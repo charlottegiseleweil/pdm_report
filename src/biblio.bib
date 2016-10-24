@@ -1,252 +1,116 @@
-@article{lms,
- author = {Rompf, Tiark and Odersky, Martin},
- title = {Lightweight Modular Staging: A Pragmatic Approach to Runtime Code Generation and Compiled DSLs},
- journal = {Commun. ACM},
- issue_date = {June 2012},
- volume = {55},
- number = {6},
- month = jun,
- year = {2012},
- issn = {0001-0782},
- pages = {121--130},
- numpages = {10},
- url = {http://doi.acm.org/10.1145/2184319.2184345},
- doi = {10.1145/2184319.2184345},
- acmid = {2184345},
+INTRO
+John C. Russ states that we are visual
+créatures who receive 99 % of the
+information on our surroundings through
+our eyes. As many readers enter the
+"information âge" and dépend upon images
+as major data source, [Ross, 1995]
+
+METHODOLOGY:
+SURVEY APPENDIX OF http://www.geog.ucsb.edu/~kclarke/Papers/AertsClarkeKeuper_CaGIS.pdf
+
+J. Sanyal, S. Zhang, J. Dyer, A. Mercer, P. Amburn, and R. J. Moorhead, “Noodles: A tool for visualization of numerical weather model ensemble uncertainty,” Visualization and Computer Graphics, IEEE Transactions on, vol. 16, pp. 1421-1430, 2010.
+
+K.Potter,A.Wilson,P.-T.Bremer,D.Williams,C.Doutriaux,V.Pascucci,andC.R.Johnson. Ensemble-vis: A framework for the statistical visualization of ensemble data. In Proceedings of the 2009 IEEE International Conference on Data Mining Workshops, pages 233–240. IEEE Computer Society, 2009
+
+C Lundström, P Ljung, A Persson, A Ynnerman
+Uncertainty visualization in medical volume rendering using probabilistic animation
+IEEE transactions on visualization and computer graphics 13 (6), 1648-1655, 2007
+
+A Review of Uncertainty in Data Visualization
+2012 Ken Brodlie, Rodolfo Allendes Osorio and Adriano Lopes 
+
+Carlos D. Correa, Yu-Hsuan Chan, and Kwan-Liu Ma. A framework for uncertainty-aware 
+visual analytics. In Proceedings of IEEE Symposium on Visual Analytics Science and Tech- 
+nology VAST 09, 2009. 
+
+Russ, John C. (1995) The Image Processing Handbook. Boca Raton, CRC Press, 2nd Edition, 674 p. (ISBN 0-8493-2516-1)
+
+Rory J. Bingham and Keith Haines. Mean dynamic topography: intercomparisons and errors. Philosophical Transactions of The Royal Society A, pages 903 – 916, 2006. 
+
+ T. Hengl. Visualisation of uncertainty using the hsi colour model: Computation with colours. In Proceedings of the 7th International Conference on GeoComputation, pages 8–17, Southampton, United Kingdom, 2003.
+
+S.K. Lodha, C.M. Wilson, and R.E. Sheehan. LISTEN: Sounding uncertainty visualization. In Proceedings of Visualization 96, pages 189–195, 1996. 
+
+P. Fisher. Animation and sound for the visualization of uncertain spatial information. In Visualization in Graphical Information Systems, pages 181–185. Wiley, 1994. 
+
+J. Aerts, Keith C. Clarke, and A. Keuper, Testing Popular Visualization Techniques for Representing Model Uncertainty, Cartography and Geographic Information Science, Vol. 30, No. 3, 2003, pp. 249-261
+
+A Layered Grammar of Graphics - Hadley WICKHAM 2008.
+
+@article{Brown,
+ author = {Brown, Ross},
+ title = {Animated Visual Vibrations As an Uncertainty Visualisation Technique},
+ booktitle = {Proceedings of the 2Nd International Conference on Computer Graphics and Interactive Techniques in Australasia and South East Asia},
+ series = {GRAPHITE '04},
+ year = {2004},
+ isbn = {1-58113-883-0},
+ location = {Singapore},
+ pages = {84--89},
+ numpages = {6},
+ url = {http://doi.acm.org/10.1145/988834.988849},
+ doi = {10.1145/988834.988849},
+ acmid = {988849},
  publisher = {ACM},
  address = {New York, NY, USA},
-}
-
-@article{delite,
- author = {Sujeeth, Arvind K. and Brown, Kevin J. and Lee, Hyoukjoong and Rompf, Tiark and Chafi, Hassan and Odersky, Martin and Olukotun, Kunle},
- title = {Delite: A Compiler Architecture for Performance-Oriented Embedded Domain-Specific Languages},
- journal = {ACM Trans. Embed. Comput. Syst.},
- issue_date = {July 2014},
- volume = {13},
- number = {4s},
- month = apr,
- year = {2014},
- issn = {1539-9087},
- pages = {134:1--134:25},
- articleno = {134},
- numpages = {25},
- url = {http://doi.acm.org/10.1145/2584665},
- doi = {10.1145/2584665},
- acmid = {2584665},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {Domain-specific languages, code generation, language virtualization, multistage programming},
-}
-
-@inproceedings{optistructs,
- author = {Rompf, Tiark and Sujeeth, Arvind K. and Amin, Nada and Brown, Kevin J. and Jovanovic, Vojin and Lee, HyoukJoong and Jonnalagedda, Manohar and Olukotun, Kunle and Odersky, Martin},
- title = {Optimizing Data Structures in High-level Programs: New Directions for Extensible Compilers Based on Staging},
- booktitle = {Proceedings of the 40th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
- series = {POPL '13},
- year = {2013},
- isbn = {978-1-4503-1832-7},
- location = {Rome, Italy},
- pages = {497--510},
- numpages = {14},
- url = {http://doi.acm.org/10.1145/2429069.2429128},
- doi = {10.1145/2429069.2429128},
- acmid = {2429128},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {code generation, data structures, extensible compilers, staging},
-}
-
-@inproceedings{eatperf,
- author = {Brown, Kevin J. and Lee, HyoukJoong and Rompf, Tiark and Sujeeth, Arvind K. and De Sa, Christopher and Aberger, Christopher and Olukotun, Kunle},
- title = {Have Abstraction and Eat Performance, Too: Optimized Heterogeneous Computing with Parallel Patterns},
- booktitle = {Proceedings of the 2016 International Symposium on Code Generation and Optimization},
- series = {CGO 2016},
- year = {2016},
- isbn = {978-1-4503-3778-6},
- location = {Barcelona, Spain},
- pages = {194--205},
- numpages = {12},
- url = {http://doi.acm.org/10.1145/2854038.2854042},
- doi = {10.1145/2854038.2854042},
- acmid = {2854042},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {Parallel patterns, distributed memory, pattern transformations},
-}
-
-@techreport{betterfusion,
-  title={Better Loop Fusion for LMS},
-  author={Salvisberg, Vera},
-  year={2014}
-}
-
-@inproceedings{scalan,
- author = {Slesarenko, Alexander and Filippov, Alexander and Romanov, Alexey},
- title = {First-class Isomorphic Specialization by Staged Evaluation},
- booktitle = {Proceedings of the 10th ACM SIGPLAN Workshop on Generic Programming},
- series = {WGP '14},
- year = {2014},
- isbn = {978-1-4503-3042-8},
- location = {Gothenburg, Sweden},
- pages = {35--46},
- numpages = {12},
- url = {http://doi.acm.org/10.1145/2633628.2633632},
- doi = {10.1145/2633628.2633632},
- acmid = {2633632},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {domain-specific languages, dsl, generic programming, isomorphisms, multi-stage programming, polytypic programming, specialization, staging},
-}
-
-@article{tagless,
- author = {Carette, Jacques and Kiselyov, Oleg and Shan, Chung-chieh},
- title = {Finally Tagless, Partially Evaluated: Tagless Staged Interpreters for Simpler Typed Languages},
- journal = {J. Funct. Program.},
- issue_date = {September 2009},
- volume = {19},
- number = {5},
- month = sep,
- year = {2009},
- issn = {0956-7968},
- pages = {509--543},
- numpages = {35},
- url = {http://dx.doi.org/10.1017/S0956796809007205},
- doi = {10.1017/S0956796809007205},
- acmid = {1630626},
- publisher = {Cambridge University Press},
- address = {New York, NY, USA},
+ keywords = {stereo vision, uncertainty visualisation, vibrating textures, visual features},
 } 
 
-
-@inproceedings{virtualization,
- author = {Moors, Adriaan and Rompf, Tiark and Haller, Philipp and Odersky, Martin},
- title = {Scala-virtualized},
- booktitle = {Proceedings of the ACM SIGPLAN 2012 Workshop on Partial Evaluation and Program Manipulation},
- series = {PEPM '12},
- year = {2012},
- isbn = {978-1-4503-1118-2},
- location = {Philadelphia, Pennsylvania, USA},
- pages = {117--120},
- numpages = {4},
- url = {http://doi.acm.org/10.1145/2103746.2103769},
- doi = {10.1145/2103746.2103769},
- acmid = {2103769},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {code generation, domain-specific languages, language virtualization, multi-stage programming},
+@Article{Ehlschlaeger,
+  Author = 	 {Charles R. Ehlschlaeger and Ashton M. Shortridge and
+                  Michael F. Goodchild},
+  title = 	 {Visualizing Spatial Data Uncertainty Using
+                  Animation},
+  journal = 	 {Computers in GeoSciences},
+  year = 	 {1997},
+  volume = 	 {23},
+  number = 	 {4},
+  pages = 	 {387--395},
 }
 
-@inproceedings{staging,
- author = {J{\o}rring, Ulrik and Scherlis, William L.},
- title = {Compilers and Staging Transformations},
- booktitle = {Proceedings of the 13th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages},
- series = {POPL '86},
- year = {1986},
- location = {St. Petersburg Beach, Florida},
- pages = {86--96},
- numpages = {11},
- url = {http://doi.acm.org/10.1145/512644.512652},
- doi = {10.1145/512644.512652},
- acmid = {512652},
- publisher = {ACM},
- address = {New York, NY, USA},
-} 
 
-@inproceedings{dslhudak,
-  title={Modular domain specific languages and tools},
-  author={Hudak, Paul},
-  booktitle={Software Reuse, 1998. Proceedings. Fifth International Conference on},
-  pages={134--142},
-  year={1998},
-  organization={IEEE}
+@Article{hengl,
+  author = 	 {Tomislav Hengl},
+  title = 	 {Visualisation of Uncertainty using the HSI Colour
+                  Model: Computations with Colours},
+  journal = 	 {Proceedings of the 7th International Conference on
+                  GeoComputation},
+  year = 	 {2003},
+  pages =        {1--12},
 }
 
-@article{dsls,
-  title={A domain-specific approach to heterogeneous parallelism},
-  author={Chafi, Hassan and Sujeeth, Arvind K and Brown, Kevin J and Lee, HyoukJoong and Atreya, Anand R and Olukotun, Kunle},
-  journal={ACM SIGPLAN Notices},
-  volume={46},
-  number={8},
-  pages={35--46},
-  year={2011},
-  publisher={ACM}
+@article {Bingham903,
+	author = {Bingham, Rory J and Haines, Keith},
+	title = {Mean dynamic topography: intercomparisons and errors},
+	volume = {364},
+	number = {1841},
+	pages = {903--916},
+	year = {2006},
+	doi = {10.1098/rsta.2006.1745},
+	publisher = {The Royal Society},
+	abstract = {Knowledge of the ocean dynamic topography, defined as the height of the sea surface above its rest-state (the geoid), would allow oceanographers to study the absolute circulation of the ocean and determine the associated geostrophic surface currents that help to regulate the Earth{\textquoteright}s climate. Here a novel approach to computing a mean dynamic topography (MDT), together with an error field, is presented for the northern North Atlantic. The method uses an ensemble of MDTs, each of which has been produced by the assimilation of hydrographic data into a numerical ocean model, to form a composite MDT, and uses the spread within the ensemble as a measure of the error on this MDT. The r.m.s. error for the composite MDT is 3.2 cm, and for the associated geostrophic currents the r.m.s. error is 2.5 cm s-1. Taylor diagrams are used to compare the composite MDT with several MDTs produced by a variety of alternative methods. Of these, the composite MDT is found to agree remarkably well with an MDT based on the GRACE geoid GGM01C. It is shown how the composite MDT and its error field are useful validation products against which other MDTs and their error fields can be compared.},
+	issn = {1364-503X},
+	URL = {http://rsta.royalsocietypublishing.org/content/364/1841/903},
+	eprint = {http://rsta.royalsocietypublishing.org/content/364/1841/903.full.pdf},
+	journal = {Philosophical Transactions of the Royal Society of London A: Mathematical, Physical and Engineering Sciences}
+
 }
 
-@article{mapreduce,
- author = {Dean, Jeffrey and Ghemawat, Sanjay},
- title = {MapReduce: Simplified Data Processing on Large Clusters},
- journal = {Commun. ACM},
- issue_date = {January 2008},
- volume = {51},
- number = {1},
- month = jan,
- year = {2008},
- issn = {0001-0782},
- pages = {107--113},
- numpages = {7},
- url = {http://doi.acm.org/10.1145/1327452.1327492},
- doi = {10.1145/1327452.1327492},
- acmid = {1327492},
- publisher = {ACM},
- address = {New York, NY, USA},
-} 
-
-
-@inproceedings{spark,
- author = {Zaharia, Matei and Chowdhury, Mosharaf and Das, Tathagata and Dave, Ankur and Ma, Justin and McCauley, Murphy and Franklin, Michael J. and Shenker, Scott and Stoica, Ion},
- title = {Resilient Distributed Datasets: A Fault-tolerant Abstraction for In-memory Cluster Computing},
- booktitle = {Proceedings of the 9th USENIX Conference on Networked Systems Design and Implementation},
- series = {NSDI'12},
- year = {2012},
- location = {San Jose, CA},
- pages = {2--2},
- numpages = {1},
- url = {http://dl.acm.org/citation.cfm?id=2228298.2228301},
- acmid = {2228301},
- publisher = {USENIX Association},
- address = {Berkeley, CA, USA},
+@ARTICLE{Aerts03,
+    author = {Jeroen C. J. H. Aerts and Keith C. Clarke and Alex D. Keuper},
+    title = {Testing popular visualization techniques for representing model uncertainty,” Cartography and Geographic},
+    journal = {Information Science},
+    year = {2003},
+    pages = {249--261}
 }
 
-@inproceedings{soa,
- author = {Sung, I-Jui and Stratton, John A. and Hwu, Wen-Mei W.},
- title = {Data Layout Transformation Exploiting Memory-level Parallelism in Structured Grid Many-core Applications},
- booktitle = {Proceedings of the 19th International Conference on Parallel Architectures and Compilation Techniques},
- series = {PACT '10},
- year = {2010},
- isbn = {978-1-4503-0178-7},
- location = {Vienna, Austria},
- pages = {513--522},
- numpages = {10},
- url = {http://doi.acm.org/10.1145/1854273.1854336},
- doi = {10.1145/1854273.1854336},
- acmid = {1854336},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {GPU, data layout transformation, parallel programming},
-} 
+@ARTICLE{mac92,
+    author = {Department Of Geography and Alan M. Maceachren},
+    title = {published in Cartographic Perspective, Number 13, Fall, 1992, pp. 10-19 VISUALIZING UNCERTAIN INFORMATION},
+    journal = {Cartographic Perspectives},
+    year = {1992},
+    volume = {13},
+    pages = {10--19}
+	}
 
-@inproceedings{loopfusion,
-  title={Maximizing loop parallelism and improving data locality via loop fusion and distribution},
-  author={Kennedy, Ken and McKinley, Kathryn S},
-  booktitle={International Workshop on Languages and Compilers for Parallel Computing},
-  pages={301--320},
-  year={1993},
-  organization={Springer}
-}
 
-@article{debug,
-  title={Debuggers and logging frameworks},
-  author={Spinellis, Diomidis},
-  journal={IEEE software},
-  volume={23},
-  number={3},
-  pages={98--99},
-  year={2006}
-}
-
-@book{designpatterns,
-  title={Design patterns: elements of reusable object-oriented software},
-  author={Gamma, Erich},
-  year={1995},
-  publisher={Pearson Education India}
-}

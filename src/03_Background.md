@@ -2,13 +2,24 @@
 
 #Background on design strategies for information displays 
 
-\textit{Research into the range for static and dynamic approaches to displaying} ??
+Research into the range for static and dynamic approaches to displaying
 
 ## Motivation
 > "Excellence in statistical graphics consists of complex ideas communicated with clarity, precision and efficiency."
-> Edward Tufte
+> 
+Edward Tufte
 
-### IntroExplore the design strategies to express and display multi-dimensional, spatial ,multi-objective and uncertain data.What’s data visualizationInformation visualization or visual communication, = processing abstract data into a concrete form to be perceived by user, i.e encoding data into visual objects (such as points or lines)Goal : communicate information clearly and efficientlyImportance of visualization : making complex data accessibleStructured decision making : Structured process to make rational and relatively optimal decisions in complex.Formal application of common sense when too complcated for an informal oneClear visualization helps understand complex data . high-dimensional outputs require sophisticated analytical approaches.Effective data visualization includes inter-disciplnary considerations ranging from the fields from graphic design, visual art, perceptual psychology and cognitive science
+### Intro
+Explore the design strategies to express and display multi-dimensional, spatial ,multi-objective and uncertain data.
+What’s data visualization
+Information visualization or visual communication, 
+= processing abstract data into a concrete form to be perceived by user, i.e encoding data into visual objects (such as points or lines)
+Goal : communicate information clearly and efficiently
+Importance of visualization : making complex data accessible
+Structured decision making : Structured process to make rational and relatively optimal decisions in complex.
+Formal application of common sense when too complcated for an informal one
+Clear visualization helps understand complex data . high-dimensional outputs require sophisticated analytical approaches.
+Effective data visualization includes inter-disciplnary considerations ranging from the fields from graphic design, visual art, perceptual psychology and cognitive science
 
 
 
