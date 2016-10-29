@@ -1,7 +1,5 @@
 # Master Thesis
-by [Damien Engels](https://github.com/paullepoulpe)
-
-This is the source for the final report of my master's thesis at [EPFL](http://epfl.ch). In the report, I present the work I have done over 6 months at the Pervasive Parallelism Lab ([PPL](https://ppl.stanford.edu/)) in Stanford in conjunction with the Programming Methods Laboratory ([LAMP](http://lamp.epfl.ch)) at EPFL.
+by [Charlotte Weil](https://github.com/charlottegiseleweil). Copied from [Damien Engels](https://github.com/paullepoulpe)'s master-thesis project ([https://github.com/paullepoulpe/master-thesis](https://github.com/paullepoulpe/master-thesis)).
 
 ## Usage
 **Warning:** Only runs on MacOS. There is no reason why you could not use it on another platform, but I did not bother adding support. If you want to use it, you'll have to figure it out yourself.
