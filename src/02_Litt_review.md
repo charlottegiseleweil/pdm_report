@@ -1,4 +1,6 @@
-# Design strategies for implementation of complex display
+# Literature Review
+
+## Design strategies for implementation of complex display
  [make subtitle?]
  *This chapter consists in a literature review on static and dynamic approaches to displaying multidimensional and uncertain data. It aims to explore the design strategies to express and display multi-dimensional, spatial, multi-objective and uncertain data.*
  

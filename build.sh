@@ -48,12 +48,6 @@ elif [ $batch_spellcheck = true ]; then
   mdspell --report --ignore-acronyms --en-us src/*.md
 fi
 
-# Build the plots
-echo "Building plots"
-cd plots
-./build.sh
-cd ..
-
 # Concatenate all files with space in between
 for f in src/*.md; do 
   cat "${f}"; echo; echo;
@@ -70,7 +64,6 @@ for idx in "${!outputs[@]}"; do
   # Update all the links to be pdf instead of png
   cat build/thesis_raw.md | \
     sed -e "s|/g/png|/g/pdf|g" |\
-    sed -e "s|../plots/out/\(.*\)\.png|plots/out/\1|g" |\
     sed -e "s|../images/\(.*\)|images/\1|g" \
     > build/thesis.md
 
@@ -79,6 +72,7 @@ for idx in "${!outputs[@]}"; do
   pandoc -f markdown $format \
     --smart \
     --include-in-header=templates/break-sections.tex \
+    --include-in-header=templates/chapter-style.tex \
     --include-before-body=templates/titlepage.tex \
     --reference-links \
     --standalone \
@@ -88,8 +82,9 @@ for idx in "${!outputs[@]}"; do
     --highlight-style=tango \
     --filter pandoc-citeproc \
     --bibliography=src/biblio.bib \
-    --csl templates/computer.csl \
+    --csl templates/nature.csl \
     -V fontsize=12pt \
+    -V documentclass:memoir \
     --variable=geometry:a4paper \
     -o $outfile
   echo " Done !"
