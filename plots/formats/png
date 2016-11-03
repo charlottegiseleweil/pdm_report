@@ -1,2 +1,0 @@
-set terminal png transparent nocrop enhanced size 800,600 font "arial,12"
-set output '%filename%.png'

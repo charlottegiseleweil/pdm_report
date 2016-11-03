@@ -7,9 +7,9 @@ function installed(){
   type "$1" 2>&1 >/dev/null
   let ret=$?
   if [ $ret -eq 0 ]; then
-    echo "$1" already installed
+    echo "$1 already installed"
   else
-    echo Installing "$1"
+    echo "Installing $1"
   fi
   return $ret
 }
@@ -17,9 +17,11 @@ function installed(){
 # Package manager
 installed brew || /usr/bin/ruby -e \
   "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo -n "Updating brew ... "
+brew update && brew upgrade && brew tap caskroom/cask
 
 # Markdonw to latex
-installed pandoc || brew install pandoc
+installed pandoc || (brew install pandoc && brew install pandoc-citeproc)
 
 # Latex compilation
 installed pdflatex || brew cask install mactex
