@@ -82,7 +82,7 @@ for idx in "${!outputs[@]}"; do
     --highlight-style=tango \
     --filter pandoc-citeproc \
     --bibliography=src/biblio.bib \
-    --csl templates/nature.csl \
+    --csl templates/apa.csl \
     -V fontsize=12pt \
     -V documentclass:memoir \
     --variable=geometry:a4paper \
