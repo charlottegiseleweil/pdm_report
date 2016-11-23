@@ -1,80 +1,58 @@
 # Design strategies for complex information display
 
-This chapter consists in a literature review on static and dynamic approaches to displaying multidimensional and uncertain data. It aims to explore the design strategies to express and display multi-dimensional, spatial, multi-objective and uncertain data.
- 
- 
- 
+This chapter consists in a literature review on static and dynamic approaches to displaying complex data. First, a brief overview of some general notions in data visualization is given to familiarize with the context. Then, an exploration of the multiple visualization tools supports choice of the most adapted software or library for each application. Most importantly this chapter aims to explore the design strategies to express and display multi-dimensional, spatial, multi-objective, uncertain data and combinations of these. This focus corresponds to the specific challenges faced while communicating natural capital information.
+
 >*"Excellence in statistical graphics consists of complex ideas communicated with clarity, precision and efficiency."*
 > 
 > *Edward Tufte*
 
 ##Elements of data visualization
-###Introduction
+###Information visualization and graphical integrity (TODO)
 Information visualization, or visual communication, consists in transforming complex and abstract data into a accessible and concrete form, that a human brain can perceive with as little as possible cognitive processing. It consists simply in encoding data into visual objects, such as lines or points. 
 
 In order to communicate fact-based information clearly and efficiently, one needs to use tools allowing to gain quick insight from the data. This is the purpose of information visualization. In other words, a clear visualization helps understand complex data. Moreover, in the case of high-dimensional outputs, sophisticated analytical approaches are required, and display tools supports these. Effective data visualization takes into account human perception and desicion making process, aesthitical considerations, statistical mathematical precision and more. It is an interdisciplinary work including statistics, graphic design, visual art, perceptual psychology and cognitive science. The following sections aim to introduce some basic principles of data visualization, to set the ground for further exploration of more specific display needs.
-###Notions and techniques in data visualization 
+
+Goal :  effectively convey information [@Kelleher]
+
+Graphical integrity (Tufte TODO + "But with the great power of graphs, one might say, comes great responsibility. Graphs can be fundamentally misleading about underlying data, and design choices can skew viewers' perceptions, leading them toward incorrect conclusions (How to Lie with Charts, Jones, 2006)."[@Allen1])###Notions and techniques in data visualization 
 
 ####Modes of visualization
-* Static presentation : Required for printed format, static presentations are essential. In the context of inter-orgational projects defined in time, there is almost always a need to summarize results in final reports. * Dynamic user-interactive visualisations gives the greatest flexibility to the user who is given options to test and visualize results while having control on parameters. User interactivity enhances the user's implication (REF TODO). Dynamic displays offers many options to tailored and multi-dimensional visualizations. The following section will detail some of the main features of interest.* Interactive storytelling is the in-between between the two previous visualization modes. Especially useful during presentations, but also on interactive webpages, the dynamic storytelling allows the flexibility and multi-dimensional displays options of dynamic visualizations, while keeping control on the selected options, i.e walking the user through the visualisation to lead to the envisioned goal. From the user's perspective, there is less flexibility to try options than in a dynamic display, but the main message can be more easily conveyed than in a single static display. 
+- Static presentation : Required for printed format, static presentations are essential. In the context of inter-orgational projects defined in time, there is almost always a need to summarize results in final reports. 
+- Dynamic user-interactive visualisations gives the greatest flexibility to the user who is given options to test and visualize results while having control on parameters. User interactivity enhances the user's implication and satisfaction [@Teo2003281]. Dynamic displays offers many options to tailored and multi-dimensional visualizations. The following section will detail some of the main features of interest.- Interactive storytelling is the in-between between the two previous visualization modes, is is dynamic but not interactive. Especially useful during presentations, but also on webpages, the dynamic storytelling allows the flexibility and multi-dimensional displays options of dynamic visualizations, while keeping control on the selected options, i.e walking the user through the visualisation to lead to the envisioned goal. From the user's perspective, there is less flexibility, but the main message can be easier to convey. 
 
-####Vocabulary (=Basic Grammar of graphics TODO)
-A graphic, or a plot consists in at least one dataset translated into a set of mappings (i.e visual encodings), forming layers that are statistically transformed according to the scale, and the coordinate system. (TODO: + the facet specification (Faceting (includes : conditioning, trellising, and latticing) = produces small multiples showing different subsets of the data.)
+####Vocabulary and grammar of graphics
+A graph, or a plot consists in at least one dataset translated into a set of mappings (i.e visual encodings), forming layers that are statistically transformed according to the scale, the coordinate system and the facet specification [@wickham08]. Graphs, charts, diagrams and plots, depsite ambiguous nuances, are all defined as representations of data [@Thesaurus], these words will be used synonymously in this work.
 
-####Basics of GIS
-SPatial DATA TODO ! 
-GIS is a computer based tool linking geographic information (where: maps) with descriptive information (what: attributes).
-
-A GIS system captures, stores, manipulates, analyzes and present spatial or geogrpahic data.
-
-GIS links separate layers (dfferent data) and associates them based on geogrpahy
-
-raster data : collection of pixels referenced with coordinates
-
-vector data : set of points, lines and polygons
-
-**Projections** and coordinates systems, 
-Because the earth is round but most maps are not, projections have to distort somehow the spatial data. In some, distance is conserved, in some it is shape, or areas, but always something needs to be distorted.
-
-
-On Webmaps TODO
-ref 
-Mapbox workshop, GIS Library,  Lyzi Diamond. 15 NOV 2016
-Webmaps
-1996 MapQuest was the first Webmap, mainly, slow loading of static maps. (No zooming or any interactivity)
-2005 Google innovates with map tiles = breaking the map into small square images that can load individually, therefore saving time by loading only relevant ones.
-MAPBOX = API
-mapping platform for developers
-> build fancy maps / no crossfiltering with some interactivity (zooming etc) but no crossfiltering options though.
-=Leaflet  
-> style : list of visualrules
-> tileset : 
-> data set####Distortion techniques
+Spatial data is handled with specific tools, so called **geographical information systems (GIS)** which links geographic (maps) and descriptive informations. In a GIS system, data is organized is different layers, associated based on their geography. Spatial data can be stored in two types: raster, which is a collection of pixels referenced with coordinates, and vector, which corresponds to a set of point, lines and polygons. Different projections and coordinate systems are of great importance when dealing with spatial data: the round shape of the earth different from the flat projections of the maps means that distortion cannot be avoided, these correspond to projections (which conserve either the shape, or the area for example but cannot conserve all measures.) [@LectureGIS]. With recent development of webmaps, other formats have appeared, particularly **tilesets, which concept is to break the map into small square images that can load individually, therefore saving time by loading only relevant ones. [@LectureMapbox]
+####Distortion techniques
 When displaying large data set, combining considerations about different scales can become very tricky. Some distortion techniques have been developped in order to view precisely local details in their global context. They allows a greater space to the display of a focused zone, while still embedding its surrounding context. Generally, linear or hyperbolic geometry supports the smooth connection of the focus area and the background, that have different scales [@Leung].
 
 - **Bifocal display** (lens) : linear transformation (in one or two directions) [@bifocal and @Leung]
 - **Polyfocal lens** : similar to bifocal lens, but using a more complex hyperbolic (or polynomial) transformation function [@Leung]
 - **The fisheye view**, originally called Focus + Context technique ([@Lamping], [@Furnas_fisheye]) uses a continuous magnification function (that also transforms the boundaries). Tough this term has been used with different definitions, it is broadly used and very intuitive.
 - Other distortion techniques include the **perspective wall** [@Mackinlay], that simulates the perspective effect, the hyperbolic tree, that extends the fisheye view using hyperbolic plane mapped onto a circular display region [@Lamping]...
-
 *Is an illustration needed here? (If yes: TODO screenshots from davis_cours?)*
 
 ####Interaction techniques
-	TODO REF IN KEIM :  interactive mapping [16], [11], projection [8], [11], filtering [7], [20], [24], zooming [13], [9], and interactive linking and brushing [60], [63].Interaction techniques have also been developped to further improve these visualizations (e.g., [17], [10], [3])Dynamic features of interest include :
+	TODO REF IN KEIM :  interactive mapping [16], [11], projection [8], [11], filtering [7], [20], [24], zooming [13], [9], and interactive linking and brushing [60], [63].Interaction techniques have also been developped to further improve these visualizations (e.g., [17], [10], [3])
+	3 goals : focusing on individual view, searching for linearity, clusters, posing queries, making comparisons.  [@Buja]
+	Dynamic features of interest include :
 
--	Scaling, which is simply zooming in and out but is powerful in the sense that it allows the user to both global view of the whole dataset and precise details on smaller fluctuations, therefore removing the need for a distorded view. Some scaling options also combine distortion techniques (see RENVOI TODO) to both zoom in and keep the background context in the surroundings.-	Identification (also called pointing) allows access to detailed information of a subset of the graph by clicking on it.-	Generalized selection extracts every point that is similar to the user’s selection for an overview of subsets.-	Brushing consists in selecting a subset of data, that is then highlighted. Also, brushing can be used to remove unwanted data, when a specific threshold is required [@Kollat_Video]
--       Linking adds value to brushing, it is the dynamic update of the other graphs displayed, to higlight the corresponding  «brushed» selection. (TODO have an example?). 
-
+-	**Scaling** which is simply zooming in and out but is powerful in the sense that it allows the user to both global view of the whole dataset and precise details on smaller fluctuations, therefore removing the need for a distorded view. Some scaling options also combine distortion techniques (see RENVOI TODO) to both zoom in and keep the background context in the surroundings.-	**Identification** (also called pointing) allows access to detailed information of a subset of the graph by clicking on it.-	**Generalized selection** extracts every point that is similar to the user’s selection for an overview of subsets.-	**Brushing** consists in selecting a subset of data, that is then highlighted. Also, brushing can be used to remove unwanted data, when a specific threshold is required [@Kollat_Video]. Brushing can be done with a slider, or with direct selection on the plot. 
+-      In a context where the displays consists in several views (different plots), **linking** adds value to brushing, it is the dynamic update of the other graphs displayed, to higlight the corresponding  «brushed» selection. (TODO have an example?). 
 ###Graphical best practices and guidelines
+#### What makes a good visualization ? (Todo)
 
-#### What makes a good visualization ?
-
-Keeping in mind the goal which is to gain insight on the data, an efficient visualisation limits the cognitive process of understanding the graph, in order to bring the observer's attention on the actual facts. Some may seem trivial, nevertheless the guidelines summarized in the following paragraphs are essential to achieving the visualisation's purpose. 
+Keeping in mind the goal which is to effectively convey information, to gain insight on the data, an efficient visualisation limits the cognitive process of understanding the graph, in order to bring the observer's attention on the actual facts. Some may seem trivial, nevertheless the guidelines summarized in the following paragraphs are essential to achieving the visualisation's purpose. 
 
 >*«Graphical displays should:*
 >- *show the data*-	*induce the viewer to think about the substance rather than about methodology, graphic design, the technology of graphic production or something else*-	*avoid distorting what the data has to say*-	*present many numbers in a small space*-	*make large data sets coherent*-	*encourage the eye to compare different pieces of data*-	*reveal the data at several levels of detail, from a broad overview to the fine structure*-	*serve a reasonably clear purpose: description, exploration, tabulation or decoration*-	*be closely integrated with the statistical and verbal descriptions of a data set. »* 
 >
 > Edward Tufte, in *The Visual Display of Quantitative Information* [@tufte]
+ 
+[@Kelleher] gathers general guidelines. Firstly, he advocates for simplicity, arguing that redundancy overcomplicates, and suggesting to minimizing the data ink ratio (i.e the ratio of ink used to display data over the total ink of the figure) [@tufte]. Furthermore, his recommendations deal with making the right choices, 
+between displaying patterns or details (S.M. Kosslyn, C.F. Chabris Minding information graphics), but also for appropriate encoding objects and attributes, (Cleveland and McGill, 1984), for meaningful axis range, data transformations (e.g log scale, for time-series plots), aggregation level (e.g temporal aggregation by averaging over a larger time step for long time-series) and colorscheme. Additionally, he argues to maintain axis ranges accross subplots for easier comparison, connect sequential data (e.g disconnection for missing data in time series plots) and express density in when overlapping points (e.g with color gradient in scatterplots) [@Kelleher]. Lastly, the inclusion of uncertainty estimates improves decision making (P. Reichert, M.E. Borsuk
+Does high forecast uncertainty preclude effective decision support? // K.J. Beven On undermining the science?) [Todo Ref in there]
 
 Best practices seem to be summarized by three main points, that will therefore be used as criteria for success throughout this study. An efficient display should
 
@@ -82,26 +60,21 @@ Best practices seem to be summarized by three main points, that will therefore b
 2. be self-explanatory (including its legend, and possibly the use of storytelling)
 3. tailor to the intended audience.
 
-#### Aesthetics and layouting
-TODO: In terms of aesthetics and graphical choices, readibility should always be a priority. Some key rules needs to be considered : about color scheme (colorblind safe, intuitive hue(...) [Colorbrewer]), but also legend, and ordering (by some properties of data, never alphabetically: a space to express something about the data would be neglected)... Layouting, selecting apporpriate scales and aspect ratios (there is always trade-offs between showing the zero, or zooming on fluctuations)
 
-####Colors
-colorblindness simulator online.
+**Legend**
 
+but also legend, and ordering (by some properties of data, never alphabetically: a space to express something about the data would be neglected)... 
 
-In terms of aesthetics and graphical choices, readibility should always be a priority. Some key rules needs to be considered : about color scheme (colorblind safe, intuitive hue(...) [Colorbrewer]), but also legend, and ordering (by some properties of data, never alphabetically: a space to express something about the data would be neglected)... Layouting, selecting apporpriate scales and aspect ratios (there is always trade-offs between showing the zero, or zooming on fluctuations)
+Layouting, selecting apporpriate scales and aspect ratios (there is always trade-offs between showing the zero, or zooming on fluctuations)
 
-(TODO ask Ben about his issues w/ colors)
+**Colorscheme**(TODO ask Ben about his issues w/ colors)
 
-The careful choice of the color scheme is not be neglected. Sequential color scheme ought to be chosen when the underlying data shows ranked differences; diverging scheme when dealing with negative and positive differences around a mean or a neutral value; and a categorical scheme for discrete values (such as land cover types). (TODO https://tilemill-project.github.io/tilemill/docs/guides/tips-for-color/)
+The careful choice of the color scheme is not be neglected. Sequential color scheme ought to be chosen when the underlying data shows ranked differences; diverging scheme when dealing with negative and positive differences around a mean or a neutral value; and a categorical scheme for discrete values [@tilemill].
+Moreover, many sources suggests to use only a few colors (about 6), while choosing them distinctive, and striving for color harmony. Cultural conventions and intuitive hue facilitate fast perception. Colorblind and printing safe schemes are prudent. Also, the color scale should be normalized, considering which datapoints should appear in different categories. [@Colorbrewer] provides good templates.
 
-Moreover, many sources suggests to use only a few colors (about 6), while choosing them distinctive, and striving for color harmony. Cultural conventions and intuitive hue facilitate fast perception. Colorblind and printing safe schemes are prudent. Also, the color scale should be normalized, considering which datapoints should appear in different categories.
+**Interactivity**
 
-####Zooming
-TODO: magnification, fishe-eye view (Leung and Apperley 94), difocal distortion ...
-
-#### Tailoring to the audience
-"Interface complexity versus user motivation. The success of cartographic interac- tion is contingent upon the relationship between interface complexity and user motivation." [@Roth] todo explore ROTH, R. E., AND HARROWER, M. Addressing map interface usability: Learning from the lakeshore nature preserve interactive map. Cartographic Perspectives 60, Spring (2008), 46–66.
+The success of an interactive display results from the appropriate interface complexity for a certain user motivation [@Roth]
 
 ## Overview of visualization tools
 
@@ -129,11 +102,12 @@ R plotting packages **ggplot** and **ggplot2** are very efficient for static vis
 
 ####Python
 **Matplotlib** is the main Python graphing library. It contains a toolkit for plotting 2D data on maps: **basemap**.  Also, **geopandas** extends the data analysis library Pandas to spatial data, using also Fiona for file access, Shapely and Descartes for geometric operations, PySal for spatial analysis, and of couse Matplotlib for plotting [@python_libs]. Interactive plots are based on **Bokeh** which imitates D3, or, as mentioned previously, Plotly. 
-##Specific data visualization challenges et strategies
-
-In the context of this study, focus will be given on the specific challenges face while communicating natural capital information. These include the display of multi-dimensional data (e.g ...), spatial data, uncertain data, and these all combined. Summarizing results of mutiples model outputs that consists in multi-dimensional spatial data is often necessary, wheter the multiplicity of outputs correspond to various scenarios or a sensitivity analysis.
-###Displaying multi-dimensional data
+##Specific data visualization challenges et strategies###Displaying multi-dimensional data
 Multidimensional data visualization has been given considerable attention, as computational capacities have been increasing and the amount of produced data exploding. Multi-dimensional data exploration has taken several directions, based on a geometric projection techniques, including parallel coordinates (...), to which distortion and interaction techniques (discussed above TODO RENVOI) can be added to further improve these visualizations [@Keim].
+
+TODO : Curse of multi-dimensionality:
+"graphical displays become less informative as the dimensions and complexity of data sets increase" [@Allen1]
+However, [@Allen1] argues in favor of more detailed graphs showing more, revealing more informations. :" Rather than use standard designs such as bar plots and thresholded maps that hide these data, we, as authors, peer reviewers, and editors, can establish new standards for visualizations that reveal data and inform readers."
  
 In the context of this work, emphasis will be given on multi-objective optimization problems. *Vocabulary note: "multi-objective" refers here to problems with three or more objectives, also called many-objective problems [@Fleming05] or high order-Pareto optimization problems [@Reed04]* Visual decision support tools are very relevant in the field of multi-objective optimization problems. In the multi-objective typical cases, there is no unique optimal solution, but a collection of Pareto optimal ones [@Hadka2015], i.e solutions where improving the result towards one objective result a decrease in performance with regards to another objective  [@paretoUNIL]. Efficient visualizations empower the user with the ability to navigate through thousands of potential solutions, compare them and understand trade-offs, leading to performant decision-making. 
 
@@ -211,6 +185,7 @@ Interestingly, Wickham ([@wickham08]) attempted to reproduce this visualisation,
 ####Cartographic interaction
 Interactive maps: dialog between a human and map [@Roth]
  [@Roth] examines when cartographic interaction positively supports work. Interactivity is not always beneficial to the map, but relevant for users who wish to customize the communicated information to their particular interests, also relevant to overcome some cartographic problematics [@Roth] (see for example :renvoi uncertainty todo). Another point that interactivity helps achieving is enhancing the user's involvment with the map, by offering a sense of control over the experience [@Roth]###Comparing multiple versions of spatial data (runs)
+ Summarizing results of mutiples model outputs that consists in multi-dimensional spatial data is often necessary, wheter the multiplicity of outputs correspond to various scenarios or a sensitivity analysis.
  
 ####Maps displays
 For the examination of (dis)agreement between two maps, simple and efficent strategies suggests to show the two maps next to each other; or to substract one map to another to display the change map. (Typically change maps uses diverging colorscheme, two colors representing respectively increase and decrease, and the intensity gradient reflects the amount of change >> Examples : Fig 12, http://www.sciencedirect.com/science/article/pii/S0198971514000714)
@@ -233,11 +208,14 @@ Different types of categorical map consistency measures exist. *Vocabulary note:
 1. A basic cell-by-cell comparison method measures simply the **overall agreement**, by calculating the portion of cells that agree between two maps:
 (Cell-by-cell level of agreement) = (Number of direct matched cells between 2 maps) / (Total number of cells in map)
 
-1. **Kappa index of agreement** (KIA or Cohen's Kappa) is a statistic measuring concordance between categorical items. This technique has proven efficient for cell-by-cell comparisons of spatial data [@Manson2005], as long as patterns and locations of changes are not involved [@Kuhnert2005]. Some variants have been developped to adress the quantity and the location fit (points 2 and 3 below) as well [TODO? [@Hagen2003] and [@Pontius2000] ) It is more robust than a percent agreement because it takes into account the agreement occuring by chance. 
-KAPPA = (p0 - pe)/(1 - pe) with p0 being the proportion of units agreeing, and pe the proportion of units expected to agree by chance (i.e the hypothetical probability of chance agreement). Complete agreeement results in KAPPA = 1. [@Cohen1960]. 
+3. Kappaindexofagreement(KIAorCohen’sKappa)isastatisticmeasuringcon- cordance between categorical items. This technique has proven efficient for cell-by-cell comparisons of spatial data (Manson, 2005), as long as patterns and locations of changes are not involved (Kuhnert, Voinov, & Seppelt, 2005). Some variants have been developped to adress the quantity and the location fit (points 2 and 3 below) as well [TODO? (Hagen, 2003) and (Pontius & Gilmore Pontius, Robert, 2000) ) It is more robust than a percent agreement because it takes into account the agreement occuring by chance. KAPPA = (p0 - pe)/(1 - pe) with p0 being the proportion of units agreeing, and pe the proportion of units expected to agree by chance (i.e the hypothetical probability of chance agreement). Complete agreeement results in KAPPA = 1. (Cohen, 1960).
+
+4. Thequantityfitinformsonthenumberofcellsthatchangedfromonecategory to another, offering an overall comparison on the quantity of each category: [todo @ Pontius2002 cf Kuhnert2005] (Quantity fit) = 1 - 1/( (Total number of cells in map) * sum(all categories) abs(a1i - a2i) where aki is the number of cells assigned to category i, in map k. (k appartient 1,2) TODO FORMULA ! (see Kuhnert formula 2)
+
+
+1. **Kappa index of agreement** (KIA or Cohen's Kappa) is a statistic measuring concordance between categorical items. This technique has proven efficient for cell-by-cell comparisons of spatial data [@Manson2005], as long as patterns and locations of changes are not involved [@Kuhnert2005]. Some variants have been developped to adress the quantity and the location fit (points 2 and 3 below) as well ([@Hagen2003] and [@Pontius2000] ) It is more robust than a percent agreement because it takes into account the agreement occuring by chance. KAPPA = (p0 - pe)/(1 - pe) with p0 being the proportion of units agreeing, and pe the proportion of units expected to agree by chance (i.e the hypothetical probability of chance agreement). Complete agreeement results in Kappa = 1 [@Cohen1960]. 
 1. The **quantity fit** informs on the number of cells that changed from one category to another, offering an overall comparison on the quantity of each category: [todo @ Pontius2002 cf Kuhnert2005]
-(Quantity fit) = 1 - 1/( (Total number of cells in map) * sum(all categories) abs(a1i - a2i) 
-where aki is the number of cells assigned to category i, in map k. (k appartient 1,2) TODO FORMULA ! (see Kuhnert formula 2) 
+. ! LATEXequation (see src_drafts_formula)where LATEXa_{ki} is the number of cells assigned to category i, in map k. (k LATEXappartient 1,2), N the total number of cells in map and C means all categories.
 
 1. The **location fit** informs on the number of cells that kept the category but changed location from one map to another:
 (Location fit) = (Quantity fit) - (Cell-by-cell level of agreement)
@@ -339,3 +317,7 @@ Networks data
  Force-Directed Layout
  Arc Diagrams
  Matrix Views
+ _________
+ 
+ _______
+ 
