@@ -1,30 +1,31 @@
 # Design strategies for complex information display
 
-This chapter consists in a literature review on static and dynamic approaches to displaying complex data. First, a brief overview of some general notions in data visualization is given to familiarize with the context. Then, an exploration of the multiple visualization tools supports choice of the most adapted software or library for each application. Most importantly this chapter aims to explore the design strategies to express and display multi-dimensional, spatial, multi-objective, uncertain data and combinations of these. This focus corresponds to the specific challenges faced while communicating natural capital information.
+This chapter consists in a literature review on static and dynamic approaches to displaying complex data. First, a brief overview of some general notions in data visualization is given to familiarize with the context. Then, and most importantly this chapter aims to explore the design strategies to express and display multi-dimensional, spatial, multi-objective, uncertain data and combinations of these. This focus corresponds to the specific challenges faced while communicating natural capital information. Finally, an exploration of the multiple visualization tools supports choice of the most adapted software or library for each application. 
 
+>
+>
 >*"Excellence in statistical graphics consists of complex ideas communicated with clarity, precision and efficiency."*
 > 
 > *Edward Tufte*
 
 ##Elements of data visualization
-###Information visualization and graphical integrity (TODO)
-Information visualization, or visual communication, consists in transforming complex and abstract data into a accessible and concrete form, that a human brain can perceive with as little as possible cognitive processing. It consists simply in encoding data into visual objects, such as lines or points. 
+###Information visualization and graphical integrity
+Information visualization, or visual communication, consists in transforming complex and abstract data into a accessible and concrete form, that a human brain can perceive with as little as possible cognitive processing. It consists simply in encoding data into visual objects, such as lines or points [@tufte?]. The goal of a visualization is to effectively convey information [@Kelleher].
 
-In order to communicate fact-based information clearly and efficiently, one needs to use tools allowing to gain quick insight from the data. This is the purpose of information visualization. In other words, a clear visualization helps understand complex data. Moreover, in the case of high-dimensional outputs, sophisticated analytical approaches are required, and display tools supports these. Effective data visualization takes into account human perception and desicion making process, aesthitical considerations, statistical mathematical precision and more. It is an interdisciplinary work including statistics, graphic design, visual art, perceptual psychology and cognitive science. The following sections aim to introduce some basic principles of data visualization, to set the ground for further exploration of more specific display needs.
+In order to achieve this aim honestly, graphical integrity considerations must be kept in mind throughout the process of building visualizations [@tufte]. It has been shown that graphs can clearly be misleading because of design choices [@Allen1].
 
-Goal :  effectively convey information [@Kelleher]
+The following sections aim to introduce some basic principles of data visualization, to set the ground for further exploration of more specific display needs.
+###Notions and techniques in data visualization 
 
-Graphical integrity (Tufte TODO + "But with the great power of graphs, one might say, comes great responsibility. Graphs can be fundamentally misleading about underlying data, and design choices can skew viewers' perceptions, leading them toward incorrect conclusions (How to Lie with Charts, Jones, 2006)."[@Allen1])###Notions and techniques in data visualization 
+####Vocabulary and grammar of graphics
+Graphs, charts, diagrams and plots, depsite ambiguous nuances, are all defined as representations of data [@Thesaurus], these words will be used synonymously in this work. A graph, or a plot consists in at least one dataset translated into a set of mappings (i.e visual encodings), forming layers that are statistically transformed according to the scale, the coordinate system and the facet specification [@wickham08]. 
 
-####Modes of visualization
+Spatial data is handled with specific tools, so called **geographical information systems (GIS)** which links geographic (maps) and descriptive informations. In a GIS system, data is organized is different layers, associated based on their geography. Spatial data can be stored in two types: raster, which is a collection of pixels referenced with coordinates, and vector, which corresponds to a set of point, lines and polygons. Different projections and coordinate systems are of great importance when dealing with spatial data: the round shape of the earth different from the flat projections of the maps means that distortion cannot be avoided, these correspond to projections (which conserve either the shape, or the area for example but cannot conserve all measures.) [@LectureGIS]. With recent development of webmaps, other formats have appeared, particularly **tilesets, which concept is to break the map into small square images that can load individually, therefore saving time by loading only relevant ones. [@LectureMapbox]
+####Modes of visualization
 - Static presentation : Required for printed format, static presentations are essential. In the context of inter-orgational projects defined in time, there is almost always a need to summarize results in final reports. 
 - Dynamic user-interactive visualisations gives the greatest flexibility to the user who is given options to test and visualize results while having control on parameters. User interactivity enhances the user's implication and satisfaction [@Teo2003281]. Dynamic displays offers many options to tailored and multi-dimensional visualizations. The following section will detail some of the main features of interest.- Interactive storytelling is the in-between between the two previous visualization modes, is is dynamic but not interactive. Especially useful during presentations, but also on webpages, the dynamic storytelling allows the flexibility and multi-dimensional displays options of dynamic visualizations, while keeping control on the selected options, i.e walking the user through the visualisation to lead to the envisioned goal. From the user's perspective, there is less flexibility, but the main message can be easier to convey. 
 
-####Vocabulary and grammar of graphics
-A graph, or a plot consists in at least one dataset translated into a set of mappings (i.e visual encodings), forming layers that are statistically transformed according to the scale, the coordinate system and the facet specification [@wickham08]. Graphs, charts, diagrams and plots, depsite ambiguous nuances, are all defined as representations of data [@Thesaurus], these words will be used synonymously in this work.
-
-Spatial data is handled with specific tools, so called **geographical information systems (GIS)** which links geographic (maps) and descriptive informations. In a GIS system, data is organized is different layers, associated based on their geography. Spatial data can be stored in two types: raster, which is a collection of pixels referenced with coordinates, and vector, which corresponds to a set of point, lines and polygons. Different projections and coordinate systems are of great importance when dealing with spatial data: the round shape of the earth different from the flat projections of the maps means that distortion cannot be avoided, these correspond to projections (which conserve either the shape, or the area for example but cannot conserve all measures.) [@LectureGIS]. With recent development of webmaps, other formats have appeared, particularly **tilesets, which concept is to break the map into small square images that can load individually, therefore saving time by loading only relevant ones. [@LectureMapbox]
-####Distortion techniques
+####Distortion techniques
 When displaying large data set, combining considerations about different scales can become very tricky. Some distortion techniques have been developped in order to view precisely local details in their global context. They allows a greater space to the display of a focused zone, while still embedding its surrounding context. Generally, linear or hyperbolic geometry supports the smooth connection of the focus area and the background, that have different scales [@Leung].
 
 - **Bifocal display** (lens) : linear transformation (in one or two directions) [@bifocal and @Leung]
@@ -36,7 +37,7 @@ When displaying large data set, combining considerations about different scales 
 ####Interaction techniques
 	TODO REF IN KEIM :  interactive mapping [16], [11], projection [8], [11], filtering [7], [20], [24], zooming [13], [9], and interactive linking and brushing [60], [63].Interaction techniques have also been developped to further improve these visualizations (e.g., [17], [10], [3])
 	3 goals : focusing on individual view, searching for linearity, clusters, posing queries, making comparisons.  [@Buja]
-	Dynamic features of interest include :
+	A few interactive features of interest include :
 
 -	**Scaling** which is simply zooming in and out but is powerful in the sense that it allows the user to both global view of the whole dataset and precise details on smaller fluctuations, therefore removing the need for a distorded view. Some scaling options also combine distortion techniques (see RENVOI TODO) to both zoom in and keep the background context in the surroundings.-	**Identification** (also called pointing) allows access to detailed information of a subset of the graph by clicking on it.-	**Generalized selection** extracts every point that is similar to the user’s selection for an overview of subsets.-	**Brushing** consists in selecting a subset of data, that is then highlighted. Also, brushing can be used to remove unwanted data, when a specific threshold is required [@Kollat_Video]. Brushing can be done with a slider, or with direct selection on the plot. 
 -      In a context where the displays consists in several views (different plots), **linking** adds value to brushing, it is the dynamic update of the other graphs displayed, to higlight the corresponding  «brushed» selection. (TODO have an example?). 
@@ -50,58 +51,46 @@ Keeping in mind the goal which is to effectively convey information, to gain ins
 >
 > Edward Tufte, in *The Visual Display of Quantitative Information* [@tufte]
  
-[@Kelleher] gathers general guidelines. Firstly, he advocates for simplicity, arguing that redundancy overcomplicates, and suggesting to minimizing the data ink ratio (i.e the ratio of ink used to display data over the total ink of the figure) [@tufte]. Furthermore, his recommendations deal with making the right choices, 
-between displaying patterns or details (S.M. Kosslyn, C.F. Chabris Minding information graphics), but also for appropriate encoding objects and attributes, (Cleveland and McGill, 1984), for meaningful axis range, data transformations (e.g log scale, for time-series plots), aggregation level (e.g temporal aggregation by averaging over a larger time step for long time-series) and colorscheme. Additionally, he argues to maintain axis ranges accross subplots for easier comparison, connect sequential data (e.g disconnection for missing data in time series plots) and express density in when overlapping points (e.g with color gradient in scatterplots) [@Kelleher]. Lastly, the inclusion of uncertainty estimates improves decision making (P. Reichert, M.E. Borsuk
+[@Kelleher] gathers more precise guidelines. Firstly, he advocates for simplicity, arguing that redundancy overcomplicates, and suggesting to minimizing the data ink ratio (i.e the ratio of ink used to display data over the total ink of the figure) [@tufte]. 
+
+
+but also for appropriate encoding objects and attributes, (Cleveland and McGill, 1984)
+
+
+ and colorscheme. Additionally, he argues to maintain axis ranges accross subplots for easier comparison, connect sequential data (e.g disconnection for missing data in time series plots) and express density in when overlapping points (e.g with color gradient in scatterplots) [@Kelleher]. Lastly, the inclusion of uncertainty estimates improves decision making (P. Reichert, M.E. Borsuk
 Does high forecast uncertainty preclude effective decision support? // K.J. Beven On undermining the science?) [Todo Ref in there]
 
-Best practices seem to be summarized by three main points, that will therefore be used as criteria for success throughout this study. An efficient display should
+Best practices seem to be summarized by three main points. An efficient display should
 
 1. convey the key message; good visualizations are task dependant, the organisation of the display is closely related to the phenomena considered, and crucial to understand in that perspective [@cbo]
 2. be self-explanatory (including its legend, and possibly the use of storytelling)
 3. tailor to the intended audience.
 
+2A032673
+
+**Scale and ratios**
+
+The success of a visualization is contingent upon the careful selection of appropriate scales and aspect ratios. There is always trade-offs between showing the zero, or zooming on fluctuations. Dynamic features and distortion techniques allow to overcome some of this difficult choices, but are not always possible. Making the right choice between displaying patterns or details is crucial (S.M. Kosslyn, C.F. Chabris Minding information graphics TODO). Meaningful axis ranges, data transformations (e.g log scale, for time-series plots) and aggregation level (e.g temporal aggregation by averaging over a larger time step for long time-series) are essential too [@Kelleher]
+
+**Readibility and graphical intergrity**
+
+Additionally, he argues to maintain axis ranges accross subplots for easier comparison, connect sequential data (e.g disconnection for missing data in time series plots) and express density in when overlapping points (e.g with color gradient in scatterplots) [@Kelleher]
+Lastly, the inclusion of uncertainty estimates improves decision making (P. Reichert, M.E. Borsuk
+Does high forecast uncertainty preclude effective decision support? // K.J. Beven On undermining the science?) [Todo Ref in there]
+Overwhelming the plto. 
 
 **Legend**
 
-but also legend, and ordering (by some properties of data, never alphabetically: a space to express something about the data would be neglected)... 
+The legend should be ordered by some properties of data, never alphabetically because a space to express something about the data would be wasted. [Ref todo?]
 
-Layouting, selecting apporpriate scales and aspect ratios (there is always trade-offs between showing the zero, or zooming on fluctuations)
+**Colorscheme** *TODO ask Ben about his issues w/ colors*
 
-**Colorscheme**(TODO ask Ben about his issues w/ colors)
-
-The careful choice of the color scheme is not be neglected. Sequential color scheme ought to be chosen when the underlying data shows ranked differences; diverging scheme when dealing with negative and positive differences around a mean or a neutral value; and a categorical scheme for discrete values [@tilemill].
+The careful choice of the color scheme is not be neglected [@Kelleher]. Sequential color scheme ought to be chosen when the underlying data shows ranked differences; diverging scheme when dealing with negative and positive differences around a mean or a neutral value; and a categorical scheme for discrete values [@tilemill].
 Moreover, many sources suggests to use only a few colors (about 6), while choosing them distinctive, and striving for color harmony. Cultural conventions and intuitive hue facilitate fast perception. Colorblind and printing safe schemes are prudent. Also, the color scale should be normalized, considering which datapoints should appear in different categories. [@Colorbrewer] provides good templates.
 
 **Interactivity**
 
 The success of an interactive display results from the appropriate interface complexity for a certain user motivation [@Roth]
-
-## Overview of visualization tools
-
-A few important things to consider when chosen a tool are the features supported (user interactivity, 3D, web), and also speed, scalability, robustness, and user adoption. Then, it is often a trade-off between customizability and ease of use. The softwares are often easier to manipulate, and the results are esthetic, but if the user is willing to perform some programming, custom scripts offer the most flexibility in design, and various charting libraries allow to tailor the figure to specific needs. 
-
-This section does not pretend to be exhaustive but attempts to give an overview of the available data visualization tools, as of 2016. Emphasis will be given on spatial data (GIS) as it is an essential part of natural capital informations.
-
-*[Overview of visualization tools] (Figure : Make a visualization of data viz tools (ppt))*
-
-### Data analysis and visualization softwares
-As the information age starts, data visualization softwares, usually combining with some analytics features, thrive. The main softwares for static graphs would be **Tableau**, **Spotfire** , **Qlickview** and **MS BI Stack**. Dynamic visualization are supported by softwares like **Xmdv Tool** and **OpenDX**, which are both open source. (TODO : more? )
-
-In terms of maps, some of these softwares support spatial data (namely Tableau, Spotfire and OpenDX). Moreover, GIS softwares are designed to build maps from any data and to perform spatial data analysis. The two most used ones: **ArcGIS** and **QGIS**. The former integrates in its desktop version several applications, namley ArcMap to build maps, ArcCatalog for data management, ArcToolbox for geoprocessing, and also ArcScene, ArcGlobe, and ArcGIS Pro. QGIS (formerly Quantum GIS) is the corresponding open-source software. Although ArcGIS seems to have more functionalities and better support tools, and a QGIS a steeper learning curve, they are really comparable [Ref needed? But this is me summarizing lots of opinions:/]. To combine spatial data and dynamic displays, dome softwares such as **InstantAtlas** provide interactive mapping services. 
-
-### Charting libraries
-Charts and maps can also be coded, allowing greater flexibility. Sorted by programming languages, some of the main plotting and mapping libraries are listed in the section. On the spatial data side, these options are better than GIS softwares for exploratory data analysis [@python_libs]. 
-
-####Javascript
-Javascript is, without a doubt, the go-to language for fancy - and definately for interactive - data visualization, considering the multiple charting libraries written in this language. The one that stands out is **D3.js** (or just D3 for Data-Driven Documents). Formerly Protovis, it produces dynamic, interactive and very customizable web visualizations. Processing, Anychart, FusionCharts, Dygraphs, Highchart, Zinchchart, Three (3D) can also be mentioned (TODO). Several tools build upon D3, the library **Dc.js** adds crossfiltering functionalities, such as brushing and linking,  Raw simplifies (TODO). Also **Plotly** API libraries that build on D3.js not only for javascript but also with versions for python, Matlab and R.
-
-About spatial data, D3 supports only very simple maps and formats. **Leaflet** is probably the most adopted mapping library. **Mapbox** supports similar functionalities with the Mapbox GL library. Other mapping libraries include ModestMap (from the makers of Mapbox) and Highmaps.  (TODO : diff Mapbox/ModestMap?)
-
-####R
-R plotting packages **ggplot** and **ggplot2** are very efficient for static visualizations. The map package built on top of the latter, **ggmap** combines spatial information from GoogleMaps, OpenStreetMap with the grammar of graphics of ggplot2. [@ggmap] The interactive version of ggplot2 would be **ggvis**, however its dynamic  functionalities are quite limited. A powerful package for interactive (web) visualizations is **Shiny**. Also, as mentioned above, Plotly has an R version too, converting ggplot2 charts to interactive ones. Another way to connect to the multiple javascript charting libraries is to use the package rCharts.
-
-####Python
-**Matplotlib** is the main Python graphing library. It contains a toolkit for plotting 2D data on maps: **basemap**.  Also, **geopandas** extends the data analysis library Pandas to spatial data, using also Fiona for file access, Shapely and Descartes for geometric operations, PySal for spatial analysis, and of couse Matplotlib for plotting [@python_libs]. Interactive plots are based on **Bokeh** which imitates D3, or, as mentioned previously, Plotly. 
 ##Specific data visualization challenges et strategies###Displaying multi-dimensional data
 Multidimensional data visualization has been given considerable attention, as computational capacities have been increasing and the amount of produced data exploding. Multi-dimensional data exploration has taken several directions, based on a geometric projection techniques, including parallel coordinates (...), to which distortion and interaction techniques (discussed above TODO RENVOI) can be added to further improve these visualizations [@Keim].
 
@@ -111,15 +100,12 @@ However, [@Allen1] argues in favor of more detailed graphs showing more, reveali
  
 In the context of this work, emphasis will be given on multi-objective optimization problems. *Vocabulary note: "multi-objective" refers here to problems with three or more objectives, also called many-objective problems [@Fleming05] or high order-Pareto optimization problems [@Reed04]* Visual decision support tools are very relevant in the field of multi-objective optimization problems. In the multi-objective typical cases, there is no unique optimal solution, but a collection of Pareto optimal ones [@Hadka2015], i.e solutions where improving the result towards one objective result a decrease in performance with regards to another objective  [@paretoUNIL]. Efficient visualizations empower the user with the ability to navigate through thousands of potential solutions, compare them and understand trade-offs, leading to performant decision-making. 
 
-####Time-series data: line charts, streamgraphs...
+####Time-series data: line charts, streamgraphs and more
 For data including several independant variables, and a dependant one, line charts is a version of a scatter plot where points are ordered (on the x-axis), and joined with segments. Line charts, or run charts (for time-series data) or index charts (its interactive form) highlights relative changes, these are a good options when comparing the independant variables. Streamgraphs, also called stacked graphs, sums visually the time-series values around a central axis by stacking area charts on top of each other [@Tour].
 
 In the case of very large timeseries datasets, horizon graphs is a very space-effective option, depsite its certain learning time. Horizon graphs consists in filled line charts, where negative values are mirrored (and colored typically in red) and then the chart divided into bands that are overlayed using transparency effects; the space used is divided by four thanks to these two transformations [@horizon]. When the goal is to compare monthly values over the years and the different year, a fairly recent display solution has been suggested: temporal maps [@temporalmap]
 
-*TODO: Make these display examples one figure*
-![Line chart and streamgraph](../images/find_examples.png)
-![Horizon graphs[@horizon]](../images/horizon_1.png) 
-![Temporal map[@temporalmap]](../images/temporal_map.png)
+![Illustrations of concepts of streamgraph [@streamchart], horizon graphs[@horizon] and temporal map[@temporalmap]](../images/horizon_stream_temp_combined.png)
 
 ####Small Multiples
 An effective alternative to coercing all the data in a single plot (risking overplotting) is displaying small multiples. The concept is to replicate the same simple graph structure (in terms of axis, shape and scale), for many datasets, ordered logically. The cognitive process of understanding the graph is undertaken only once, and the understanding then is replicated while scanning all other multiples. This strategy is very efficient in many cases for comparison. Refered by Edward Tufte as "multivariate and data bountiful", they enforces comparisons of alternatives, differences and changes [@Tufte2]. This displaying startegy has also been called trellis chart, lattice chart, grid chart, or panel chart. It can be applied to many types of graphs.
@@ -208,11 +194,6 @@ Different types of categorical map consistency measures exist. *Vocabulary note:
 1. A basic cell-by-cell comparison method measures simply the **overall agreement**, by calculating the portion of cells that agree between two maps:
 (Cell-by-cell level of agreement) = (Number of direct matched cells between 2 maps) / (Total number of cells in map)
 
-3. Kappaindexofagreement(KIAorCohen’sKappa)isastatisticmeasuringcon- cordance between categorical items. This technique has proven efficient for cell-by-cell comparisons of spatial data (Manson, 2005), as long as patterns and locations of changes are not involved (Kuhnert, Voinov, & Seppelt, 2005). Some variants have been developped to adress the quantity and the location fit (points 2 and 3 below) as well [TODO? (Hagen, 2003) and (Pontius & Gilmore Pontius, Robert, 2000) ) It is more robust than a percent agreement because it takes into account the agreement occuring by chance. KAPPA = (p0 - pe)/(1 - pe) with p0 being the proportion of units agreeing, and pe the proportion of units expected to agree by chance (i.e the hypothetical probability of chance agreement). Complete agreeement results in KAPPA = 1. (Cohen, 1960).
-
-4. Thequantityfitinformsonthenumberofcellsthatchangedfromonecategory to another, offering an overall comparison on the quantity of each category: [todo @ Pontius2002 cf Kuhnert2005] (Quantity fit) = 1 - 1/( (Total number of cells in map) * sum(all categories) abs(a1i - a2i) where aki is the number of cells assigned to category i, in map k. (k appartient 1,2) TODO FORMULA ! (see Kuhnert formula 2)
-
-
 1. **Kappa index of agreement** (KIA or Cohen's Kappa) is a statistic measuring concordance between categorical items. This technique has proven efficient for cell-by-cell comparisons of spatial data [@Manson2005], as long as patterns and locations of changes are not involved [@Kuhnert2005]. Some variants have been developped to adress the quantity and the location fit (points 2 and 3 below) as well ([@Hagen2003] and [@Pontius2000] ) It is more robust than a percent agreement because it takes into account the agreement occuring by chance. KAPPA = (p0 - pe)/(1 - pe) with p0 being the proportion of units agreeing, and pe the proportion of units expected to agree by chance (i.e the hypothetical probability of chance agreement). Complete agreeement results in Kappa = 1 [@Cohen1960]. 
 1. The **quantity fit** informs on the number of cells that changed from one category to another, offering an overall comparison on the quantity of each category: [todo @ Pontius2002 cf Kuhnert2005]
 . ! LATEXequation (see src_drafts_formula)where LATEXa_{ki} is the number of cells assigned to category i, in map k. (k LATEXappartient 1,2), N the total number of cells in map and C means all categories.
@@ -260,49 +241,91 @@ A side concern that may come up in these cases, is about data management: the to
 ####Quantitative indices and spatial metric for continuous data
 ######Between 2 maps
 ######Between many maps
-*Do we really need to compare continuous maps anyway ? (Ask Ben) If skip, note in intro ##*
+*Do we really need to compare continuous maps anyway ? (Ask Ben) If skip, and note in intro ##*
 
 ###Displaying uncertainty
 ####A note on uncertainty analysis and sensitivity analysis
-It is often of interest to analysts to consider how input uncertainty and model structure affect the precision and robustness of findings. Because ecosystem services depends on unique landscape characteristics, each case is unique and different procedures can be specifically chosen to generate summaries of robustness and sensitivity. [
+It is often of interest to analysts to consider how input uncertainty and model structure affect the precision and robustness of findings. Because ecosystem services depends on unique landscape characteristics, each case is unique and different procedures can be specifically chosen to generate summaries of robustness and sensitivity. [?]
 
 ![Uncertainty analysis and sensitivity analysis [@lig14]](../images/UA_SA-lig14.png)
-A dynamic visualization platform that accounts for deep uncertainty is the OpenMORDM software framework [@Hadka2015]. It allows to explore and gain insight on the data, but also make the static plots after that exploration thanks to the visualization toolkit.  [TODO https://openmordm.shinyapps.io/Iris/]  
 
-TODO: In the context of this study, the state-of-the art research will limit to multivariate and 2D spatial data, leaving aside data types that are rarely encountered in the context of natural capital information such as vector data and 3D (that are further explored by Brodlie [@Brodlie]), and 1D scalar data, for which uncertainty representation is fairly simple (box plots, error bars... [@Ehlschlaeger]).
+In the context of this study, the state-of-the art research will limit to scalar data, leaving aside data types that are rarely encountered in the context of natural capital information such as vector data and 3D, that are further explored by [@Brodlie].
 
-####Multivariate data uncertainty
+####Non-spatial data uncertainty displays
+Not only does uncertainty adds a dimension to the visualization, it is especially complex because it depends directly on the data itself, and also because uncertainty propagates (i.e if the data is transformed to be visualized, its underlying uncertainty propagates, not necessarly in a trivial way [@correa]). It can be presented in different ways : as a function of the data, (as a PDF, as a multi-value data), as bounded data...
 
-####Spatial data uncertainty *(robustness = uncertainty ? Ask Ben?)*Not only does uncertainty adds a dimension to the visualization, it is especially complex because it depends directly on the data itself, and also because uncertainty propagates (i.e if the data is transformed to be visualized, its underlying uncertainty propagates, not necessarly in a trivial way [@correa]). It can be presented in different ways : as a function of the data, (as a PDF, as a multi-value data), as bounded data...The most common static visualization techniques include :
+For one dimensional scalar data, uncertainty can be represented with **error bars** [@Ehlschlaeger]. **Box plots** are also common to express variability by showing the quartiles. An extension of these are the **violin plots**, additionally displaying the probability density (kernel density estimation) of the data at each value [@violin].
+
+**Contouring** by displaying around the mean an indication of the spread, or the standard deviation, allow to visualize the range among which the variable can locate [@Brodlie]. This is common for time-series datasets.
+
+####Spatial data uncertainty displays
+The most common static visualization techniques for spatial data uncertainty include :
 
 1. **Juxtaposition**, that is adding a separate similar figure to represent uncertainty, alongside the representation of the data.
-2. **Overlaying** a visualization of uncertainty on top of the main one. [@Bingham] overlay a contour map of an error field on top of a heatmap of the mean value of a multivalue dataset. Not so straightforward. 3. Varying the value of a **free graphical variable**, such as a property of the color palet used to visualize the main data can also express uncertainty. The first option is **"blurring"** the representation of imprecise data: the focus is adapted proportionally to the level of uncertainty, this can be done through one of these parameters : contour crispness (« fuzzyness »), fill clarity, fod or resolution [@mac92]. Formally, blurring is defined as removing spatial high frequency details [Russ, 1995]. **Saturation** is the second option, uncertainty is expressed by paleness (or whiteness) [@hengl]. More options include texture and edge crispness variations, overall all these solutions are less precise but more intuitive [@griethe].
-4. Integrating **additional geometrical objects**, such as labels, volume rendered thickness, or error bars may express uncertainty [@griethe]. Circular glyphs and ribbons have been designed, in the context of weather forecast ensemble data, to visualize uncertainty [@sanyal].5. *Spaghetti plots show possible flows but also allow examination of variation of different variables of an ensemble over space.* *hors sujet?*
-![uncertainty table draft TODO > SEE WORD DOC 2.litt](../images/uncertainty-table-draft.png)
+2. **Overlaying** a visualization of uncertainty on top of the main one. [@Bingham] overlay a contour map of an error field on top of a heatmap of the mean value of a multivalue dataset. Not so straightforward. 3. Varying the value of a free graphical variable, such as a property of the color palet used to visualize the main data can also express uncertainty. The first option is **"blurring"** the representation of imprecise data: the focus is adapted proportionally to the level of uncertainty, this can be done through one of these parameters : contour crispness (« fuzzyness »), fill clarity, fod or resolution [@mac92]. Formally, blurring is defined as removing spatial high frequency details [Russ, 1995]. **Saturation** is the second option, uncertainty is expressed by paleness (or whiteness) [@hengl]. More options include texture and edge crispness variations, overall all these solutions are less precise but more intuitive [@griethe].
+4. Integrating **additional geometrical objects**, such as labels, volume rendered thickness, or error bars may express uncertainty [@griethe]. Circular glyphs and ribbons have been designed, in the context of weather forecast ensemble data, to visualize uncertainty [@sanyal].5. **Spaghetti plots**, as described in section( RENVOI TODO), may also allow examination of variation of different variables of an ensemble over space, which is another way of giving a sense of the uncertainty associated. *TODO: is this unrelated?*
+![uncertainty table examples : is it necessary? > SEE WORD DOC 2.litt](../images/uncertainty-table-draft.png)
 
-In dynamic visualization, uncertainty representation can be more easily achieved. A swap button can allow the user to visualize successively the main data and its associated uncertainty on the same background map, allowing easier interpretation, with the possibility of going back and forth. This method is referred to as **toggling** [@Aerts03]. Other interactive options include the **clickable map**, where uncertainty information displays upon click [@Vander].Other ways of expressing imprecision dynamically adress human senses via vibrations proportional to the level of uncertainty [@Brown], or smooth animation of sequence of different realizations of a model [@Ehlschlaeger].  There have even been attempts to display uncertainty by adding another dimension via sounds [@Ehlschlaeger][Lodha, 1996 and Fisher, 1994]. Another solution to convey accuracy is probabilistic animation : the uncertain points appear and disapear according to their accuracy, i.e the probability domain is sampled over time [@Lundstrom].
+In dynamic visualization, uncertainty representation can be more easily achieved. A swap button can allow the user to visualize successively the main data and its associated uncertainty on the same background map, allowing easier interpretation, with the possibility of going back and forth. This method is referred to as **toggling** [@Aerts03]. Other interactive options include the **clickable map**, where uncertainty information displays upon click [@Vander]. Other ways of expressing imprecision dynamically adress human senses via vibrations proportional to the level of uncertainty [@Brown], or smooth animation of sequence of different realizations of a model [@Ehlschlaeger].  There have even been attempts to display uncertainty by adding another dimension via sounds [@Ehlschlaeger][Lodha, 1996 and Fisher, 1994]. Another solution to convey accuracy is probabilistic animation : the uncertain points appear and disapear according to their accuracy, i.e the probability domain is sampled over time [@Lundstrom].
 
-####Non-spatial summaries of robustness
-*Redundant with spatial metrics for comparing runs ? Organization of this part unclear > Ask Ben ?*
->>Robustness approach #2: Breakeven prioritization scores
->>"how much things would need to change before a different decision is taken" [@RIOS] ?
+####Spatial categorical data uncertainty displays
+The techniques described in the previous section for continuous data can be adapted to categorical data. (*then merge both parts?*Todo?)
+However specific techniques for categorical spatial data exist. In the context of landcovers, prioritization score maps express the effiency of a landcover/activity with regards to an objective [@RIOS : TODO?]
 
- >>Two statistics are particularly useful: the mean that represents the central tendency of the stochastic process, and the variance that summarizes the variability of the results. Variance is then used as input to SA (UA is, therefore, a prerequisite to SA)[@lig14]
+####Robustness metrics and displays
+In general for uncertainty analysis, two statistics are very relevant to display: the **mean** to give an idea of the tendancy, and the **variance** to summarize the variability [@lig14]. There are also specific robustness measures of two types : **regret and satisficing measures**. The former seek to minimize expected loss, that is differences from an ideal solution due to deep uncertainties; the latter seek to maximize the good solutions, i.e the cases where are criterias are met [@Hadka2015].
 
-####Sensitivity Analysis displays (=parametric uncertainty)
-Sensitivity analysis aims to understand the influence of the inputs, and their uncertainty, on the outputs and their uncertainties of a model. To visualize the input/output relationship, a common and direct way is a scatterplot (with input parameter considered on x-axis and the scalar output on y-axis), the relationship is explicitly revealed, especially in the case of strctured dependencies. However, if the number of inputs to consider is high, scatterplots can become cumbersome. Pie charts displaying variance partitions are a good alternative, and do not require a scalar output. [@ABMleelig (see for examples)]
-![Expressing sensitivity analysis ... ? [@lig14]](../images/sa.png)
+Robustness of an output is contingent upon the consistency between multiple runs leading to this output, under varying conditions. Therefore, spatial metrics measuring agreement between multiple runs, as detailed in sections (TODO RENVOIS) can be used for assessing robustness, and will not be repeated to avoid redundancy.
 
-####robustness measure
-*(relevant? (ASK BEN) should be merged w/ uncertainty?)*
-Robustness measures fall in two categories : regret and satisficing measures. [@Hadka2015] >> robustness viz fig 5-6-7 [@Hadka2015] 
-Lempert and Collins (2007), Herman et al. (2015) distinguish two major classes of robustness measures in the literature: regret and satisficing. Generally speaking, regret-based robustness seeks to minimize deviations in system performance caused by deep uncertainties compared to a preferred or ideal design (i.e., minimizing expected loss), whereas satisficing-based robustness seeks to maximize the SOWs where system requirements as defined by stakeholders are met
+For spatial data, **frequency maps** reflect the number of times a certain category was assigned to a certain pixel, accross multiples runs. These accompany a categorical map, that can be the **modal portfolio** i.e the map displaying, for each cell, the category chosen most frequently across multiple runs [@RIOS]
+
+Furthermore, there is an approach specific to robustness in the context of decision making. Methods based on the **breakeven point** inquire about the magnitude of change that would result in changing the decision. The breakeven ratio of the prioritization score of the best choice over the prioritization score of the second best choice shows. This metric applied to spatial data result in prioritization score breakeven maps, which are efficient displays of how much the prioritization score of the chosen category would need to be reduced before switching to the second best category [@RIOS]
+
+*Having trouble summarizing RIOS well in a more general context . Redo two previous paragraphs ? TODO REREAD RIOS*
+
+####Parametric uncertainty: sensitivity analysis displays 
+Sensitivity analysis aims to understand the influence of the inputs, and their uncertainty, on the outputs and their uncertainties of a model. To visualize the input/output relationship, a common and direct way is a **scatterplot** (for each input parameter, with input parameter considered on x-axis and the output on y-axis), the relationship is explicitly revealed, especially in the case of strctured dependencies. This corresponds to the so-called O(F)AT (one factor at a time) method [@hamby], e.g [@murphy04]. However, with a high number of inputs, scatterplots can become cumbersome. Then, partial derivative of the output by one factor can be displayed to assess the impact of small perturbations; however it explores only locally the input space around a baseline. Other metrics such as the percentage of output change per percentage of input change, or sensitivity indexes are also used. More details can be found in [@hamby]
+
+**Pie charts** displaying variance partitions are a good alternative [@ABMleelig]. Variance decomposition is another approach to sensitivity analysis. By opposition to trying to display the impact of each inputs, variance-based method focus on finding the most influencing factors. The output variance is decomposed into parts corresponding to the contribution of each input, therefore displaying its impact on total variance. [@Homma]
+
+![Expressing sensitivity analysis through variance decomposition, extracted from [@lig14]](../images/sa.png)
+
+**Tornado diagrams** are also used to visualize the total impact of factors, and highlight their relative importance [@tornadospider]. They are horizontal bar charts corresponding to each input, plotted on the axis of output values. **Spiderplots** display these informations and more, including limit values and impact on output of each input, and also the amount of change in input leading to breakeven point. However, the amount of factors displayed is limited (to about 7 [@tornadospider]). Spiderplots (not to be confused with spider charts) are 2D plots, with percentage of change from baseline on x-axis, and output values on y-axis, and several lines corresponding to each input. *examples illustrations needed here? (Make)*
 
 ### Conclusion
-Inspiring from the current data visualizations in different fields, from Agent-based modeling and ensemble data sets to ... TODO
+Far from being exhaustive, this chapter gathers strategies to display complex data, in the context of ecosystem services model outputs.  Inspiring from the current data visualizations in different fields, from Agent-based modeling and ensemble data sets to ... TODO
+
+Overall, combining multiple linked displays seems to be necessary as complexity and number of dimensions increase, as argues [Potter, 2009] in the context of gaining insight on distribution of spatio-temporal simulation results, as well as the associated uncertainty. Arranging many views is aslo relevant to facilitate comparisons [@Buja]. (NOTE TODO? are the results of multiple runs of a simulation, generated using multiple numerical models, and input conditions and parameters varying within a given space [@PotterWilson])
  
-Combining multiple linked displays seems to be necessary as complexity and number of dimensions increase, as argues [Potter, 2009] in the context of gaining insight on distribution of spatio-temporal simulation results, as well as the associated uncertainty, for ensemble data sets. (NOTE TODO? are the results of multiple runs of a simulation, generated using multiple numerical models, and input conditions and parameters varying within a given space [@PotterWilson])
- ______
+ ## Overview of visualization tools
+
+A few important things to consider when chosen a tool are the features supported (user interactivity, 3D, web), and also speed, scalability, robustness, and user adoption. Then, it is often a trade-off between customizability and ease of use. The softwares are often easier to manipulate, and the results are esthetic, but if the user is willing to perform some programming, custom scripts offer the most flexibility in design, and various charting libraries allow to tailor the figure to specific needs. 
+
+This section does not pretend to be exhaustive but attempts to give an overview of the available data visualization tools, as of 2016. Emphasis will be given on spatial data (GIS) as it is an essential part of natural capital informations.
+
+*[Overview of visualization tools] (Figure : Make a visualization of data viz tools (ppt))*
+
+### Data analysis and visualization softwares
+As the information age starts, data visualization softwares, usually combining with some analytics features, thrive. The main softwares for static graphs would be **Tableau**, **Spotfire** , **Qlickview** and **MS BI Stack**. Dynamic visualization are supported by softwares like **Xmdv Tool** and **OpenDX**, which are both open source. (TODO : more? )
+
+In terms of maps, some of these softwares support spatial data (namely Tableau, Spotfire and OpenDX). Moreover, GIS softwares are designed to build maps from any data and to perform spatial data analysis. The two most used ones: **ArcGIS** and **QGIS**. The former integrates in its desktop version several applications, namley ArcMap to build maps, ArcCatalog for data management, ArcToolbox for geoprocessing, and also ArcScene, ArcGlobe, and ArcGIS Pro. QGIS (formerly Quantum GIS) is the corresponding open-source software. Although ArcGIS seems to have more functionalities and better support tools, and a QGIS a steeper learning curve, they are really comparable [Ref needed? But this is me summarizing lots of opinions:/]. To combine spatial data and dynamic displays, dome softwares such as **InstantAtlas** provide interactive mapping services. 
+
+### Charting libraries
+Charts and maps can also be coded, allowing greater flexibility. Sorted by programming languages, some of the main plotting and mapping libraries are listed in the section. On the spatial data side, these options are better than GIS softwares for exploratory data analysis [@python_libs]. 
+
+####Javascript
+Javascript is, without a doubt, the go-to language for fancy - and definately for interactive - data visualization, considering the multiple charting libraries written in this language. The one that stands out is **D3.js** (or just D3 for Data-Driven Documents). Formerly Protovis, it produces dynamic, interactive and very customizable web visualizations. Processing, Anychart, FusionCharts, Dygraphs, Highchart, Zingchart, Three (3D) can also be mentioned (TODO). Several tools build upon D3, the library **Dc.js** adds crossfiltering functionalities, such as brushing and linking,  Raw simplifies (TODO). Also **Plotly** API libraries that build on D3.js not only for javascript but also with versions for python, Matlab and R.
+
+About spatial data, D3 supports only very simple maps and formats. **Leaflet** is probably the most adopted mapping library. **Mapbox** supports similar functionalities with the Mapbox GL library. Other mapping libraries include ModestMap (from the makers of Mapbox) and Highmaps.  (TODO : diff Mapbox/ModestMap?)
+
+####R
+R plotting packages **ggplot** and **ggplot2** are very efficient for static visualizations. The map package built on top of the latter, **ggmap** combines spatial information from GoogleMaps, OpenStreetMap with the grammar of graphics of ggplot2. [@ggmap] The interactive version of ggplot2 would be **ggvis**, however its dynamic  functionalities are quite limited. A powerful package for interactive (web) visualizations is **Shiny**. Also, as mentioned above, Plotly has an R version too, converting ggplot2 charts to interactive ones. Another way to connect to the multiple javascript charting libraries is to use the package rCharts.
+
+The OpenMORDM visualization toolkit [@Hadka2015] is a dynamic visualization platform built from R Shiny. It allows to explore and gain insight on the data, and also to make the static plots, it accounts for deep uncertainty.
+
+####Python
+**Matplotlib** is the main Python graphing library. It contains a toolkit for plotting 2D data on maps: **basemap**.  Also, **geopandas** extends the data analysis library Pandas to spatial data, using also Fiona for file access, Shapely and Descartes for geometric operations, PySal for spatial analysis, and of couse Matplotlib for plotting [@python_libs]. Interactive plots are based on **Bokeh** which imitates D3, or, as mentioned previously, Plotly. 
+______
 #Notes
 *(1)* Agent-based modeling (ABM), or indivisual-based modeling consist in representing phenomenas as dynamical systems of interacting agents, where an agent is a discrete and autonomous entity. Their individual behaviors are encoded, resulting in outputs describing the the agents' interactions that are used to describe complex systems. These systems can be a  variety of processes, phenomena, and situations in any field. [@ABM_intro] In the context of this work, ABM is of interest because of the high volume of multidimensional output data (induces by Monte Carlo sampling), the visualization and statistical analysis of these outputs can be applied.#### Displaying hierarchical and networks data [@Tour]
  *Less relevant to the context of natural capital informations ?*
