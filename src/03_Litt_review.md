@@ -150,7 +150,8 @@ Variants of these are heatmaps, and hotspot maps which are used to display the d
 Also know by contour maps, or isarithmic maps, they display variable with contour lines (isopleth) joining the points where the variable has a constant value. In the field of ecoogy, isoflors are isopleths connecting areas of comparable biological diversity [@isoflor]
 
 ####Dasymetric map
-Visually more straight-forward than an isopleth map (TODO RENVOI), and statistically more precise than a chloropleth map, a dasymetric map can be build. Relying on additional informations on the data, it models the distribution of the variable, even within the geographical units. However, it is more complex to build, and not supported by most GIS softwares, therefore not very common.
+Visually more straight-forward than an isopleth map (TODO RENVOI), and statistically more precise than a chloropleth map, a dasymetric map can be build. Relying on additional informations on the data, it models the distribution of the variable, even within the geographical units. However, it is more complex to build, and not supported by most GIS softwares, therefore not very common. 
+
 
 ####Cartograms
 Cartogram also illustrate data aggregated over regions. The variable to be expressed is substituted to the geographical distance. The regions are in the same locations with respect to each other, but their geometry is distorted proportionally to the variable of interest. 
@@ -181,7 +182,9 @@ The problem complicates when comparing many runs. Spaghetti plots can express co
 
 Frequency map (point 2 categorical)
 
-Animation is of great help in this case. Dynamic visualizations are very suited for displaying multiple spatial outputs, there are increasingly used to display results in the field of ABMs(*Note1*), encountering similar type of outputs [@ABMleelig]. 
+Animation is of great help in this case. Dynamic visualizations are very suited for displaying multiple spatial outputs, there are increasingly used to display results in the field of ABMs[^1back], encountering similar type of outputs [@ABMleelig]. 
+
+[^1back]: Agent-based modeling (ABM), or indivisual-based modeling consist in representing phenomenas as dynamical systems of interacting agents, where an agent is a discrete and autonomous entity. Their individual behaviors are encoded, resulting in outputs describing the the agents' interactions that are used to describe complex systems. These systems can be a  variety of processes, phenomena, and situations in any field. [@ABM_intro] In the context of this work, ABM is of interest because of the high volume of multidimensional output data (induces by Monte Carlo sampling), the visualization and statistical analysis of these outputs can be applied.
 
 Visual comparisons of maps is efficient and not too intense cognitively for human perception. However, it fails to rank quantitatively the results, nor is adapted to an important number of maps. Screening through hundreds of maps produced is not a viable option. Therefore, other solutions must be considered. 
 
@@ -324,8 +327,7 @@ The OpenMORDM visualization toolkit [@Hadka2015] is a dynamic visualization plat
 ####Python
 **Matplotlib** is the main Python graphing library. It contains a toolkit for plotting 2D data on maps: **basemap**.  Also, **geopandas** extends the data analysis library Pandas to spatial data, using also Fiona for file access, Shapely and Descartes for geometric operations, PySal for spatial analysis, and of couse Matplotlib for plotting [@python_libs]. Interactive plots are based on **Bokeh** which imitates D3, or, as mentioned previously, Plotly. 
 ______
-#Notes
-*(1)* Agent-based modeling (ABM), or indivisual-based modeling consist in representing phenomenas as dynamical systems of interacting agents, where an agent is a discrete and autonomous entity. Their individual behaviors are encoded, resulting in outputs describing the the agents' interactions that are used to describe complex systems. These systems can be a  variety of processes, phenomena, and situations in any field. [@ABM_intro] In the context of this work, ABM is of interest because of the high volume of multidimensional output data (induces by Monte Carlo sampling), the visualization and statistical analysis of these outputs can be applied.#### Displaying hierarchical and networks data [@Tour]
+#Notes#### Displaying hierarchical and networks data [@Tour]
  *Less relevant to the context of natural capital informations ?*
  Hierarchichal data
  [@Tour]
