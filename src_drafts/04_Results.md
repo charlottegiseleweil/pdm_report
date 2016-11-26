@@ -1,6 +1,19 @@
 # Results
 the decision toolbox (and maybe, ideally = User’s guide to displaying/communicating natural capital informations)
 
+
+Inpire from : 
+
+>>OpenMORDRM
+
+Parallel coord plots:
+>> https://reed.cee.cornell.edu/parallel-axis/
+>> http://syntagmatic.github.io/parallel-coordinates/
+
+
+
+
+
 example table:
 
 | Name                              | Description                                           |
