@@ -73,6 +73,7 @@ for idx in "${!outputs[@]}"; do
     --smart \
     --include-in-header=templates/break-sections.tex \
     --include-in-header=templates/chapter-style.tex \
+    --include-in-header=templates/caption-size.tex \
     --include-before-body=templates/titlepage.tex \
     --include-before-body=templates/abstract.tex \
     --reference-links \
