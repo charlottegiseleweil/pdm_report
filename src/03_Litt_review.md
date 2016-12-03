@@ -248,15 +248,27 @@ Sensitivity analysis aims to understand the influence of the inputs, and their u
 
 Using landscape comparison metrics described in (renvoi section comparison categorical many maps), sensitivity analysis can be conducted through the Wilcoxon signed rank test assessing significance of mean differences. [@Sun14].
 
-### Displaying hierarchical and networks data 
+### Other things to consider (or not) (draft - this is todo)
+
+####Mutiple views
+http://delivery.acm.org/10.1145/350000/345271/p110-wang_baldonado.pdf?ip=171.66.209.8&id=345271&acc=ACTIVE%20SERVICE&key=AA86BE8B6928DDC7%2E0AF80552DEC4BA76%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=698885994&CFTOKEN=85237999&__acm__=1480547267_54bb0860e703e0f12121386553fe243b
+####Visualizing trade-offs
+
+![Hawaii, Kamehameha schools ](../images/spiderplot_tradeoffs_Ex.png)
+
+####Spatial correlation
+A very cool way of displaying spatial correlation between an ES and something (here LER) [@jgong]
+![A very cool way of displaying spatial correlation between an ES and something (here LER) [@jgong]](../images/spatial_correlation_jgong.png)
+
+####Displaying hierarchical and networks data 
  *To remove or todo?: Less relevant to the context of natural capital informations...*
- Hierarchichal data
+ **Hierarchichal data**
  [@Tour]
  Node-Link Diagrams
  Adjacency Diagrams
  Enclosure  Diagrams
-
-Networks data
+ 
+**Networks data**
  [@Tour]
  Force-Directed Layout
  Arc Diagrams

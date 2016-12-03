@@ -1,8 +1,16 @@
 # Results
 the decision toolbox (and maybe, ideally = User’s guide to displaying/communicating natural capital informations)
 
+##Design
+(design doc)
+##Implementation
+###Tools and technology
+##Testing
+(iterations and feedbacks)
 
-Inpire from : 
+______
+ 
+Inspire from : 
 
 >>OpenMORDRM
 
@@ -11,8 +19,7 @@ Parallel coord plots:
 >> http://syntagmatic.github.io/parallel-coordinates/
 
 
-
-
+See display-toolbox.pptx in report for ideas of soln 
 
 example table:
 
