@@ -74,7 +74,6 @@ for idx in "${!outputs[@]}"; do
     --include-in-header=templates/break-sections.tex \
     --include-before-body=templates/titlepage.tex \
     --include-before-body=templates/abstract.tex \
-    --include-before-body=templates/acknoledgments.tex \
     --reference-links \
     --standalone \
     --number-sections \
