@@ -7,7 +7,7 @@ the decision toolbox (and maybe, ideally = User’s guide to displaying/communic
 ###Tools and technology
 ##Testing
 (iterations and feedbacks)
-
+s
 ______
  
 Inspire from : 

@@ -85,6 +85,7 @@ For data including several independant variables, and a dependant one, line char
 
 ####Small Multiples
 An effective alternative to coercing all the data in a single plot (risking overplotting) is displaying small multiples. The concept is to replicate the same simple graph structure (in terms of axis, shape and scale), for many datasets, ordered logically. The cognitive process of understanding the graph is undertaken only once, and the understanding then is replicated while scanning all other multiples. This strategy is very efficient in many cases for comparison. Refered by Edward Tufte as "multivariate and data bountiful", they enforces comparisons of alternatives, differences and changes [@Tufte2]. This displaying startegy has also been called trellis chart, lattice chart, grid chart, or panel chart. It can be applied to many types of graphs.
+
 ![Small multiples applied to (a) line plots [@small_mult_lines] and (b) spatial data [@small_mult_maps]](../images/smallmultiples.png)
 
 ####Scatterplots
@@ -138,9 +139,13 @@ Cartogram also illustrate data aggregated over regions. The variable to be expre
 A flow map illustrates movement in space and/or in time. Its great strength reside in its capacity to encode many variables. 
 
 This epic example of flow map, drawn up by M. Minard in 1869, depicts the successive losses in men of the French amry in the Russian campaign of 1812-1813. It figures multi-variate data, including 6 dimensions that are the army size, its direction, its location in (x,y) coordinates, the dates and the temperature in the lower part of the display. *"The best statisctical graphic ever drawn"* according to Edward Tufte is an example of displaying complexity with clarity.
+
 ![Minard's Napoleon's March figurative map. The text translates to: *The numbers of men present are represented by the width of the colored zones at a rae of one millimeter for every ten thousand men; they are further written accros the zones. The red designates the men who enter into Russia, the black those who leave it. The information which has served to draw up the map has been extracted from the works of M. M. Thiers of Ségur, of Fezensac, of Chambray and the unpublished diary of Jacob, the pharmacst of the army since october 28th. In order to better judge with the eye the diminution of the army, I have assumed that the troops of Prince Jérôme and the Marshal Davoush who had been detached at Minsk and Mokilow and have rejoined around Orcha and Vitebsk had always marched with the army.* ](https://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png)
+
 Attempts were made to reproduce this visualization with modern tools. This may show limits of the computational tools, but also one may argue that Minard's map is not applicable to dataset of a bigger order of magnitude. Overall, it highlights that each visualization is very specific to the case considered, its data and its aim. 
+
 ![Reproduction of Minard's Napoleon's March ith the R package ggplot (described in renvoi) [@wickham08]](../images/minard_ggplot_2.png)
+
 ![Another modern reproduction of Minard's Napoleon's March overlaying a map [@Tour]](../images/napoleon_1.png)###Comparing multiple versions of spatial data (runs)
  Summarizing results of mutiples model outputs that consists in multi-dimensional spatial data is often necessary, wheter the multiplicity of outputs correspond to various scenarios or a sensitivity analysis (further described in renvoi)
  
@@ -148,6 +153,7 @@ Attempts were made to reproduce this visualization with modern tools. This may s
 For the examination of (dis)agreement between two maps, simple and efficient strategies suggests to show the two maps next to each other; or to substract one map to another to display the change map. Typically change maps uses diverging colorscheme, two colors representing respectively increase and decrease, and the intensity gradient reflects the amount of change. *Need Examples ? is yes todo: Fig 12, http://www.sciencedirect.com/science/article/pii/S0198971514000714* 
 
 The problem complicates when comparing many runs. Spaghetti plots can express consistency between runs, by displaying the isocontour of each run.
+
 ![Spaghetti plots displaying ensemble data sets [Potter, 2009]. The spaghetti plot is the isocontour of each run. If the runs agree (Fig. left), it will result in a coherent bundle. Slight disagrements induce divergence from the main bundle (Fig. right). *for categorical or continuous?*](../images/spaguetti.png)
 
 For continuous data, 3D plots overlaying maps have been used to highlight structural differences across maps. An example is figure 8 of [@Huang13] which plots colored histograms, organized according the geographical layout. However, this solution seems limited to relatively small regions, and clearly distinguishable distributions of the variables expressed through color and height of the histogram. 
@@ -258,6 +264,7 @@ http://delivery.acm.org/10.1145/350000/345271/p110-wang_baldonado.pdf?ip=171.66.
 
 ####Spatial correlation
 A very cool way of displaying spatial correlation between an ES and something (here LER) [@jgong]
+
 ![A very cool way of displaying spatial correlation between an ES and something (here LER) [@jgong]](../images/spatial_correlation_jgong.png)
 
 ####Displaying hierarchical and networks data 
