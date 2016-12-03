@@ -72,8 +72,9 @@ for idx in "${!outputs[@]}"; do
   pandoc -f markdown $format \
     --smart \
     --include-in-header=templates/break-sections.tex \
-    --include-in-header=templates/chapter-style.tex \
     --include-before-body=templates/titlepage.tex \
+    --include-before-body=templates/abstract.tex \
+    --include-before-body=templates/acknoledgments.tex \
     --reference-links \
     --standalone \
     --number-sections \
@@ -83,8 +84,7 @@ for idx in "${!outputs[@]}"; do
     --filter pandoc-citeproc \
     --bibliography=src/biblio.bib \
     --csl templates/apa.csl \
-    -V fontsize=12pt \
-    -V documentclass:memoir \
+    -V fontsize=11pt \
     --variable=geometry:a4paper \
     -o $outfile
   echo " Done !"
