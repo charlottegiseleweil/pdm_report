@@ -1,58 +1,16 @@
-**ACRONYMS & TERMINOLOGY**
-
-**Important concepts & terminology**[^1back]
-
-[^1back]: The field of ecosystem services suffers some inconsistent terminology in literature [@Englund]. Hence, an effort is made here to define precisely the terms used, point out synonyms and vague terminology, to avoid confusions.
+#Introduction##Background & motivation 
+*why this problem is important*
 
 
-* Natural capital :
-* Natural capital is the world's stock of natural resources, which includes geology, soils, air, water and all living organisms. Natural capital assets provide people with a wide range of free goods and services, often called ecosystem services, which underpin our economy and society and some of which even make human life possible [@naturalcapitalscotland]
- natural capital, such as trees, minerals, ecosystems, the atmosphere, etc.; manufactured capital, such as machines and buildings; and the human capital of physical bodies [@costanza1997value]
-
-* ES : Ecosystem services are the benefits nature provides to humanity [@cardinale2012]
-
-* SDU : spatial decision unit, unit where a change on the land/seascape is made -- pixel (eg, in RIOS), or polygon (eg, for marine protected area). In the context of map comparisons, the word "cell" is used in this work for SDU, to match with the literature on the topic. 
-From optimizer design doc "  In the scope of this framework, the set of possible decisions are represented by ESRI Shapefiles containing polygons, lines and/or points indicating where spatial decisions can be made.  These geometric features are called Spatial Decision Units (SDUs) and represent a discrete spatial decision/intervention which can be used to meet optimization objectives such that they are restricted by constraints.  "
-= cell
-* scenarios = storylines that describe possible futures (but aren't predicitons) [@greggg]
-* SOW : state of the world (scenario with quantitative definition)
-intervention/activity: an action that can be taken on a spatial decision unit that gets reflected in parameters that feed an ecosystem services model. In the FWAT context, this typically means changing the LULC to a new row of the biophysical table that has modified values
-* LULC : land use/land cover
-* LULC scenario = A LULC map that has been changed based on modeled or user-defined changes to represent plausible futures INDEPENDENT of implementing an optimization or other portfolio (this may be different than how others see it)
-portfolio = (etc cf gnrl trckr) - A set of SDU's and chosen activities for each SDU, emerging from an optimizer, from RIOS, or a participatory priortization process. Portfolios get overlayed on LULC's to run the model
-
-**Jargon of the field acronyms**
-
-* ABM : Agent-Based Modeling (computational modeling of phenomena as dynamical systems of interacting agents)
-* API : Application Programming Interface
-* EIA : Environmental Impact Assessment
-* GIS : Geographical Information Systems
-* MOEA : Multi-objective evolutionary algorithm* MOVA : Multi-objective visual analytics
-* OGR OpenGIS Simple Features Reference Implementation* OR : Operational research* RO : Robust optimization* SDSS : Spatial decision support systems 
-* IWS : investments in watershed services (known as waterfund)
-
-**Softwares and models**
-
-* InVEST : Integrated Valuation of Ecosystem Services and Tradeoffs
-* GDAL : Geospatial Data Abstraction Library
-* MESH :  Mapping Ecosystem Services to Human well-being
-* RIOS: The Resource Investment Optimization System
-* SDR : Sediment delivery ratio (a model in InVEST)
-* VIDEO : Visually Interactive Decision-making and Design using Evolutionary Multi-objective Optimization
-
-#Introduction##Background & motivation *why this problem is important*
+[comment]: <> (test of comment)
 
 ### Ecosystem services
-*What are ES?*
 Food, water, fuel, fiber, timber, pollination, purification, inspirational and recreational landscapes are examples of essential gifts from nature making life possible and worthwhile. These are tangible or intangible ecosystem services.
 
-*Examples of ES*
 Some of these services are obvious, some are less. Forests, for example, not only provide a natural carbon storage that helps regulate climate, but also hold soil in place along streams, participating in improved water quality, which benefits for people downstream. Habitats in rivers and along coastlines support populations of fish that provide food, including in areas of chronic food insecurity. Biodiversity stabilize ecosystems [@cardinale2012]. Mangroves stabilize shorelines and decrease damage to people and property from storms. Oceans also store carbon. 
 
-*We depend on ecosystems*
 These services rely on complex interactions of many forms of natural capital. These ecosystems that surround us are essential to our survival and well-being, and are the bedrock of a sustainable economy. Nature and people form the biosphere, caring for the former equates to caring for the latter and vice versa. Increasingly, we can map the most important forests, coastal habitats and other ecosystems and show how they support us. This is crucial in order to prioritize the use of resources and sustainably manage our natural world. In short, nature is at the source of human well-being: people depend on nature.
 
-*Ecosystems are in danger*
 However, about 60% of the ecosystem services[^2back] are being degraded or are used unsustainably. Not only degradation of ES is a major loss of natural asset, but it harms significantly human well-being [@Millennium2005]. Furthermore, the relationships between harm to an ecosystem and loss in its services are rarely linear; for example, loss in biodiversity induces more important change on every ecosystem process it affects [@cardinale2012].
 
 [^2back]: evaluated by the Millenium Assessments [@Millennium2005]. 
@@ -84,6 +42,7 @@ An important clarification that must be highlighted when presenting the concept 
 Because they are idiosyncratic (=depends on local conditions), natural capital assessments are complex[@daily2000]
 
 Identify the different alternatives, quantify their respective impacts, and value their respective consequences. The typical measuring unit for this last step of valuation is monetary [@daily2000]
+
 ### Communicating natural capital information
 Indeed, the goal of a natural capital assessment is to make better decisions, and this implies at some point convincing decision makers based on scientific facts.  These result from painstaking studies, and it crucial to communicate them well, otherwise not doing justice to the previous effort. The goal of this paper is therefore to put an emphasis on this last step of process that is converying the results, often time neglected in time-limited projects which had focused on the previous steps. 
 
@@ -111,9 +70,17 @@ NatCap developps tools meant to assess nature's contribution to society. All sof
  Other softwares include RIOS which aims to optimizing cost-effective investments for ecosystem services, OPAL which quantifies the impacts of development and the value of offsetting them with protection and restoration, but also the Python library PyGeoprocessing which implements GIS operations on which InVEST is based.
 
 ![Ecosystem services assessment strategy[@StaciePrez]](../images/ESassess.png)
+
 ![Natural Capital Approach [@greggg]](../images/natcapapproach.png)
 
 ##Objectives
+
+###Specific challenges to ES information display
+scenario analysis
+multi-objective compaisons
+expressing uncertainty
+
+### Purpose of this work
 How to synthesize and communicate spatial/multi-dimensional outputs of multiple runs for multiple ES models ?
 
 Easy approaches to clear ES viz and summaries, 
