@@ -1,98 +1,66 @@
-#Introduction##Background & motivation 
-*why this problem is important*
+#Introduction>*"Often the importance of ecosystem services is widely appreciated only upon their loss"*
+>
+>
+>
+> *Gretchen Daily, The Value of Nature and the Nature of Value*
+>
+>  *Probably change/remove this quote! for something more clear about WHY this problem is important, more on topic of natural capital assessment.*
 
-
-[comment]: <> (test of comment)
-
+##Background & motivation 
 ### Ecosystem services
-Food, water, fuel, fiber, timber, pollination, purification, inspirational and recreational landscapes are examples of essential gifts from nature making life possible and worthwhile. These are tangible or intangible ecosystem services.
-
-Some of these services are obvious, some are less. Forests, for example, not only provide a natural carbon storage that helps regulate climate, but also hold soil in place along streams, participating in improved water quality, which benefits for people downstream. Habitats in rivers and along coastlines support populations of fish that provide food, including in areas of chronic food insecurity. Biodiversity stabilize ecosystems [@cardinale2012]. Mangroves stabilize shorelines and decrease damage to people and property from storms. Oceans also store carbon. 
+Food, water, fuel, fiber, timber, pollination, purification, inspirational and recreational landscapes are examples of essential gifts from nature making life possible and worthwhile. These are tangible or intangible ecosystem services. Some of these services are obvious, some are less. Forests, for example, not only provide a natural carbon storage that helps regulate climate, but also hold soil in place along streams, participating in improved water quality, which benefits for people downstream. Habitats in rivers and along coastlines support populations of fish that provide food, including in areas of chronic food insecurity. Biodiversity stabilize ecosystems [@cardinale2012]. Mangroves stabilize shorelines and decrease damage to people and property from storms. Oceans also store carbon. 
 
 These services rely on complex interactions of many forms of natural capital. These ecosystems that surround us are essential to our survival and well-being, and are the bedrock of a sustainable economy. Nature and people form the biosphere, caring for the former equates to caring for the latter and vice versa. Increasingly, we can map the most important forests, coastal habitats and other ecosystems and show how they support us. This is crucial in order to prioritize the use of resources and sustainably manage our natural world. In short, nature is at the source of human well-being: people depend on nature.
 
-However, about 60% of the ecosystem services[^2back] are being degraded or are used unsustainably. Not only degradation of ES is a major loss of natural asset, but it harms significantly human well-being [@Millennium2005]. Furthermore, the relationships between harm to an ecosystem and loss in its services are rarely linear; for example, loss in biodiversity induces more important change on every ecosystem process it affects [@cardinale2012].
+However, about 60% of the ecosystem services[^2back] are being degraded or are not used sustainably. Not only degradation of ES is a major loss of natural asset, but it harms significantly human well-being [@Millennium2005]. Furthermore, the relationships between harm to an ecosystem and loss in its services are rarely linear; for example, loss in biodiversity induces more important change on every ecosystem process it affects [@cardinale2012].
 
 [^2back]: evaluated by the Millenium Assessments [@Millennium2005]. 
-
-Sadly, the value of ecosystem services is often widely appreciated only upon their loss [@daily2000].
-
-the concepts of ES and adapative mngmt implemented in natural resources policy but the two not connected (RUHL 2016)
 
 As the abundance of ecosystem capital decreases, due to clear and increasing human alteration [@Vitousek494], it is more than ever urgent to take action. To do so, efficient policy design requires a strong (often quantitative) understanding of ecosystem services functioning.
 
 ###Natural capital assessments
 
-**http://www.sciencedirect.com/science/article/pii/S1470160X16305957**
+The benefits nature provides to people and the economy are priceless. Natural capital assessments aims to provide information on the matter; they help understand the ecosystem services structures, involving quantitative estimates. Valuating ecosystem services aims to cultivate appreciation for the incredible invisible benefits from nature [@AnneBlog], which too often happens only upon their loss [@daily2000].
 
-The benefits nature provides to people and the economy are priceless. Natural capital assessments aims to provide informations on the matter; they help understand the ecosystem services structures, involving quantitative estimates.
-
-Valuating natual capital is not new. 20 years ago, For the entire biosphere, the value (most of which is outside the market) is estimated to be in the range of US$16–54 trillion (1012) per year, with an average of US$33 trillion per year. Because of the nature of the uncertainties, this must be considered a minimum estimate. Global gross national product total is around US$18 trillion per year. - See more at: http://mro.massey.ac.nz/handle/10179/5983#sthash.GhT7qo36.dpuf [@costanza1997value]
-
-Valuating ecosystem services aims to cultivate appreciation for the incredible invisible benefits from nature [@AnneBlog].
-
-Natural capital assessments documents ecosystem services at different levels, from local ones such as pest control, to regional ones like flood control, to global services such as climate stabilization [@daily2000]. They reveal interdependencies between services, critical points and timescales for degradation and recovery 
-
-Because degradation or loss of ecosystem benefits would incur costs, for example for water treatment, erosion control, infrastructure maintenance and disaster relief; it would undermine security, prosperity and economic development. Therefore, a thorough understanding of ecosystem assets is crucial. Natural capital assessments locates the sources of ecosystem services, provides indications for sustainable management, identifies and prioritizes conservation activies, helps build understanding of synergies and trade-offs between the needs and impacts of different projects or sectors, supports policy design, contributes to climate resilience and adaptation planning. Strong of this understanding, enlightened decisions can be taken to secure these assets in a context of social and economic developemnt [@Myanmar16]. In short, natural capital assessment hopes to make it easier for nature to become a primary consideration in all decisions, by revealing specifically what are the benefits from it [@AnneBlog].
+Because degradation or loss of ecosystem benefits would incur costs, for example for water treatment, erosion control, infrastructure maintenance and disaster relief; it would undermine security, prosperity and economic development. Therefore, a thorough understanding of ecosystem assets is crucial. Natural capital assessments locates the sources of ecosystem services, provides indications for sustainable management, identifies and prioritizes conservation activties, helps build understanding of synergies and trade-offs between the needs and impacts of different projects or sectors, supports policy design, contributes to climate resilience and adaptation planning. Strong of this understanding, enlightened decisions can be taken to secure these assets in a context of social and economic development [@Myanmar16]. In short, natural capital assessment hopes to make it easier for nature to become a primary consideration in all decisions, by revealing specifically what are the benefits from it [@AnneBlog]. Natural capital assessments documents ecosystem services at different levels, from local ones such as pest control, to regional ones like flood control, to global services such as climate stabilization [@daily2000]. They reveal interdependancies between services, critical points and timescales for degradation and recovery. 
 
 ![Examples of how a natural capital-based approach can be used to mainstream enviromental information throughout the development planning process, contributing to more effective and efficient development plannign decisions, from [@Myanmar16]](../images/mymy.png)
 
-An important clarification that must be highlighted when presenting the concept of natural capital, is that it's not merely putting a dollar tag on nature. On the contrary, the natural capital assessments approaches aim to correct capitalist society bias that make decisions based on economical return on investment; by including nature in the capitalist approach. Monetary valuation is just one small aspect of natural capital assessment, that helps connect in some contexts of financial planing and comparisons [@AnneBlog].
+Natural capital assessments are idiosyncratic[^33back] and complex [@daily2000]. In a nutshell, they consist in identifying the different alternatives, quantifying their respective impacts, and valuating their respective consequences. The typical measuring unit for this last step of valuation is monetary [@daily2000]. However, an important clarification that must be highlighted when presenting the concept of natural capital, is that it's not merely putting a dollar tag on nature. On the contrary, the natural capital assessments approaches aim to correct capitalist society bias that make decisions based on economical return on investment; by including nature in the capitalist approach. Monetary valuation is just one small aspect of natural capital assessment, that helps connect in some contexts of financial planing and comparisons [@AnneBlog].
 
-Because they are idiosyncratic (=depends on local conditions), natural capital assessments are complex[@daily2000]
+Valuating natual capital is not a new concept; 20 years ago, Costanza [@costanza1997value], estimated the value of the entire biosphere to be around 33 trillion dollars per year (considered a minimum estimate, with significant uncertainty associated). This is the magnitude of two times the US GNP. 
 
-Identify the different alternatives, quantify their respective impacts, and value their respective consequences. The typical measuring unit for this last step of valuation is monetary [@daily2000]
+[^33back]: distinctive, depends on local conditions. *or is the meaning of this word obvious?*
 
 ### Communicating natural capital information
-Indeed, the goal of a natural capital assessment is to make better decisions, and this implies at some point convincing decision makers based on scientific facts.  These result from painstaking studies, and it crucial to communicate them well, otherwise not doing justice to the previous effort. The goal of this paper is therefore to put an emphasis on this last step of process that is converying the results, often time neglected in time-limited projects which had focused on the previous steps. 
+Indeed, the goal of a natural capital assessment is to make better decisions, and this implies at some point convincing decision makers based on scientific facts.  These results stem from painstaking studies, and it crucial to communicate them well, to do justice to the previous effort and achieve the intended goal. Therefore, the present work aims to put an emphasis on this last step of process that is converying the results, often time neglected in time-limited projects which had focused on the previous steps. 
 
-Mapping—the organization of spatially explicit quantitative information—is essential for many assessments of ES [@Englund].
+Because it has been proven to be easier for the brain to understand an image than words or numbers [@Cukier], a strong focus will be given to visualization. Because of their abilities to synthesize large amounts of data into effective displays [@Ware2000], graphics have been widely used in the literature, and the topic of information visualization widely studied (by Cleveland, Ware, Tufte, to just cite a few). Visualizations support both data analysis and data presentation. The latter is the focus of this work, assuming that the analysis is completed. *Ben this point should be discussed!* *Or: focus of exploratory analysis for the analyst, to help build insight* *Or both?* It has been shown that combining optimization with visualization promotes design innovations and empowers decision makers with a better understanding of systems behaviors ([@Kollat_Video], [@Reed04], [@Fleming05], [@Winer02] and many more)
 
-### Visualizations matters
-
-It is easier for the brain to comprehend an image versus words or numbers (A special report on managing information. Cukier, 2010),
-
-TODO (TO REPHRASE THIS IS COPY/PASTE)
-Thoroughly explored, (Cleveland, 1994; Ware, 2000; Spence, 2001; Few, 2004, Tufte; 2006; Strange, 2007 and more), the topic of visualization is key in research presentation and communication because it allows to synthesize into effective graphics large amounts of data (C. Ware Information Visualization: Perception for Design, 2000 todo). Visualization serves two major purposes, data analysis (Rebolj and Sturm, 1999, Jeong et al., 2006, Kollat and Reed, 2007, Wagener and Kollat, 2007 and Xu et al., 2010) and data presentation. The latter is the focus of this work, assuming that the analysis is completed.
-
-It has been shown that combining optimization with visualization promotes design innovations and empowers decision makers with a better understanding of systems behaviors ([@Kollat_Video], [@Reed04], [@Fleming05], [@Winer02] and many more)
-
-Visualization serves two major purposes, data analysis (Rebolj and Sturm, 1999, Jeong et al., 2006, Kollat and Reed, 2007, Wagener and Kollat, 2007 and Xu et al., 2010) and data presentation. The latter is the focus of this paper, assuming that analysis is completed.
+Mapping, defined by Englund [@Englund] as the organization of spatially explicit quantitative information, has proven essential for many assessments of ES [@Troy]. [@Hauck] showed how the spatial products from mapping - maps - are tremendously helpful to support proper management of ecosystems and ecosystem services. However,  he also brings attention to the fact that they should be used carefully. Visualizations of large datasets and complex information is a very effective way to conveying knowledge, but it is also non-trivial, which is why it is given so much attention.
 ##The Natural Capital Project
-The Natural Capital Project (NatCap) aims to account for nature’s contributions to society, so that leaders worldwide can take into account the value of ecosystem services, to make smarter decisions for a more sustainable future. to integrate the value nature provides to society into all major decisions. Our ultimate objective is to improve the well-being of all people and nature by motivating greater and more targeted natural capital investments.
+The Natural Capital Project (shortened NatCap) aims to account for nature’s contributions to society, so that decision-makers worldwide can take into account the value of ecosystem services, leading to wiser and more sustainable choices and better outcomes for people and nature. It strives to improve the well-being of people and nature by integrating the value nature provides to society into all major decisions leading to greater and more targeted natural capital investments. Founded in 199?, the Natural Capital Project gathers NGOs and academics, namely it is a partnership of four parties: the World Wild Fund (WWF), The Nature Conservancy (TNC), University of Minnesota and Stanford University. *In the InVEST license, "The Natural Capital Project" is defined as these four parties.* *(need a ref?)*
 
-Founded in 199??, the Natural Capital Project gathers NGOs and academics, namely it is a partnesrship of four parties: the World Wild Fund (WWF), The Nature Conservancy (TNC), University of Minnesota and Stanford University. (In the InVEST license, "The Natural Capital Project" is defined as these four parties.)
-
-NatCap approach can be summarized in three actions (1) advance science of ecosystem services, (2) create user-friendly approaches and tools and (3) build and tell success stories. These actions lead to the goal of getting natural capital infromations into decisions, serving the broader purpose of making decisions with better outcomes for people and nature. [@StaciePrez]
-
-NatCap developps tools meant to assess nature's contribution to society. All sofwares developped at NatCap are open-source, to make the science accessible and useful in real decisions. The main one is InVEST which gathers several models tackling various ecosystem services such as water yield, sediment retention, carbon storage, wind energy, habitat quality, crop pollination... It explores, maps and value these ecosystem services and translate the change in ecosytem to its corresponsing change in ecosystem services and to the impacts and benefits to people, therefore it is especially useful to estimate impacts of change in ecosystem services. 
-
- Other softwares include RIOS which aims to optimizing cost-effective investments for ecosystem services, OPAL which quantifies the impacts of development and the value of offsetting them with protection and restoration, but also the Python library PyGeoprocessing which implements GIS operations on which InVEST is based.
-
-![Ecosystem services assessment strategy[@StaciePrez]](../images/ESassess.png)
-
-![Natural Capital Approach [@greggg]](../images/natcapapproach.png)
+NatCap's work falls in three types of activities: (1) advance science of ecosystem services, (2) create user-friendly approaches and tools and (3) build and tell success stories [@StaciePrez]. (1) *have some quantitative result of publications or smg?*(2) NatCap develops tools meant to assess nature's contribution to society. All softwares developed at NatCap are open-source, to make the science accessible and useful in real decisions. The main one is InVEST which gathers several models tackling various ecosystem services such as water yield, sediment retention, carbon storage, wind energy, habitat quality, crop pollination... It explores, maps and value these ecosystem services and translate the change in ecosystem to its corresponding change in ecosystem services and to the impacts and benefits to people, therefore it is especially useful to estimate impacts of change in ecosystem services.  Other softwares include RIOS which aims to optimizing cost-effective investments for ecosystem services, OPAL which quantifies the impacts of development and the value of offsetting them with protection and restoration, but also the Python library PyGeoprocessing which implements GIS operations on which InVEST is based. (3) *have some quantitative result of projects or smg?*
 
 ##Objectives
 
-###Specific challenges to ES information display
-scenario analysis
-multi-objective compaisons
-expressing uncertainty
+###Specific challenges to ES information display *struggling for this part?/feels like to early to say that it would be repeated in "identifying needs"? not sure///*
+*A preliminary part of this work consisted in identifying the specific challenges related to displaying ES results*
+ES information consists in varied, large, multi-dimensional datasets. It can be categorical or continuous, spatial or aspatial, (...). The main tasks that these displays aim to support are scenario analysis, multi-objective comparisons, expression of uncertainty (...). Some cases may require combinations of these tasks.
 
 ### Purpose of this work
-How to synthesize and communicate spatial/multi-dimensional outputs of multiple runs for multiple ES models ?
+Overall, this work aims to empower analysts with **easy approaches to clear ES visualizations and summaries**: effective solutions to synthesize and communicate spatial, multi-dimensional outputs of multiple runs for multiple ES models. It gathers an overview of existing display tools and builds upon these to improve natural capital visualizations. The first objective of this work is to identify the challenges and the needs for an efficient communication of results. In a second phase, the aim is to suggest powerful and innovative solutions to address these points. A framework for implementation of the proposed solutions could be developed, depending on the remaining time. 
 
-Easy approaches to clear ES viz and summaries, 
+### Integration in NatCap's strategy *move this paragraph to section NATCAP??*
+The ecosystem service assessment strategy NatCap follows can be summarized in 6 steps, with repeated iterations throughout the process [@StaciePrez]. First, define the partnership, roles and objectives. Secondly, compile the data. Thirdly, generate baselines and scenarios. In fourth, assess the corresponding outcomes. Then, synthesize the results. Last, but not least, inform decisions by communicating solutions. These two last steps *or just one? last* correspond to the focus of this work.
 
-Gather an overview of existing display toold and build upon these to improve natural capital visualizations and develop the needed display. The first objective of this work is to identify the challenges and the needs for an efficient communication of results. In a second phase, the aim is to suggest powerful and innovative solutions to adress these points. A framework for implementation of the proposed solutions could be developped, depending on the remaining time. 
+![Natural Capital Approach [@greggg]](../images/natcapapproach.png)
 
-- tool as having a focus of exploratory analysis for the analyst, to help build insight, which would take some pressure off challenges of making pretty static graphs (though great to do both, but we could prioritize the first)
-
-Integrate in the context of NatCap's work. Incorporate the display for MESH outputs and reports. Also, in the context of the developpement plan for InVEST 4.0, one of the three long-term InVEST goals is to integrate reporting as part of the InVEST workflow [Rich Webinar 29/11/16]
+The present work integrates in the context of NatCap's approach; the developed tools aim to be incorporated MESH outputs and reports. Also, in the context of the developement plan for InVEST 4.0, one of the three long-term InVEST goals is to integrate reporting as part of the InVEST workflow [Rich Webinar 29/11/16], which this work could support. 
 
 ## Outline
-This master thesis presents approaches to displaying natural capital informations, with specific examples of use cases in Peru, Kenya and Hawaii. Section 2 describes the adopted methodology, presents the use cases on which the work was based and detail the corresponding workflow. Section 3 summarizes an extended literature review that was conducted to explore the design strategies to displaying multi-dimensional, spatial, multi-objective and uncertain data which are the data types natural capital informations contain. It also adresses the question of which tools to use. Section 4 presents the results of (1) the identified display needs (2) the suggested solutions for each need. *Section 5 maybe discussion, maybe detail one major implementation ? TODO dunno yet!*. *Section 6 discusses next steps and do I need to say smg about the conclusion, isn't it obvious?!*
+This master thesis presents approaches to displaying natural capital information, with specific examples of use cases in Peru, Kenya and Hawaii. Section 2 describes the adopted methodology, presents the use cases on which the work was based and detail the corresponding workflow. Section 3 summarizes an extended literature review that was conducted to explore the design strategies to displaying multi-dimensional, spatial, multi-objective and uncertain data which are the data types natural capital information contains. It also addresses the question of which tools to use. Section 4 presents the results of (1) the identified display needs (2) the suggested solutions for each need. *Section 5 maybe discussion, maybe detail one major implementation ? TODO dunno yet!*. *Section 6 discusses next steps and do I need to say smg about the conclusion, isn't it obvious?!*
 
 
 
