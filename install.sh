@@ -21,7 +21,13 @@ echo -n "Updating brew ... "
 brew update && brew upgrade && brew tap caskroom/cask
 
 # Markdonw to latex
-installed pandoc || (brew install pandoc && brew install pandoc-citeproc)
+installed pandoc || brew install pandoc
+
+# Biblatex filter
+installed pandoc-citeproc || brew install pandoc-citeproc
+
+# Section number reference
+installed pandoc-crossref || brew install pandoc-crossref
 
 # Latex compilation
 installed pdflatex || brew cask install mactex
