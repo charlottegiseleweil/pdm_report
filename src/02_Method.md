@@ -10,7 +10,9 @@ The first steps to approaching the question of displaying natural capital inform
 Meanwhile, in computational data visualization, the resulting display highly depends on the choice of tool. And it turned out that the available data visualization tools were numerous, varied, overlapping. An exploration of these softwares and libraries attempted to guide with more clarity towards the choice of an adapted tool. To conduct such a comparison, some of these tools were learned and used.
 
 ##Identifying display needs
-First, based on typical example cases and interviews of *Natcappers* / *professionals in the field of ecosystem services* ? , some display needs were identified. Then this list was refined and completed thanks to the inputs of the broader FWAT team. Next, these needs were gathered and organized in a survey document sent out to a broader community of professionals in the field, including scientists, ecologists, hydrologist, economists, analysts and researchers working with the Natural Capital Project. The survey questions can be found in Annex (renvoi). A total of (???) answers were collected, where participants assessed, for each identified need, the usefulness of such a display, but also commented on their current implementation and the usefulness of improving the current displays. Resulting from their inputs, the display needs were prioritized (...TODO!)
+First, based on typical example cases and interviews of *Natcappers* / *professionals in the field of ecosystem services* ? , some display needs were identified. Then this list was refined and completed thanks to the inputs of the broader FWAT team. Next, these needs were gathered and organized in a survey document sent out to a broader community of professionals in the field, including scientists, ecologists, hydrologist, economists, analysts and researchers working with the Natural Capital Project. The survey questions can be found in Annex ({section number}). A total of (???) answers were collected, where participants assessed, for each identified need, the usefulness of such a display, but also commented on their current implementation and the usefulness of improving the current displays. Resulting from their inputs, the display needs were prioritized (...TODO!)
+
+![Gathering NatCappers' visualizations needs and tools survey sample empty page -- *Survey here or in Annex ?*](../images/survey.pdf)
 
 ##Example Cases
 The present work have found applications, and based its trials on several on-going projects at the Natural Capital Project. 
@@ -51,6 +53,7 @@ TODO, Assessment through:
 
 * Expert's opinions (Assessment/survey online or in person)
 * Criterias of clarity and completeness:
+* 
 ![When Evaluating a Figure for Clarity and Completeness, Consider the Following Questions[@Allen1]](../images/assess_table.png)
 ##Incorporation of the tools (?)
 If time : e.g MESH/InVEST ?

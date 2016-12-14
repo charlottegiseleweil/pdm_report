@@ -4,7 +4,7 @@
 
 [^123back]: The field of ecosystem services suffers some inconsistent terminology in literature [@Englund]. Hence, an effort is made here to define precisely the terms used, point out synonyms and vague terminology, to avoid confusions.
 
-* Natural capital : Natural capital is the stock of resources, such a rivers, trees, the atmosphere and all living organisms [@naturalcapitalscotland]
+* Natural capital : Natural capital is the stock of resources, such a rivers, trees, the atmosphere and all living organisms [@naturalcapitalscotland] 
 * ES : Ecosystem services are the benefits natural capital assets provide to humanity [@cardinale2012]
 
 * SDU : spatial decision unit, corresponding to a geometric feature such as polygon, pixel, lines or point. In the context of map comparisons, the word "cell" is used in this work for SDU, to match with the literature on the topic. SDU represent the scale at which a discrete spatial decision/intervention is undertaken. *[refs: Ben, optimizer design doc, Kuhnert]*
@@ -21,7 +21,7 @@
 * EIA : Environmental Impact Assessment
 * GIS : Geographical Information Systems
 * MOEA : Multi-objective evolutionary algorithm* MOVA : Multi-objective visual analytics
-* OGR OpenGIS Simple Features Reference Implementation* OR : Operational research* RO : Robust optimization* SDSS : Spatial decision support systems 
+* OGR : OpenGIS Simple Features Reference Implementation* OR : Operational research* RO : Robust optimization* SDSS : Spatial decision support systems 
 * IWS : investments in watershed services (known as waterfund)
 
 **Softwares and models**

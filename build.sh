@@ -67,6 +67,7 @@ for idx in "${!outputs[@]}"; do
     sed -e "s|../images/\(.*\)|images/\1|g" \
     > build/thesis.md
 
+# Rajouter ca apres titlepage: --include-before-body=templates/abstract.tex \
   echo -n "Compiling thesis to $outfile ($format) ..."
   cat build/thesis.md |\
   pandoc -f markdown $format \
@@ -75,17 +76,15 @@ for idx in "${!outputs[@]}"; do
     --include-in-header=templates/chapter-style.tex \
     --include-in-header=templates/caption-size.tex \
     --include-before-body=templates/titlepage.tex \
-    --include-before-body=templates/abstract.tex \
     --reference-links \
     --standalone \
     --number-sections \
     --default-image-extension=pdf \
     --toc \
     --highlight-style=tango \
-    --filter pandoc-crossref \
     --filter pandoc-citeproc \
     --bibliography=src/biblio.bib \
-    --csl templates/apa.csl \
+    --csl templates/computer.csl \
     -V documentclass:memoir \
     -V classoption=oneside \
     -V fontsize=11pt \
