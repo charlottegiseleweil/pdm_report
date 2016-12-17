@@ -1,0 +1,82 @@
+[@berinato2016viz]
+
+2 questions : 
+Is the information conceptual or data-driven?
+	CONCEPTUAL
+		FOCUS: Ideas
+		GOALS: Simplify, teach (“Here’s how our organization is structured.”)
+
+	DATA-DRIVEN
+		FOCUS: Statistics
+		GOALS: Inform, enlighten (“Here are our revenues for the past two years.”)
+
+Am I declaring something or exploring something?
+
+	DECLARATIVE
+		FOCUS: Documenting, designing
+		GOALS: Affirm (“Here is our budget by department.”)
+
+	EXPLORATORY
+		FOCUS: Prototyping, iterating, interacting, automating
+		GOALS: Confirm (“Let’s see if marketing investments contributed to rising profits.”) and discover (“What would we see if we visualized customer purchases by gender, location, and purchase amount in real time?”)
+
+		testing a hypothesis OR discovery-focused exploratory
+
+![](../images/fourtypes.png)
+idea illustrations clarify complex ideas. IDEA ILLUSTRATION
+
+INFO TYPE: Process, framework
+
+TYPICAL SETTING: Presentations, teaching
+
+PRIMARY SKILLS: Design, editing
+
+GOALS: Learning, simplifying, explaining
+
+IDEA GENERATION
+
+INFO TYPE: Complex, undefined
+
+TYPICAL SETTING: Working session, brainstorming
+
+PRIMARY SKILLS: Team-building, facilitation
+
+GOALS: Problem solving, discovery, innovation
+
+___
+
+Tufte 1-day course
+
+Guidelines for viz
+	Clear titles : verbs not noums
+	quote experts +++
+	Less interface, max content reasoning time (get design out of the way)
+	No "little data" charts (e.g a visual representation can just be the number itself !)
+
+For maps
+	no bright colors
+	integration of everything
+
+
+Principles (in beautiful evidence p.126)
+	Show comparisons (adjacent in space: within eyespan)
+	Efficient, contextual
+	Scrolling better than interactivity
+
+Presentation
+	Practice ! (video)
+	Approve yr contents
+	Encourage credibility (show knowledgeableà)
+	Show up early
+	Give a document to read (12min beginning of meeting) (not a deck!)
+	Repeat highlights
+	Finish early
+
+Abstract
+100 words, problem, relevance (who cares?), solution
+
+See refs:
+Berners Lee 1989 info mngmt: a proposal
+examples of designs: in Nature ! 
+
+Google maps: the most widely used viz in the world - data rich but not overwhelming. 

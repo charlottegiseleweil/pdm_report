@@ -28,6 +28,7 @@ In the context of this work, this project's display tasks were (...) (*portfolio
 TODO. 
 
 In the context of this work, this project's display tasks were (...) (*multi-objective displays TODO*)
+
 ###The Upper Tana Nairobi Water Fund*Improving Water for Millions in Kenya*The Tana River supplies 95% of the water for a total of 9 million people living in Nairobi and surroundings, feeds one of the country’s most important agricultural areas and provides half of the country’s hydropower output
 *Re-write this:* Since the 1970s, forests on steep hillsides and areas of wetlands have been converted to agriculture, removing natural areas for storing runoff water and soil from the land. Now, as rain falls over farms, soils are washed down into the river, which reduces the productivity of farmland and sends sediment into the rivers. This increased sedimentation can choke water treatment and distribution facilities causing complete service disruptions for days or weeks at a time. Today, 60 percent of Nairobi’s residents do not have access to a reliable water supply.This growing challenge requires something innovative to protect the Tana River, increase downstream water quality and quantity and provide positive benefits for tens of thousands of farmers in the watershed. Enter the Upper Tana-Nairobi Water Fund. Water funds are founded on the principle that it is cheaper to prevent water problems at the source than it is to address them further downstream. Public and private donors and major water consumers downstream contribute to the Fund to support upstream water and soil conservation measures, resulting in improved water quality and supply.The Nairobi Water Fund builds on the Conservancy’s experience addressing similar issues in Latin America, where more than 30 water funds are either underway or in development. This fund is now the first of its kind in Africa, and will serve as a model as leaders across the continent look for innovative ways to solve ever-increasing water challenges.
 
@@ -49,11 +50,15 @@ Strong of the knowledge from the literature review, and the current state of exi
 In terms of static visualizations. The main goal of the paper  is to look at the impact of restoration (land cover scenarios) on the ES objectives (water, flammability) both independently and then simultaneously with climate scenarios going on in the background.
  
 ##Assess quality of suggested solutions 
+Rather subjective, 
 TODO, Assessment through:
+
+![imperatives for visualization, defined by [@stephens2012] in the context of ensemble predicitons:  richness, saliency, and robustness.](../images/criterias.png)
+
 
 * Expert's opinions (Assessment/survey online or in person)
 * Criterias of clarity and completeness:
-* 
+*
 ![When Evaluating a Figure for Clarity and Completeness, Consider the Following Questions[@Allen1]](../images/assess_table.png)
 ##Incorporation of the tools (?)
 If time : e.g MESH/InVEST ?
