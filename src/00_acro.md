@@ -1,5 +1,12 @@
 # Acronyms & Terminology {.unnumbered}
 
+Lorem {++ipsum++} dolor sit amet, consectetur adipiscing elit. {==Aenean imperdiet a nibh sit amet rhoncus. Quisque venenatis laoreet augue ut commodo.==}{>>Needs more work<<} Sed vestibulum suscipit risus, sit amet volutpat eros {--esta--} luctus et. Mauris non tempor metus, consequat dapibus risus. Vestibulum aliquet neque a lectus maximus, non porta nisi pretium. Quisque dui nunc, eleifend at vehicula sit amet, placerat id {~~ risos ~> risus ~~}. Nulla sed elit sem. In vel posuere augue. Morbi sollicitudin dui sit amet facilisis dapibus.
+
+{>> This is just a side comment <<}
+
+Duis mattis ipsum nec eros sodales fermentum. Nulla facilisi. Integer rhoncus, nunc nec faucibus condimentum, sem velit congue ligula, in blandit ligula sapien et augue.
+
+
 **Important concepts & terminology**[^123back]
 
 [^123back]: The field of ecosystem services suffers some inconsistent terminology in literature [@Englund]. Hence, an effort is made here to define precisely the terms used, point out synonyms and vague terminology, to avoid confusions.
