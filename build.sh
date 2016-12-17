@@ -64,7 +64,19 @@ for idx in "${!outputs[@]}"; do
   # Update all the links to be pdf instead of png
   cat build/thesis_raw.md | \
     sed -e "s|/g/png|/g/pdf|g" |\
-    sed -e "s|../images/\(.*\)|images/\1|g" \
+    sed -e "s|../images/\(.*\)|images/\1|g" |\
+    sed \
+        -e s/'~~}'/'}'/g \
+        -e s/'{~~'/'\\st{'/g \
+        -e s/'~>'/'}\\underline{'/g \
+        -e s/'{--'/'\\st{'/g \
+        -e s/'--}'/'}'/g \
+        -e s/'{++'/'\\underline{'/g \
+        -e s/'++}'/'}'/g \
+        -e s/'{=='/'\\hl{'/g \
+        -e s/'==}'/'}'/g \
+        -e s/'{>>'/'\\marginpar{'/g \
+        -e s/'<<}'/'}'/g \
     > build/thesis.md
 
 # Rajouter ca apres titlepage: --include-before-body=templates/abstract.tex \
