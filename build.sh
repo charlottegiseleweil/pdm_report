@@ -64,7 +64,7 @@ for idx in "${!outputs[@]}"; do
   # Update all the links to be pdf instead of png
   cat build/thesis_raw.md | \
     sed -e "s|/g/png|/g/pdf|g" |\
-    sed -e "s|../images/\(.*\)|images/\1|g" |\
+    sed -e "s|../images|images|g" |\
     sed \
         -e s/'~~}'/'}'/g \
         -e s/'{~~'/'\\st{'/g \
