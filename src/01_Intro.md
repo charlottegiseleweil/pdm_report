@@ -1,4 +1,5 @@
-#Introduction>*"Often the importance of ecosystem services is widely appreciated only upon their loss"*
+#Introductioncheck renvoi fig @fig:prout.
+>*"Often the importance of ecosystem services is widely appreciated only upon their loss"*
 >
 >
 >
@@ -6,9 +7,9 @@
 >
 >  *Probably change/remove this quote! for something more clear about WHY this problem is important, more on topic of natural capital assessment.*
 
-##Background & motivation 
+##Background & motivation {#sec:mot}
 ### Ecosystem services
-{++See Figure++} @fig:mymy. Food, water, fuel, fiber, timber, pollination, purification, inspirational and recreational landscapes are examples of essential gifts from nature making life possible and worthwhile. These are tangible or intangible ecosystem services. Some of these services are obvious, some are less. Forests, for example, not only provide a natural carbon storage that helps regulate climate, but also hold soil in place along streams, participating in improved water quality, which benefits for people downstream. Habitats in rivers and along coastlines support populations of fish that provide food, including in areas of chronic food insecurity. Biodiversity stabilize ecosystems [@cardinale2012]. Mangroves stabilize shorelines and decrease damage to people and property from storms. Oceans also store carbon. 
+{++See Figure++} @fig:mymy. and see section @sec:mot. Food, water, fuel, fiber, timber, pollination, purification, inspirational and recreational landscapes are examples of essential gifts from nature making life possible and worthwhile. These are tangible or intangible ecosystem services. Some of these services are obvious, some are less. Forests, for example, not only provide a natural carbon storage that helps regulate climate, but also hold soil in place along streams, participating in improved water quality, which benefits for people downstream. Habitats in rivers and along coastlines support populations of fish that provide food, including in areas of chronic food insecurity. Biodiversity stabilize ecosystems [@cardinale2012]. Mangroves stabilize shorelines and decrease damage to people and property from storms. Oceans also store carbon. 
 
 
 \begin{figure}
@@ -25,7 +26,7 @@
   \caption{A subfigure}
   \label{fig:sub2}
 \end{subfigure}
-\caption{A figure with two subfigures}
+\caption{A figure with two subfigures} 
 \label{fig:test}
 \end{figure}
 

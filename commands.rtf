@@ -41,6 +41,12 @@ $$\\frac\{n\}\{2\}$$
 
 \b \cf0 Renvois 
 \b0 (see http://pandoc.org/MANUAL.html#header-identifiers)\
+Apr\'e8s la figure \{#fig:mymy\}\
+see @fig:mymy\
+\
+Apr\'e8s le title \{#sec:roly\}\
+see @sec:mymy\
+\
 \pard\pardeftab720
 
 \f2 \cf4 \cb5 \expnd0\expndtw0\kerning0
@@ -49,8 +55,37 @@ $$\\frac\{n\}\{2\}$$
 
 \f2 \cf4 \cb5 \expnd0\expndtw0\kerning0
 Section [-@sec:display] \cf0 \cb1 \expnd0\expndtw0\kerning0
-(avec le \'ab\'a0-\'ab\'a0 \'e7a donne que le num)
-\f0 \kerning1\expnd0\expndtw0 \
+(avec le \'ab\'a0-\'ab\'a0 \'e7a donne que le num)\
+\
+\pard\pardeftab720
+
+\b \cf0 Figures
+\b0 \
+\pard\pardeftab720
+
+\fs26 \cf6 \expnd0\expndtw0\kerning0
+\{width=50%\}\
+\
+Subfigures\
+
+\fs18 \\begin\{figure\}\
+\\centering\
+\\begin\{subfigure\}\{.5\\textwidth\}\
+  \\centering\
+  \\includegraphics[width=.4\\linewidth]\{images/fourtypes.png\}\
+  \\caption\{A subfigure\}\
+  \\label\{fig:sub1\}\
+\\end\{subfigure\}%\
+\\begin\{subfigure\}\{.5\\textwidth\}\
+  \\centering\
+  \\includegraphics[width=.4\\linewidth]\{images/fourtypes.png\}\
+  \\caption\{A subfigure\}\
+  \\label\{fig:sub2\}\
+\\end\{subfigure\}\
+\\caption\{A figure with two subfigures\}\
+\\label\{fig:test\}\
+\\end\{figure\}
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 \cf0 pour le nom du titre: 
@@ -94,9 +129,7 @@ see [section 1.4](#intro)\cb1 \expnd0\expndtw0\kerning0
 \
 
 \fs26 \expnd0\expndtw0\kerning0
-\{--\cf6 \expnd0\expndtw0\kerning0
-Something will be removed\cf6 \expnd0\expndtw0\kerning0
- --\} *\
+\{--Something will be removed --\} *\
 \{~~ This will be replaced ~> by that ~~~\}
 \f0\fs48 \cf0 \kerning1\expnd0\expndtw0 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
