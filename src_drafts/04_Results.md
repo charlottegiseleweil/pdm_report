@@ -1,5 +1,6 @@
 # Results
 the decision toolbox (and maybe, ideally = User’s guide to displaying/communicating natural capital informations)
+For each task : design, implementation and testing
 
 ##Design
 (design doc)
@@ -9,6 +10,8 @@ the decision toolbox (and maybe, ideally = User’s guide to displaying/communic
 (iterations and feedbacks)
 s
 ______
+
+parallel plots in python : https://waterprogramming.wordpress.com/2016/09/12/easy-vectorized-parallel-plots-for-multiple-data-sets/
  
 Inspire from : 
 
