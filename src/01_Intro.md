@@ -8,7 +8,7 @@
 
 ##Background & motivation 
 ### Ecosystem services
-See Figure @fig:mymy. Food, water, fuel, fiber, timber, pollination, purification, inspirational and recreational landscapes are examples of essential gifts from nature making life possible and worthwhile. These are tangible or intangible ecosystem services. Some of these services are obvious, some are less. Forests, for example, not only provide a natural carbon storage that helps regulate climate, but also hold soil in place along streams, participating in improved water quality, which benefits for people downstream. Habitats in rivers and along coastlines support populations of fish that provide food, including in areas of chronic food insecurity. Biodiversity stabilize ecosystems [@cardinale2012]. Mangroves stabilize shorelines and decrease damage to people and property from storms. Oceans also store carbon. 
+{++See Figure++} @fig:mymy. Food, water, fuel, fiber, timber, pollination, purification, inspirational and recreational landscapes are examples of essential gifts from nature making life possible and worthwhile. These are tangible or intangible ecosystem services. Some of these services are obvious, some are less. Forests, for example, not only provide a natural carbon storage that helps regulate climate, but also hold soil in place along streams, participating in improved water quality, which benefits for people downstream. Habitats in rivers and along coastlines support populations of fish that provide food, including in areas of chronic food insecurity. Biodiversity stabilize ecosystems [@cardinale2012]. Mangroves stabilize shorelines and decrease damage to people and property from storms. Oceans also store carbon. 
 
 
 \begin{figure}
