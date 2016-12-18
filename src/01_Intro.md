@@ -10,9 +10,24 @@
 ### Ecosystem services
 See Figure @fig:mymy. Food, water, fuel, fiber, timber, pollination, purification, inspirational and recreational landscapes are examples of essential gifts from nature making life possible and worthwhile. These are tangible or intangible ecosystem services. Some of these services are obvious, some are less. Forests, for example, not only provide a natural carbon storage that helps regulate climate, but also hold soil in place along streams, participating in improved water quality, which benefits for people downstream. Habitats in rivers and along coastlines support populations of fish that provide food, including in areas of chronic food insecurity. Biodiversity stabilize ecosystems [@cardinale2012]. Mangroves stabilize shorelines and decrease damage to people and property from storms. Oceans also store carbon. 
 
-| Image 1                             | Image 2                             |
-|-------------------------------------|-------------------------------------|
-|![Caption 1](../images/fourtypes.png){ width=20% } | ![Caption 2](../images/fourtypes.png){ width=20% } |
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{images/fourtypes.png}
+  \caption{A subfigure}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{images/fourtypes.png}
+  \caption{A subfigure}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{A figure with two subfigures}
+\label{fig:test}
+\end{figure}
 
 
 These services rely on complex interactions of many forms of natural capital. These ecosystems that surround us are essential to our survival and well-being, and are the bedrock of a sustainable economy. Nature and people form the biosphere, caring for the former equates to caring for the latter and vice versa. Increasingly, we can map the most important forests, coastal habitats and other ecosystems and show how they support us. This is crucial in order to prioritize the use of resources and sustainably manage our natural world. In short, nature is at the source of human well-being: people depend on nature.

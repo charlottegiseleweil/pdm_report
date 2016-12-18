@@ -84,6 +84,7 @@ for idx in "${!outputs[@]}"; do
   cat build/thesis.md |\
   pandoc -f markdown $format \
     --smart \
+    --include-in-header=templates/subcaption.tex \
     --include-in-header=templates/break-sections.tex \
     --include-in-header=templates/chapter-style.tex \
     --include-in-header=templates/caption-size.tex \
