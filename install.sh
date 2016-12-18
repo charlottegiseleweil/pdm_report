@@ -14,6 +14,8 @@ function installed(){
   return $ret
 }
 
+####### Brew ########
+
 # Package manager
 installed brew || /usr/bin/ruby -e \
   "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -26,11 +28,20 @@ installed pandoc || brew install pandoc
 # Biblatex filter
 installed pandoc-citeproc || brew install pandoc-citeproc
 
-# Section number reference
-installed pandoc-crossref || brew install pandoc-crossref
-
 # Latex compilation
 installed pdflatex || brew cask install mactex
+
+
+##### Pip #######
+
+# Pip package manager
+installed pip || brew install pip
+
+# Section number reference
+installed pandoc-fignos || pip install pandoc-crossref
+
+
+##### NPM ######
 
 # Node package manager
 installed npm || brew install npm

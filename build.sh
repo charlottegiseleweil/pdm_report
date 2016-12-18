@@ -94,6 +94,7 @@ for idx in "${!outputs[@]}"; do
     --default-image-extension=pdf \
     --toc \
     --highlight-style=tango \
+    --filter pandoc-fignos \
     --filter pandoc-citeproc \
     --bibliography=src/biblio.bib \
     --csl templates/computer.csl \
