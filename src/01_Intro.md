@@ -1,5 +1,4 @@
-#Introductioncheck renvoi fig @fig:prout.
->*"Often the importance of ecosystem services is widely appreciated only upon their loss"*
+#Introduction>*"Often the importance of ecosystem services is widely appreciated only upon their loss"*
 >
 >
 >
@@ -7,29 +6,9 @@
 >
 >  *Probably change/remove this quote! for something more clear about WHY this problem is important, more on topic of natural capital assessment.*
 
-##Background & motivation {#sec:mot}
+##Background & motivation 
 ### Ecosystem services
-{++See Figure++} @fig:mymy. and see section @sec:mot. Food, water, fuel, fiber, timber, pollination, purification, inspirational and recreational landscapes are examples of essential gifts from nature making life possible and worthwhile. These are tangible or intangible ecosystem services. Some of these services are obvious, some are less. Forests, for example, not only provide a natural carbon storage that helps regulate climate, but also hold soil in place along streams, participating in improved water quality, which benefits for people downstream. Habitats in rivers and along coastlines support populations of fish that provide food, including in areas of chronic food insecurity. Biodiversity stabilize ecosystems [@cardinale2012]. Mangroves stabilize shorelines and decrease damage to people and property from storms. Oceans also store carbon. 
-
-
-\begin{figure}
-\centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.4\linewidth]{images/fourtypes.png}
-  \caption{A subfigure}
-  \label{fig:sub1}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.4\linewidth]{images/fourtypes.png}
-  \caption{A subfigure}
-  \label{fig:sub2}
-\end{subfigure}
-\caption{A figure with two subfigures} 
-\label{fig:test}
-\end{figure}
-
+Food, water, fuel, fiber, timber, pollination, purification, inspirational and recreational landscapes are examples of essential gifts from nature making life possible and worthwhile. These are tangible or intangible ecosystem services. Some of these services are obvious, some are less. Forests, for example, not only provide a natural carbon storage that helps regulate climate, but also hold soil in place along streams, participating in improved water quality, which benefits for people downstream. Habitats in rivers and along coastlines support populations of fish that provide food, including in areas of chronic food insecurity. Biodiversity stabilize ecosystems [@cardinale2012]. Mangroves stabilize shorelines and decrease damage to people and property from storms. Oceans also store carbon. 
 
 These services rely on complex interactions of many forms of natural capital. These ecosystems that surround us are essential to our survival and well-being, and are the bedrock of a sustainable economy. Nature and people form the biosphere, caring for the former equates to caring for the latter and vice versa. Increasingly, we can map the most important forests, coastal habitats and other ecosystems and show how they support us. This is crucial in order to prioritize the use of resources and sustainably manage our natural world. In short, nature is at the source of human well-being: people depend on nature.
 
@@ -68,7 +47,7 @@ NatCap's work falls in three types of activities: (1) advance science of ecosyst
 ### Integration in NatCap's strategy
 The ecosystem service assessment strategy NatCap follows can be summarized in 6 steps, with repeated iterations throughout the process [@StaciePrez]. First, define the partnership, roles and objectives. Secondly, compile the data. Thirdly, generate baselines and scenarios. In fourth, assess the corresponding outcomes. Then, synthesize the results. Last, but not least, inform decisions by communicating solutions. These two last steps *or just one? last* correspond to the focus of this work.
 
-![Natural Capital Approach [@greggg]](../images/natcapapproach.png)
+![Natural Capital Approach [@greggg]](../images/natcapapproach.png){#fig:approach}
 
 The present work integrates in the context of NatCap's approach; the developed tools aim to be incorporated MESH outputs and reports. Also, in the context of the developement plan for InVEST 4.0, one of the three long-term InVEST goals is to integrate reporting as part of the InVEST workflow [Rich Webinar 29/11/16], which this work could support. 
 

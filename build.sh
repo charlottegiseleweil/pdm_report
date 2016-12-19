@@ -80,12 +80,13 @@ for idx in "${!outputs[@]}"; do
     > build/thesis.md
 
 # Rajouter ca apres titlepage: --include-before-body=templates/abstract.tex \
+# Pour sauts de pages après titles2: --include-in-header=templates/break-sections.tex \ 
+
   echo -n "Compiling thesis to $outfile ($format) ..."
   cat build/thesis.md |\
   pandoc -f markdown $format \
     --smart \
     --include-in-header=templates/subcaption.tex \
-    --include-in-header=templates/break-sections.tex \
     --include-in-header=templates/chapter-style.tex \
     --include-in-header=templates/caption-size.tex \
     --include-before-body=templates/titlepage.tex \

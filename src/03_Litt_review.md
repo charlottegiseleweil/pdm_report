@@ -26,9 +26,9 @@ Graphs, charts, diagrams and plots, despite ambiguous nuances, are all defined a
 Spatial data is handled with specific tools, so called **geographical information systems (GIS)** which link geographic (e.g maps) and descriptive informations. Data is organized is different layers, associated based on their geography. Spatial data can be stored in two types: raster, which is a collection of pixels referenced with coordinates, and vector, which corresponds to a set of point, lines and polygons. Different projections and coordinate systems are of great importance when dealing with spatial data: the round shape of the earth different from the flat projections of the maps means that distortion cannot be avoided. These projections conserve either the shape, or the area for example but cannot conserve all measures [@LectureGIS]. 
 ####Modes of visualization
 Required for printed format, **static presentations** are essential. Plus, in the context of inter-organizational projects, there is almost always a need to summarize results in static reports. 
-**Dynamic user-interactive visualizations** gives the greatest flexibility to the user who is given options to test and visualize results while having some control on the display. In many cases, user interactivity enhances the user's implication and satisfaction [@Teo2003281]. Dynamic displays offers many options to tailored and multi-dimensional visualizations. Section ({number}) will detail some of the main features of interest.**Dynamic storytelling** is the in-between between the two previous visualization modes, is is dynamic but not fully interactive. The viewer is guided through the visualization, either by a presenter, or step-by-step through the storyline, he therefore has less flexibility to "play around" with the variables, but it can result in easier delivery of main message.  Especially useful during presentations, but also on webpages, the dynamic storytelling allows the flexibility and multi-dimensional displays options of dynamic visualizations, while keeping control on the selected options, i.e walking the user through the visualization to lead to the envisioned goal. 
+**Dynamic user-interactive visualizations** gives the greatest flexibility to the user who is given options to test and visualize results while having some control on the display. In many cases, user interactivity enhances the user's implication and satisfaction [@Teo2003281]. Dynamic displays offers many options to tailored and multi-dimensional visualizations. Section \ref{sec:interactivefeatures} will detail some of the main features of interest.**Dynamic storytelling** is the in-between between the two previous visualization modes, is is dynamic but not fully interactive. The viewer is guided through the visualization, either by a presenter, or step-by-step through the storyline, he therefore has less flexibility to "play around" with the variables, but it can result in easier delivery of main message.  Especially useful during presentations, but also on webpages, the dynamic storytelling allows the flexibility and multi-dimensional displays options of dynamic visualizations, while keeping control on the selected options, i.e walking the user through the visualization to lead to the envisioned goal. 
 
-####Distortion techniques
+####Distortion techniques {#sec:disto}
 When displaying large datasets, combining considerations about different scales can become very tricky. As noted in (({section number lit review intro}), aiming for graphical integrity, the context of the dataset is required to be presented. However, when attempting to show local variations, displaying two scales at once is a notable challenge. Some distortion techniques have been developed in order to view precisely local details in their global context. They allows a greater space to the display of a focused zone, while still embedding its surrounding context. Generally, linear or hyperbolic geometry supports the smooth connection of the focus area and the background, that have different scales [@Leung].
 
 - The **bifocal display** (or lens) corresponds simply to a linear transformation (in one or two directions) [@bifocal and @Leung].
@@ -36,12 +36,12 @@ When displaying large datasets, combining considerations about different scales 
 - The **fisheye view**, originally called *Focus + Context* technique [@Lamping], [@Furnas_fisheye] uses a continuous magnification function (that also transforms the boundaries). Tough this term has been used with different definitions, it is broadly used and very intuitive.
 - Other distortion techniques include the **perspective wall** [@Mackinlay], that simulates the perspective effect, the **hyperbolic tree**, that extends the fisheye view using hyperbolic plane mapped onto a circular display region [@Lamping] and more.  
 
-####Interaction techniquesA few interactive features of interest include [@wilhelm1995software]:
+####Interaction techniques {#sec:interactivefeatures}A few interactive features of interest include [@wilhelm1995software]:
 
--	**Scaling** which is simply zooming in and out but is powerful in the sense that it allows the user to both global view of the whole dataset and precise details on smaller fluctuations, therefore removing the need for a distorded view. Some scaling options also combine distortion techniques (see previous section ({number})) to both zoom in and keep the background context in the surroundings.-	**Identification** (also called pointing) allows access to detailed information of a subset of the graph by clicking on it.-	**Generalized selection** extracts every point that is similar to the user’s selection for an overview of subsets. The similarity rules are defined according to the case.-	**Brushing** consists in selecting a subset of data, that is then highlighted. Also, brushing can be used to remove unwanted data, when a specific threshold is required [@Kollat_Video]. Brushing can be done with a slider, or with direct selection on the plot [@xmdvtool].
+-	**Scaling** which is simply zooming in and out but is powerful in the sense that it allows the user to both global view of the whole dataset and precise details on smaller fluctuations, therefore removing the need for a distorded view. Some scaling options also combine distortion techniques (see section \ref{sec:disto}) to both zoom in and keep the background context in the surroundings.-	**Identification** (also called pointing) allows access to detailed information of a subset of the graph by clicking on it.-	**Generalized selection** extracts every point that is similar to the user’s selection for an overview of subsets. The similarity rules are defined according to the case.-	**Brushing** consists in selecting a subset of data, that is then highlighted. Also, brushing can be used to remove unwanted data, when a specific threshold is required [@Kollat_Video]. Brushing can be done with a slider, or with direct selection on the plot [@xmdvtool].
 -      In a context where the displays consists in several views (different plots), **linking** adds value to brushing, it is the dynamic update of the other graphs displayed, to undergo the corresponding  «brushed» selection [@Buja].
 ###Graphical best practices and guidelines
-#### What makes a good visualization ?
+#### What makes a good visualization ? {#sec:colors}
 Keeping in mind the goal which is to effectively convey information, i.e to gain insight on the data, an efficient visualization reduces the cognitive effort of understanding the graph, in order to bring the observer's attention on the actual facts. Some may seem trivial, nevertheless the guidelines summarized in the following paragraphs are essential to achieving the highlight's purpose. As described by Tufte (1983) in his classic text, graphical displays should: "'*show the data, induce the viewer to think about the substance rather than about methodology, graphic design, the technology of graphic production or something else, avoid distorting what the data has to say, present many numbers in a small space, make large data sets coherent, encourage the eye to compare different pieces of data, reveal the data at several levels of detail, from a broad overview to the fine structure, serve a reasonably clear purpose: description, exploration, tabulation or decoration, be closely integrated with the statistical and verbal descriptions of a data set. »*
 
 Best practices seem to be summarized by three main points. An efficient display should be self-explanatory, tailored to the audience and most importantly convey the key message. Moreover a good visualization is highly dependent on the task, the type of display and other design choices are very specific to the dataset considered.
@@ -63,7 +63,30 @@ For the graph to be self-explanatory, a clear labeling must be included. If opti
 
 The careful choice of the color scheme is not be neglected [@Kelleher]. Sequential color scheme ought to be chosen when the underlying data shows ranked differences; diverging scheme when dealing with negative and positive differences around a mean or a neutral value; and a categorical scheme for discrete values [@tilemill]. Moreover, many sources suggests to use only a few colors (about 6), while choosing them distinct, and striving for color harmony. Cultural conventions and intuitive tints facilitate fast perception. Colorblind and printing safe schemes are prudent. Also, the color scale should be normalized, considering which datapoints should appear in different categories. [@Colorbrewer] provides good templates.
 
-![Color schemes types *image to be re-done smaller (Todo)*](../images/colorschemes_h.png)
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{images/colorschemes/qual.png}
+  \caption{qualitative}
+  \label{fig:colorschemes_sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{images/colorschemes/seq.png}
+  \caption{sequential}
+  \label{fig:colorschemes_sub2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{images/colorschemes/div.png}
+  \caption{diverging}
+  \label{fig:colorschemes_sub3}
+\end{subfigure}
+\caption{Colorschemes}
+\label{fig:test}
+\end{figure}
+
 
 **Interactivity**
 
@@ -71,19 +94,19 @@ The success of an interactive display results from the appropriate interface com
 ##Specific data visualization challenges and strategies###Displaying multi-dimensional data
 In the context of ES, multi-dimensionality arises from multi-objective problems, such as cases where mutiple ES are considered and their trade-offs are to be explored, but also from (*where do we encounter multi-dim in ES besides multi-obj???*) Visual decision support tools are very relevant in field of multi-objective optimization problems[^0326back]. In the  typical cases, there is no unique optimal solution, but a collection of Pareto optimal ones [@Hadka2015], i.e solutions where improving the result towards one objective result a decrease in performance with regards to another objective  [@paretoUNIL]. Efficient visualizations empower the user with the ability to navigate through thousands of potential solutions, compare them and understand trade-offs, leading to performant decision-making. 
 
-Multidimensional data visualization has been given considerable attention, as computational capacities have been increasing and the amount of produced data exploding. Multi-dimensional data exploration has taken several directions, based on a geometric projection techniques, to which distortion and interaction techniques (discussed in section ({number})) can be added to further improve these visualizations [@Keim]. The curse of multi-dimensionality, as explained by [@Allen1] is that graphical displays become less informative as the dimensions and complexity of data sets increase. However, he argues in favor of detailed graphs showing more data and revealing more informations.
+Multidimensional data visualization has been given considerable attention, as computational capacities have been increasing and the amount of produced data exploding. Multi-dimensional data exploration has taken several directions, based on a geometric projection techniques, to which distortion and interaction techniques (discussed in sections \ref{sec:disto} and \ref{sec:interactivefeatures}) can be added to further improve these visualizations [@Keim]. The curse of multi-dimensionality, as explained by [@Allen1] is that graphical displays become less informative as the dimensions and complexity of data sets increase. However, he argues in favor of detailed graphs showing more data and revealing more informations.
 
  [^0326back]: Vocabulary note: "multi-objective" refers here to problems with three or more objectives, also called many-objective problems [@Fleming05] or high order-Pareto optimization problems [@Reed04]
 
 ####Time-series data: line charts, streamgraphs and more
 For data including several independent variables, and a dependent one, line charts is a version of a scatter plot where points are ordered (on the x-axis), and joined with segments. Line charts (also refered to as run charts for time-series data, or index charts when interactive) highlights relative changes, these are a good options when comparing the independant variables. Streamgraphs, also called stacked graphs, sums visually the time-series values around a central axis by stacking area charts on top of each other [@Tour]. These work only for positive values, and provide general view of the data, but are not effective for visualizing details, also they are more efficient in interactive form than static [@datavizz]. In the case of very large timeseries datasets, horizon graphs is a very space-effective option, despite a certain amount of learning time. Horizon graphs consists in filled line charts, where negative values are mirrored (and colored typically in red) and then the chart divided into bands that are overlayed using transparency effects; the space used is divided by four thanks to these two transformations [@horizon]. When the goal is to compare monthly values over the years and the different year, a fairly recent display solution has been suggested: temporal maps [@temporalmap].
 
-![Illustrations of concepts of streamgraph [@streamchart], horizon graphs[@horizon] and temporal map[@temporalmap] *Should I add line charts or unecessary?* Todo?](../images/horizon_stream_temp_combined.png) 
+![Illustrations of concepts of streamgraph [@streamchart], horizon graphs[@horizon] and temporal map[@temporalmap] *Should I add line charts or unecessary?* Image to update ! Todo?](../images/horizon_stream_temp_combined.png){#fig:todotodo}
 
 ####Small Multiples
 An effective alternative to coercing all the data in a single plot (risking overplotting) is displaying small multiples. The concept is to replicate the same simple graph structure (in terms of axis, shape and scale), for many datasets, ordered logically. The cognitive process of understanding the graph is undertaken only once, and the understanding then is replicated while scanning all other multiples. This strategy is very efficient in many cases for comparison. Referred by Edward Tufte as "multivariate and data bountiful", they enforces comparisons of alternatives, differences and changes [@tufte]. This displaying startegy has also been called trellis chart, lattice chart, grid chart, or panel chart. It can be applied to many types of graphs.
 
-![Small multiples applied to (a) line plots [@small_mult_lines] and (b) spatial data [@small_mult_maps]](../images/smallmultiples.png)
+![Small multiples applied to (a) line plots [@small_mult_lines] and (b) spatial data [@small_mult_maps]](../images/smallmultiples.png){#fig:todotodo2}
 
 ####Scatterplots
 The classic scatterplot displays data with two to three dimensions, using cartesian coordinates and two or three axes; in a **3D scatterplot**, solutions are represented as points in the space.  Additional dimensions can be represented by changing attributes (color, shape, size, orientation, etc), however concerns about clarity and risk of overwhelming the plot may occur. Interactivity allows the user to perform selections of one or multiple solution point(s). 3D scatterplots are often used for multi-objective display (e.g  the VIDEO software [@Kollat_Video]).
@@ -97,9 +120,9 @@ Combining parallel coordinates with interactive features offers interesting opti
 
 Tradeoffs are illustrated by crossing lines. However, one limitation is that each axis having at most two neighboring axis, only N-1 relationships of $\binom{N}{2}$ combinations for an N-dimensional dataset can be visualized at once. This can be overcome by re-ordering the axis, possibly with an interactive tool, or by upgrading to a 3D parallel coordinate plot where the axis are still in parallel, but some appear closer [@Achtert2013_6], although this solution result in a much harder interpretation, which may explain why it is not widely used. 
 
- To compare and constrast alternative options, and explore the effects of trade-offs, 3D scatter plot and parallel coordinates plot are recommended by [@Hadka2015], as shown in Figure {number}. 
+ To compare and constrast alternative options, and explore the effects of trade-offs, 3D scatter plot and parallel coordinates plot are recommended by [@Hadka2015], as shown in Figure @fig:hadka. 
 
-![Four objectives visualization with (a) 3D scatterplot and colors and (b) parallel coordinate plot, achieved with the OpenMORDM open-source R library [@Hadka2015]](http://ars.els-cdn.com/content/image/1-s2.0-S1364815215300190-gr3.jpg)
+![Four objectives visualization with (a) 3D scatterplot and colors and (b) parallel coordinate plot, achieved with the OpenMORDM open-source R library [@Hadka2015]](http://ars.els-cdn.com/content/image/1-s2.0-S1364815215300190-gr3.jpg){#fig:hadka}
 
 ####Radar charts 
 {<< merge with parallel coord plots?) >>}
@@ -108,7 +131,7 @@ The radar chart, (that has also been refered to as spider chart[^5353back], web 
 
 [^100back]: see also petal charts [@spiderman_bad_Ref].
 
-![Hawaii, Kamehameha schools, from NatCap intranet](../images/spiderplot_tradeoffs_Ex.png)
+![Hawaii, Kamehameha schools, from NatCap intranet](../images/spiderplot_tradeoffs_Ex.png){#fig:radar}
 
 #### Other displays 
 Other statistical distributed data displays more specific to some data types include **Stem-and-Leaf Plots**, which is a variant of horizontal histogram painting a frequency distribution with numbers classified forming the histogram-like bars; and **Q-Q Plots** that compare probability distributions by graphing their quantiles where values lining up will reflect linear correlation [@Tour]. 
@@ -124,7 +147,7 @@ Several options to display multi-variate data were discussed. However they all r
 ###Displaying spatial data 
 
 ####Chloropleth maps and proportional symbol maps
-Chloropleth maps are very effective and widely used to display a continuous or categorical spatial variable aggregated by regions. The variable of interest is expressed by coloring (or using patterns on) these geographical areas. Particular attention needs to be given to the choice of patterns (see section Colors {number}). Furthermore, it is necessary to normalize[^212back] raw data values may be necessary to ensure graphical integrity [@Tour]. However, the main drawback is that larger areas appear emphasised [@datavizz].
+Chloropleth maps are very effective and widely used to display a continuous or categorical spatial variable aggregated by regions. The variable of interest is expressed by coloring (or using patterns on) these geographical areas. Particular attention needs to be given to the choice of patterns (see section \ref{sec:colors}). Furthermore, it is necessary to normalize[^212back] raw data values may be necessary to ensure graphical integrity [@Tour]. However, the main drawback is that larger areas appear emphasised [@datavizz].
  
 Another solution for continuous spatial data aggregated by regions is the graduated symbol map (or proportional symbol map, also called bubble map [@datavizz]) that overlays symbols to the base map. In this case, the underlying area does not affect the perception of the variable considered [@Tour]. These two approaches can also be combined, allowing to express more than one variable.
 
@@ -133,7 +156,35 @@ Another solution for continuous spatial data aggregated by regions is the gradua
 #### Heatmaps, isopleths and dot density maps
 Displaying density of occurence, and identifying clusters can be achieved with heatmaps and hotspot maps. The heatmap can be understood as the continuous version of the chloropleth map, whithout aggregation of the data. It visualizes a scalar function over a geographical area [@Brodlie]. Similarly, in the dot distribution map (or dot density map), the density of dots represents the intensity of the variable. 
 
-![Chloropleth map, graduate symbol map, dot density map [@datavizz], and heatmap/isopleth [@heatmap_img] (figures to be merged {todo MERGE SUBFIGURES})](../images/subfigures/map1/map1.png)
+\begin{figure}
+\centering
+\begin{subfigure}{.1\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{images/maps1/map1.png}
+  \caption{Chloropleth map}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.3\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{images/maps1/graduated.png}
+  \caption{Graduated symbol map}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{images/maps1/dot.png}
+  \caption{Dot density map}
+  \label{fig:sub4}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{images/maps1/heat.png}
+  \caption{Heatmap}
+  \label{fig:sub3}
+\end{subfigure}
+\caption{Maps types from }
+\label{fig:test}
+\end{figure}
 
 #### Contour maps 
 Also know by contour maps, or isarithmic maps, isopleth maps they display variable with contour lines (isopleths) joining the points where the variable has a constant value. For example in the field of ecoogy, isoflors are isopleths connecting areas of comparable biological diversity [@isoflor]. Color fills may be used to enhance the map patterb
@@ -143,31 +194,31 @@ Also know by contour maps, or isarithmic maps, isopleth maps they display variab
 ####Cartograms
 Cartogram also illustrate data aggregated over regions. The variable to be expressed is substituted to the geographical distance or area. The regions are in the same locations with respect to each other, but their geometry is distorted proportionally to the variable of interest [@Tour]
 
-![Cartogram displaying population (variable) per country (regions of aggregation) [@carto_img]](../images/carto.png)
+![Cartogram displaying population (variable) per country (regions of aggregation) [@carto_img]](../images/carto.png){#fig:carto}
 
 #### Flow maps 
 A flow map illustrates movement in space and/or in time. The intensity of a flow is represented by the thickness of the line depicting it [@datavizz]. Flow maps are typically used to visualize migrations of animals, but could also be applied to pollution load transfer, or groundwater recharge from a region ot another. 
 {>> better in context of ES? <<}
 
 ![Minard's Napoleon's March figurative map. This epic example of flow map, drawn up by M. Minard in 1869, depicts the successive losses in men of the French army in the Russian campaign of 1812-1813. It figures multi-variate data, including 6 dimensions that are the army size, its direction, its location in (x,y) coordinates, the dates and the temperature in the lower part of the display. *"The best statisctical graphic ever drawn"* according to Edward Tufte is an example of displaying complexity with clarity. Its great strength reside in its capacity to encode many variables. This example reminds also that successful and effective visualization are very specific to the dataset and message, and its buty resides in the fact that it is very tailored to the story to be conveyed, here: the numerous deaths of soldiers. 
-The text translates to: *The numbers of men present are represented by the width of the colored zones at a rae of one millimeter for every ten thousand men; they are further written accros the zones. The red designates the men who enter into Russia, the black those who leave it. The information which has served to draw up the map has been extracted from the works of M. M. Thiers of Ségur, of Fezensac, of Chambray and the unpublished diary of Jacob, the pharmacst of the army since october 28th. In order to better judge with the eye the diminution of the army, I have assumed that the troops of Prince Jérôme and the Marshal Davoush who had been detached at Minsk and Mokilow and have rejoined around Orcha and Vitebsk had always marched with the army.* ](../images/Minard.png)###Comparing multiple versions of spatial data (runs)
- Summarizing results of mutiples model outputs that consists in multi-dimensional spatial data is often necessary, wheter the multiplicity of outputs correspond to multiple objectives, various scenarios or a parameters explorations (i.e sensitivity analysis, this case is further described in section {number}). Comparison and summaries of maps can be achieved either by visualizing in space (maps display) or through quantitative indices and spatial metrics synthetizing the results. 
+The text translates to: *The numbers of men present are represented by the width of the colored zones at a rae of one millimeter for every ten thousand men; they are further written accros the zones. The red designates the men who enter into Russia, the black those who leave it. The information which has served to draw up the map has been extracted from the works of M. M. Thiers of Ségur, of Fezensac, of Chambray and the unpublished diary of Jacob, the pharmacst of the army since october 28th. In order to better judge with the eye the diminution of the army, I have assumed that the troops of Prince Jérôme and the Marshal Davoush who had been detached at Minsk and Mokilow and have rejoined around Orcha and Vitebsk had always marched with the army.* ](../images/Minard.png){#fig:minard}###Comparing multiple versions of spatial data (runs)
+ Summarizing results of mutiples model outputs that consists in multi-dimensional spatial data is often necessary, wheter the multiplicity of outputs correspond to multiple objectives, various scenarios or a parameters explorations (i.e sensitivity analysis, this case is further described in section \ref{sec:SA}). Comparison and summaries of maps can be achieved either by visualizing in space (maps display) or through quantitative indices and spatial metrics synthetizing the results. 
  
 ####Maps displays 
 ##### Between 2 maps
 For the examination of (dis)agreement between two maps, simple and efficient strategies suggests to show the two maps next to each other; or to substract one map to another to display the change map. Typically change maps uses diverging colorscheme, two colors representing respectively increase and decrease, and the intensity gradient reflects the amount of change. 
 
-##### Between many maps
+##### Between many maps \ref{sec:spag}
 The problem complicates when comparing many runs. 
 
 Visualizing flow data, **spaghetti plots** can express consistency between runs. Widely used in meteorology, the consistency of the runs is expressed by how tightly clustered they appear. Spaghetti plots may be translated to continuous spatial data by using the isocontour of each run, which is useful when concerned about a specific threshold. *better, Ben?*
-For continuous data, **3D plots overlaying maps** (figure {number}) have been used to highlight structural differences across maps. However, this solution seems limited to relatively small regions, and clearly distinguishable distributions of the variables expressed through color and height of the histogram. 
+For continuous data, **3D plots overlaying maps** (figure \ref{fig:overlay}) have been used to highlight structural differences across maps. However, this solution seems limited to relatively small regions, and clearly distinguishable distributions of the variables expressed through color and height of the histogram. 
 
 ![Spaghetti plots displaying ensemble data sets [Potter, 2009]. The spaghetti plot is the isocontour of each run. If the runs agree (Fig. left), it will result in a coherent bundle. Slight disagrements induce divergence from the main bundle (Fig. right). *for categorical or continuous?*](../images/spaguetti.png)
 
-![3D histograms, organized according the geographical layout; extract from figure 8 of [@Huang13] -- Merge (subfigures!)](../images/3Dplotsoverlaying.png)
+![3D histograms, organized according the geographical layout; extract from figure 8 of [@Huang13] -- Merge (subfigures!)](../images/3Dplotsoverlaying.png){#fig:overlay}
 
-For categorical data, the **frequency map** approach would display the most assigned category to each area across many runs, with possibly additionally a measure of how often this category was assigned. More details can be found in section {number} Robustness metrics and displays [@RIOS].
+For categorical data, the **frequency map** approach would display the most assigned category to each area across many runs, with possibly additionally a measure of how often this category was assigned. *(remove) More details can be found in section \ref{sec:manycatmaps} [@RIOS].*
 
 Animation is of great interest in this context. Dynamic visualizations are very suited for displaying multiple spatial outputs, there are increasingly used to display results in the field of ABMs[^1back], encountering similar type of outputs [@ABMleelig]. 
 
@@ -175,7 +226,7 @@ Animation is of great interest in this context. Dynamic visualizations are very 
 
 Visual comparisons of maps is efficient and not too intense cognitively for human perception. However, it fails to rank quantitatively the results, nor is adapted to an important number of maps. Screening through hundreds of maps produced is not a viable option. Therefore, other solutions must be considered. 
 
-####Quantitative indices and spatial metrics for categorical data
+####Quantitative indices and spatial metrics for categorical data {#sec:metricsmultrunscat} 
 #####Between two maps
 There are different types of categorical (i.e discrete attributes) map consistency measures [@Kuhnert2005]:
 1. The coarsest approach would be to compare the total numbers of cells[^3back] assigned to each category, neglecting any spatial patterns. This gives a very general quantitative overview of the **total per categories**. (All the other, finer approaches detailed below imply a cell-by-cell comparison.)
@@ -187,7 +238,7 @@ There are different types of categorical (i.e discrete attributes) map consisten
 1. The **location fit** informs on the number of cells that kept the category but changed location from one map to another:  $Quantity \ fit = (Location \ fit) \ - \ (Cell-by-cell\  level\  of\  agreement)$1. The **distance** between the locations of matching cells in the maps can also be calculated [@Kuhnert2005]. An overall measure of distance between two discrete maps expresses the amount of agreement or the goodness of fit [@Seppelt2003217] and [@costanza].
 1. The **moving window algorithm** further accounts for landscape patterns by considering neighboring cells in addition to the cell-to-cell comparison. It has been develop to answer the following problem: computing solely the number of cell-to-cell matches is not reliable in all circumstances, as if there is a matching cell right near by, it will not be taken into account (e.g if we compare two chessboards shifted by one well, the number of cell-to-cell matches is null although there is evident similarity not to be ignored) [@Kuhnert2005]. 
 
-#####Between many maps
+#####Between many maps {#sec:manycatmaps}
 
 When comparing a large number of maps, aggregation often is necessary to communicate results [@Brown2005]. Some of the metrics detailed above that calculate correlation between two maps may be extended to many maps comparison [@Seppelt2003217]. Calculating the total numbers of pixels assigned to each category (point 1 from previous section) is the coarsest approach. Finer methods imply to make calculations for each cell, in all the considered maps (as in, superposing all maps, and making calculation for the column of corresponding cells). For raster data, this technique of *column of cells* is referred to as pixel stack (? From Ben, fin ref TODO). Measures expressing the agreement between runs include:
 
@@ -208,11 +259,11 @@ Automated comparison of maps can be achieved with softwares like the Map Compari
 ##### Visualizations of summary statistics 
 Through comprehensive plotting, quantitative metrics can be visualized. Spatial metrics can also be visualized through histograms comparing main summary statistics in different scenarios (e.g the percentage of land areas covered by each 3 category is displayed for 3 drivers, and 4 scenarios using small multiples histograms in [@villamor14], figure 4)[^11back].
 
-![An example of comprehensive plotting where [@Sun14] displays results of 4 metrics (one per figure), as several line plots (for several variables, here one per market level), and varying parameters (here 3 parameters with 3 possible values each resulting in $3^3$ data points per market level, per figure. This is one of four figures corresponding to the metric "Edge density".](../images/sun.png)
+![An example of comprehensive plotting where [@Sun14] displays results of 4 metrics (one per figure), as several line plots (for several variables, here one per market level), and varying parameters (here 3 parameters with 3 possible values each resulting in $3^3$ data points per market level, per figure. This is one of four figures corresponding to the metric "Edge density".](../images/sun.png){#fig:compreh}
 
 [^11back]: A side concern that may come up in these cases, is about data management: the total size of the runs can become is too large for available main memory. A strategy is to precompute summary statistics, such as the mean and extrema [@PotterWilson].
 
-####Quantitative indices and spatial metric for continuous data
+####Quantitative indices and spatial metric for continuous data {#sec:metricsmultrunscont} 
 #####Between 2 maps
 #####Between many maps
 
@@ -242,7 +293,7 @@ In general for uncertainty analysis, two statistics are very relevant to display
 
 There are also specific measures for robustness, based on the amount of times, accross many runs in different states of the world, leading to desired solutions, i.e the cases where all criterias are met . Robustness measures of two types: **regret and satisficing measures**. The former seek to minimize expected loss, that is differences from an ideal solution due to deep uncertainties; the latter seek to maximize the good solutions [@Hadka2015].
 
-Robustness of an output is contingent upon the consistency between multiple runs leading to this output, under varying conditions. Therefore, spatial metrics measuring agreement between multiple runs, as detailed in sections (section {number}) can be used for assessing robustness, and will not be repeated here, to avoid redundancy.
+Robustness of an output is contingent upon the consistency between multiple runs leading to this output, under varying conditions. Therefore, spatial metrics measuring agreement between multiple runs, as detailed in sections \ref{sec:metricsmultrunscat} and \ref{sec:metricsmultrunscont} can be used for assessing robustness, and will not be repeated here, to avoid redundancy.
 
 Furthermore, there is an approach specific to robustness in the context of decision making. Methods based on the **breakeven point** inquire about the magnitude of change that would result in changing the decision. The breakeven ratio is defined as the prioritization score of the best choice over the prioritization score of the second best choice. This metric applied to spatial data result in prioritization score breakeven maps, which are efficient displays of how much the prioritization score of the chosen category would need to be reduced before switching to the second best category [@RIOS] 
 
@@ -252,7 +303,7 @@ The most common static visualization techniques for spatial data uncertainty inc
 
 1. **Juxtaposition**, that is adding a separate similar figure to represent uncertainty, alongside the representation of the data.
 2. **Overlaying** a visualization of uncertainty on top of the main one. [@Bingham] overlays a contour map of an error field on top of a heatmap of the mean value of a multivalue dataset, but it is not so straightforward. 3. Varying the value of a free graphical variable, such as a property of the color palet used to visualize the main data can also express uncertainty. The first option is **"blurring"**: the focus is adapted proportionally to the level of uncertainty, this can be done through one of these parameters : contour crispness (« fuzzyness »), fill clarity, fod or resolution [@mac92]. Formally, blurring is defined as removing spatial high frequency details [@russ95]. **Saturation** is the second option, uncertainty is expressed by paleness, also referred to as whiteness [@hengl]. More options include texture and edge crispness variations, overall all these solutions are more intuitive but less precise [@griethe].
-4. Integrating **additional geometrical objects**, such as labels, volume rendered thickness, or error bars may express uncertainty [@griethe]. Circular glyphs and ribbons have been designed, in the context of weather forecast ensemble data, to visualize uncertainty [@sanyal].5. **Spaghetti plots**, as described in section {number}, may also allow examination of variation of different variables of an ensemble over space, which is another way of giving a sense of the uncertainty associated. 
+4. Integrating **additional geometrical objects**, such as labels, volume rendered thickness, or error bars may express uncertainty [@griethe]. Circular glyphs and ribbons have been designed, in the context of weather forecast ensemble data, to visualize uncertainty [@sanyal].5. **Spaghetti plots**, as described in section \ref{sec:spag}, may also allow examination of variation of different variables of an ensemble over space, which is another way of giving a sense of the uncertainty associated. 
 6.  **Frequency maps** reflect the number of times a certain category was assigned to a certain pixel, across multiples runs. These accompany a categorical map, that can be the **modal portfolio** i.e the map displaying, for each cell, the category chosen most frequently across multiple runs [@RIOS]
 
 In dynamic visualization, uncertainty representation can be more easily achieved. A swap button can allow the user to visualize successively the main data and its associated uncertainty on the same background map, allowing easier interpretation, with the possibility of going back and forth. This method is referred to as **toggling** [@Aerts03]. Other interactive options include the **clickable map**, where uncertainty information displays upon click [@Vander]. There has also been attempts to express imprecision dynamically adressing human senses via vibrations proportional to the level of uncertainty [@Brown], or smooth animation of sequence of different realizations of a model [@Ehlschlaeger].  There have even been attempts to display uncertainty by adding another dimension via sounds [@Lodha][@Fisher]. Another solution to convey accuracy is probabilistic animation : the uncertain points appear and disapear according to their accuracy, i.e the probability domain is sampled over time [@Lundstrom].
@@ -261,22 +312,22 @@ Another strategy is to combine uncertainty metrics with maps, by displaying stat
  
 The techniques described above were mainly developed for continuous data, but can be adapted to categorical data. However specific techniques for categorical spatial data exist. In the context of landcovers, prioritization score maps express the effiency of a landcover/activity with regards to an objective [@RIOS] 
 
-####Parametric uncertainty: sensitivity analysis displays *this is pretty superficial but is that enough - otherwise this is a whole other topic to dig in (See Pianosi2016)*
+####Parametric uncertainty: sensitivity analysis displays {#sec:SA} *this is pretty superficial but is that enough - otherwise this is a whole other topic to dig in (See Pianosi2016)*
 Sensitivity analysis aims to understand the influence of the inputs, and their uncertainty, on the outputs and their uncertainties of a model [@Pianosi2016]. To visualize the input/output relationship, a common and direct way is a **scatterplot** (for each input parameter, with input parameter considered on x-axis and the output on y-axis), the relationship is explicitly revealed, especially in the case of strctured dependencies. This corresponds to the so-called O(F)AT (one factor at a time) method [@hamby], e.g [@murphy04]. However, with a high number of inputs, scatterplots can become cumbersome. Then, partial derivative of the output by one factor can be displayed to assess the impact of small perturbations; however it explores only locally the input space around a baseline. Other metrics such as the percentage of output change per percentage of input change, or sensitivity indexes are also used. More details can be found in [@hamby]
 
 Variance decomposition is another approach to sensitivity analysis; then **pie charts** displaying variance partitions are a good alternative [@ABMleelig]. By opposition to trying to display the impact of each inputs, variance-based method focus on finding the most influencing factors. The output variance is decomposed into parts corresponding to the contribution of each input, therefore displaying its impact on total variance [@Homma]. Pie charts are widely used mostly because they are easy to build and understand (*and named after a desert. Okay I know I'll remove this, just checking if you were reading :D*). They are effective for small datasets (less than 6 segments of notably different sizes), and if segments are ordered according to size [@piepiepie]. Because only effective on small datasets, and inadequate for comparisons (between several pie charts), partisans of high density space-effective displays, like Tufte, argue against these charts.
 
-![Expressing sensitivity analysis through variance decomposition, from [@lig14]](../images/sa.png)
+![Expressing sensitivity analysis through variance decomposition, from [@lig14]](../images/sa.png){#fig:lig}
 
 **Tornado diagrams** are also used to visualize the total impact of factors, and highlight their relative importance [@tornadospider]. They are horizontal bar charts corresponding to each input, plotted on the axis of output values. 
 
 **Spiderplots** [^5353back] display these informations and more, including limit values and impact on output of each input, and also the amount of change in input leading to breakeven point. However, the amount of factors displayed is limited (to about 7 [@tornadospider]). These are 2D plots, with percentage of change from baseline on x-axis, and output values on y-axis, and several lines corresponding to each input. 
 
-![Will make a better figure but just to give you an idea !](../images/todo.png)
+![Will make a better figure but just to give you an idea !](../images/todo.png){#fig:spiderplot}
 
-[^5353back]: Spiderplots or spidercharts is a blurry term to that has been used to refer both to 2-axis spiderplots (as in Fig {number: SPIDERPLOT Sensitivity analysis}, but also to multi-axis spiderplots (as in Fig {number: RADARCHART}). 
+[^5353back]: Spiderplots or spidercharts is a blurry term to that has been used to refer both to 2-axis spiderplots (as in figure \ref{fig:spiderplot}), but also to multi-axis spiderplots (as in figure \ref{fig:radar}). 
 
-Using landscape comparison metrics described in section ({number} many cat maps),  sensitivity analysis can be conducted through the Wilcoxon signed rank test assessing significance of mean differences. [@Sun14].
+Using landscape comparison metrics described in section \ref{sec:manycatmaps},  sensitivity analysis can be conducted through the Wilcoxon signed rank test assessing significance of mean differences. [@Sun14].
 
 ### Other things to consider (or not) 
 *(draft - this is todo later maybe don't bother reading)*
@@ -316,7 +367,7 @@ The examples, guidelines and suggestions gathered above aim to support creation 
 
 A few important things to consider when chosing a tool are the features supported (user interactivity, 3D, web), and also speed, scalability, robustness, and user adoption. Then, it is often a trade-off between customizability and ease of use. The softwares are usually easier to manipulate, and the results are aesthetic, but if the user is willing to code, custom scripts offer the most flexibility in design, and various charting libraries allow to tailor the figure to specific needs. This section does not pretend to be exhaustive but attempts to give an overview of the available data visualization tools, as of 2016. Emphasis will be given on spatial data as it constitutes an essential part of natural capital informations.
 
-![DRAFT figure, will be simplified in buckets - because so much subjectivity! Overview of visualization tools. A lot of parameters, such as customizability and user adoption have been subjectively estimated from informations found online, and various users' forums](../images/draaaft.png)
+![DRAFT figure, will be simplified in buckets - because so much subjectivity! Overview of visualization tools. A lot of parameters, such as customizability and user adoption have been subjectively estimated from informations found online, and various users' forums](../images/draaaft.png){#fig:boooo}
 
 ### Data analysis and visualization softwares
 As we enter the information age, data visualization softwares, usually combining some analytics features, thrive. The main softwares for static graphs would be **Tableau**, **Spotfire** , **Qlickview** and **MS BI Stack**. Dynamic visualization are supported by softwares like **Xmdv Tool** and **OpenDX**, which are both open source. (*TODO : more?*)
