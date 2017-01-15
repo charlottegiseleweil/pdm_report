@@ -6,13 +6,22 @@ Within the initial framework of the project, on environmental modeling and data 
 ###Literature review
 The first steps to approaching the question of displaying natural capital information were to explore the context, learn notions of data visualization in general and understand the state-of-the art. Background knowledge was built gathering from the literature. It turned out this literature review could answer the need for a useful guidance document on ES visualization, by putting together the various approaches and main strategies for displaying ES information. 
 
-### Tools exploration
+### Tools market study
 Meanwhile, in computational data visualization, the resulting display highly depends on the choice of tool. And it turned out that the available data visualization tools were numerous, varied, overlapping. An exploration of these softwares and libraries attempted to guide with more clarity towards the choice of an adapted tool. To conduct such a comparison, some of these tools were learned and used.
 
-##Identifying display needs
+##Identifying display needs TO RE DO ! {#sec:survey}
 First, based on typical example cases and interviews of *Natcappers* / *professionals in the field of ecosystem services* ? , some display needs were identified. Then this list was refined and completed thanks to the inputs of the broader FWAT team. Next, these needs were gathered and organized in a survey document sent out to a broader community of professionals in the field, including scientists, ecologists, hydrologist, economists, analysts and researchers working with the Natural Capital Project. The survey questions can be found in Annex ({section number}). A total of (???) answers were collected, where participants assessed, for each identified need, the usefulness of such a display, but also commented on their current implementation and the usefulness of improving the current displays. Resulting from their inputs, the display needs were prioritized (...TODO!) 
 
+In order to identify the communication needs of ecosystem services analysts, a survey, as described in (renvoi motiv) was crafted, in collaboration with a small team of analysts. Grouped in 6 categories, 30 different display tasks were listed; they were phrased purposively to be (formulation email survey), clear enough to be solved by a same display(...), but general enough that they wouldn't underly a solution.  (TO REPHRASE)
+The 14 respondents were all professionals in the field of ecosystem services, working in different domains ranging from marine, to FWAT (...). They rated the usefulness of each display tasks[^335back] both in terms of (1) the need for this type of display in general and (2) the need for an improved implementation to these displays. The former will serve as a basis to point relevant needs for the user guidance to displaying natural capital information (Chapter \ref{sec:UserGuide}). The latter will allow to identify the areas where better implementations and solutions are required, and will guide the development of a display tool (Chapter \ref{sec:TheTool}).
+
+[^335back]: On a scale from 0 to 5, with 0 meaning totally useless and 5 totally useful. 
+
 {>> TODO Describe and explain the survey  <<}
+
+[^66809back]:
+
+[^66809back]: link to the survey !!
 
 ![Gathering NatCappers' visualizations needs and tools survey sample empty page -- *Survey here or in Annex ?*](../images/survey.pdf){#fig:survey}
 
@@ -51,7 +60,7 @@ Strong of the knowledge from the literature review, and the current state of exi
 #### Defining the needs
 In terms of static visualizations. The main goal of the paper  is to look at the impact of restoration (land cover scenarios) on the ES objectives (water, flammability) both independently and then simultaneously with climate scenarios going on in the background.
  
-##Assess quality of suggested solutions 
+##Assess quality of suggested solutions {#sec:criterion}
 Rather subjective, 
 TODO, Assessment through:
 

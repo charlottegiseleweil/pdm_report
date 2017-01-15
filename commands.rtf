@@ -1,12 +1,20 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;\f2\fnil\fcharset0 HelveticaNeue;
-\f3\froman\fcharset0 Times-Roman;}
+\f3\froman\fcharset0 Times-Roman;\f4\fmodern\fcharset0 Courier;}
 {\colortbl;\red255\green255\blue255;\red242\green242\blue242;\red50\green102\blue255;\red22\green25\blue31;
-\red58\green62\blue68;\red237\green236\blue236;\red243\green235\blue0;\red93\green93\blue93;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh16220\viewkind0
+\red58\green62\blue68;\red237\green236\blue236;\red243\green235\blue0;\red93\green93\blue93;\red246\green246\blue246;
+\red52\green61\blue68;\red71\green85\blue110;\red242\green245\blue249;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh15600\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\f0\fs48 \cf0 Latex compiler
+\f0\fs48 \cf0 CSS\
+
+\fs24 @general \
+#specific ?\
+.special ?
+\fs48 \
+\
+Latex compiler
 \fs24 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
@@ -54,10 +62,14 @@ see \\ref\{sec:prout\}
 \f2 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720
-\cf0 \
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
 
-\b Figures
-\b0 \
+\b \cf0 \expnd0\expndtw0\kerning0
+Figures
+\b0 \expnd0\expndtw0\kerning0
+\
 \pard\pardeftab720
 
 \fs26 \cf4 \expnd0\expndtw0\kerning0
@@ -103,7 +115,9 @@ see [section 1.4](#intro)\cb1 \expnd0\expndtw0\kerning0
 \pard\pardeftab720
 
 \fs26 \cf4 \expnd0\expndtw0\kerning0
-\{== \cb7 Highlight en jaune\cb1  ==\}\
+\{== \cb7 \expnd0\expndtw0\kerning0
+Highlight en jaune\cb1 \expnd0\expndtw0\kerning0
+ ==\}\
 \pard\pardeftab720
 
 \fs24 \cf4 \expnd0\expndtw0\kerning0
@@ -192,8 +206,34 @@ Run file.html \
 
 \fs28 \
 Online\
+\pard\pardeftab720
 
-\fs20 Heroku API :\
+\f1\fs26 \cf9 \cb10 \expnd0\expndtw0\kerning0
+heroku login\
+cd webviz_trial\
+heroku create\
+\pard\pardeftab720
+
+\f4\fs28 \cf11 \cb12 \expnd0\expndtw0\kerning0
+heroku git:remote -a peru-viz\
+git add .\
+$ git commit -am "make it better"\
+$ git push heroku master
+\f1\fs26 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\
+git push heroku master\
+\pard\pardeftab720
+\cf9 \cb10 \expnd0\expndtw0\kerning0
+heroku ps:scale web=1\cf9 \cb10 \expnd0\expndtw0\kerning0
+\
+heroku open\
+View logs ::  heroku logs --tail\
+\pard\pardeftab720
+
+\f0\fs28 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs20 \cf0 Heroku API :\
 
 \f1 \cf2 \cb0 \CocoaLigature0 git add .\
 git commit -m \'ab\'a0blah\'a0\'bb\
