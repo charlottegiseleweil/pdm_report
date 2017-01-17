@@ -19,7 +19,6 @@ The 14 respondents were all professionals in the field of ecosystem services, wo
 
 {>> TODO Describe and explain the survey  <<}
 
-[^66809back]:
 
 [^66809back]: link to the survey !!
 

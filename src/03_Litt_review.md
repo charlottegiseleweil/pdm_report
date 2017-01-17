@@ -1,4 +1,4 @@
-# Design strategies for complex information display
+# Design strategies for complex information display {#sec:litreview}
 
 >
 >   
@@ -46,19 +46,21 @@ What makes a good visualization? Keeping in mind the goal which is to effectivel
 Best practices seem to be summarized by three main points. An efficient display should be self-explanatory, tailored to the audience and most importantly convey the key message. Moreover a good visualization is highly dependent on the task, the type of display and other design choices are very specific to the dataset considered.
 
 
-**Readibility and intuitivity**
+#### Readibility and intuitivity {.unnumbered}
 
 Simplicity is key to an effective display. Tufte advocates to minimize the design complexity, to maximize the content reasoning time. Redundancy complicates vainly and should be avoided. For example, the data ink ratio (i.e the ratio of ink used to display data over the total ink of the figure) should be minimized as far as possible [@tufte]. Additionally, [@Kelleher] argues to maintain axis ranges across subplots for easier comparison, connect sequential data (e.g disconnection for missing data in time series plots) and express density in overlapping points (e.g with color gradient in scatterplots). Moreover, appropriate encoding of objects and attributes lead to intuitive plots [@cleveland1984graphical].
 
-**Scale and ratios**
+#### Scale and ratios {.unnumbered}
 
 The success of a visualization is contingent upon the careful selection of appropriate scales and aspect ratios. There is always trade-offs between showing the zero, or zooming on fluctuations. Dynamic features and distortion techniques allow to overcome some of this difficult choices, but are not always possible. Making the right choice between displaying patterns or details is crucial [@kosslyn1992minding]. Meaningful axis ranges, data transformations (e.g log scale) and aggregation level (e.g temporal aggregation by averaging over a larger time step for long time-series) are essential too [@Kelleher]
 
-**Legend**
+#### Legend {.unnumbered}
+
 
 For the graph to be self-explanatory, a clear labeling must be included. If opting for a legend, it should be ordered by some properties of data, never alphabetically because a space to express something about the data would be wasted [@tufte]. Creating logical groups assist the understanding. For color codes, it is advised to display adjacent to each other in the legend the colors that are adjacent in the corresponding map [@Desi5656].
 
-**Colorscheme** 
+#### Colorscheme {.unnumbered}
+
 
 The careful choice of the color scheme is not be neglected [@Kelleher]. Sequential color scheme ought to be chosen when the underlying data shows ranked differences; diverging scheme when dealing with negative and positive differences around a mean or a neutral value; and a categorical scheme for discrete values [@tilemill]. Moreover, many sources suggests to use only a few colors (about 6), while choosing them distinct, and striving for color harmony. Cultural conventions and intuitive tints facilitate fast perception. Colorblind and printing safe schemes are prudent. Also, the color scale should be normalized, considering which datapoints should appear in different categories. [@Colorbrewer] provides good templates.
 
@@ -83,12 +85,10 @@ The careful choice of the color scheme is not be neglected [@Kelleher]. Sequenti
   \label{fig:colorschemes_sub3}
 \end{subfigure}
 \caption{Colorschemes}
-\label{fig:test}
+\label{fig:colorschemes}
 \end{figure}
 
-
-**Interactivity**
-
+#### Interactivity {.unnumbered}
 The success of an interactive display results from the appropriate interface complexity for a certain user motivation [@Roth]. In the field of interactive maps, [@Roth] examines when cartographic interaction positively supports work.Interactivity is not always beneficial to the graphs, but relevant for users who wish to customize the communicated information to their particular interests, also relevant to overcome some display problematics. Another point that interactivity helps achieving is enhancing the user's involvment with the map, by offering a sense of control over the experience.
 ##Specific data visualization challenges and strategies###Displaying multi-dimensional data
 In the context of ES, multi-dimensionality arises from multi-objective problems, such as cases where mutiple ES are considered and their trade-offs are to be explored, but also from (*where do we encounter multi-dim in ES besides multi-obj???*) Visual decision support tools are very relevant in field of multi-objective optimization problems[^0326back]. In the  typical cases, there is no unique optimal solution, but a collection of Pareto optimal ones [@Hadka2015], i.e solutions where improving the result towards one objective result a decrease in performance with regards to another objective  [@paretoUNIL]. Efficient visualizations empower the user with the ability to navigate through thousands of potential solutions, compare them and understand trade-offs, leading to performant decision-making. 
@@ -207,7 +207,7 @@ The text translates to: *The numbers of men present are represented by the width
 ##### Between 2 maps
 For the examination of (dis)agreement between two maps, simple and efficient strategies suggests to show the two maps next to each other; or to substract one map to another to display the change map. Typically change maps uses diverging colorscheme, two colors representing respectively increase and decrease, and the intensity gradient reflects the amount of change. 
 
-##### Between many maps \ref{sec:spag}
+##### Between many maps {#sec:spag}
 The problem complicates when comparing many runs. 
 
 Visualizing flow data, **spaghetti plots** can express consistency between runs. Widely used in meteorology, the consistency of the runs is expressed by how tightly clustered they appear. Spaghetti plots may be translated to continuous spatial data by using the isocontour of each run, which is useful when concerned about a specific threshold. *better, Ben?*
@@ -217,7 +217,12 @@ For continuous data, **3D plots overlaying maps** (figure \ref{fig:overlay}) hav
 
 ![3D histograms, organized according the geographical layout; extract from figure 8 of [@Huang13] -- Merge (subfigures!)](../images/3Dplotsoverlaying.png){#fig:overlay}
 
-For categorical data, the **frequency map** approach would display the most assigned category to each area across many runs, with possibly additionally a measure of how often this category was assigned. *(remove) More details can be found in section \ref{sec:manycatmaps} [@RIOS].*
+1. Proportion of runs in which the cell was assigned **any category**, by opposition to empty cell; this measure would make sense for example in the context of intervention maps, where one would consider scenarios selecting where, on the landscape, the intervention should be undertaken - which is a very typical question in optimizing natural capital conservation. 
+2. For categorical data, the **frequency map** approach would display the most assigned category to each area across many runs, with possibly additionally a measure of how often this category was assigned. [@RIOS]. = **Category most often assigned** to the cell, among all the runs. For example, in the context of portfolios, the modal portfolio approach is based on calculation of the most often chosen activity for each parcel. These have been called modal portfolios, and frequency map can be constructed from there, expressing how often was the activity chosen [@RIOS]. These can display the category assigned in most of the runs, or limit to these assigned in a certain threshold percentage of the runs. 
+5. In the same vein, the **variant-invariant method** aims to distinguish the invariant regions, that is the areas where the category assigned is consistently the same [@Brown2005]
+4. (TODO) the idea of some “breakeven” or “next best” score (*Does Breakeven prioritization scores apply to comparison of many maps? Ben: "it's comparing one particular map to a whole bunch of other maps (to find next-best values), but once  you've found the next best, it's just a calculation from two elements of the pixel stack. (That's probably confusing)*" 
+1. The **fuzzy set approach** [@Hagen2003] assesses the similarity of several categorical maps, resulting in a fuzzy set comparison map where each cell displays a degree of similarity and an overall value for similarity, so-called $\kappa$-Fuzzy as it extends the Kappa index including fuzziness of category and of location.
+
 
 Animation is of great interest in this context. Dynamic visualizations are very suited for displaying multiple spatial outputs, there are increasingly used to display results in the field of ABMs[^1back], encountering similar type of outputs [@ABMleelig]. 
 
@@ -225,48 +230,127 @@ Animation is of great interest in this context. Dynamic visualizations are very 
 
 Visual comparisons of maps is efficient and not too intense cognitively for human perception. However, it fails to rank quantitatively the results, nor is adapted to an important number of maps. Screening through hundreds of maps produced is not a viable option. Therefore, other solutions must be considered. 
 
-####Quantitative indices and spatial metrics for categorical data {#sec:metricsmultrunscat} 
+####Aspatial metrics to summarize results and agreements of many categorical maps {#sec:metricsmultrunscat} 
+Non-spatial statistics, such as quantitative indices exist ...
 #####Between two maps
 There are different types of categorical (i.e discrete attributes) map consistency measures [@Kuhnert2005]:
-1. The coarsest approach would be to compare the total numbers of cells[^3back] assigned to each category, neglecting any spatial patterns. This gives a very general quantitative overview of the **total per categories**. (All the other, finer approaches detailed below imply a cell-by-cell comparison.)
+1. The coarsest approach would be to compare the total numbers of cells[^3back] assigned to each category, neglecting any spatial patterns. This gives a very general quantitative overview of the **total per categories**, that can be delivered as tabular data. (All the other, finer approaches detailed below imply a cell-by-cell comparison.)
 
 [^3back]: *Vocabulary note: in this section, "cell" corresponds to the regional unit at which data is aggregated, it can be a region, a pixel, an HRU, a state...*
-1. A basic cell-by-cell comparison method measures simply the **overall agreement**, by calculating the portion of cells that agree between two maps:
+2. A basic cell-by-cell comparison method measures simply the **overall agreement** (or percent agreement) by calculating the portion of cells that agree between two maps:
 (Cell-by-cell level of agreement) = (Number of direct matched cells between 2 maps) / (Total number of cells in map)
-1. **Kappa index of agreement** (KIA or Cohen's $\kappa$) is a statistic measuring concordance between categorical items. This technique has proven efficient for cell-by-cell comparisons of spatial data [@Manson2005], as long as patterns and locations of changes are not involved [@Kuhnert2005]. Some variants have been visualizations to adress the quantity and the location fit (points 4 and 5 below) as well [@Hagen2003] and [@Pontius2000] It is more robust than a percent agreement because it takes into account the agreement occuring by chance. $\kappa = \frac{\textrm{p}_{0}-\textrm{p}_\textrm{e}}{1-\textrm{p}_\textrm{e}}$  with  $\textrm{p}_{0}$  being the proportion of units agreeing, and  $\textrm{p}_\textrm{e}$  the proportion of units expected to agree by chance (i.e the hypothetical probability of chance agreement). Complete agreement results in $\kappa = 1$ [@Cohen1960]. 1. The **quantity fit** informs on the number of cells that changed from one category to another, offering an overall comparison on the quantity of each category: $$Quantity \ fit = 1 - \frac{1}{N}\sum \left |  \textrm{a}_\textrm{1i} - \textrm{a}_\textrm{2i} \right |$$ where $\textrm{a}_\textrm{ki}$ is the number of cells assigned to category $i$, in map $k$ with $k \subseteq (1,2)$, $N$ the total number of cells in map and $C$ means all categories [@Kuhnert2005].
-1. The **location fit** informs on the number of cells that kept the category but changed location from one map to another:  $Quantity \ fit = (Location \ fit) \ - \ (Cell-by-cell\  level\  of\  agreement)$1. The **distance** between the locations of matching cells in the maps can also be calculated [@Kuhnert2005]. An overall measure of distance between two discrete maps expresses the amount of agreement or the goodness of fit [@Seppelt2003217] and [@costanza].
-1. The **moving window algorithm** further accounts for landscape patterns by considering neighboring cells in addition to the cell-to-cell comparison. It has been develop to answer the following problem: computing solely the number of cell-to-cell matches is not reliable in all circumstances, as if there is a matching cell right near by, it will not be taken into account (e.g if we compare two chessboards shifted by one well, the number of cell-to-cell matches is null although there is evident similarity not to be ignored) [@Kuhnert2005]. 
+3. **Kappa index of agreement** (KIA or Cohen's $\kappa$) is a widely used statistic measuring concordance between categorical items. This technique has proven efficient for cell-by-cell comparisons of spatial data [@Manson2005], as long as patterns and locations of changes are not involved [@Kuhnert2005]. It is more robust than a percent agreement because it takes into account the agreement occuring by chance. $\kappa = \frac{\textrm{p}_{0}-\textrm{p}_\textrm{e}}{1-\textrm{p}_\textrm{e}}$  with  $\textrm{p}_{0}$  being the proportion of units agreeing, and  $\textrm{p}_\textrm{e}$  the proportion of units expected to agree by chance (i.e the hypothetical probability of chance agreement). Complete agreement results in $\kappa = 1$ [@Cohen1960]. 
+{{4. Extending the $\kappa$IA, the **quantity fit** informs on the number of cells that changed from one category to another, offering an overall comparison on the quantity of each category: $$Quantity \ fit = 1 - \frac{1}{N}\sum \left |  \textrm{a}_\textrm{1i} - \textrm{a}_\textrm{2i} \right |$$ where $\textrm{a}_\textrm{ki}$ is the number of cells assigned to category $i$, in map $k$ with $k \subseteq (1,2)$, $N$ the total number of cells in map and $C$ means all categories [@Kuhnert2005].
+5. Also extending the $\kappa$IA, the **location fit** informs on the number of cells that kept the category but changed location from one map to another:  $Quantity \ fit = (Location \ fit) \ - \ (Cell-by-cell\  level\  of\  agreement)$
+8. However, Pontius, who published about $\kappa$ [@Pontius2000] ended up reconsidering his positions and advocating against the use of this index because of several flaws, mainly the irrelevance of the randomness baseline in many applications, and the fact that it's the ratio is difficult to interprete and overly complicated because only the numerator is really important [@Pontius2011].
+9. Instead, Pontius suggests to use **quantity disagreement and allocation disagreement** measures, more helpful to understand both components of disagreement than with a single statistic of agreement. ....... the cross-tabulation matrix ...... e.g in remote sensing
+}}
+6. The **distance** between the locations of matching cells in the maps can also be calculated [@Kuhnert2005]. An overall measure of distance between two discrete maps expresses the amount of agreement or the goodness of fit [@Seppelt2003217] and [@costanza].
+7. The **moving window algorithm** further accounts for landscape patterns by considering neighboring cells in addition to the cell-to-cell comparison. It has been develop to answer the following problem: computing solely the number of cell-to-cell matches is not reliable in all circumstances, as if there is a matching cell right near by, it will not be taken into account (e.g if we compare two chessboards shifted by one well, the number of cell-to-cell matches is null although there is evident similarity not to be ignored) [@Kuhnert2005]. 
+
+For discrete variables you can try:
+
+a) Jaccard index (http://en.wikipedia.org/wiki/Jaccard_index)
+
+b) Sorensen-Dice coefficient (http://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient)
+
+c) Hamming distance (http://en.wikipedia.org/wiki/Hamming_distance)
 
 #####Between many maps {#sec:manycatmaps}
 
-When comparing a large number of maps, aggregation often is necessary to communicate results [@Brown2005]. Some of the metrics detailed above that calculate correlation between two maps may be extended to many maps comparison [@Seppelt2003217]. Calculating the total numbers of pixels assigned to each category (point 1 from previous section) is the coarsest approach. Finer methods imply to make calculations for each cell, in all the considered maps (as in, superposing all maps, and making calculation for the column of corresponding cells). For raster data, this technique of *column of cells* is referred to as pixel stack (? From Ben, fin ref TODO). Measures expressing the agreement between runs include:
+When comparing a large number of maps, aggregation often is necessary to communicate results [@Brown2005]. Some of the metrics detailed above that calculate correlation between two maps may be extended to many maps comparison [@Seppelt2003217], like the approach #1.
 
-1. Proportion of runs in which the cell was assigned **any category**, by opposition to empty cell; this measure would make sense for example in the context of intervention maps, where one would consider scenarios selecting where, on the landscape, the intervention should be undertaken - which is a very typical question in optimizing natural capital conservation. 
-2. **Category most often assigned** to the cell, among all the runs. For example, in the context of portfolios, the modal portfolio approach is based on calculation of the most often chosen activity for each parcel. These have been called modal portfolios, and frequency map can be constructed from there, expressing how often was the activity chosen [@RIOS]. These can display the category assigned in most of the runs, or limit to these assigned in a certain threshold percentage of the runs. 
-5. In the same vein, the **variant-invariant method** aims to distinguish the invariant regions, that is the areas where the category assigned is consistently the same [@Brown2005]
-4. (TODO) the idea of some “breakeven” or “next best” score (*Does Breakeven prioritization scores apply to comparison of many maps? Ben: "it's comparing one particular map to a whole bunch of other maps (to find next-best values), but once  you've found the next best, it's just a calculation from two elements of the pixel stack. (That's probably confusing)*" 
-1. The **fuzzy set approach** [@Hagen2003] assesses the similarity of several categorical maps, resulting in a fuzzy set comparison map where each cell displays a degree of similarity and an overall value for similarity, so-called $\kappa$-Fuzzy as it extends the Kappa index including fuzziness of category and of location.
-2. The **hierarchical fuzzy pattern matching** uses a different strategy to address the same concern as the moving window algorithm (see previous section, point 7). It avoids drawbacks of a cell-by-cell comparison by aggregating the regional unit considered in patches, and conducting comparisons at different scales [@power2001].
+###### Standard deviation and other variance measures on summaries of maps ? {.unnumbered}
+1. Calculating the total **numbers of pixels assigned to each category** (point 1 from previous section) resulting in a table, with categories in comuns and runs inrows, which works if there are not too many runs. If there are, one may display a simple table linking categories with summary statistics, such as average, extrema or standard deviation.
+
+| Land cover    |  Grass | Forest | Barren | 
+| --------------------------------- | ----------------------------------- | --------------------------------- | -------------- |
+| Average pixels [min;max]     | 117 [50;120] | 170 [150;190] | 32 [30;40] | 
+| Average percentage ± standard deviation     | 50% ± 20% | 50% ± 20%  | 50% ± 20% | 
+
+(I litterally made this up,  it sucks?)
+
+###### diversity indexes ? {.unnumbered}
+**Diversity indexes** can also be used as a way to summarize categorical variance (?) 
+Diversity index reflect the number of categories, and measures the relative abundance of each category across the dataset, i.e how evenly they are distributed. (when evenly distributed, the index is maximum)
+However, this measure only account for the overall amount of each category, and not for spatial distribution. 
+
+**Shannon diversity index** [Examples and explain: Peter]
+
+* Formula : Shannon diversity index $ H = - \sum_{i=1}^{R} p_{i} \ln(p_{i})$, with $\textrm{p}_{i}$ the proportion of cells assigned to category i, and $R$ the total number of categories.
+* Interpretation : when evenly distributed, $ H = \ln(R) $, and as it approaches $0$, proportions in each category vary more.
+
+**To Peter** : My understanding of Shannon diversity index is that it reflects the relative abundance of each category across the dataset. I don't see how it would summarize the categorical variance accross many runs?
+
+###### Pixel stack methods {.unnumbered}
+Finer methods imply to make calculations for each cell, in all the considered maps (as in, superposing all maps, and making calculation for the column of corresponding cells). For raster data, this technique of *column of cells* is referred to as **pixel stack** (? From Ben, fin ref TODO). Measures expressing the agreement between runs include:
+
+######  Coeff ?? {.unnumbered}
+ A **coefficient of unlikeability** measures variability in categorical data by considering how often, not how much, observations differ [@kader7]. It can be used as a type of variance for categorical interventions *[Ref here is Ginger!]*. 
+
 8. Other **spatial metrics** can be used to measure land-use change and discover spatial patterns. They include Area-weighted mean shape index, centrality indexes, contagion index... [@ABMleelig]. (*need more details ? todo ABMleelig> 4.16*). Some are more specific landscape metrics, such as the average core area, which is the proportion of production land per land cover category [Parker2004], and the average patch perimeter-area ratio (PA-1) [@Ritters1995]. 
 9. Landscape statistics measuring sprawl and frangmentation include landscape shape index (LSI), aggregation index (AI) contiguity index (CI) and centrality index (CTI). Together, they allow for comparison of landscape, spatial patterns of change and overall spread [@Sun14]. Spatial autocorrelation statistics, such as Moran I, inform on the degree of correlation, revealing the extent of clustering [@Wu2002].
-5. A **coefficient of unlikeability** measures variability in categorical data by considering how often, not how much, observations differ [@kader7]. It can be used as a type of variance for categorical interventions *[Ref here is Ginger!]*. **Shannon diversity index** can also be used as a way to summarize categorical variance (?) [*Peter does this. But not found in literature - so it goes in results section??*]. This diversity index measures the relative abundance of each category across the dataset, i.e how evenly they are distributed; but this measure only account for the overall amount of each category, and not for spatial distribution. (Todo?)
 
+??
+2. The **hierarchical fuzzy pattern matching** uses a different strategy to address the same concern as the moving window algorithm (see previous section, point 7). It avoids drawbacks of a cell-by-cell comparison by aggregating the regional unit considered in patches, and conducting comparisons at different scales [@power2001].
+3. 
 Automated comparison of maps can be achieved with softwares like the Map Comparison Kit[^127back] [@visser2006map].
 
 [^127back]: MCK compares raster maps using fuzzy set map comparison, hierarchical fuzzy pattern matching, and moving window based comparison of landscape structure. See $http://mck.riks.nl$. 
 
-##### Visualizations of summary statistics 
-Through comprehensive plotting, quantitative metrics can be visualized. Spatial metrics can also be visualized through histograms comparing main summary statistics in different scenarios (e.g the percentage of land areas covered by each 3 category is displayed for 3 drivers, and 4 scenarios using small multiples histograms in [@villamor14], figure 4)[^11back].
+Mapcurves, which gives you a goodness-of-fit measure based on spatial overlap. The algorithm is described in this paper and an implementation in R and Matlab
+
+####Quantitative indices and spatial metric for continuous data {#sec:metricsmultrunscont} 
+
+A handy strategy if to **discretize the continuous data**, by sorting the dataset into categories corresponding to ranges of values. This allow to use all the metrics discussed above (section \ref{sec:metricsmultrunscat}) for comparison.
+
+#####Between 2 maps 
+**statistical tests to summarize variance** ? (like average of difference between corresponding pixels, normalized ?)
+
+Statistical tests: 
+we performed pixel-to-pixel comparisons between model outcomes and calculated the mean difference in pixel scores. We used a two sample Student's t-test, (assuming as null hypothesis that both maps were identical to each other regardless of which input parameters were used) to examine whether the mean difference in corresponding pixel scores from one map to another was greater than would be expected by chance alone. We also utilized weighted kappa statistics, frequency distributions, and percent difference to look at the disparities in pixel scores.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2652433/
+
+One way is to use the Bivariate Moran index. Moran's I.
+Here's an example of application
+http://www.n-aerus.net/web/sat/workshops/2013/PDF/N-AERUS14_Matkan_Ali%20Akbar_FINAL.pdf
+
+a) Pearson linear correlation (http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient)
+
+b) Reflective correlation (variant of Pearson, also on the link above)
+
+c) Spearman rank correlation (http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)
+
+d) Cosine similarity (http://en.wikipedia.org/wiki/Cosine_similarity)
+
+
+
+Conventional method (Pontius 2008)
+A conventional approach fits a least squaresline through the plotted points and computes confidence intervals around the slope of the line.  conventional approach compares the pattern inthe map to a random distribution, which is not necessarily an appropriate or interestingnull model
+
+Indice ?
+
+compare the  patterns  in  two maps corresponsing to different expressions of a single shared variable. 
+distinguish:
+agreement of quantity 
+agreement of location
+
+
+Pontius 2008: the influence of resolution in map comparison
+The basic approach is to examine how measurements change as a function ofthe resolution of the pixels. The strategy is to examine the data at many resolutions, andnot to focus on any one particular resolution. The manner in which the measurementschange as a function of resolution can be more important and interesting than the resultsat any single resolution, because the results at any single particular resolution may indi-cate more about the format of the data, than about the overall pattern in the landscape.
+for multiple res-olution analyses
+The proposed approach generates a budget of components of agreement anddisagreement concerning the information of quantity of vegetation and the informa-tion of location of vegetation.
+#####Between many maps
+
+#### Visualizations of summary statistics 
+Through comprehensive plotting, multi-variate metrics can be visualized. For example, figure \ref{fig:compreh} illustrates a case of a 4-dimensions dataset plotted with four 3-dimensions figures to display 4*3^3 data points.
+Spatial metrics can also be visualized through histograms comparing main summary statistics in different scenarios (e.g the percentage of land areas covered by each 3 category is displayed for 3 drivers, and 4 scenarios using small multiples histograms in [@villamor14], figure 4)[^11back].
 
 ![An example of comprehensive plotting where [@Sun14] displays results of 4 metrics (one per figure), as several line plots (for several variables, here one per market level), and varying parameters (here 3 parameters with 3 possible values each resulting in $3^3$ data points per market level, per figure. This is one of four figures corresponding to the metric "Edge density".](../images/sun.png){#fig:compreh}
 
 [^11back]: A side concern that may come up in these cases, is about data management: the total size of the runs can become is too large for available main memory. A strategy is to precompute summary statistics, such as the mean and extrema [@PotterWilson].
 
-####Quantitative indices and spatial metric for continuous data {#sec:metricsmultrunscont} 
-#####Between 2 maps
-#####Between many maps
-
-###Displaying uncertainty
+###Displaying uncertainty {#sec:uncertainty}
 ####A note on uncertainty and sensitivity analysis
 >*"“Finding ways to accurately and effectively represent uncertainty is one of the most important challenges in data visualization today. And it’s important to know that visualizing uncertainty in general is extremely difficult to do.”*  [@sohardtovizuncertainty]
 
