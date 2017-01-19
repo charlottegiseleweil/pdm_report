@@ -64,6 +64,8 @@ The sliders ...
 
 The map ...
 
+highlight iterative process, and several versions of design doc !
+
 ##Implementation
 ###Tools and technology
 Webapp,
