@@ -89,6 +89,7 @@ for idx in "${!outputs[@]}"; do
     --include-in-header=templates/subcaption.tex \
     --include-in-header=templates/chapter-style.tex \
     --include-in-header=templates/caption-size.tex \
+    --include-in-header=templates/square-bullets.tex \
     --include-before-body=templates/titlepage.tex \
     --reference-links \
     --standalone \
