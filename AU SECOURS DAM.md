@@ -5,7 +5,22 @@ semblent ne pas fonctionner lorsque le renvoi est AVANT la section à laquelle o
 
 **{.unnumbered} marche que pour gros titres ?**
 Du coup j'ai fait \setcounter{secnumdepth}{3}. C'est un peu chelou parce que le titre n'est pas identé . j'arrive pas à lui mettre une tablulation. C'est bizarre car normalement leurs titres sont indentés. EN plus le paragraphe qui suit est identé, alors que normalement les paragraphes ne sont pas indentés... ?
+bref, j'ai tout essayé (.unnumbered titre de niveau 5 et mettre en gras), mais j'arrive pas à avoir:
+saut de ligne
+titre en gras indenté
+paragraphe non identé
+)
+Si  je mets \
+\
+**titre**\
 
+ça indente pas :( et saute 2 lignes (I'd like just one)
+
+Si je mets \
+**titre**\ 
+ça indente (youpi) mais saute ZÉRO lignes (I'd like just 1 ligne!)
+
+Mais si je mets juste
 #TRUCS À APPRENDRE
 
 **TABLEAUX
