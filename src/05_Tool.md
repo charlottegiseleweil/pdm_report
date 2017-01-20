@@ -1,5 +1,6 @@
 # NatCapViz: an innovative tool to display natural capital results {#sec:TheTool}
 
+>> in between communicationpurposes (webapp introduced by analyst) and exploratory. Because
 ## Identifying the needs (survey results)
 
 The needs were identified thanks to the survey filled by ecosystem services analysts. As detailed in \ref{sec:survey}, the respondents assessed for each listed display task: its usefulness in general, and the need for an improved implementation with a score from 0 to 5; 5 meaning *totally useful*. 
