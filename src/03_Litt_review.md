@@ -117,15 +117,13 @@ Javascript is, without a doubt, the go-to language for fancy - and definately fo
 About spatial data, **Leaflet** is probably the most adopted mapping library. **Mapbox** supports similar functionalities with the Mapbox GL library. Other mapping libraries include ModestMap (from the makers of Mapbox) and Highmaps.  (*diff Mapbox/ModestMap?*)
 
 ####R
-R plotting packages **ggplot** and **ggplot2** are very efficient for static visualizations. The map package built on top of the latter, **ggmap** combines spatial information from GoogleMaps, OpenStreetMap with the grammar of graphics of ggplot2 [@ggmap]. The interactive version of ggplot2 would be **ggvis**, however its dynamic  functionalities are quite limited. A powerful package for interactive (web) visualizations is **Shiny**. R spatial packages include **sp**, **raster**, **maptools** and **rasterVis**. Also, as mentioned above, Plotly has an R version too, converting ggplot2 charts to interactive ones. Another way to connect to the multiple javascript charting libraries is to use the package rCharts.
+R plotting packages **ggplot** and **ggplot2** are very efficient for static visualizations. The map package built on top of the latter, **ggmap** combines spatial information from GoogleMaps, OpenStreetMap with the grammar of graphics of ggplot2 [@ggmap]. The interactive version of ggplot2 would be **ggvis**, however its dynamic  functionalities are quite limited. A powerful package for interactive (web) visualizations is **Shiny**. R spatial packages include **sp**, **raster**, **maptools** and **rasterVis** [^6782back]. Also, as mentioned above, Plotly has an R version too, converting ggplot2 charts to interactive ones. Another way to connect to the multiple javascript charting libraries is to use the package rCharts.
 
 The OpenMORDM visualization toolkit [@Hadka2015] is a dynamic visualization platform built from R Shiny. It allows to explore, gain insight on the data, and make static plots, with a focus on deep uncertainty and robustness visualizations.
 
 ####Python
-**Matplotlib** is the main Python graphing library. It contains a toolkit for plotting 2D data on maps: **basemap**.  Also, **geopandas** extends the data analysis library Pandas to spatial data, using also Fiona for file access, Shapely and Descartes for geometric operations, PySal for spatial analysis, and of couse Matplotlib for plotting [@python_libs]. Interactive plots are based on **Bokeh** which imitates D3, or, as mentioned previously, Plotly. 
+**Matplotlib** is the main Python graphing library. It contains a toolkit for plotting 2D data on maps: **basemap**[^6789back].  Also, **geopandas** extends the data analysis library Pandas to spatial data, using also Fiona for file access, Shapely and Descartes for geometric operations, PySal for spatial analysis, and of couse Matplotlib for plotting [@python_libs]. Interactive plots are based on **Bokeh** which imitates D3, or, as mentioned previously, Plotly. 
 
-
-____
-___
-
+[^6789back]: Useful links to make maps using Python (matplotlib, basemap): http://sensitivecities.com/so-youd-like-to-make-a-map-using-python-EN.html#.WCJPDvkrJhE, http://www.datadependence.com/2016/06/creating-map-visualisations-in-python/, http://matplotlib.org/basemap/users/examples.html
  
+[^6782back]: Useful links about analysis of spatial data in R: https://cran.r-project.org/web/views/Spatial.html, Illustration of the ggmap package: https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf, Introduction to the raster package: https://cran.r-project.org/web/packages/raster/vignettes/Raster.pdf, and to RasterVis, which builds on raster package: https://oscarperpinan.github.io/rastervis/
