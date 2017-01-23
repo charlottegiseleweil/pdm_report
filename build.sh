@@ -91,6 +91,7 @@ for idx in "${!outputs[@]}"; do
     --include-in-header=templates/caption-size.tex \
     --include-in-header=templates/square-bullets.tex \
     --include-in-header=templates/margins.tex \
+    --include-in-header=templates/landscape.tex \
     --include-before-body=templates/titlepage.tex \
     --reference-links \
     --standalone \
