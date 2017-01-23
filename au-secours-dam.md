@@ -29,8 +29,6 @@ Mais si je mets juste
 **Je dois faire un GROS tableau (une page) avec des renvois à des sections dedans. C’est possible hein ?
 il doit etre grand comment ton grand tableau ? UNE PAGE OU DEUX. 
 
-## subfigures!
-
 ## CSL
 Toute une histoire ça aussi, il est super incohérent :(
 
@@ -40,6 +38,45 @@ Toute une histoire ça aussi, il est super incohérent :(
 
 ## Comment je réponds à des questions toute seule ?
 Read the doc : [http://pandoc.org/MANUAL.html](http://pandoc.org/MANUAL.html)
+
+## Comment je fais pour que mes figures soit moins larges ?
+
+Comme ça:
+
+![Ma jolie legende](images/criterias.png){#fig:crit1 width=50%}
+
+## Comment je fais de subfigures ?
+Tu dois les faire en latex (oui je sais c'est compliqué). Mais bon voilà un example que tu peux copier coller:
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{images/maps1/map1.png}
+  \caption{Chloropleth map}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{images/maps1/graduated.png}
+  \caption{Graduated symbol map}
+  \label{fig:sub2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{images/maps1/dot.png}
+  \caption{Dot density map}
+  \label{fig:sub3}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{images/maps1/heat.png}
+  \caption{Heatmap}
+  \label{fig:sub4}
+\end{subfigure}
+\caption{Maps types from }
+\label{fig:test}
+\end{figure}
 
 ## Comment je fais pour avoir une page en landscape
 
