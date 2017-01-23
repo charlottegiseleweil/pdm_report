@@ -16,10 +16,6 @@ In order to identify the communication needs of ecosystem services analysts, a s
 The 14 respondents were all professionals in the field of ecosystem services, working in different domains ranging from marine, to FWAT (...). They rated the usefulness of each display tasks[^335back] both in terms of (1) the need for this type of display in general and (2) the need for an improved implementation to these displays. The former will serve as a basis to point relevant needs for the user guidance to displaying natural capital information (Chapter \ref{sec:UserGuide}). The latter will allow to identify the areas where better implementations and solutions are required, and will guide the development of a display tool (Chapter \ref{sec:TheTool}).
 
 [^335back]: On a scale from 0 to 5, with 0 meaning totally useless and 5 totally useful. 
-
-{>> TODO Describe and explain the survey  <<}
-
-
 [^66809back]: link to the survey !!
 
 ![Gathering NatCappers' visualizations needs and tools survey sample empty page -- *Survey here or in Annex ?*](../images/survey.pdf){#fig:survey}
