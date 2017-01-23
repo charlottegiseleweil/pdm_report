@@ -25,8 +25,6 @@ Mais si je mets juste
 # TRUCS À APPRENDRE
 
 ## TABLEAUX
-Solution de folie : écrire tes tableaux et graphes avec google sheets
-et après ça les integre direct dans ton pdf ?
 
 **Je dois faire un GROS tableau (une page) avec des renvois à des sections dedans. C’est possible hein ?
 il doit etre grand comment ton grand tableau ? UNE PAGE OU DEUX. 
@@ -36,16 +34,17 @@ il doit etre grand comment ton grand tableau ? UNE PAGE OU DEUX.
 ## CSL
 Toute une histoire ça aussi, il est super incohérent :(
 
-# MOINS URGENT MAIS QUAND MÊME (LÀ IL EST TEMPS DE FAIRE LA MISE EN PAGE !)
-
-**Possible de en diminuer un peu les marges des cotés en d’en bas (les diminuer toutes de moitié à peu près)
-
 -------------
 
 # Trucs réglés (pour mémoire de charlotte)
 
 ## Comment je réponds à des questions toute seule ?
 Read the doc : [http://pandoc.org/MANUAL.html](http://pandoc.org/MANUAL.html)
+
+## Marges
+Possible de en diminuer un peu les marges des cotés en d’en bas ? (les diminuer toutes de moitié à peu près)
+
+ Voir dans `templates/margins.tex`
 
 ## Comment mettre une légende à un tableau ? 
 
