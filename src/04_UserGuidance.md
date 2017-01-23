@@ -185,9 +185,10 @@ A remaining subquestion is about the intensity of tradeoffs and synergies in spa
 Another strategy consists in combining trade-offs curves with small multiples of objective score maps.
 "In the past for PPFs using raster data, I have converted cells to points in ArcGIS and attached service values at each point to the attribute table. With fine scale rasters of spatially continuous service value, it is usually only necessary to extract a sample of these points into a data. This data is then imported into R for visualization and further processing."
 TODO
-Examples: Polasky + describe Peter 's The Middle Ceddar visualization[^009back]
+[@polasky]
+Examples: Polasky + describe Peter 's The Middle Ceddar visualization[^009back].
 
-[^009back]: https://phawthorne.github.io/mc-vis/
+[^009back]: see at https://phawthorne.github.io/mc-vis/
 
 
 ###Relationship between two independant variables 
@@ -337,11 +338,13 @@ Calculating the total numbers of pixels assigned to each category (as in point 1
 | Average pixels [min;max]     | 121 [110;143] | 204 [158;226] | 25 [14;50] | 
 | Average percentage ± standard deviation     | 35% ± 2% | 58% ± 3%  | 7% ± 3% | 
 
-Table: Made-up example to illustrate the *total per categories* approach [^80back] 
+Table: Made-up example to illustrate the *total per categories* approach
+
+note [^80back] 
 
 *bpb: No reference. I litterally made this up,  it sucks?*
  
- [^80back]: Details of calculations can be found at: https://docs.google.com/spreadsheets/d/1wsm0-X5-pJ_I7J7nduWE_dmiOVWgSUyyo-51t58C8Vo/edit#gid=436596527
+ [^80back]: Details of calculations can be found at https://docs.google.com/spreadsheets/d/1wsm0-X5-pJ_I7J7nduWE_dmiOVWgSUyyo-51t58C8Vo/edit#gid=436596527
 
 / **Pixel stack methods**/
 Finer methods imply to make calculations for each cell, in all the considered maps (as in, superposing all maps, and making calculation for the column of corresponding cells). For raster data, this technique of *column of cells* is referred to as **pixel stack** (bpb: reference for this term ? Not found in Pontius articles nor R/raster package reference...? TODO). To summarize agreement between runs in a single number, the measures suggested in \ref{sec:comp_map_many} can be aggregated. For example, the average SDI would give an indication of the consistency of the runs. However, these overall average do not give any indications on spatial patterns.
