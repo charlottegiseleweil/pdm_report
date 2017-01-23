@@ -90,8 +90,8 @@ for idx in "${!outputs[@]}"; do
     --include-in-header=templates/chapter-style.tex \
     --include-in-header=templates/caption-size.tex \
     --include-in-header=templates/square-bullets.tex \
+    --include-in-header=templates/margins.tex \
     --include-before-body=templates/titlepage.tex \
-    --include-before-body=templates/margins.tex \
     --reference-links \
     --standalone \
     --number-sections \
