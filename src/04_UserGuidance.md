@@ -58,7 +58,7 @@ An effective alternative to coercing all the data in a single plot (risking over
 
 ![Small multiples applied to (a) line plots [@small_mult_lines] and (b) spatial data [@small_mult_maps]](../images/smallmultiples.png){#fig:todotodo2}
 
-###Scatterplots
+###Scatterplots {#sec:scatterplots}
 The classic scatterplot displays data with two to three dimensions, using cartesian coordinates and two or three axes. In a **3D scatterplot**, solutions are represented as points in the space.  Additional dimensions can be represented by changing attributes (color, shape, size, orientation, etc), however concerns about clarity and risk of overwhelming the plot may occur. Interactivity allows the user to perform selections of one or multiple solution point(s). 
 
 A **Scatter plot matrix** combines the small multiple strategy with the classic scatterplot; abbreviated SPLOM, it displays relationships between every pair of variables.
@@ -115,19 +115,19 @@ Displaying density of occurence, and identifying clusters can be achieved with h
 
 \begin{figure}
 \centering
-\begin{subfigure}{.1\textwidth}
+\begin{subfigure}{.25\textwidth}
   \centering
   \includegraphics[width=.4\linewidth]{images/maps1/map1.png}
   \caption{Chloropleth map}
   \label{fig:sub1}
 \end{subfigure}%
-\begin{subfigure}{.3\textwidth}
+\begin{subfigure}{.25\textwidth}
   \centering
   \includegraphics[width=.7\linewidth]{images/maps1/graduated.png}
   \caption{Graduated symbol map}
   \label{fig:sub1}
 \end{subfigure}%
-\begin{subfigure}{.5\textwidth}
+\begin{subfigure}{.25\textwidth}
   \centering
   \includegraphics[width=.7\linewidth]{images/maps1/dot.png}
   \caption{Dot density map}
@@ -135,9 +135,39 @@ Displaying density of occurence, and identifying clusters can be achieved with h
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[width=.5\linewidth]{images/maps1/heat.png}
+  \includegraphics[width=.25\linewidth]{images/maps1/heat.png}
   \caption{Heatmap}
   \label{fig:sub3}
+\end{subfigure}
+\caption{Maps types from }
+\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{images/maps1/map1.png}
+  \caption{Chloropleth map}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{images/maps1/graduated.png}
+  \caption{Graduated symbol map}
+  \label{fig:sub2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{images/maps1/dot.png}
+  \caption{Dot density map}
+  \label{fig:sub3}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{images/maps1/heat.png}
+  \caption{Heatmap}
+  \label{fig:sub4}
 \end{subfigure}
 \caption{Maps types from }
 \label{fig:test}
@@ -162,15 +192,16 @@ The text translates to: *The numbers of men present are represented by the width
 ###Two widely used ES maps
 Two types of chloropleth maps are very often used.
 
-####Portfolios TODO
-Categorical : land cover.
-*Example*
-Careful care must be given to symbology, see recommendations in section \ref{sec:colors}. (+see stacie/ginger colorscale email)
+####Portfolios 
+A portfolio is a landcover map which correspond to a subset of the full landscape: the set of chosen activities for each SDU.
+*Example TODO*
+When displaying portfolios, careful care must be given to symbology, see recommendations in section \ref{sec:colors}. Landcover colors chemes can be very tricky, depending on the number of classes and the arrangement. A good example is given by figure \ref{fig:lulc}.
 
-####Objective score maps TODO
-spatial ES model outputs displays, continuous data, at pixel or polygon level.
-Combined
-*Example*
+![A many-classes LULC colorscheme (Stacie Wolny)](../images/lulccolorscheme.png){#fig:lulc}
+
+####Objective score maps 
+Objective score maps are chloropleths displaying a continuous variable: the objective score for each SDU. These are widely used to visualized ES model outputs. Often, the objective score maps of different ES objectives are combined in a single one summarizing the overall scores. When doing so, it is essential to normalize the scores.
+*Example TODO*
 
 ###Spatial visualization of tradeoffs
 In the context of optimization, ES analysts often have to figure out where, on a landscape, do activities produce co-benefits, and where are they in conflict ? That is: where does an intervention move multiple ES metrics (aka objectives) in the same direction i.e where are the "win-wins"? And on the other hand, where in space is a given intervention or scenario contribute to some metrics at the expense of others? 
@@ -181,23 +212,23 @@ In the case of only 2 scenarios or only 2 objectives, one could show change maps
 
 A remaining subquestion is about the intensity of tradeoffs and synergies in space: where are tradeoffs more or less stark? An extension of figure \ref{fig:spatialtradeoffs} could be envisioned, varying transparency to represent intensity.
 
-Another strategy consists in combining trade-offs curves with small multiples of objective score maps.
-"In the past for PPFs using raster data, I have converted cells to points in ArcGIS and attached service values at each point to the attribute table. With fine scale rasters of spatially continuous service value, it is usually only necessary to extract a sample of these points into a data. This data is then imported into R for visualization and further processing."
-TODO
-[@polasky]
-Examples: Polasky + describe Peter 's The Middle Ceddar visualization[^009back].
+Another strategy consists in combining trade-offs curves with small multiples of objective score maps. On trade-offs curves (see section \ref{sec:scatterplots}), each point corresponds to a portfolio: displaying these together adds great value and helps understanding. Examples of strategies to display together the trade-offs curve and the corresponding maps are presented in figure \ref{fig:polasky-peter}.
 
-[^009back]: see at https://phawthorne.github.io/mc-vis/
 
+![On a static display, the strategy consists in displayingonly the extreme points of the trade-off curve [@polasky]](../images/polasky.png){#fig:polasky-peter} TODO Combine subfigures !
+![The Middle Cedar visualization is an interactive webapp, allowing users to click on each point of the trade-off curve, and the corresponding land cover map will be displayed. Additionally, summary metrics and a pie chart provide information relative to the scenario chosen by clicking[^009back] [@Peter]](../images/peter.png)
+
+[^009back]: The Middle Cedar visualization is availabe at https://phawthorne.github.io/mc-vis/
 
 ###Relationship between two independant variables 
 Combining two maps 
 Displaying side by side the two input map and the one combining these.
-![ ... [@Myanmar16]](../images/combine_my.png)
+
+![Legend [@Myanmar16]](../images/combine_my.png)
 
 ####Spatial correlation
-A very cool way of displaying spatial correlation between an ES and something (here LER) [@jgong]
-![A very cool way of displaying spatial correlation between an ES and something (here LER) [@jgong]](../images/spatial_correlation_jgong.png)
+Hello
+![A very cool way of displaying spatial correlation between an ES and something (here LER) [@jgong]](../images/spatial_correlation_jgong.png){#fig:jong width=50%}
 
 See also figures \ref{fig:myanmar_biodiv-ppl} (combines informations about two independant variables).
 
@@ -219,32 +250,27 @@ Comparison and summaries of maps can be achieved either by visualizing spatially
  
 ###Maps displays 
 #### Between 2 maps {#sec:comp_map_2}
-**Interactive switching between maps**\
+####Interactive switching between maps {.unnumbered}
 For the examination of (dis)agreement between two maps, analysts often like to flip back and forth between the two. This is easy to do in GIS softwares and is a convenient solution for the data exploration purposes. Nevertheless, this method is not always suited for communication purposes. Plus, this interactive solution doesn't apply to static documents.
 
-\ **Side by side maps**\
+#### Side by side maps  {.unnumbered}
 Show the two maps next to each other. This is not the most space effective option, but allow an intuitive understanding and faciltiates comparison. The two maps must be within eyespan (careful to page breaks).
 
-\ **Change map**\
+#### Change map  {.unnumbered}
 Substracting one map to the other (generally corresponding to the baseline scenario) results in a change map. Typically change maps uses diverging colorscheme, two colors representing respectively increase and decrease, and the intensity gradient reflects the amount of change. 
 Suited for (examples)\
 
 ![Change map displaying the amount of additional sediment export (in percentage) comparing a future scenario with the current baseline one [@Myanmar16]](../images/changemap.png)
 
-\ **Agreement map**\
-= An agreement map (?): ça veut reien dire c'est tt et rien
-* A single map showing which areas are consistently selected ( in case of portfolios). 
+#### 20%mapStacie? {.unnumbered}
 *  take top 20% of service for two ES and find areas of overlap. (in case of continuous Es model outputs such as objective scores per pixel. >> Stacie?)
-
-TODO
-
 
 #### Between many maps {#sec:comp_map_many}
 The problem complicates when comparing many runs. 
 \
 **Footprint map** \
+To express the agreement on doing an (any) activity across portfolios, footprint maps show which areas are consistently selected. Pixels are assigned a binary value (1 if the pixel was selected in the portfolio for any intervention, 0 otherwise), and these binary values are added up across pixel stack. The resulting map shows which areas are consistently selected.
 
-To express the agreement on doing an (any) activity across portfolios, footprint maps show which areas are consistently selected. Pixels are assigned a binary value (1 if the pixel was selected in the portfolio for any intervention, 0 otherwise), and these binary values are added up across pixel stack. 
 
 To express agreement about an activity across portfolios, footprint maps can also be done for a specific category (1 is assigned is the pixel was selected in this category). \
 
@@ -455,13 +481,11 @@ Using landscape comparison metrics described in section \ref{sec:comp_stat_cat_m
 sensitivity analysis packages in multiple languages (SAlib for python, sensitivity for R)
 
 ## Summary
-### Mutiple linked views
-PETER
 
 ### Key take-aways
 With no pretention of being exhaustive, this chapter gathers strategies to display complex data, in the context of ecosystem services model outputs. It took inspirations from the current data visualizations in different fields, such as agent-based modeling and ensemble data sets.
 
-Overall, combining multiple linked displays seems to be necessary as complexity and number of dimensions increase, as argues [@potter] in the context of gaining insight on distribution of spatio-temporal simulation results, as well as the associated uncertainty. Arranging many views is aslo relevant to facilitate comparisons [@Buja]. Some of the most successful visualizations currently used combine interactive features and mutiple linked views to deliver broad information in an organized an straight-forward way, as exemplified by The Middle Ceddar Visualization[^009back].
+Overall, combining multiple linked displays seems to be necessary as complexity and number of dimensions increase, as argues [@potter] in the context of gaining insight on distribution of spatio-temporal simulation results, as well as the associated uncertainty. Arranging many views is aslo relevant to facilitate comparisons [@Buja]. Some of the most successful visualizations currently used combine interactive features and mutiple linked views to deliver broad information in an organized an straight-forward way, as exemplified by The Middle Cedar Visualization[^009back] [@Peter].
 
 The examples, guidelines and suggestions gathered above aim to support creation of effective visualizations. Nevertheless, the main thing to keep in mind is that graphs are here to support conveying the data's message; i.e visualizations should always be tailored to the specific need and dataset. The final visualization needs to be adapted to fit the document type and format, the audience adressed and will also depend on the functionalities of the charting tool used.
 
