@@ -13,16 +13,15 @@
 * scenarios: storylines that describe possible futures (but are not predictions) [@greggg] (e.g an LULC scenario corresponds to an LULC map that has been changed based on modeled or user-defined changes to represent plausible futures)
 * SOW: state of the world (scenario with quantitative definition)
 
-**Jargon of the field acronyms**
+**Jarfon of the field**
 
 * ABM: Agent-Based Modeling (computational modeling of phenomena as dynamical systems of interacting agents)
 * API: Application Programming Interface
 * EIA: Environmental Impact Assessment
 * GIS: Geographical Information Systems
-* HRU: Hydrological region unit {<< ? >>}
 * IWS: investments in watershed services (known as waterfund)
 * MOEA: Multi-objective evolutionary algorithm* MOVA: Multi-objective visual analytics
-* OGR: OpenGIS Simple Features Reference Implementation* OR: Operational research* PCA: Principal component analysis (PCA) 
+* OGR: OpenGIS Simple Features Reference Implementation* OR: Operational research* PCA: Principal component analysis
 * PFF: Production possibilities frontier (economical term for tradeoff curve)* RO: Robust optimization
 * SA: Sensitivity analysis
 * SLR: Sea Level Rise* SDSS: Spatial decision support systems 

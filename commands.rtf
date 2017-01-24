@@ -1,11 +1,11 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;\f2\fnil\fcharset0 HelveticaNeue;
 \f3\froman\fcharset0 Times-Roman;\f4\froman\fcharset0 TimesNewRomanPSMT;\f5\fswiss\fcharset0 ArialMT;
-\f6\fmodern\fcharset0 Courier;}
+\f6\fmodern\fcharset0 Courier;\f7\fnil\fcharset0 Baskerville;}
 {\colortbl;\red255\green255\blue255;\red242\green242\blue242;\red50\green102\blue255;\red22\green25\blue31;
 \red58\green62\blue68;\red237\green236\blue236;\red243\green235\blue0;\red93\green93\blue93;\red67\green10\blue31;
-\red26\green26\blue26;\red255\green255\blue255;\red16\green60\blue192;\red246\green246\blue246;\red52\green61\blue68;
-\red71\green85\blue110;\red242\green245\blue249;}
+\red26\green26\blue26;\red16\green60\blue192;\red246\green246\blue246;\red52\green61\blue68;\red71\green85\blue110;
+\red242\green245\blue249;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww13840\viewh15600\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
@@ -218,8 +218,8 @@ Run file.html \
 \fs20 - Browser : X cross origin requests not supported (from file:// \'85)\
 - Local host :\
 	- easily : 
-\f5\fs26 \cf10 \cb11 run "python -m SimpleHTTPServer". Go to {\field{\*\fldinst{HYPERLINK "http://localhost:8000/"}}{\fldrslt \cf12 \ul \ulc12 http://localhost:8000}}
-\f0\fs20 \cf0 \cb1 \
+\f5\fs26 \cf10 run "python -m SimpleHTTPServer". Go to {\field{\*\fldinst{HYPERLINK "http://localhost:8000/"}}{\fldrslt \cf11 \ul \ulc11 http://localhost:8000}}
+\f0\fs20 \cf0 \
 	- through 
 \f1 \cf2 \cb0 \CocoaLigature0  heroku local 
 \f0 \cf0 \cb1 \CocoaLigature1 doesn\'92t work  because virtualenv wouldn\'92t install properly (with Anaconda Python: virtualenv is an issue)\
@@ -231,18 +231,18 @@ Run file.html \
 Online\
 \pard\pardeftab720
 
-\f1\fs26 \cf13 \cb14 \expnd0\expndtw0\kerning0
+\f1\fs26 \cf12 \cb13 \expnd0\expndtw0\kerning0
 heroku login\
 cd webviz_trial\
 heroku create\
 \pard\pardeftab720
 
-\f6\fs28 \cf15 \cb16 \expnd0\expndtw0\kerning0
+\f6\fs28 \cf14 \cb15 \expnd0\expndtw0\kerning0
 heroku git:remote -a peru-viz\
 git add .\
 $ git commit -am "make it better"\
 $ git push heroku master
-\f1\fs26 \cf13 \cb14 \expnd0\expndtw0\kerning0
+\f1\fs26 \cf12 \cb13 \expnd0\expndtw0\kerning0
 \
 git push heroku master\
 heroku ps:scale web=1\
@@ -259,4 +259,22 @@ View logs ::  heroku logs --tail\
 git commit -m \'ab\'a0blah\'a0\'bb\
 git push heroku master\
 heroku open\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs48 \cf0 \cb1 \CocoaLigature1 \
+D3\
+\pard\pardeftab720
+
+\f7\fs32 \cf10  input domain \
+output range
+\f0\fs48 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs20 \cf2 \cb0 \CocoaLigature0 \
+\pard\pardeftab720
+\cf2 \
 }

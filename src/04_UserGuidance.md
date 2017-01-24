@@ -27,7 +27,7 @@ Also, data visualization is really a case-by-case and efficient displays really 
 
 Plots and graphs are not always necessary. Sometimes, the full data table is the best visualization. For example, in the case of an mid-project intermediary report for a meeting with experts on the project, it is likely that plots will lead to questions digging in details, where showing the full dataset and how solution where selected, and compare to each other is necessary. 
 ## Multi-dimensional data
-In the context of ES, multi-dimensionality arises from multi-objective problems, such as cases where mutiple ES are considered and their trade-offs are to be explored, but also from (*where do we encounter multi-dim in ES besides multi-obj???*) Visual decision support tools are very relevant in field of multi-objective optimization problems[^0326back]. In the  typical cases, there is no unique optimal solution, but a collection of Pareto optimal ones [@Hadka2015], i.e solutions where improving the result towards one objective result a decrease in performance with regards to another objective  [@paretoUNIL]. Efficient visualizations empower the user with the ability to navigate through thousands of potential solutions, compare them and understand trade-offs, leading to performant decision-making. 
+In the context of ES, multi-dimensionality arises from multi-objective problems, such as cases where mutiple ES are considered and their trade-offs are to be explored, but also from mutiple scenarios, due for example to uncertainty. Visual decision support tools are very relevant in field of multi-objective optimization problems[^0326back]. In the  typical cases, there is no unique optimal solution, but a collection of Pareto optimal ones [@Hadka2015], i.e solutions where improving the result towards one objective result a decrease in performance with regards to another objective  [@paretoUNIL]. Efficient visualizations empower the user with the ability to navigate through thousands of potential solutions, compare them and understand trade-offs, leading to performant decision-making. 
 
 *FOCUS ON VISUALIZING TRADE-OFFS AND INCLUDE EVERYWHERE TODO*
 
@@ -38,9 +38,33 @@ Multidimensional data visualization has been given considerable attention, as co
  [^0326back]: Vocabulary note: "multi-objective" refers here to problems with three or more objectives, also called many-objective problems [@Fleming05] or high order-Pareto optimization problems [@Reed04]
 
 ###Time-series data: line charts, streamgraphs and more
-For data including several independent variables, and a dependent one, line charts is a version of a scatter plot where points are ordered (on the x-axis), and joined with segments. Line charts (also refered to as run charts for time-series data, or index charts when interactive) highlights relative changes, these are a good options when comparing the independant variables. Streamgraphs, also called stacked graphs, sums visually the time-series values around a central axis by stacking area charts on top of each other [@Tour]. These work only for positive values, and provide general view of the data, but are not effective for visualizing details, also they are more efficient in interactive form than static [@datavizz]. In the case of very large timeseries datasets, horizon graphs is a very space-effective option, despite a certain amount of learning time. Horizon graphs consists in filled line charts, where negative values are mirrored (and colored typically in red) and then the chart divided into bands that are overlayed using transparency effects; the space used is divided by four thanks to these two transformations [@horizon]. When the goal is to compare monthly values over the years and the different year, a fairly recent display solution has been suggested: temporal maps [@temporalmap].
+For data including several independent variables, and a dependent one, **line charts** is a version of a scatter plot where points are ordered (on the x-axis), and joined with segments. Line charts (also refered to as run charts for time-series data, or index charts when interactive) highlights relative changes, these are a good options when comparing the independant variables. Streamgraphs, also called stacked graphs, sums visually the time-series values around a central axis by stacking area charts on top of each other [@Tour]. These work only for positive values, and provide general view of the data, but are not effective for visualizing details, also they are more efficient in interactive form than static [@datavizz]. In the case of very large timeseries datasets, **horizon graphs** is a very space-effective option, despite a certain amount of learning time. Horizon graphs consists in filled line charts, where negative values are mirrored (and colored typically in red) to appear on the upper side, and then the chart divided into bands that are overlayed using transparency effects to limit the space required for peaks. Thus the space used is divided by four thanks to these two transformations [@horizon]. When the goal is to compare monthly values over the years and the different year, a fairly recent display solution has been suggested: **temporal maps** [@temporalmap]. An extension of this concept, for very high-dimensional datasets, is **pixel-oriented visualization** which consists in using each pixel to display one data value in highly structured arrangements [@Keim].
 
 ![Illustrations of concepts of streamgraph [@streamchart], horizon graphs[@horizon] and temporal map[@temporalmap] *Should I add line charts or unecessary?* Image to update ! Todo?](../images/horizon_stream_temp_combined.png){#fig:todotodo}
+
+\begin{figure}
+\centering
+\begin{subfigure}{1\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{images/horizon_1.png}
+  \caption{Horizon graph}
+  \label{fig:horizon}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{images/streamgraph.png}
+  \caption{Streamgraph}
+  \label{fig:streamgraph}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{images/temporalmap.png}
+  \caption{Temporal map}
+  \label{fig:temporalmap}
+\end{subfigure}
+\caption{Illustrations of concepts of streamgraph [@streamchart], horizon graphs[@horizon] and temporal map[@temporalmap]}
+\label{fig:timeseriesdatafig}
+\end{figure}
 
 *EXAMPLE: SOME SORT OF LINE GRAPH FOR MULTI-OBJ OPTIMIZATION (STACIE?)*
 
@@ -49,7 +73,7 @@ For data including several independent variables, and a dependent one, line char
 Through comprehensive plotting, multi-variate metrics can be visualized. For example, figure \ref{fig:compreh} illustrates a case of a 4-dimensions dataset plotted with four 3-dimensions figures to display 4*3^3 data points.
 Spatial metrics can also be visualized through histograms comparing main summary statistics in different scenarios (e.g the percentage of land areas covered by each 3 category is displayed for 3 drivers, and 4 scenarios using small multiples histograms in [@villamor14], figure 4)[^11back].
 
-![An example of comprehensive plotting where [@Sun14] displays results of 4 metrics (one per figure), as several line plots (for several variables, here one per market level), and varying parameters (here 3 parameters with 3 possible values each resulting in $3^3$ data points per market level, per figure. This is one of four figures corresponding to the metric "Edge density".](../images/sun.png){#fig:compreh}
+![An example of comprehensive plotting where [@Sun14] displays results of 4 metrics (one per figure), as several line plots (for several variables, here one per market level), and varying parameters (here 3 parameters with 3 possible values each resulting in $3^3$ data points per market level, per figure. This is one of four figures corresponding to the metric "Edge density".](../images/sun.png){#fig:compreh width 90%}
 
 [^11back]: A side concern that may come up in these cases, is about data management: the total size of the runs can become is too large for available main memory. A strategy is to precompute summary statistics, such as the mean and extrema [@PotterWilson].
 
@@ -74,7 +98,7 @@ Combining parallel coordinates with interactive features offers interesting opti
 
 Tradeoffs are illustrated by crossing lines. However, one limitation is that each axis having at most two neighboring axis, only N-1 relationships of $\binom{N}{2}$ combinations for an N-dimensional dataset can be visualized at once. This can be overcome by re-ordering the axis, possibly with an interactive tool, or by upgrading to a 3D parallel coordinate plot where the axis are still in parallel, but some appear closer [@Achtert2013_6], although this solution result in a much harder interpretation, which may explain why it is not widely used. 
 
- To compare and constrast alternative options, and explore the effects of trade-offs, 3D scatter plot and parallel coordinates plot are recommended by [@Hadka2015], as shown in Figure @fig:hadka. 
+ To compare and constrast alternative options, and explore the effects of trade-offs, 3D scatter plot and parallel coordinates plot are recommended by [@Hadka2015], as shown in Figure \ref{fig:hadka}. 
 
 ![Four objectives visualization with (a) 3D scatterplot and colors and (b) parallel coordinate plot, achieved with the OpenMORDM open-source R library [@Hadka2015]](http://ars.els-cdn.com/content/image/1-s2.0-S1364815215300190-gr3.jpg) {#fig:hadka}
 
@@ -90,15 +114,17 @@ Other statistical distributed data displays more specific to some data types inc
 
 More display techniques have been explored, but are not widely used. To mention just a few, in the 1990's, were developed the **prosections views** [@prosections] that build view of high-dimensional objects through projection (in one or two dimensions), followed by section (i.e intersection of subspaces). Also, the **Hyperslice** [@Wijk] attempts to represents multi-dimensional function as a matrix of orthogonal two-dimensional plans. 
 
-For very high-dimensional data, one may consider **pixel-oriented visualization** [@Keim] which consists in using each pixel to display one data value. 
-
-
 ### Reduce dimensions
 Another approach to reduce cognitive complexity of multi-dimensional data, is to reduce the dimensions in some coherent way. For example, the **principal components analysis** (PCA) can be conducted to reduce the number of variables by combining the correlated ones [@hotelling1933analysis]. Similarly, the **choice modeler approach** aims to evaluate multiple decision variants, in a very large decision space. The concept is to identify criteria that do not influence the output (here, the decision option ranking), and remove these dimensions, to simplify without loosing correctness [@Piotr]. 
 
 NEED EXAMPLE RYAN COMBINE VARIABLE UNTIL ITS 2 DIMENSIONS (RYAN)
 
-Several options to display multi-variate data were discussed. However they all realistically apply to a limited number of variables. As dimensions of the data increase, **multiple linked views** become necessary to convey the complex information, giving different perspectives to the viewer. 
+###Mutiple linked views
+Several options to display multi-variate data were discussed. However they all realistically apply to a limited number of variables. As dimensions of the data increase, it is often interesting to show several linked graphs  of the same dataset to convey the complex information. This solution gives different perspectives to the viewer. In the case of a static display, the graphs are connected by matching color coding or other corresponding parameters. Dynamic displays allow improvement by adding brushing and linking features (see \ref{sec:interactivefeatures}). A great example of multiple linked view was done by @Peter, who combined a scatterplot, a map, a pie chart and summary statistics in a single dashboard, presented in \ref{fig:Peter} [^009back]. 
+
+![The Middle Cedar visualization is an interactive webapp, allowing users to click on each point of the trade-off curve, and the corresponding land cover map will be displayed. Additionally, summary metrics and a pie chart provide information relative to the scenario chosen upon click[^009back] [@Peter]](../images/peter.png){#fig:Peter} 
+
+[^009back]: The Middle Cedar visualization is availabe at https://phawthorne.github.io/mc-vis/
 ## Spatial data 
 *Possible tools : ArcGIS, QGIS, PyGeoprocessing, Python, matplotlib, R, CV / HRA Dashboards*
 
@@ -212,13 +238,10 @@ In the case of only 2 scenarios or only 2 objectives, one could show change maps
 
 A remaining subquestion is about the intensity of tradeoffs and synergies in space: where are tradeoffs more or less stark? An extension of figure \ref{fig:spatialtradeoffs} could be envisioned, varying transparency to represent intensity.
 
-Another strategy consists in combining trade-offs curves with small multiples of objective score maps. On trade-offs curves (see section \ref{sec:scatterplots}), each point corresponds to a portfolio: displaying these together adds great value and helps understanding. Examples of strategies to display together the trade-offs curve and the corresponding maps are presented in figure \ref{fig:polasky-peter}.
+Another strategy consists in combining trade-offs curves with small multiples of objective score maps. On trade-offs curves (see section \ref{sec:scatterplots}), each point corresponds to a portfolio: displaying these together adds great value and helps understanding. Examples of strategies to display together the trade-offs curve and the corresponding maps are presented in figures \ref{fig:polasky} and \ref{fig:Peter}.
 
 
-![On a static display, the strategy consists in displayingonly the extreme points of the trade-off curve [@polasky]](../images/polasky.png){#fig:polasky-peter} TODO Combine subfigures !
-![The Middle Cedar visualization is an interactive webapp, allowing users to click on each point of the trade-off curve, and the corresponding land cover map will be displayed. Additionally, summary metrics and a pie chart provide information relative to the scenario chosen by clicking[^009back] [@Peter]](../images/peter.png)
-
-[^009back]: The Middle Cedar visualization is availabe at https://phawthorne.github.io/mc-vis/
+![On a static display, the strategy consists in displayingonly the extreme points of the trade-off curve [@polasky]](../images/polasky.png){#fig:polasky} 
 
 ###Relationship between two independant variables 
 Combining two maps 
@@ -245,11 +268,12 @@ Runs refers here to different versions of a spatially explicit variable; this se
 
 Comparison and summaries of maps can be achieved either by visualizing spatially through maps (\ref{sec:comp_map}) or through quantitative indices and metrics synthetizing the results aspatially (\ref{sec:comp_stat_cat} for categorical data summary indices, \ref{sec:comp_stat_cont} for continuous data).
 
-**Tools**: Automated comparison of maps can be achieved with softwares like the Map Comparison Kit[^127back] [@visser2006map]. An algorithm called Mapcurves, implemented in R and Matlab, provides a goodness-of-fit measure based on spatial overlap.
+**Tools**: Automated comparison of maps can be achieved with softwares like the Map Comparison Kit[^127back] [@visser2006map]. An algorithm called Mapcurves, implemented in R and Matlab, provides a goodness-of-fit measure based on spatial overlap. (*TODO look at TerrSet*)
 [^127back]: MCK compares raster maps using fuzzy set map comparison, hierarchical fuzzy pattern matching, and moving window based comparison of landscape structure. See $http://mck.riks.nl$. 
  
 ###Maps displays 
 #### Between 2 maps {#sec:comp_map_2}
+
 ####Interactive switching between maps {.unnumbered}
 For the examination of (dis)agreement between two maps, analysts often like to flip back and forth between the two. This is easy to do in GIS softwares and is a convenient solution for the data exploration purposes. Nevertheless, this method is not always suited for communication purposes. Plus, this interactive solution doesn't apply to static documents.
 
@@ -267,17 +291,18 @@ Suited for (examples)\
 
 #### Between many maps {#sec:comp_map_many}
 The problem complicates when comparing many runs. 
-\
-**Footprint map** \
+
+#### Footprint map {.unnumbered}
+
 To express the agreement on doing an (any) activity across portfolios, footprint maps show which areas are consistently selected. Pixels are assigned a binary value (1 if the pixel was selected in the portfolio for any intervention, 0 otherwise), and these binary values are added up across pixel stack. The resulting map shows which areas are consistently selected.
 
 
 To express agreement about an activity across portfolios, footprint maps can also be done for a specific category (1 is assigned is the pixel was selected in this category). \
 
-**20%mapStacie?**\
-* For ES results, the method of taking top 20% of service and seeing overlap between scenarios extends to many map comparison too.
+#### 20%mapStacie? {.unnumbered}
+*For ES results, the method of taking top 20% of service and seeing overlap between scenarios extends to many map comparison too.*
 
-**Modal portfolio and frequency map**\
+#### Modal portfolio and frequency map {.unnumbered}
 For categorical data, the frequency map approach would display the most assigned category to each area across runs, with additionally a measure of how often this category was assigned [@RIOS]. In the context of portfolios, this is called the modal portfolio, displaying the most often chosen activity for each spatial unit[^55back]. The comparison part is held by the frequency map, which express how often was the activity chosen. Precisely, the frequency map is usually constructed as such: for each spatial unit, number of portfolios where the modal value is chosen divided by total number of portfolios. 
 These two maps complements each other: the former is about summarizing when the latter hold indications on comparison. They can be overlayed or displayed side by side.
 
@@ -285,25 +310,28 @@ These two maps complements each other: the former is about summarizing when the 
 
 [^55back]: More precisely, the modal portfolio maps can either display the category assigned in most of the runs, or limit to these assigned in a certain threshold percentage of the runs. 
 
-**Shannon diversity index**
+####Shannon diversity index {.unnumbered}
+
 An alternative to frequency maps, to summarize the categorical variance accross many runs is the shannon diversity indexes of each pixel: $SDI = - \sum_{i=1}^{R} p_{i} \ln(p_{i})$, with $\textrm{p}_{i}$ the proportion of cells assigned to category i, and $R$ the total number of categories. Here is how to interprete the SDI: when evenly distributed, $H = \ln(R)$, and as it approaches $0$, proportions in each category vary more. Hence, SDI reflects the relative abundance of each category across the pixel stack. So, the bigger the SDI, the most confident one can be about the pixel's most chosen category. Other diversity indexes can also be substituted. 
 
 TODO MAYBE ; A **coefficient of unlikeability** measures variability in categorical data by considering how often, not how much, observations differ [@kader7]. It can be used as a type of variance for categorical interventions *[Ref here is Ginger!]*. 
 
-**variant-invariant method**\
+####variant-invariant method {.unnumbered}
 In the same vein, the **variant-invariant method** aims to distinguish the invariant regions, that is the areas where the category assigned is consistently the same [@Brown2005]
 
-**“breakeven” or “next best” score**\
+####“Breakeven” or “next best” score{.unnumbered}
 TODO RIOS  (*Does Breakeven prioritization scores apply to comparison of many maps? Ben: "it's comparing one particular map to a whole bunch of other maps (to find next-best values), but once  you've found the next best, it's just a calculation from two elements of the pixel stack. (That's probably confusing)*" 
 
-**Fuzzy set approach**\
+####Fuzzy set approach {.unnumbered}
 TODO !
 The fuzzy set approach [@Hagen2003] assesses the similarity of several categorical maps, resulting in a fuzzy set comparison map where each cell displays a degree of similarity and an overall value for similarity, so-called $\kappa$-Fuzzy as it extends the Kappa index including fuzziness of category and of location.
 
-**spaghetti plots**\
+####Spaghetti plots{.unnumbered}
+
 Visualizing flow data, **spaghetti plots** (figure \ref{fig:spag}) express consistency between runs. Widely used in meteorology, the consistency of the runs is expressed by how tightly clustered they appear. Spaghetti plots may be translated to continuous spatial data by using the isocontour of each run, which is useful when concerned about a specific threshold. *bpb: better?*
 
-**3D plots overlaying maps**\
+####3D plots overlaying maps {.unnumbered}
+
 For continuous data, **3D plots overlaying maps** (figure \ref{fig:overlay}) have been used to highlight structural differences across maps. However, this solution seems limited to relatively small regions, and clearly distinguishable distributions of the variables expressed through color and height of the histogram. 
 
 TODO merge subfigures: 
@@ -311,50 +339,50 @@ TODO merge subfigures:
 
 ![3D histograms, organized according the geographical layout; extract from figure 8 of [@Huang13] -- Merge (subfigures!)](../images/3Dplotsoverlaying.png){#fig:overlay}
 
-**Interactive map comparisons**\
-Animation is of great interest in this context. Dynamic visualizations are very suited for displaying multiple spatial outputs, there are increasingly used to display results in the field of ABMs[^1back], encountering similar type of outputs [@ABMleelig]. 
+####Interactive map comparisons {.unnumbered}
+Animation is of great interest in this context. Dynamic visualizations are very suited for displaying multiple spatial outputs, there are increasingly used to display results in the field of ABMs[^1back], encountering similar type of outputs [@ABMleelig].\
+\
 
-(saut de ligne TODO)
-
-Visual comparisons of maps is efficient and not too intense cognitively for human perception. However, it fails to rank quantitatively the results, nor is adapted to an important number of maps. Screening through hundreds of maps produced is not a viable option. Therefore, other solutions must be considered. 
+Visual comparisons of maps is efficient and not too intense cognitively for human perception. However, it fails to rank quantitatively the results, nor is adapted to an important number of maps. Screening through hundreds of maps produced is not a viable option. Therefore, other solutions must be considered. In particular, a variety of statistics can be used to summarize results and agreement over maps of the same area.
 
 [^1back]: Agent-based modeling (ABM), or indivisual-based modeling consist in representing phenomenas as dynamical systems of interacting agents, where an agent is a discrete and autonomous entity. Their individual behaviors are encoded, resulting in outputs describing the the agents' interactions that are used to describe complex systems. These systems can be a  variety of processes, phenomena, and situations in any field. [@ABM_intro] In the context of this work, ABM is of interest because of the high volume of multidimensional output data (induces by Monte Carlo sampling), the visualization and statistical analysis of these outputs can be applied.
 
 
 ###Aspatial metrics to summarize results and agreements of categorical maps {#sec:metricsmultrunscat} 
 Non-spatial statistics, such as quantitative indices exist ...
-#####Between two maps {#sec:comp_stat_cat_2}
-There are different types of categorical (i.e discrete attributes) map consistency measures [@Kuhnert2005]:
-\ **Total per categories**\The coarsest approach would be to compare the total numbers of cells[^3back] assigned to each category, neglecting any spatial patterns. This gives a very general quantitative overview of the total per categories, that can be delivered as tabular data. (All the other, finer approaches detailed below imply a cell-by-cell comparison.)
-[^3back]: *Vocabulary note: in this section, "cell" corresponds to the regional unit at which data is aggregated, it can be a region, a pixel, an HRU, a state...*
 
-\ **Percent agreement**\
+#### Between two maps {#sec:comp_stat_cat_2}
+There are different types of categorical (i.e discrete attributes) map consistency measures [@Kuhnert2005]:
+####Total per categories {.unnumbered}The coarsest approach would be to compare the total numbers of cells[^3back] assigned to each category, neglecting any spatial patterns. This gives a very general quantitative overview of the total per categories, that can be delivered as tabular data. (All the other, finer approaches detailed below imply a cell-by-cell comparison.)
+[^3back]: *Vocabulary note: Following @Kuhnert2005, in this section, "cell" corresponds to the regional unit at which data is aggregated, it can be a region, a pixel, an HRU, a state...*
+
+#### Percent agreement {.unnumbered}
 A basic cell-by-cell comparison method measures simply the overall agreement (or percent agreement) by calculating the portion of cells that agree between two maps:
 (Cell-by-cell level of agreement) = (Number of direct matched cells between 2 maps) / (Total number of cells in map)
 
-\ **Kappa index of agreement** \
+#### Kappa index of agreement {.unnumbered}
 KIA or Cohen's $\kappa$ is a widely used statistic measuring concordance between categorical items. This technique has proven efficient for cell-by-cell comparisons of spatial data [@Manson2005], as long as patterns and locations of changes are not involved [@Kuhnert2005]. It is more robust than a percent agreement because it takes into account the agreement occuring by chance. $\kappa = \frac{\textrm{p}_{0}-\textrm{p}_\textrm{e}}{1-\textrm{p}_\textrm{e}}$  with  $\textrm{p}_{0}$  being the proportion of units agreeing, and  $\textrm{p}_\textrm{e}$  the proportion of units expected to agree by chance (i.e the hypothetical probability of chance agreement). Complete agreement results in $\kappa = 1$ [@Cohen1960]. 
 
 However, Pontius, who published about $\kappa$ [@Pontius2000] ended up reconsidering his positions and advocating against the use of this index because of several flaws, mainly the irrelevance of the randomness baseline in many applications, and the fact that it's the ratio is difficult to interprete and overly complicated, as only the numerator actually matters [@Pontius2011]. Instead, he suggests to use quantity disagreement and allocation disagreement measures (see next point). 
 
-\ **Quantity & location fit** \
+#### Quantity & location fit{.unnumbered}
 A more precise version of the $\kappa$ approach explained above consists in analyzing 2 metrics, measuring respectively the quantity disagreement and allocation disagreement. These are more helpful to understand both components of disagreement than with a single statistic of agreement. [@Pontius2011]. For example:
 
 * The **quantity fit** informs on the number of cells that changed from one category to another, offering an overall comparison on the quantity of each category: $$Quantity \ fit = 1 - \frac{1}{N}\sum \left |  \textrm{a}_\textrm{1i} - \textrm{a}_\textrm{2i} \right |$$ where $\textrm{a}_\textrm{ki}$ is the number of cells assigned to category $i$, in map $k$ with $k \subseteq (1,2)$, $N$ the total number of cells in map and $C$ means all categories [@Kuhnert2005].
 * The **location fit** informs on the number of cells that kept the category but changed location from one map to another:  $Quantity \ fit = (Location \ fit) \ - \ (Cell-by-cell\  level\  of\  agreement)$. Another possible way of measuring the location disagrement is the **distance between the locations of matching cells** in the maps can also be calculated [@Kuhnert2005]. An overall measure of distance between two discrete maps expresses the amount of agreement or the goodness of fit [@Seppelt2003217] and [@costanza].
 
-\ **Jaccard index**\
+#### Jaccard index {.unnumbered}
 Other indexes comparing agreement accross categorical datasets exist. However, very few to no applications in comparing maps has been found. 
 The Jaccard index, also known as Tanimoto index, is computed as the ratio of the intersection of the two sets over their union: $$Jaccard\ index = \frac{Map1 \cap Map2}{Map1 \cup Map2}$$ [@jaccard]. Simple to understand, it ranges from 0 to 1, increasing with increasing similarity between the sets.
 The **Sørensen-Dice coefficient** is a slightly different version of the Jaccard index. Also called the Dice similarity coefficient , or F1 score, it is calculated as such: $$Sorensen-Dice\ index={\frac {2|Map1\cap Map2|}{|Map1|+|Map2|}}$$. More similarity measures for categorical data have been explored by Lourenco [@ourenco2004binary].
-\ **Taking into account shifted similar patterns...**\
+#### Taking into account shifted similar patterns... {.unnumbered}
 The **moving window algorithm** further accounts for landscape patterns by considering neighboring cells in addition to the cell-to-cell comparison. It has been develop to answer the following problem: computing solely the number of cell-to-cell matches is not reliable in all circumstances, as if there is a matching cell right near by, it will not be taken into account (e.g if we compare two chessboards shifted by one well, the number of cell-to-cell matches is null although there is evident similarity not to be ignored) [@Kuhnert2005]. The **hierarchical fuzzy pattern matching** uses a different strategy to address the same concern, instead of moving a "window", it varies the zoom. It avoids drawbacks of a cell-by-cell comparison by aggregating the regional unit considered in patches, and conducting comparisons at different scales [@power2001].
 
-#####Between many maps {#sec:comp_stat_cat_many}
+####Between many maps {#sec:comp_stat_cat_many}
 
 When comparing a large number of maps, aggregation often is necessary to communicate results [@Brown2005]. Some of the metrics detailed above that calculate correlation between two maps may be extended to many maps comparison [@Seppelt2003217], like the approach #1.
 
-\ **Total per categories**\
+#### Total per categories{.unnumbered}
 Calculating the total numbers of pixels assigned to each category (as in point 1 from previous section) resulting in a table, with categories in comuns and runs in rows, which works if there are not too many runs. If there are, one may display a simple table linking categories with summary statistics indicating some measure of the mean and the variance (e.g average and extrema or standard deviation), as exemplified in the table below. However, this measure only account for the overall amount of each category, and not for spatial distribution. 
 
 
@@ -371,32 +399,33 @@ note [^80back]
  
  [^80back]: Details of calculations can be found at https://docs.google.com/spreadsheets/d/1wsm0-X5-pJ_I7J7nduWE_dmiOVWgSUyyo-51t58C8Vo/edit#gid=436596527
 
-/ **Pixel stack methods**/
+####Pixel stack methods{.unnumbered}
 Finer methods imply to make calculations for each cell, in all the considered maps (as in, superposing all maps, and making calculation for the column of corresponding cells). For raster data, this technique of *column of cells* is referred to as **pixel stack** (bpb: reference for this term ? Not found in Pontius articles nor R/raster package reference...? TODO). To summarize agreement between runs in a single number, the measures suggested in \ref{sec:comp_map_many} can be aggregated. For example, the average SDI would give an indication of the consistency of the runs. However, these overall average do not give any indications on spatial patterns.
 
-/ **Comparison of landscape metrics**/ (bpb: unclear? useless?)
+####Comparison of landscape metrics{.unnumbered}
+ *(bpb: unclear? useless?)*
 Some spatial metrics allow to spatial patterns. They allow tabular comparisons of some runs (the indexes are calculated for each run) They include Area-weighted mean shape index, centrality indexes, contagion index... [@ABMleelig]. (* bpb: need more details ? (if so todo ABMleelig> 4.16*). Some are more specific landscape metrics, such as the average core area, which is the proportion of production land per land cover category [Parker2004], and the average patch perimeter-area ratio (PA-1) [@Ritters1995]. Landscape statistics measuring sprawl and frangmentation include landscape shape index (LSI), aggregation index (AI) contiguity index (CI) and centrality index (CTI). Together, they allow for comparison of landscape, spatial patterns of change and overall spread [@Sun14]. 
 
 ###Aspatial metrics to summarize results and agreements of continuous maps {#sec:metricsmultrunscont} 
 
 A handy strategy if to **discretize the continuous data**, by sorting the dataset into categories corresponding to ranges of values. This allow to use all the metrics discussed above (section \ref{sec:metricsmultrunscat}) for comparison. However, the arbitrary classification will impact the results. For a reliable metric, it is therefore necessary to do several different classication (i.e discretize the dataset with different limits/size of categories). (bpb: reference for this is my brain, what do you think discretizing continuous datasets?)
 
-#####Between 2 maps {#sec:comp_stat_cont_2}
+#### Between 2 maps {#sec:comp_stat_cont_2}
 
-**Aggregation of cell's values: sum or mean**
+#### Aggregation of cell's values: sum or mean {.unnumbered}
 Each map can be summarized with a value aggregating cell's values. For example, for an objective score map, the overall objective score of the map is the sum of the pixel's scores. The average could also be used to aggregate. Once each map has an aggregated "summary value", these can be substracted to reflect the numerical difference in ES between 2 scenarios. 
 
-**Statistical tests to summarize variance** ? (like average of difference between corresponding pixels, normalized ?)
+#### Statistical tests to summarize variance ? *(like average of difference between corresponding pixels, normalized ?)* {.unnumbered}
 Disagreement between two maps can be summarized by their variance, i.e the average of corresponding cell's squared difference: $$\sum_{cells} (v_1 - v_2)^2$$ where $$v_1, v_2$$ would be the same cell's value in $$Map_1, Map_2$$.
 (bpb: no ref, this is out of my brain because couldn't find literature. But this should exist no ? Makes sense? Should remove?)
 
-**Least squares** (??)
+#### Least squares (??) {.unnumbered}
 A conventional approach would be the least square on the plotted points [^776back] (Pontius, 2008)
 
-**Spatial correlation coefficients**
+#### Spatial correlation coefficients {.unnumbered}
 Statistical indices like the Bivariate Moran's I or LISA aim to measure spatial autocorrelation between 2 variables in a same location [@akbar], which can correspond to two runs of the same variable. (bpb: enough? should dig more? out of scope?)
 
-**Correlation coefficient** *relevant??*
+#### Correlation coefficient *relevant??* {.unnumbered}
 
 * Pearson linear correlation: $$\rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigma _{Y}}}$$. It ranges from -1 (negative linar correlation) to +1 (positive linear correlation), and 0 corresponds to maps not correlated, or its variant, the reflective correlation.
 
@@ -445,6 +474,8 @@ That is adding a separate similar figure to represent uncertainty, alongside the
  Overlaying a visualization of uncertainty on top of the main one. [@Bingham] overlays a contour map of an error field on top of a heatmap of the mean value of a multivalue dataset, but it is not so straightforward. Integrating additional geometrical objects, such as labels, volume rendered thickness, or error bars may express uncertainty [@griethe]. Circular glyphs and ribbons have been designed, in the context of weather forecast ensemble data, to visualize uncertainty [@sanyal].
  **Modifying the displayed variable to account for uncertainty**
 Varying the value of a free graphical variable, such as a property of the color palet used to visualize the main data can also express uncertainty. The first option is **"blurring"**: the focus is adapted proportionally to the level of uncertainty, this can be done through one of these parameters : contour crispness (« fuzzyness »), fill clarity, fod or resolution [@mac92]. Formally, blurring is defined as removing spatial high frequency details [@russ95]. **Saturation** is the second option, uncertainty is expressed by paleness, also referred to as whiteness [@hengl]. More options include texture and edge crispness variations, overall all these solutions are more intuitive but less precise [@griethe].
+
+*TODO: Example img*
 
 **Agreement maps**
 Techniques for comparison of multiple spatial runs, such as frequency maps or spaguetti plots, can be applied in the context of uncertainty. See section \ref{sec:comp_map_many}.
