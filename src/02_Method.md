@@ -1,5 +1,4 @@
 #Method
-*This chapter is an unfinished draft for now...because not 200% sure on next steps methods / also need to put form in here *
 ##Project definition (scoping)
 Within the initial framework of the project, on environmental modeling and data analysis, several potential directions were considered. Possible directions of work targeted handling spatial interdependence in the models or assessing the value of detailed data in improving optimization outputs and modeled impacts... However, an extended exploration of the needs was conducted to understand where would could this work bring the most useful contribution. Analyzing the need is indeed crucial to a good project definition. This preliminary step was achieved during the first month and the annual gathering of NatCap has been a great occasion to identify the areas of needs, it resulted in defining the project around the topic of display tools for ecosystem services. The question of how to synthesize and communicate spatial and multi-dimensional outputs of multiple runs for multiple ES models would be addressed. The goal being to define easy approaches to clear ES visualizations and summaries.
 ##Background and context (approaching the problem)
@@ -46,10 +45,13 @@ The display needs were organized per theme, in the most logical way that could b
 Once these questions were organized, the aim consisted in answering each effectively.
 To each display tasks was associated  corresponding concrete questions, and examples to which the user could identify its projects. Then, for each task, several solutions would be proposed according to options the user specifies, namely the target audience (analysts, stakeholders, public), the document type (static, dynamic). For each solution, implementations
 **Basic question > display task > document type > visualization > implementation**However, the approach of selecting a "best" solution for each display need quickly turned out to be irrelevant as each display need is very specific and context dependent. The alternative was to build an organized toolbow suggesting several strategies for each cases, where the analyst could take inspiration and adapt its solution to fit his or her needs. 
+
+The document aimed to be explored and skimmed through, with fast referencing (dynamic links in the pdf document) to related topics and displays.
+
+The table summarizes
 ### Suggested solutions
 Strong of the knowledge from the literature review, and the current state of existing visualizations, display solutions were suggested. For the tasks where no satisfying solutions could be found, new ones were developed, or adapted from neighboring fields in the literature. 
 
-### Quality assessment
 It is a rather subjective task to assess the quality of suggested solutions. To increase objectivity, several criteria were considered, specifically the imperatives for visualization, defined by [@stephens2012] in the context of ensemble predicitons (figure \ref:{fig:crit1}), and the criteria of clarity and completeness detailed by @Allen1, in Annex \ref{fig:crit2}.
 
 ![Imperatives for visualization, defined by [@stephens2012] in the context of ensemble predicitons:  richness, saliency, and robustness.](../images/criterias.png){#fig:crit1 width=40%}

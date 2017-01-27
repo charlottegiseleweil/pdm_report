@@ -1,0 +1,3 @@
+####“Breakeven” or “next best” score{.unnumbered}
+Useful in the context of assessing robustness of prioritized activities, the breakeven approach compares a map (supposively, the modal portfolio) to many others. It answers the question of "how much things would need to change before a different decision is taken" [@RIOS]. For each cell, the breakeven map displays a fraction corresponding to the amount of change that the prioritization score would need to be reduced for another activity to be chosen. 
+*bpb: is my interpretation right ? I still think this approach is slightly confusing!*

@@ -3,33 +3,22 @@
 This chapter gathers learnings from in a literature review on static and dynamic approaches to displaying complex data and existing ... Then, and most importantly this chapter aims to explore the design strategies to express and display multi-dimensional, spatial, multi-objective, uncertain data and combinations of these. This focus corresponds to the specific challenges faced while communicating natural capital information.
 
 ## Specific data visualization challenges
-### Analysis/proof of need
-
-The display tasks gathered in the survey (detailed in section \ref{sec:survey}) appeared to be right on point as the average scores, in terms of general usefulness, were all higher than 3.5, and 84% were higher than 4.0 and 47% higher than 4.5. As these results proves the relevance of these display tasks, the structure of the present user guide will follow the same order.
+### Analysis of the display needs
+The display tasks gathered in the survey (detailed in section \ref{sec:survey}) appeared to be right on point as the average scores, in terms of general usefulness, were all higher than 3.5, 84% were higher than 4.0 and 47% higher than 4.5. These results prove the relevance of these display tasks. *(bpb: repeat list of display tasks from survey or unnecessary?*)
 
 ### How to read this document
+This document is intended to support and guide analysts in their task of communicating natural capital information. It is a toolbox, structured around four main themes: displaying multi-dimensional data, spatial data, comparing multiple versions of spatial data and expressing uncertainty. It aims to suggest display solutions for each of the display tasks previously identified. Each proposed display is explained, discussed (pros and cons) and illustrated with relevant use cases and/or examples. These solutions were selected based on several criterion (see section \ref{sec:criterion}). However, when it comes to data visualization and clarity, some subjectivity cannot be avoided. Also, data visualization is really a case-by-case and efficient displays really depends on the underlying data and information to convey. This user guidance aims to serve as a basis and an inspiration to the analyst, suggesting several options to be used and adapted to each case. Tailoring the displays is essential. For example, the suggested displays have different degrees of complexity and the analyst should pick a complexity level according to :
 
-This document is intended to support and guide analysts who need to display nat cap info. 
-**TODO**
-METHOD : Strong of the learning of the previous chapter on \ref{sec:litreview}, and the knowledge of currently used displays among ecosystem services analysts at The Natural Capital Project and beyond, this chapter proposes a toolbox to support analysts in their tasks of communicating natural capital information. This user guide is structured around 6 main topics encountered in ecosystem services analysis: portfolios, spatial and non-spatial ES model outputs, scales, uncertainty and beneficiaries. In each topic, several specific display tasks are listed and solutions are suggested (... DYNAMIC/STATIC? THESE SOL ARE STARTING POINTS THAT SHOULD BE TAILORED TO EACH CONTEXT.) 
-Along with suggested tools (programming language or software), ready-to-use when available.
+* the audience targeted: *Who is the display intended for ? What is their level of knowledge about the project ?*
+* the time at disposition: *Should this convey the key results and the conclusion or go in depth about the analysis ?*
+* the document type: *Static, dynamic, interactive ?* 
+* the presentation type: *Should this be self explanatory or will it be presented by the analyst?*
 
-These solutions were (subjectively?) selected based on several criterion (see section \ref{sec:criterion}). However, when it comes to data visualization and clarity, some subjectivity cannot be avoided ..
+An important preliminary note: plots and graphs are not always necessary. Sometimes, the full data table is the best visualization. For example, in the case of an mid-project intermediary report for a meeting with experts on the project, it is likely that plots will lead to questions digging in details, where showing the full dataset and how solution were selected and compared to each other is necessary. 
 
-Also, data visualization is really a case-by-case and efficient displays really depends on the underlying data and information to convey. This user guidance aims to serve as a basis suggesting several options to be (se réapproprier) by the analyst. to inspire to analyst.
-
-**Tailor**, the suggested displays have different degrees of complexity and the analyst should pick a complexity level according to :
-
-* the audience targeted:
-*  the time at disposition: conveying the key results and the conclusion, or should we go in depth ?
-*  document type : static or dynamic, 
-* Presentation type: (should it be a self explanatory document, or will the analyst present it?)
-
-Plots and graphs are not always necessary. Sometimes, the full data table is the best visualization. For example, in the case of an mid-project intermediary report for a meeting with experts on the project, it is likely that plots will lead to questions digging in details, where showing the full dataset and how solution where selected, and compare to each other is necessary. 
+Table (*todo ref table*) summarizes the relevant options for the main display tasks, and links to appropriate tools.
 ## Multi-dimensional data
-In the context of ES, multi-dimensionality arises from multi-objective problems, such as cases where mutiple ES are considered and their trade-offs are to be explored, but also from mutiple scenarios, due for example to uncertainty. Visual decision support tools are very relevant in field of multi-objective optimization problems[^0326back]. In the  typical cases, there is no unique optimal solution, but a collection of Pareto optimal ones [@Hadka2015], i.e solutions where improving the result towards one objective result a decrease in performance with regards to another objective  [@paretoUNIL]. Efficient visualizations empower the user with the ability to navigate through thousands of potential solutions, compare them and understand trade-offs, leading to performant decision-making. 
-
-*FOCUS ON VISUALIZING TRADE-OFFS AND INCLUDE EVERYWHERE TODO*
+In the context of ES, multi-dimensionality arises from multi-objective problems, such as cases where mutiple ES are considered and their trade-offs are to be explored, but also from mutiple scenarios, due for example to uncertainty. Visual decision support tools are very relevant in field of multi-objective optimization problems[^0326back]. In the typical cases, there is no unique optimal solution, but a collection of Pareto optimal ones [@Hadka2015], i.e solutions where improving the result towards one objective result a decrease in performance with regards to another objective  [@paretoUNIL]. Efficient visualizations empower the user with the ability to navigate through thousands of potential solutions, compare them and understand trade-offs, leading to performant decision-making. 
 
 Relevance : for scenario comparison, multi-objective optimization. For multi-objective optimization under uncertainty, the number of scenario considered can be very large. 
 
@@ -69,21 +58,23 @@ For data including several independent variables, and a dependent one, **line ch
 *EXAMPLE: SOME SORT OF LINE GRAPH FOR MULTI-OBJ OPTIMIZATION (STACIE?)*
 
 
-####Comprehensive plotting 
+####Comprehensive plotting: extending line charts to multiple variables {.unnumbered}
 Through comprehensive plotting, multi-variate metrics can be visualized. For example, figure \ref{fig:compreh} illustrates a case of a 4-dimensions dataset plotted with four 3-dimensions figures to display 4*3^3 data points.
 Spatial metrics can also be visualized through histograms comparing main summary statistics in different scenarios (e.g the percentage of land areas covered by each 3 category is displayed for 3 drivers, and 4 scenarios using small multiples histograms in [@villamor14], figure 4)[^11back].
 
-![An example of comprehensive plotting where [@Sun14] displays results of 4 metrics (one per figure), as several line plots (for several variables, here one per market level), and varying parameters (here 3 parameters with 3 possible values each resulting in $3^3$ data points per market level, per figure. This is one of four figures corresponding to the metric "Edge density".](../images/sun.png){#fig:compreh width 90%}
+![An example of comprehensive plotting where [@Sun14] displays results of 4 metrics (one per figure), as several line plots (for several variables, here one per market level), and varying parameters (here 3 parameters with 3 possible values each resulting in $3^3$ data points per market level, per figure. This is one of four figures corresponding to the metric "Edge density".](../images/sun.png){#fig:compreh width=90%}
 
 [^11back]: A side concern that may come up in these cases, is about data management: the total size of the runs can become is too large for available main memory. A strategy is to precompute summary statistics, such as the mean and extrema [@PotterWilson].
 
-###Small Multiples
-An effective alternative to coercing all the data in a single plot (risking overplotting) is displaying small multiples. The concept is to replicate the same simple graph structure (in terms of axis, shape and scale), for many datasets, ordered logically. The cognitive process of understanding the graph is undertaken only once, and the understanding then is replicated while scanning all other multiples. This strategy is very efficient in many cases for comparison. Referred by Edward Tufte as "multivariate and data bountiful", they enforces comparisons of alternatives, differences and changes [@tufte]. This displaying startegy has also been called trellis chart, lattice chart, grid chart, or panel chart. It can be applied to many types of graphs.
+###Small Multiples {#sec:smallmultiples}
+An effective alternative to coercing all the data in a single plot (risking overplotting) is displaying small multiples. The concept is to replicate the same simple graph structure (in terms of axis, shape and scale), for many datasets, ordered logically. The cognitive process of understanding the graph is undertaken only once, and the understanding then is replicated while scanning all other multiples. This strategy is very efficient in many cases for comparison. Referred by Edward Tufte as "multivariate and data bountiful", they enforces comparisons of alternatives, differences and changes [@tufte]. This displaying startegy has also been called trellis chart, lattice chart, grid chart, or panel chart. It can be applied to many types of graphs, or maps. Other examples of the small multiple strategy and variants of it can be found in figures \ref{fig:arkema1}, \ref{fig:coastal1}, \ref{fig:coastal_2}
 
-![Small multiples applied to (a) line plots [@small_mult_lines] and (b) spatial data [@small_mult_maps]](../images/smallmultiples.png){#fig:todotodo2}
+![Small multiples strategy applied to (a) line plots [@small_mult_lines] and (b) spatial data [@small_mult_maps] *TODO: remove this figure - useless*](../images/smallmultiples.png){#fig:todotodo2}
+
+![Small multiples strategy applied to radar charts (further described in \ref{sec:radar}) by @Arkema2. The multiples correspond here to the 9 considered regions](../images/coastal3.png){#fig:coastal_sm}
 
 ###Scatterplots {#sec:scatterplots}
-The classic scatterplot displays data with two to three dimensions, using cartesian coordinates and two or three axes. In a **3D scatterplot**, solutions are represented as points in the space.  Additional dimensions can be represented by changing attributes (color, shape, size, orientation, etc), however concerns about clarity and risk of overwhelming the plot may occur. Interactivity allows the user to perform selections of one or multiple solution point(s). 
+The classic scatterplot displays data with two to three dimensions, using cartesian coordinates and two or three axes. In a **3D scatterplot** (figure \ref{fig:hadka}a) solutions are represented as points in the space.  Additional dimensions can be represented by changing attributes (color, shape, size, orientation, etc), however concerns about clarity and risk of overwhelming the plot may occur. Interactivity allows the user to perform selections of one or multiple solution point(s). 
 
 A **Scatter plot matrix** combines the small multiple strategy with the classic scatterplot; abbreviated SPLOM, it displays relationships between every pair of variables.
 
@@ -91,21 +82,28 @@ In the context of multi-objective optimization, to understand trade-offs and syn
 
 *bpb NEED EXAMPLE OF SMALL MULTIPLE SCATTERPLOTS TRADE OFFS CURVES (I asked Dave you mentioned in the survey he uses this)*
 
-###Parallel coordinates plot *bpb is this section better now?*
-Parallel coordinates plots are very effective to display different solutions in a multi-objective context to understand trade-offs and synergies between objectives under several scenarios. The number of scenarios is then nearly unlimited, and so is the number of objectives, to the limit that the horizontal axis fit the page. Scenarios are represented as lines, distinguished by varying colors, which intersect horizontal axis representing the objectives. Patterns are clearly visible [@Achtert2013_6]. The vertical direction of preferred solution must be clearly indicated to assist interpretation. 
 
-Combining parallel coordinates with interactive features offers interesting options to explore the data, for example brushing allows to extract trends over subsets, [@andrienkopp] recommends linking to other graphics.
+
+###Parallel coordinates plot *bpb is this section better now?*
+Parallel coordinates plots (figure \ref{fig:hadka}b) are very effective to display different solutions in a multi-objective context and visualize trade-offs and synergies between objectives under several scenarios. The number of scenarios is then nearly unlimited, and so is the number of objectives, to the limit that the horizontal axis fit the page. Scenarios are represented as lines, distinguished by varying colors, which intersect horizontal axis representing the objectives. Patterns are clearly visible [@Achtert2013_6]. The vertical direction of preferred solution must be clearly indicated to assist interpretation. 
 
 Tradeoffs are illustrated by crossing lines. However, one limitation is that each axis having at most two neighboring axis, only N-1 relationships of $\binom{N}{2}$ combinations for an N-dimensional dataset can be visualized at once. This can be overcome by re-ordering the axis, possibly with an interactive tool, or by upgrading to a 3D parallel coordinate plot where the axis are still in parallel, but some appear closer [@Achtert2013_6], although this solution result in a much harder interpretation, which may explain why it is not widely used. 
 
- To compare and constrast alternative options, and explore the effects of trade-offs, 3D scatter plot and parallel coordinates plot are recommended by [@Hadka2015], as shown in Figure \ref{fig:hadka}. 
+Combining parallel coordinates with interactive features offers interesting options to explore the data, for example brushing allows to extract trends over subsets, [@andrienkopp] recommends linking to other graphics. To constrast alternative options and explore the effects of trade-offs, 3D scatter plot and parallel coordinates plot are recommended by @Hadka2015, as shown in figure \ref{fig:hadka}. The equivalent of parallel coordinates plot for categorical data is the alluvial plot; it is also useful to discretize the data into subsets when the dataset is too large for the lines to be distinguished, @Alluvial provides more details. Several tools and packages exist to make both parallel and alluvial plots[^980back].
 
-![Four objectives visualization with (a) 3D scatterplot and colors and (b) parallel coordinate plot, achieved with the OpenMORDM open-source R library [@Hadka2015]](http://ars.els-cdn.com/content/image/1-s2.0-S1364815215300190-gr3.jpg) {#fig:hadka}
+![Four objectives visualization with (a) 3D scatterplot and colors and (b) parallel coordinate plot, achieved with the OpenMORDM open-source R library [@Hadka2015]](http://ars.els-cdn.com/content/image/1-s2.0-S1364815215300190-gr3.jpg){#fig:hadka}
 
-###Radar charts 
- The radar chart, (that has also been refered to as spider chart[^5353back], web chart, star chart, polar chart, or Kiviat diagram.[2][3]) is the parallel coordinates plot version in polar coordinates. It can be an interesting way to visualize trade-offs. However, they tend to become cluttered and complicated if with many variables, making comparisons very difficult [@datavizz] [^100back]
+[^980back]: Links to parallel coordinates and alluvial plots implementations and packages: \
+- [A tool to build directly an interactive parallel coordinate plot](Parallehttps://reed.cee.cornell.edu/parallel-axis/) \
+- [Its underlying implementation, with D3.js](http://syntagmatic.github.io/parallel-coordinates/) \
+- [Parallel plots in Python](https://waterprogramming.wordpress.com/2016/09/12/easy-vectorized-parallel-plots-for-multiple-data-sets/) \
+- [Interactive parallel plots in R, with Shiny and 3D scatterplot](https://openmordm.shinyapps.io/Iris/) \
+- [Alluvial plot package in R](https://cran.r-project.org/web/packages/alluvial/vignettes/alluvial.html).
 
-[^100back]: see also petal charts [@spiderman_bad_Ref].
+###Radar charts {#sec:radar}
+ The radar chart, as shown in figures \ref{fig:radar} and \ref{fig:coastal_sm}, is the version of parallel coordinates plot in polar coordinates.  It has also been refered to as spider chart[^5353back], web chart, star chart, polar chart, or Kiviat diagram. It can be an interesting way to visualize trade-offs. However, they tend to become cluttered and complicated if with many variables, making comparisons very difficult [@datavizz] [^100back]
+
+[^100back]: see also petal charts, and discussion from @spiderman_bad_Ref.
 
 ![Hawaii, Kamehameha schools, from NatCap intranet](../images/spiderplot_tradeoffs_Ex.png){#fig:radar}
 
@@ -117,14 +115,26 @@ More display techniques have been explored, but are not widely used. To mention 
 ### Reduce dimensions
 Another approach to reduce cognitive complexity of multi-dimensional data, is to reduce the dimensions in some coherent way. For example, the **principal components analysis** (PCA) can be conducted to reduce the number of variables by combining the correlated ones [@hotelling1933analysis]. Similarly, the **choice modeler approach** aims to evaluate multiple decision variants, in a very large decision space. The concept is to identify criteria that do not influence the output (here, the decision option ranking), and remove these dimensions, to simplify without loosing correctness [@Piotr]. 
 
-NEED EXAMPLE RYAN COMBINE VARIABLE UNTIL ITS 2 DIMENSIONS (RYAN)
+In the same vein, a simpler approach consists in combining variables relative to the same idea in a logical way. For example, in the context of {*what does Ryan do?* comparing lake's values}, variables depicting boat launch, lake water clarity and size of the lake can be weighted and combined in a single metric, here lake recreation value... *(bpb: okay this is super unclear but don't really know if I should mention it, how to make it clearer: it's basically just combining all factors have one overall number to simplfy comparisons... Like Boat launch value, size value, clarifty value --> Recreation value (in an example Ryan gave me. (I also dunno how to reference it then)!!!))*  *Is it clearer if I make an equation ?*
+Recreation value = (weight_boat_launch) * (boat_launch_value) + (weight_clarity) * (lake_water_clarity_value) + (weight_size) * (lake_size_value) 
+**(TODO UNCLEAR!!!)**
 
-###Mutiple linked views
-Several options to display multi-variate data were discussed. However they all realistically apply to a limited number of variables. As dimensions of the data increase, it is often interesting to show several linked graphs  of the same dataset to convey the complex information. This solution gives different perspectives to the viewer. In the case of a static display, the graphs are connected by matching color coding or other corresponding parameters. Dynamic displays allow improvement by adding brushing and linking features (see \ref{sec:interactivefeatures}). A great example of multiple linked view was done by @Peter, who combined a scatterplot, a map, a pie chart and summary statistics in a single dashboard, presented in \ref{fig:Peter} [^009back]. 
 
-![The Middle Cedar visualization is an interactive webapp, allowing users to click on each point of the trade-off curve, and the corresponding land cover map will be displayed. Additionally, summary metrics and a pie chart provide information relative to the scenario chosen upon click[^009back] [@Peter]](../images/peter.png){#fig:Peter} 
+###Multiple linked views
+Several options to display multi-variate data were discussed. However they all realistically apply to a limited number of variables. As dimensions of the data increase, it is often interesting to show several linked graphs of the same dataset to convey the complex information. This solution gives different perspectives to the viewer. In the case of a static display, the graphs are connected by matching color coding or other corresponding parameters, as in figures \ref{fig:hadka}, \ref{coastal2}, \ref{arkema1}, \ref{fig:coastal1} and (todo the one with maps+trade-offs curves). Furthermore, dynamic displays allow improvement by adding brushing and linking features (see \ref{sec:interactivefeatures}), examples of interactive dashboard with mutiple linked views are presented in figures \ref{fig:Peter}and \ref{fig:ConservationROIDashboard}.
 
-[^009back]: The Middle Cedar visualization is availabe at https://phawthorne.github.io/mc-vis/
+####Combining static plots
+![Combining bar plots with maps and small mutiples. The bar plots display the area of habitat in each risk category (low, medium, high) per planning region (1 to 9). [@arkema1]](../images/arkema1.png){#fig:arkema1} 
+
+![Dense figure using a story-telling approach to present scenarios. It combines bar plots, maps and the small multiples approach. This figure is self-explanatory, and by including a few sentences, it replaces a lot of text. [@Arkema2]](../images/coastal1.png){#fig:coastal1 width=50%}
+
+####Interactive dashboards
+![The Middle Cedar visualization is an interactive webapp, developed by @Peter, who combined a scatterplot, a map, a pie chart and summary statistics in a single dashboard. It allows users to click on each point of the trade-off curve, and the corresponding land cover map will be displayed. Additionally, summary metrics and a pie chart provide information relative to the scenario chosen upon click[^009back] [@Peter]](../images/peter.png){#fig:Peter} 
+
+![Extract of the Conservation ROI Dashboard, gathering and comparing ROI projects accross the US[^008back]](../images/consdash.png){#fig:ConservationROIDashboard}
+
+[^009back]: The Middle Cedar visualization is available at [https://phawthorne.github.io/mc-vis/](https://phawthorne.github.io/mc-vis/)
+[^008back]: The Conservation ROI Dashboard is available at [http://nascience.us/roi/public](http://nascience.us/roi/public/)
 ## Spatial data 
 *Possible tools : ArcGIS, QGIS, PyGeoprocessing, Python, matplotlib, R, CV / HRA Dashboards*
 
@@ -256,7 +266,7 @@ Hello
 See also figures \ref{fig:myanmar_biodiv-ppl} (combines informations about two independant variables).
 
 ####Beneficiaries {#sec:beneficiaries}
-The survey conducted highlighted growing interest in the topic of displaying the beneficiaries (TODO CiteSurvey). However, this tasks appears to be very context specific. Typically, the displays would aim to quantify and show the beneficaries impact, possibly by subgroups, and often their location in space. It is also often of interest to contrast beneficiary distribution in space with service distribution in space. 
+The survey conducted highlighted growing interest in the topic of displaying the beneficiaries (*TODO bpb how to Cite Survey results?*). However, this tasks appears to be very context specific. Typically, the displays would aim to quantify and show the beneficaries impact, possibly by subgroups, and often their location in space. It is also often of interest to contrast beneficiary distribution in space with service distribution in space. 
 
 Figure \ref{fig:myanmar_forest} highlights depend
 
@@ -268,11 +278,11 @@ Runs refers here to different versions of a spatially explicit variable; this se
 
 Comparison and summaries of maps can be achieved either by visualizing spatially through maps (\ref{sec:comp_map}) or through quantitative indices and metrics synthetizing the results aspatially (\ref{sec:comp_stat_cat} for categorical data summary indices, \ref{sec:comp_stat_cont} for continuous data).
 
-**Tools**: Automated comparison of maps can be achieved with softwares like the Map Comparison Kit[^127back] [@visser2006map]. An algorithm called Mapcurves, implemented in R and Matlab, provides a goodness-of-fit measure based on spatial overlap. (*TODO look at TerrSet*)
+**Tools**: Automated comparison of maps can be achieved with softwares like the Map Comparison Kit[^127back] [@visser2006map]. An algorithm called Mapcurves, implemented in R and Matlab, provides a goodness-of-fit measure based on spatial overlap. TerrSet software also provdes GIS analysis features, including multiple map comparison and a variety of spatial statistics [@TerrSet]. (*Bpb, have you used it ? Is that right ? I have to pay to download and try it,so I'm trying to summarize info on their website.*)
 [^127back]: MCK compares raster maps using fuzzy set map comparison, hierarchical fuzzy pattern matching, and moving window based comparison of landscape structure. See $http://mck.riks.nl$. 
  
 ###Maps displays 
-#### Between 2 maps {#sec:comp_map_2}
+#### Between 2 (or a few) maps {#sec:comp_map_2}
 
 ####Interactive switching between maps {.unnumbered}
 For the examination of (dis)agreement between two maps, analysts often like to flip back and forth between the two. This is easy to do in GIS softwares and is a convenient solution for the data exploration purposes. Nevertheless, this method is not always suited for communication purposes. Plus, this interactive solution doesn't apply to static documents.
@@ -282,12 +292,17 @@ Show the two maps next to each other. This is not the most space effective optio
 
 #### Change map  {.unnumbered}
 Substracting one map to the other (generally corresponding to the baseline scenario) results in a change map. Typically change maps uses diverging colorscheme, two colors representing respectively increase and decrease, and the intensity gradient reflects the amount of change. 
-Suited for (examples)\
+Suited for (examples)
 
-![Change map displaying the amount of additional sediment export (in percentage) comparing a future scenario with the current baseline one [@Myanmar16]](../images/changemap.png)
+![Change map displaying the amount of additional sediment export (in percentage) comparing a future scenario with the current baseline one [@Myanmar16]](../images/changemap.png){#fig:my123 width=20%}
 
 #### 20%mapStacie? {.unnumbered}
 *  take top 20% of service for two ES and find areas of overlap. (in case of continuous Es model outputs such as objective scores per pixel. >> Stacie?)
+
+#### Maps matrix (small multiple strategy) {.unnumbered}
+When the number of maps to compare is low enough to fit in a page, with a reasonable resolution, the small multiple approach (see section \ref{sec:smallmultiples}) is relevant, as in figure \ref{fig:coastal_2}.
+
+![To compare 3 ES metrics between 4 scenarios, @Arkema2 combines small multiples of objective score maps, with summary statistics and bar plots](../images/coastal_2.png){#fig:coastal_2}
 
 #### Between many maps {#sec:comp_map_many}
 The problem complicates when comparing many runs. 
@@ -304,40 +319,29 @@ To express agreement about an activity across portfolios, footprint maps can als
 
 #### Modal portfolio and frequency map {.unnumbered}
 For categorical data, the frequency map approach would display the most assigned category to each area across runs, with additionally a measure of how often this category was assigned [@RIOS]. In the context of portfolios, this is called the modal portfolio, displaying the most often chosen activity for each spatial unit[^55back]. The comparison part is held by the frequency map, which express how often was the activity chosen. Precisely, the frequency map is usually constructed as such: for each spatial unit, number of portfolios where the modal value is chosen divided by total number of portfolios. 
-These two maps complements each other: the former is about summarizing when the latter hold indications on comparison. They can be overlayed or displayed side by side.
+These two maps complements each other: the former is about summarizing when the latter hold indications on comparison. They can be overlayed or displayed side by side, as in \ref{fig:RIOS}.
 
-*Examples: RIOS TODO *
+![Example for a set of 57 runs, over a subwatershed, modified from @RIOS. In the frequency map (b), the prevalence of dark green indicates that most activities are quite robust.](../images/RIOS.png){#fig:RIOS}
 
 [^55back]: More precisely, the modal portfolio maps can either display the category assigned in most of the runs, or limit to these assigned in a certain threshold percentage of the runs. 
 
-####Shannon diversity index {.unnumbered}
+####Categorical map diversity indices {.unnumbered}
+An alternative to frequency maps, to summarize the categorical variance accross many runs is the **shannon diversity index**,  for each pixel: $SDI = - \sum_{i=1}^{R} p_{i} \ln(p_{i})$, with $\textrm{p}_{i}$ the proportion of cells assigned to category i, and $R$ the total number of categories. Here is how to interprete the SDI: when evenly distributed, $H = \ln(R)$, and as it approaches $0$, proportions in each category vary more. Hence, SDI reflects the relative abundance of each category across the pixel stack. So, the bigger the SDI, the most confident one can be about the pixel's most chosen category. Other diversity indexes can also be substituted. 
 
-An alternative to frequency maps, to summarize the categorical variance accross many runs is the shannon diversity indexes of each pixel: $SDI = - \sum_{i=1}^{R} p_{i} \ln(p_{i})$, with $\textrm{p}_{i}$ the proportion of cells assigned to category i, and $R$ the total number of categories. Here is how to interprete the SDI: when evenly distributed, $H = \ln(R)$, and as it approaches $0$, proportions in each category vary more. Hence, SDI reflects the relative abundance of each category across the pixel stack. So, the bigger the SDI, the most confident one can be about the pixel's most chosen category. Other diversity indexes can also be substituted. 
+The **fuzzy set approach** [@Hagen2003] assesses the similarity of several categorical maps, resulting in a fuzzy set comparison map where each cell displays a degree of similarity and an overall value for similarity, so-called $\kappa$-Fuzzy as it extends the Kappa index including fuzziness of category and of location.
 
-TODO MAYBE ; A **coefficient of unlikeability** measures variability in categorical data by considering how often, not how much, observations differ [@kader7]. It can be used as a type of variance for categorical interventions *[Ref here is Ginger!]*. 
+Similarly, a **coefficient of unlikeability** measure variability in categorical data by considering how often, not how much, observations differ [@kader7]. Calculated for each cell. It should be interpreted as such: the coefficient is high if different interventions were chosen (i.e low agreement), and low if the same intervention tended to be chosen (high agreement). So it reflects (the inverse of) agreement across maps.
 
 ####variant-invariant method {.unnumbered}
-In the same vein, the **variant-invariant method** aims to distinguish the invariant regions, that is the areas where the category assigned is consistently the same [@Brown2005]
-
-####“Breakeven” or “next best” score{.unnumbered}
-TODO RIOS  (*Does Breakeven prioritization scores apply to comparison of many maps? Ben: "it's comparing one particular map to a whole bunch of other maps (to find next-best values), but once  you've found the next best, it's just a calculation from two elements of the pixel stack. (That's probably confusing)*" 
-
-####Fuzzy set approach {.unnumbered}
-TODO !
-The fuzzy set approach [@Hagen2003] assesses the similarity of several categorical maps, resulting in a fuzzy set comparison map where each cell displays a degree of similarity and an overall value for similarity, so-called $\kappa$-Fuzzy as it extends the Kappa index including fuzziness of category and of location.
+In the same vein, the **variant-invariant method** aims to distinguish the invariant regions, that is the areas where the category assigned is consistently the same [@Brown2005]  *(todo)*
 
 ####Spaghetti plots{.unnumbered}
-
-Visualizing flow data, **spaghetti plots** (figure \ref{fig:spag}) express consistency between runs. Widely used in meteorology, the consistency of the runs is expressed by how tightly clustered they appear. Spaghetti plots may be translated to continuous spatial data by using the isocontour of each run, which is useful when concerned about a specific threshold. *bpb: better?*
+Visualizing flow data, **spaghetti plots** (figure \ref{fig:spag3D}a) express consistency between runs. Widely used in meteorology, the consistency of the runs is expressed by how tightly clustered they appear. Spaghetti plots may be translated to continuous spatial data by using the isocontour of each run, which is useful when concerned about a specific threshold. *bpb: better?*
 
 ####3D plots overlaying maps {.unnumbered}
+For continuous data, **3D plots overlaying maps** (figure \ref{fig:spag3D}b) have been used to highlight structural differences across maps. However, this solution seems limited to relatively small regions, and clearly distinguishable distributions of the variables expressed through color and height of the histogram. 
 
-For continuous data, **3D plots overlaying maps** (figure \ref{fig:overlay}) have been used to highlight structural differences across maps. However, this solution seems limited to relatively small regions, and clearly distinguishable distributions of the variables expressed through color and height of the histogram. 
-
-TODO merge subfigures: 
-![Spaghetti plots displaying ensemble data sets [Potter, 2009]. The spaghetti plot is the isocontour of each run. If the runs agree (Fig. left), it will result in a coherent bundle. Slight disagrements induce divergence from the main bundle (Fig. right). *for categorical or continuous?*](../images/spaguetti.png){#fig:spag}
-
-![3D histograms, organized according the geographical layout; extract from figure 8 of [@Huang13] -- Merge (subfigures!)](../images/3Dplotsoverlaying.png){#fig:overlay}
+![(a) Spaghetti plots displaying ensemble data sets [Potter, 2009]. The spaghetti plot is the isocontour of each run. If the runs agree (Fig. left), it will result in a coherent bundle. Slight disagrements induce divergence from the main bundle (Fig. right). (b) 3D histograms, organized according the geographical layout; extract from figure 8 of @Huang13](../images/spag3D.png){#fig:spag3D}
 
 ####Interactive map comparisons {.unnumbered}
 Animation is of great interest in this context. Dynamic visualizations are very suited for displaying multiple spatial outputs, there are increasingly used to display results in the field of ABMs[^1back], encountering similar type of outputs [@ABMleelig].\
@@ -400,11 +404,11 @@ note [^80back]
  [^80back]: Details of calculations can be found at https://docs.google.com/spreadsheets/d/1wsm0-X5-pJ_I7J7nduWE_dmiOVWgSUyyo-51t58C8Vo/edit#gid=436596527
 
 ####Pixel stack methods{.unnumbered}
-Finer methods imply to make calculations for each cell, in all the considered maps (as in, superposing all maps, and making calculation for the column of corresponding cells). For raster data, this technique of *column of cells* is referred to as **pixel stack** (bpb: reference for this term ? Not found in Pontius articles nor R/raster package reference...? TODO). To summarize agreement between runs in a single number, the measures suggested in \ref{sec:comp_map_many} can be aggregated. For example, the average SDI would give an indication of the consistency of the runs. However, these overall average do not give any indications on spatial patterns.
+Finer methods imply to make calculations for each cell, in all the considered maps (as in, superposing all maps, and making calculation for the column of corresponding cells). For raster data, this technique of *column of cells* is referred to as **pixel stack** (*bpb: reference for this term ? Not found in Pontius articles nor R/raster package reference...? TODO*). To summarize agreement between runs in a single number, the measures suggested in \ref{sec:comp_map_many} can be aggregated. For example, the average SDI would give an indication of the consistency of the runs. However, these overall average do not give any indications on spatial patterns.
 
 ####Comparison of landscape metrics{.unnumbered}
  *(bpb: unclear? useless?)*
-Some spatial metrics allow to spatial patterns. They allow tabular comparisons of some runs (the indexes are calculated for each run) They include Area-weighted mean shape index, centrality indexes, contagion index... [@ABMleelig]. (* bpb: need more details ? (if so todo ABMleelig> 4.16*). Some are more specific landscape metrics, such as the average core area, which is the proportion of production land per land cover category [Parker2004], and the average patch perimeter-area ratio (PA-1) [@Ritters1995]. Landscape statistics measuring sprawl and frangmentation include landscape shape index (LSI), aggregation index (AI) contiguity index (CI) and centrality index (CTI). Together, they allow for comparison of landscape, spatial patterns of change and overall spread [@Sun14]. 
+Some spatial metrics allow to spatial patterns. They allow tabular comparisons of some runs (the indexes are calculated for each run) They include Area-weighted mean shape index, centrality indexes, contagion index... [@ABMleelig]. (*bpb: need more details ? (if so todo ABMleelig> 4.16*). Some are more specific landscape metrics, such as the average core area, which is the proportion of production land per land cover category [Parker2004], and the average patch perimeter-area ratio (PA-1) [@Ritters1995]. Landscape statistics measuring sprawl and frangmentation include landscape shape index (LSI), aggregation index (AI) contiguity index (CI) and centrality index (CTI). Together, they allow for comparison of landscape, spatial patterns of change and overall spread [@Sun14]. 
 
 ###Aspatial metrics to summarize results and agreements of continuous maps {#sec:metricsmultrunscont} 
 
@@ -493,6 +497,8 @@ The techniques described above were mainly developed for continuous data, but ca
 *bpb:this is pretty superficial but is that enough - otherwise this is a whole other topic to dig in (See Pianosi2016)*
 Sensitivity analysis aims to understand the influence of the inputs, and their uncertainty, on the outputs and their uncertainties of a model [@Pianosi2016]. To visualize the input/output relationship, a common and direct way is a **scatterplot** (for each input parameter, with input parameter considered on x-axis and the output on y-axis), the relationship is explicitly revealed, especially in the case of strctured dependencies. This corresponds to the so-called O(F)AT (one factor at a time) method [@hamby], e.g [@murphy04]. However, with a high number of inputs, scatterplots can become cumbersome. Then, partial derivative of the output by one factor can be displayed to assess the impact of small perturbations; however it explores only locally the input space around a baseline. Other metrics such as the percentage of output change per percentage of input change, or sensitivity indexes are also used. More details can be found in [@hamby]
 
+![A line plot to express sensitivity analysis: the impact of change in input parameters (ETo and P) on the output variable (water yield) [@Sadrian]](../images/Sadrian.png){#fig:lineSA}
+
 Variance decomposition is another approach to sensitivity analysis; then **pie charts** displaying variance partitions are a good alternative [@ABMleelig]. By opposition to trying to display the impact of each inputs, variance-based method focus on finding the most influencing factors. The output variance is decomposed into parts corresponding to the contribution of each input, therefore displaying its impact on total variance [@Homma]. Pie charts are widely used mostly because they are easy to build and understand (*and named after a desert. Okay I know I'll remove this, just checking if you were reading :D (bpb)*). They are effective for small datasets (less than 6 segments of notably different sizes), and if segments are ordered according to size [@piepiepie]. Because only effective on small datasets, and inadequate for comparisons (between several pie charts), partisans of high density space-effective displays, like Tufte, argue against these charts.
 
 ![Expressing sensitivity analysis through variance decomposition, from [@lig14]](../images/sa.png){#fig:lig}
@@ -523,7 +529,7 @@ The examples, guidelines and suggestions gathered above aim to support creation 
 CONTEXT SPECIFIC
 
 ### Useful tools 
-Chapter relevant if not all in table
+Remove chapter and Put all in table
 
 Parallel coordinates plots
 
@@ -531,11 +537,15 @@ Parallel coordinates plots
 * http://syntagmatic.github.io/parallel-coordinates/
 * in Python : https://waterprogramming.wordpress.com/2016/09/12/easy-vectorized-parallel-plots-for-multiple-data-sets/
 * in R (linked with a 3D scatterplot): OpenMORDRM
+* alluvial R package
 
 Mutiple views ?
 http://delivery.acm.org/10.1145/350000/345271/p110-wang_baldonado.pdf?ip=171.66.209.8&id=345271&acc=ACTIVE%20SERVICE&key=AA86BE8B6928DDC7%2E0AF80552DEC4BA76%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=698885994&CFTOKEN=85237999&__acm__=1480547267_54bb0860e703e0f12121386553fe243b
 
 ### Summary table for specific display needs *for analyst in a hurry*
+
+###Things & Examples I'm not sure where to put (*todo!*)
+![Change in services for all scenarios and iterations relative to current management @Arkema2](../images/coastal4.png)
 
 
 

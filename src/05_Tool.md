@@ -71,6 +71,10 @@ highlight iterative process, and several versions of design doc !
 ###Tools and technology
 Webapp,
 D3.js, Dc.js, Geotiffs.js, leaflet, crossfilter, parcoords.
+
+###Raster-on-the-fly computation
+Upon brushing ...
+Peter: pre-load all maps so not calculations needed.
 ###Workflow
 
 
