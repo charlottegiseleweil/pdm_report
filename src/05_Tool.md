@@ -58,6 +58,7 @@ interactive display, allowing to ...
 
 ##Design
 The proposed tool takes the form of a dashboard. Multiple linked plots allow to explore interactively the results.
+For scenario comparison.
 
 Based on the Upper Tana Waterfund use case, described in \ref{sec:tanacase}, the design of the tool is refined. Its prototype includes 5 elements: a map, a parallel coordinates plot, sliders.
 

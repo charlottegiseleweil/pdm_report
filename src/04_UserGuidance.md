@@ -7,6 +7,7 @@ This chapter gathers learnings from in a literature review on static and dynamic
 The display tasks gathered in the survey (detailed in section \ref{sec:survey}) appeared to be right on point as the average scores, in terms of general usefulness, were all higher than 3.5, 84% were higher than 4.0 and 47% higher than 4.5. These results prove the relevance of these display tasks. *(bpb: repeat list of display tasks from survey or unnecessary?*)
 
 ### How to read this document
+*todo: add : fast referencing allow to jump between sections, interactive document*
 This document is intended to support and guide analysts in their task of communicating natural capital information. It is a toolbox, structured around four main themes: displaying multi-dimensional data, spatial data, comparing multiple versions of spatial data and expressing uncertainty. It aims to suggest display solutions for each of the display tasks previously identified. Each proposed display is explained, discussed (pros and cons) and illustrated with relevant use cases and/or examples. These solutions were selected based on several criterion (see section \ref{sec:criterion}). However, when it comes to data visualization and clarity, some subjectivity cannot be avoided. Also, data visualization is really a case-by-case and efficient displays really depends on the underlying data and information to convey. This user guidance aims to serve as a basis and an inspiration to the analyst, suggesting several options to be used and adapted to each case. Tailoring the displays is essential. For example, the suggested displays have different degrees of complexity and the analyst should pick a complexity level according to :
 
 * the audience targeted: *Who is the display intended for ? What is their level of knowledge about the project ?*
@@ -27,7 +28,7 @@ Multidimensional data visualization has been given considerable attention, as co
  [^0326back]: Vocabulary note: "multi-objective" refers here to problems with three or more objectives, also called many-objective problems [@Fleming05] or high order-Pareto optimization problems [@Reed04]
 
 ###Time-series data: line charts, streamgraphs and more
-For data including several independent variables, and a dependent one, **line charts** is a version of a scatter plot where points are ordered (on the x-axis), and joined with segments. Line charts (also refered to as run charts for time-series data, or index charts when interactive) highlights relative changes, these are a good options when comparing the independant variables. Streamgraphs, also called stacked graphs, sums visually the time-series values around a central axis by stacking area charts on top of each other [@Tour]. These work only for positive values, and provide general view of the data, but are not effective for visualizing details, also they are more efficient in interactive form than static [@datavizz]. In the case of very large timeseries datasets, **horizon graphs** is a very space-effective option, despite a certain amount of learning time. Horizon graphs consists in filled line charts, where negative values are mirrored (and colored typically in red) to appear on the upper side, and then the chart divided into bands that are overlayed using transparency effects to limit the space required for peaks. Thus the space used is divided by four thanks to these two transformations [@horizon]. When the goal is to compare monthly values over the years and the different year, a fairly recent display solution has been suggested: **temporal maps** [@temporalmap]. An extension of this concept, for very high-dimensional datasets, is **pixel-oriented visualization** which consists in using each pixel to display one data value in highly structured arrangements [@Keim].
+For data including several independent variables, and a dependent one, **line charts** is a version of a scatterplot (see \ref{sec:scatterplots} where points are ordered (on the x-axis), and joined with segments. Line charts (also refered to as run charts for time-series data, or index charts when interactive) highlights relative changes, these are a good options when comparing the independant variables. Streamgraphs, also called stacked graphs, sums visually the time-series values around a central axis by stacking area charts on top of each other [@Tour]. These work only for positive values, and provide general view of the data, but are not effective for visualizing details, also they are more efficient in interactive form than static [@datavizz]. In the case of very large timeseries datasets, **horizon graphs** is a very space-effective option, despite a certain amount of learning time. Horizon graphs consists in filled line charts, where negative values are mirrored (and colored typically in red) to appear on the upper side, and then the chart divided into bands that are overlayed using transparency effects to limit the space required for peaks. Thus the space used is divided by four thanks to these two transformations [@horizon]. When the goal is to compare monthly values over the years and the different year, a fairly recent display solution has been suggested: **temporal maps** [@temporalmap]. An extension of this concept, for very high-dimensional datasets, is **pixel-oriented visualization** which consists in using each pixel to display one data value in highly structured arrangements [@Keim].
 
 ![Illustrations of concepts of streamgraph [@streamchart], horizon graphs[@horizon] and temporal map[@temporalmap] *Should I add line charts or unecessary?* Image to update ! Todo?](../images/horizon_stream_temp_combined.png){#fig:todotodo}
 
@@ -78,10 +79,12 @@ The classic scatterplot displays data with two to three dimensions, using cartes
 
 A **Scatter plot matrix** combines the small multiple strategy with the classic scatterplot; abbreviated SPLOM, it displays relationships between every pair of variables.
 
-In the context of multi-objective optimization, to understand trade-offs and synergies between several objectives under many scenarios, scatterplots are a great option. The commonly used **trade-off curve** is a scatterplot displaying objective scores, with each an axis per objective, and a datapoint per scenario. A third objective can be displayed by adding a colorscale or size-scale. Also, 3D scatterplots are often used for up to four objectives (e.g in figure \ref{fig:hadka} or the VIDEO software [@Kollat_Video]). Over 4 objectives, small multiples of trade-off curves are very relevant.
+In the context of multi-objective optimization, to understand trade-offs and synergies between several objectives under many scenarios, scatterplots are a great option. The commonly used **trade-off curve** is a scatterplot displaying objective scores, with an axis per objective, and a datapoint per scenario. A third objective can be displayed by adding a colorscale or size-scale. Also, 3D scatterplots are often used for up to four objectives (e.g in figure \ref{fig:hadka} or the VIDEO software [@Kollat_Video]). Over 4 objectives, small multiples of trade-off curves are very relevant.
 
-*bpb NEED EXAMPLE OF SMALL MULTIPLE SCATTERPLOTS TRADE OFFS CURVES (I asked Dave you mentioned in the survey he uses this)*
+*bpb NEED EXAMPLE OF SMALL MULTIPLE SCATTERPLOTS TRADE OFFS CURVES ? And also some of your scatterplots where same-budgets are linked and there's a color code ?*
+Tradeoff curves examples see also figure \ref{fig:Peter}.
 
+![Several options to display multiple vairable with scatteplots: (a) Two axis scatterplot [@Sadrian], (b) Shape-coded scatterplot (examples..?)  ](../images/todo_img.png)
 
 
 ###Parallel coordinates plot *bpb is this section better now?*
@@ -135,6 +138,8 @@ Several options to display multi-variate data were discussed. However they all r
 
 [^009back]: The Middle Cedar visualization is available at [https://phawthorne.github.io/mc-vis/](https://phawthorne.github.io/mc-vis/)
 [^008back]: The Conservation ROI Dashboard is available at [http://nascience.us/roi/public](http://nascience.us/roi/public/)
+* [Habitat Risk Assessment Dashboard](http://vulpes.sefs.uw.edu/ttapp/hra-dash.php). This interactive web application displays user's InVEST output workspace, and was developped in R and Javascript.
+* [Coastal Vulnerability Dashboard](http://vulpes.sefs.uw.edu/ttapp/cv-dash.php)
 ## Spatial data 
 *Possible tools : ArcGIS, QGIS, PyGeoprocessing, Python, matplotlib, R, CV / HRA Dashboards*
 
@@ -229,11 +234,11 @@ The text translates to: *The numbers of men present are represented by the width
 Two types of chloropleth maps are very often used.
 
 ####Portfolios 
-A portfolio is a landcover map which correspond to a subset of the full landscape: the set of chosen activities for each SDU.
+Landcover maps, also called LULC for land use/land cover, represent the full landscape with its corresponding land uses. A portfolio is a landcover map which correspond to a subset of the full landscape: the set of chosen activities for each SDU.
 *Example TODO*
-When displaying portfolios, careful care must be given to symbology, see recommendations in section \ref{sec:colors}. Landcover colors chemes can be very tricky, depending on the number of classes and the arrangement. A good example is given by figure \ref{fig:lulc}.
+When displaying portfolios, careful care must be given to symbology, see recommendations in section \ref{sec:colors}. Landcover colors chemes can be very tricky, depending on the number of classes and the arrangement. A good example is given by figure \ref{fig:lulc}b.
 
-![A many-classes LULC colorscheme (Stacie Wolny)](../images/lulccolorscheme.png){#fig:lulc}
+![Portofolio and landcover maps: (a) a portfolio map of the Nathpa Jhakri catchment [@Sadrian] and (b) a many-classes LULC colorscheme (Stacie Wolny)](../images/portfolio_lulc.png){#fig:lulc}
 
 ####Objective score maps 
 Objective score maps are chloropleths displaying a continuous variable: the objective score for each SDU. These are widely used to visualized ES model outputs. Often, the objective score maps of different ES objectives are combined in a single one summarizing the overall scores. When doing so, it is essential to normalize the scores.
@@ -270,7 +275,12 @@ The survey conducted highlighted growing interest in the topic of displaying the
 
 Figure \ref{fig:myanmar_forest} highlights depend
 
-![Combining ES maps with population maps to show people's dependency to ES [@Myanmar16]](../images/Myanmar_people_depend.png){#fig:myanmar_forest} *Ask Stacie*## Comparison of mutiple spatial runs {#sec:compare}
+![Combining ES maps with population maps to show people's dependency to ES [@Myanmar16]](../images/Myanmar_people_depend.png){#fig:myanmar_forest} *Ask Stacie*###Interactive maps
+
+* [The Mapping portal by Gregg Verutes, developped with Mapbox, and OpenStreetMap](http://www.geointerest.frih.org/NatCap/)
+* [Myanmar Natural Capital: a storytelling approach for a project involving mutiple ecosystem services](http://www.myanmarnaturalcapital.org/en). The tools used here are D3.js, leaflet, openStreetMaps, Google Maps and photoshop.
+* 
+## Comparison of mutiple spatial runs {#sec:compare}
 Runs refers here to different versions of a spatially explicit variable; this section deals about comparing multiple maps expressing the same variable. This multiplicity of outputs may correspond to multiple objectives, various scenarios or varying parameters values (i.e sensitivity analysis, this case is further described in section \ref{sec:SA}). Summarizing these mutiples spatial model outputs is necessary in applications such as:
 
 * portfolios comparisons, to understand trends in agreement and disagreement on recommended action, in contexts of land use change planning, optimization. 
@@ -528,7 +538,13 @@ The examples, guidelines and suggestions gathered above aim to support creation 
 
 CONTEXT SPECIFIC
 
-### Useful tools 
+### Resources
+
+####Examples
+[The Gallery of the Marine Planning Concierge Tool](http://msp.naturalcapitalproject.org/msp_concierge_master/)
+[Flowing data: Data visualization ideas in blog format"](http://flowingdata.com/)
+
+####Useful tools 
 Remove chapter and Put all in table
 
 Parallel coordinates plots

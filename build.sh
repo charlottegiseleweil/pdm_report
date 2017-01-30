@@ -102,7 +102,7 @@ for idx in "${!outputs[@]}"; do
     --filter pandoc-fignos \
     --filter pandoc-citeproc \
     --bibliography=src/biblio.bib \
-    --csl templates/apa.csl \
+    --csl templates/civil.csl \
     -V documentclass:memoir \
     -V classoption=oneside \
     -V fontsize=11pt \
