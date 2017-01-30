@@ -3,6 +3,9 @@
 This chapter gathers learnings from in a literature review on static and dynamic approaches to displaying complex data and existing ... Then, and most importantly this chapter aims to explore the design strategies to express and display multi-dimensional, spatial, multi-objective, uncertain data and combinations of these. This focus corresponds to the specific challenges faced while communicating natural capital information.
 
 ## Specific data visualization challenges
+###Motivation
+The variety of mapping and synthesizing approaches in the field of ES leads to difficult choices of methods for the analysts [@Englund]. 
+
 ### Analysis of the display needs
 The display tasks gathered in the survey (detailed in section \ref{sec:survey}) appeared to be right on point as the average scores, in terms of general usefulness, were all higher than 3.5, 84% were higher than 4.0 and 47% higher than 4.5. These results prove the relevance of these display tasks. *(bpb: repeat list of display tasks from survey or unnecessary?*)
 
@@ -27,10 +30,23 @@ Multidimensional data visualization has been given considerable attention, as co
 
  [^0326back]: Vocabulary note: "multi-objective" refers here to problems with three or more objectives, also called many-objective problems [@Fleming05] or high order-Pareto optimization problems [@Reed04]
 
-###Time-series data: line charts, streamgraphs and more
+###Scatterplots {#sec:scatterplots}
+The classic scatterplot displays data with two to three dimensions, using cartesian coordinates and two or three axes. In a **3D scatterplot** (figure \ref{fig:hadka}a) solutions are represented as points in the space.  Additional dimensions can be represented by changing attributes (color, shape, size, orientation, etc), however concerns about clarity and risk of overwhelming the plot may occur. Interactivity allows the user to perform selections of one or multiple solution point(s). 
+
+A **Scatter plot matrix** combines the small multiple strategy with the classic scatterplot; abbreviated SPLOM, it displays relationships between every pair of variables.
+
+In the context of multi-objective optimization, to understand trade-offs and synergies between several objectives under many scenarios, scatterplots are a great option. The commonly used **trade-off curve** is a scatterplot displaying objective scores, with an axis per objective, and a datapoint per scenario. A third objective can be displayed by adding a colorscale or size-scale. Also, 3D scatterplots are often used for up to four objectives (e.g in figure \ref{fig:hadka} or the VIDEO software [@Kollat_Video]). Over 4 objectives, small multiples of trade-off curves are very relevant.
+
+*bpb NEED EXAMPLE OF SMALL MULTIPLE SCATTERPLOTS TRADE OFFS CURVES ? And also some of your scatterplots where same-budgets are linked and there's a color code ?*
+Tradeoff curves examples see also figure \ref{fig:Peter}.
+
+![Several options to display multiple vairable with scatteplots: (a) Two axis scatterplot [@Sadrian], (b) Shape-coded scatterplot (examples..?)  ](../images/todo_img.png)
+
+
+###Time-series data: line charts, streamgraphs and more {#sec:timeseries}
 For data including several independent variables, and a dependent one, **line charts** is a version of a scatterplot (see \ref{sec:scatterplots} where points are ordered (on the x-axis), and joined with segments. Line charts (also refered to as run charts for time-series data, or index charts when interactive) highlights relative changes, these are a good options when comparing the independant variables. Streamgraphs, also called stacked graphs, sums visually the time-series values around a central axis by stacking area charts on top of each other [@Tour]. These work only for positive values, and provide general view of the data, but are not effective for visualizing details, also they are more efficient in interactive form than static [@datavizz]. In the case of very large timeseries datasets, **horizon graphs** is a very space-effective option, despite a certain amount of learning time. Horizon graphs consists in filled line charts, where negative values are mirrored (and colored typically in red) to appear on the upper side, and then the chart divided into bands that are overlayed using transparency effects to limit the space required for peaks. Thus the space used is divided by four thanks to these two transformations [@horizon]. When the goal is to compare monthly values over the years and the different year, a fairly recent display solution has been suggested: **temporal maps** [@temporalmap]. An extension of this concept, for very high-dimensional datasets, is **pixel-oriented visualization** which consists in using each pixel to display one data value in highly structured arrangements [@Keim].
 
-![Illustrations of concepts of streamgraph [@streamchart], horizon graphs[@horizon] and temporal map[@temporalmap] *Should I add line charts or unecessary?* Image to update ! Todo?](../images/horizon_stream_temp_combined.png){#fig:todotodo}
+![Illustrations of concepts of streamgraph [@streamchart], horizon graphs[@horizon] and temporal map[@temporalmap]](../images/horizon_stream_temp_combined.png){#fig:line_img}
 
 \begin{figure}
 \centering
@@ -56,36 +72,11 @@ For data including several independent variables, and a dependent one, **line ch
 \label{fig:timeseriesdatafig}
 \end{figure}
 
-*EXAMPLE: SOME SORT OF LINE GRAPH FOR MULTI-OBJ OPTIMIZATION (STACIE?)*
-
-
-####Comprehensive plotting: extending line charts to multiple variables {.unnumbered}
-Through comprehensive plotting, multi-variate metrics can be visualized. For example, figure \ref{fig:compreh} illustrates a case of a 4-dimensions dataset plotted with four 3-dimensions figures to display 4*3^3 data points.
-Spatial metrics can also be visualized through histograms comparing main summary statistics in different scenarios (e.g the percentage of land areas covered by each 3 category is displayed for 3 drivers, and 4 scenarios using small multiples histograms in [@villamor14], figure 4)[^11back].
+Through comprehensive plotting, multi-variate metrics can be visualized. For example, figure \ref{fig:compreh} illustrates a case of a 4-dimensions dataset plotted with four 3-dimensions figures to display 4*3^3 data points. Spatial metrics can also be visualized through histograms comparing main summary statistics in different scenarios (e.g the percentage of land areas covered by each 3 category is displayed for 3 drivers, and 4 scenarios using small multiples histograms in [@villamor14], figure 4)[^11back].
 
 ![An example of comprehensive plotting where [@Sun14] displays results of 4 metrics (one per figure), as several line plots (for several variables, here one per market level), and varying parameters (here 3 parameters with 3 possible values each resulting in $3^3$ data points per market level, per figure. This is one of four figures corresponding to the metric "Edge density".](../images/sun.png){#fig:compreh width=90%}
 
 [^11back]: A side concern that may come up in these cases, is about data management: the total size of the runs can become is too large for available main memory. A strategy is to precompute summary statistics, such as the mean and extrema [@PotterWilson].
-
-###Small Multiples {#sec:smallmultiples}
-An effective alternative to coercing all the data in a single plot (risking overplotting) is displaying small multiples. The concept is to replicate the same simple graph structure (in terms of axis, shape and scale), for many datasets, ordered logically. The cognitive process of understanding the graph is undertaken only once, and the understanding then is replicated while scanning all other multiples. This strategy is very efficient in many cases for comparison. Referred by Edward Tufte as "multivariate and data bountiful", they enforces comparisons of alternatives, differences and changes [@tufte]. This displaying startegy has also been called trellis chart, lattice chart, grid chart, or panel chart. It can be applied to many types of graphs, or maps. Other examples of the small multiple strategy and variants of it can be found in figures \ref{fig:arkema1}, \ref{fig:coastal1}, \ref{fig:coastal_2}
-
-![Small multiples strategy applied to (a) line plots [@small_mult_lines] and (b) spatial data [@small_mult_maps] *TODO: remove this figure - useless*](../images/smallmultiples.png){#fig:todotodo2}
-
-![Small multiples strategy applied to radar charts (further described in \ref{sec:radar}) by @Arkema2. The multiples correspond here to the 9 considered regions](../images/coastal3.png){#fig:coastal_sm}
-
-###Scatterplots {#sec:scatterplots}
-The classic scatterplot displays data with two to three dimensions, using cartesian coordinates and two or three axes. In a **3D scatterplot** (figure \ref{fig:hadka}a) solutions are represented as points in the space.  Additional dimensions can be represented by changing attributes (color, shape, size, orientation, etc), however concerns about clarity and risk of overwhelming the plot may occur. Interactivity allows the user to perform selections of one or multiple solution point(s). 
-
-A **Scatter plot matrix** combines the small multiple strategy with the classic scatterplot; abbreviated SPLOM, it displays relationships between every pair of variables.
-
-In the context of multi-objective optimization, to understand trade-offs and synergies between several objectives under many scenarios, scatterplots are a great option. The commonly used **trade-off curve** is a scatterplot displaying objective scores, with an axis per objective, and a datapoint per scenario. A third objective can be displayed by adding a colorscale or size-scale. Also, 3D scatterplots are often used for up to four objectives (e.g in figure \ref{fig:hadka} or the VIDEO software [@Kollat_Video]). Over 4 objectives, small multiples of trade-off curves are very relevant.
-
-*bpb NEED EXAMPLE OF SMALL MULTIPLE SCATTERPLOTS TRADE OFFS CURVES ? And also some of your scatterplots where same-budgets are linked and there's a color code ?*
-Tradeoff curves examples see also figure \ref{fig:Peter}.
-
-![Several options to display multiple vairable with scatteplots: (a) Two axis scatterplot [@Sadrian], (b) Shape-coded scatterplot (examples..?)  ](../images/todo_img.png)
-
 
 ###Parallel coordinates plot *bpb is this section better now?*
 Parallel coordinates plots (figure \ref{fig:hadka}b) are very effective to display different solutions in a multi-objective context and visualize trade-offs and synergies between objectives under several scenarios. The number of scenarios is then nearly unlimited, and so is the number of objectives, to the limit that the horizontal axis fit the page. Scenarios are represented as lines, distinguished by varying colors, which intersect horizontal axis representing the objectives. Patterns are clearly visible [@Achtert2013_6]. The vertical direction of preferred solution must be clearly indicated to assist interpretation. 
@@ -109,6 +100,13 @@ Combining parallel coordinates with interactive features offers interesting opti
 [^100back]: see also petal charts, and discussion from @spiderman_bad_Ref.
 
 ![Hawaii, Kamehameha schools, from NatCap intranet](../images/spiderplot_tradeoffs_Ex.png){#fig:radar}
+
+###Small Multiples {#sec:smallmultiples}
+An effective alternative to coercing all the data in a single plot (risking overplotting) is displaying small multiples. The concept is to replicate the same simple graph structure (in terms of axis, shape and scale), for many datasets, ordered logically. The cognitive process of understanding the graph is undertaken only once, and the understanding then is replicated while scanning all other multiples. This strategy is very efficient in many cases for comparison. Referred by Edward Tufte as "multivariate and data bountiful", they enforces comparisons of alternatives, differences and changes [@tufte]. This displaying startegy has also been called trellis chart, lattice chart, grid chart, or panel chart. It can be applied to many types of graphs, or maps. Other examples of the small multiple strategy and variants of it can be found in figures \ref{fig:arkema1}, \ref{fig:coastal1}, \ref{fig:coastal_2}
+
+![Small multiples strategy applied to (a) line plots [@small_mult_lines] and (b) spatial data [@small_mult_maps] *TODO: remove this figure - useless*](../images/smallmultiples.png){#fig:todotodo2}
+
+![Small multiples strategy applied to radar charts (further described in \ref{sec:radar}) by @Arkema2. The multiples correspond here to the 9 considered regions](../images/coastal3.png){#fig:coastal_sm}
 
 ###Other displays 
 Other statistical distributed data displays more specific to some data types include **Stem-and-Leaf Plots**, which is a variant of horizontal histogram painting a frequency distribution with numbers classified forming the histogram-like bars; and **Q-Q Plots** that compare probability distributions by graphing their quantiles where values lining up will reflect linear correlation [@Tour]. 
@@ -271,15 +269,16 @@ Hello
 See also figures \ref{fig:myanmar_biodiv-ppl} (combines informations about two independant variables).
 
 ####Beneficiaries {#sec:beneficiaries}
-The survey conducted highlighted growing interest in the topic of displaying the beneficiaries (*TODO bpb how to Cite Survey results?*). However, this tasks appears to be very context specific. Typically, the displays would aim to quantify and show the beneficaries impact, possibly by subgroups, and often their location in space. It is also often of interest to contrast beneficiary distribution in space with service distribution in space. 
+The survey conducted highlighted growing interest in the topic of displaying the beneficiaries (*TODO bpb how to Cite Survey results?* section \ref{sec:survey)). However, this tasks appears to be very context specific. Typically, the displays would aim to quantify and show the beneficaries impact, possibly by subgroups, and often their location in space. It is also often of interest to contrast beneficiary distribution in space with service distribution in space. 
 
 Figure \ref{fig:myanmar_forest} highlights depend
 
-![Combining ES maps with population maps to show people's dependency to ES [@Myanmar16]](../images/Myanmar_people_depend.png){#fig:myanmar_forest} *Ask Stacie*###Interactive maps
+![Combining ES maps with population maps to show people's dependency to ES [@Myanmar16]. This map results from the multiplication of (1) an objective score map for sediment retention, and (2) a map of the number of people who use surface water for drinking, as provided by the national census.](../images/Myanmar_people_depend.png){#fig:myanmar_forest} 
+###Interactive maps
 
 * [The Mapping portal by Gregg Verutes, developped with Mapbox, and OpenStreetMap](http://www.geointerest.frih.org/NatCap/)
 * [Myanmar Natural Capital: a storytelling approach for a project involving mutiple ecosystem services](http://www.myanmarnaturalcapital.org/en). The tools used here are D3.js, leaflet, openStreetMaps, Google Maps and photoshop.
-* 
+* [The Nature Conservancy also developed a visualization platform, gathering a suite of web applications based on maps](http://coastalresilience.org/tools/apps/#apps_id|assess-risk|1), aiming to convey and/or simplify ecological concepts, assess risk, identifiy and compare different solutions and scenarios. For example, [the coastal resilience in the Gulf of Mexico.](http://maps.coastalresilience.org/gulfmex/)
 ## Comparison of mutiple spatial runs {#sec:compare}
 Runs refers here to different versions of a spatially explicit variable; this section deals about comparing multiple maps expressing the same variable. This multiplicity of outputs may correspond to multiple objectives, various scenarios or varying parameters values (i.e sensitivity analysis, this case is further described in section \ref{sec:SA}). Summarizing these mutiples spatial model outputs is necessary in applications such as:
 
@@ -293,7 +292,6 @@ Comparison and summaries of maps can be achieved either by visualizing spatially
  
 ###Maps displays 
 #### Between 2 (or a few) maps {#sec:comp_map_2}
-
 ####Interactive switching between maps {.unnumbered}
 For the examination of (dis)agreement between two maps, analysts often like to flip back and forth between the two. This is easy to do in GIS softwares and is a convenient solution for the data exploration purposes. Nevertheless, this method is not always suited for communication purposes. Plus, this interactive solution doesn't apply to static documents.
 
@@ -306,8 +304,10 @@ Suited for (examples)
 
 ![Change map displaying the amount of additional sediment export (in percentage) comparing a future scenario with the current baseline one [@Myanmar16]](../images/changemap.png){#fig:my123 width=20%}
 
-#### 20%mapStacie? {.unnumbered}
-*  take top 20% of service for two ES and find areas of overlap. (in case of continuous Es model outputs such as objective scores per pixel. >> Stacie?)
+#### Hotspot map {.unnumbered}
+In the context of multiple continuous ES model outputs, such as objective score maps for several ES services, a hotspot map can be constructed. The idea is to select the areas of highest score, for each objective, and find areas of overlaps. For example, as shown in figure \ref{fig:Stacie}, the top 20% of each service are selected, the selection are then added to construct the hotspot map.
+
+![Hotspot map in Myanmar for 3 objectives (Wolny, 2016)](../images/Stacie20.png){#fig:Stacie}
 
 #### Maps matrix (small multiple strategy) {.unnumbered}
 When the number of maps to compare is low enough to fit in a page, with a reasonable resolution, the small multiple approach (see section \ref{sec:smallmultiples}) is relevant, as in figure \ref{fig:coastal_2}.
@@ -336,7 +336,7 @@ These two maps complements each other: the former is about summarizing when the 
 [^55back]: More precisely, the modal portfolio maps can either display the category assigned in most of the runs, or limit to these assigned in a certain threshold percentage of the runs. 
 
 ####Categorical map diversity indices {.unnumbered}
-An alternative to frequency maps, to summarize the categorical variance accross many runs is the **shannon diversity index**,  for each pixel: $SDI = - \sum_{i=1}^{R} p_{i} \ln(p_{i})$, with $\textrm{p}_{i}$ the proportion of cells assigned to category i, and $R$ the total number of categories. Here is how to interprete the SDI: when evenly distributed, $H = \ln(R)$, and as it approaches $0$, proportions in each category vary more. Hence, SDI reflects the relative abundance of each category across the pixel stack. So, the bigger the SDI, the most confident one can be about the pixel's most chosen category. Other diversity indexes can also be substituted. 
+An alternative to frequency maps, to summarize the categorical variance accross many runs is the **shannon diversity index**,  for each pixel: $SDI = - \sum_{i=1}^{R} p_{i} \ln(p_{i})$, with $\textrm{p}_{i}$ the proportion of cells assigned to category i, and $R$ the total number of categories. Here is how to interprete the SDI: when evenly distributed, $H = \ln(R)$, and as it approaches $0$, proportions in each category vary more. Hence, SDI reflects the relative abundance of each category across the pixel stack. So, the bigger the SDI, the most confident one can be about the pixel's most chosen category. Other diversity indexes can also be substituted, such as the Evenness index, see the work of @Dimitra for details and the Inverse Distance Weighted interpolation method that she uses to map the results, if not all points have an index value. 
 
 The **fuzzy set approach** [@Hagen2003] assesses the similarity of several categorical maps, resulting in a fuzzy set comparison map where each cell displays a degree of similarity and an overall value for similarity, so-called $\kappa$-Fuzzy as it extends the Kappa index including fuzziness of category and of location.
 
@@ -443,7 +443,7 @@ Statistical indices like the Bivariate Moran's I or LISA aim to measure spatial 
 
 * Pearson linear correlation: $$\rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigma _{Y}}}$$. It ranges from -1 (negative linar correlation) to +1 (positive linear correlation), and 0 corresponds to maps not correlated, or its variant, the reflective correlation.
 
-#####Between many maps {#sec:comp_stat_cont_many}
+#### Between many maps {#sec:comp_stat_cont_many}
 Besides discretizing the data and then using methods from \ref{sec:comp_stat_cat_many}, the solution would be an aggregation of aggregated map values. As mentioned above, each map can be summarized with a value aggregating cell's values. For example, for an objective score map, the overall objective score of the map is the sum of the pixel's scores. A second aggregation can follow: for example, the mean of these overall objective scores will give an indication of average total objective score of scenarios. (This could be interesting when comparing different subsets of runs). (bpb: is this super unclear? refers to agreement value plotted in webapp!)
 
 ### Influence of scale in map comparison {#sec:scale} 
@@ -504,20 +504,28 @@ Another strategy is to combine uncertainty metrics with maps, by displaying stat
 The techniques described above were mainly developed for continuous data, but can be adapted to categorical data. However specific techniques for categorical spatial data exist. In the context of landcovers, prioritization score maps express the effiency of a landcover/activity with regards to an objective [@RIOS] 
 
 ###Parametric uncertainty: sensitivity analysis displays {#sec:SA} 
-*bpb:this is pretty superficial but is that enough - otherwise this is a whole other topic to dig in (See Pianosi2016)*
-Sensitivity analysis aims to understand the influence of the inputs, and their uncertainty, on the outputs and their uncertainties of a model [@Pianosi2016]. To visualize the input/output relationship, a common and direct way is a **scatterplot** (for each input parameter, with input parameter considered on x-axis and the output on y-axis), the relationship is explicitly revealed, especially in the case of strctured dependencies. This corresponds to the so-called O(F)AT (one factor at a time) method [@hamby], e.g [@murphy04]. However, with a high number of inputs, scatterplots can become cumbersome. Then, partial derivative of the output by one factor can be displayed to assess the impact of small perturbations; however it explores only locally the input space around a baseline. Other metrics such as the percentage of output change per percentage of input change, or sensitivity indexes are also used. More details can be found in [@hamby]
+*bpb:this is pretty superficial in terms of sensitivty analysis theory because I tried focusing on the graphs.. but is that enough? otherwise this is a whole other topic to dig in (See Pianosi2016)*
+Sensitivity analysis aims to understand the influence of the inputs, and their uncertainty, on the outputs and their uncertainties of a model [@Pianosi2016]. To visualize the input/output relationship, a common and direct way is a **scatterplot** (for each input parameter, with input parameter considered on x-axis and the output on y-axis), the relationship is explicitly revealed, especially in the case of strctured dependencies. This corresponds to the so-called O(F)AT (one factor at a time) method [@hamby], e.g [@murphy04]. However, with a high number of inputs, scatterplots can become cumbersome. Then, partial derivative of the output by one factor can be displayed to assess the impact of small perturbations; however it explores only locally the input space around a baseline. Other metrics such as the percentage of output change per percentage of input change, or sensitivity indexes are also used. More details can be found in [@hamby]. 
 
-![A line plot to express sensitivity analysis: the impact of change in input parameters (ETo and P) on the output variable (water yield) [@Sadrian]](../images/Sadrian.png){#fig:lineSA}
+**Line plots** express sensitivity analysis by showing the impact of change in an input parameter the output variable. **Spiderplots**[^5353back] are an upgrade of the line plot, to combine several factors. They display the total impact of factors, and highlight their relative importance. Additionally they include limit values and impact on output of each input, and also the amount of change in input leading to breakeven point. However, the amount of factors displayed is limited (to about 7 according to @tornadospider). These are 2D plots, with percentage of change from baseline on x-axis, and output values on y-axis, and several lines corresponding to each input.
 
-Variance decomposition is another approach to sensitivity analysis; then **pie charts** displaying variance partitions are a good alternative [@ABMleelig]. By opposition to trying to display the impact of each inputs, variance-based method focus on finding the most influencing factors. The output variance is decomposed into parts corresponding to the contribution of each input, therefore displaying its impact on total variance [@Homma]. Pie charts are widely used mostly because they are easy to build and understand (*and named after a desert. Okay I know I'll remove this, just checking if you were reading :D (bpb)*). They are effective for small datasets (less than 6 segments of notably different sizes), and if segments are ordered according to size [@piepiepie]. Because only effective on small datasets, and inadequate for comparisons (between several pie charts), partisans of high density space-effective displays, like Tufte, argue against these charts.
+Variance decomposition is another approach to sensitivity analysis; then **pie charts** displaying variance partitions are a good alternative [@ABMleelig]. By opposition to trying to display the impact of each inputs, variance-based method focus on finding the most influencing factors. The output variance is decomposed into parts corresponding to the contribution of each input, therefore displaying its impact on total variance [@Homma]. Pie charts are widely used mostly because they are easy to build and understand (*and named after a desert. Okay I know I'll remove this, just checking if you were reading :D (bpb)*). They are effective for small datasets (less than 6 segments of notably different sizes), and if segments are ordered according to size [@piepiepie]. Because only effective on small datasets, and inadequate for comparisons (between several pie charts), partisans of high density space-effective displays, like Tufte, argue against these charts. 
 
-![Expressing sensitivity analysis through variance decomposition, from [@lig14]](../images/sa.png){#fig:lig}
+**Tornado diagrams** are also used to visualize the total impact of factors, and highlight their relative importance [@tornadospider]. They are horizontal bar charts corresponding to each input, plotted on the axis of output values. @Pianosi2016 gathers examples of helpful visualization tools for global SA (see her Appendix A).
 
-**Tornado diagrams** are also used to visualize the total impact of factors, and highlight their relative importance [@tornadospider]. They are horizontal bar charts corresponding to each input, plotted on the axis of output values. 
+**Radial convergence diagrams** arrange input parameters in logical groups around a circle, and express, for each input its influence on output, and interactions with other input prameters. The size of inner circle of each input is proportional to its direct influence. The size of the outer circle (ring) reflects its total influence (including interactions). The interactions are reflected by the lines connecting the input parameters, the lines' width reflects the extent of the interaction [@Pianosi2016].
 
-**Spiderplots** [^5353back] display these informations and more, including limit values and impact on output of each input, and also the amount of change in input leading to breakeven point. However, the amount of factors displayed is limited (to about 7 [@tornadospider]). These are 2D plots, with percentage of change from baseline on x-axis, and output values on y-axis, and several lines corresponding to each input. 
+**Pattern plots** are similar to temporal maps (section \ref{sec:timeseries}) for sensitivity analysis. A color scale reflects the output sensitivity for each pair of inputs. On figure \ref{fig:SA}e, the input parameters are listed vertically, and the study sites horizontally. Here, the study sites are listed according to another parameter (climate conditions), therefore facilitating visual understanding of trends [@Pianosi2016]
 
-![Will make a better figure but just to give you an idea !](../images/todo.png){#fig:spiderplot}
+
+![ Examples of plots to express sensitivity analysis
+(a) Line plot shows the impact of change in an input parameter (ETo) on the output variable (water yield) [@Sadrian].
+(b) Spiderplot (ref todo) 
+(c) Tornado diagram (ref todo)
+(d) Expressing sensitivity analysis through variance decomposition, with box plots and pie charts by @lig14.
+(e) Radial convergence diagram, displaying Sobol sensitivity results for 30 parameters grouped in 10 categories, from @Butler.
+(f) Pattern plot, evaluating sensitivity for 12 watersheds and 14 parameters, using the Sobol sensitivy index over a 38-year period, by @van2008.
+See also @Pianosi2016, Appendix A.](../images/SA_overall.png){#fig:SA}
 
 [^5353back]: Spiderplots or spidercharts is a blurry term to that has been used to refer both to 2-axis spiderplots (as in figure \ref{fig:spiderplot}), but also to multi-axis spiderplots (as in figure \ref{fig:radar}). 
 
