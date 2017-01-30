@@ -48,30 +48,6 @@ For data including several independent variables, and a dependent one, **line ch
 
 ![Illustrations of concepts of streamgraph [@streamchart], horizon graphs[@horizon] and temporal map[@temporalmap]](../images/horizon_stream_temp_combined.png){#fig:line_img}
 
-\begin{figure}
-\centering
-\begin{subfigure}{1\textwidth}
-  \centering
-  \includegraphics[width=.4\linewidth]{images/horizon_1.png}
-  \caption{Horizon graph}
-  \label{fig:horizon}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.4\linewidth]{images/streamgraph.png}
-  \caption{Streamgraph}
-  \label{fig:streamgraph}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.4\linewidth]{images/temporalmap.png}
-  \caption{Temporal map}
-  \label{fig:temporalmap}
-\end{subfigure}
-\caption{Illustrations of concepts of streamgraph [@streamchart], horizon graphs[@horizon] and temporal map[@temporalmap]}
-\label{fig:timeseriesdatafig}
-\end{figure}
-
 Through comprehensive plotting, multi-variate metrics can be visualized. For example, figure \ref{fig:compreh} illustrates a case of a 4-dimensions dataset plotted with four 3-dimensions figures to display 4*3^3 data points. Spatial metrics can also be visualized through histograms comparing main summary statistics in different scenarios (e.g the percentage of land areas covered by each 3 category is displayed for 3 drivers, and 4 scenarios using small multiples histograms in [@villamor14], figure 4)[^11back].
 
 ![An example of comprehensive plotting where [@Sun14] displays results of 4 metrics (one per figure), as several line plots (for several variables, here one per market level), and varying parameters (here 3 parameters with 3 possible values each resulting in $3^3$ data points per market level, per figure. This is one of four figures corresponding to the metric "Edge density".](../images/sun.png){#fig:compreh width=90%}
@@ -99,14 +75,14 @@ Combining parallel coordinates with interactive features offers interesting opti
 
 [^100back]: see also petal charts, and discussion from @spiderman_bad_Ref.
 
-![Hawaii, Kamehameha schools, from NatCap intranet](../images/spiderplot_tradeoffs_Ex.png){#fig:radar}
+![Hawaii, Kamehameha schools, from NatCap intranet](../images/spiderplot_tradeoffs_Ex.png){#fig:radar width=70%}
 
 ###Small Multiples {#sec:smallmultiples}
 An effective alternative to coercing all the data in a single plot (risking overplotting) is displaying small multiples. The concept is to replicate the same simple graph structure (in terms of axis, shape and scale), for many datasets, ordered logically. The cognitive process of understanding the graph is undertaken only once, and the understanding then is replicated while scanning all other multiples. This strategy is very efficient in many cases for comparison. Referred by Edward Tufte as "multivariate and data bountiful", they enforces comparisons of alternatives, differences and changes [@tufte]. This displaying startegy has also been called trellis chart, lattice chart, grid chart, or panel chart. It can be applied to many types of graphs, or maps. Other examples of the small multiple strategy and variants of it can be found in figures \ref{fig:arkema1}, \ref{fig:coastal1}, \ref{fig:coastal_2}
 
 ![Small multiples strategy applied to (a) line plots [@small_mult_lines] and (b) spatial data [@small_mult_maps] *TODO: remove this figure - useless*](../images/smallmultiples.png){#fig:todotodo2}
 
-![Small multiples strategy applied to radar charts (further described in \ref{sec:radar}) by @Arkema2. The multiples correspond here to the 9 considered regions](../images/coastal3.png){#fig:coastal_sm}
+![Small multiples strategy applied to radar charts (further described in \ref{sec:radar}) by @Arkema2. The multiples correspond here to the 9 considered regions](../images/coastal3.png){#fig:coastal_sm width=90%}
 
 ###Other displays 
 Other statistical distributed data displays more specific to some data types include **Stem-and-Leaf Plots**, which is a variant of horizontal histogram painting a frequency distribution with numbers classified forming the histogram-like bars; and **Q-Q Plots** that compare probability distributions by graphing their quantiles where values lining up will reflect linear correlation [@Tour]. 
@@ -125,9 +101,9 @@ Recreation value = (weight_boat_launch) * (boat_launch_value) + (weight_clarity)
 Several options to display multi-variate data were discussed. However they all realistically apply to a limited number of variables. As dimensions of the data increase, it is often interesting to show several linked graphs of the same dataset to convey the complex information. This solution gives different perspectives to the viewer. In the case of a static display, the graphs are connected by matching color coding or other corresponding parameters, as in figures \ref{fig:hadka}, \ref{coastal2}, \ref{arkema1}, \ref{fig:coastal1} and (todo the one with maps+trade-offs curves). Furthermore, dynamic displays allow improvement by adding brushing and linking features (see \ref{sec:interactivefeatures}), examples of interactive dashboard with mutiple linked views are presented in figures \ref{fig:Peter}and \ref{fig:ConservationROIDashboard}.
 
 ####Combining static plots
-![Combining bar plots with maps and small mutiples. The bar plots display the area of habitat in each risk category (low, medium, high) per planning region (1 to 9). [@arkema1]](../images/arkema1.png){#fig:arkema1} 
+![Combining bar plots with maps and small mutiples. The bar plots display the area of habitat in each risk category (low, medium, high) per planning region (1 to 9). [@arkema1]](../images/arkema1.png){#fig:arkema1 width=50%} 
 
-![Dense figure using a story-telling approach to present scenarios. It combines bar plots, maps and the small multiples approach. This figure is self-explanatory, and by including a few sentences, it replaces a lot of text. [@Arkema2]](../images/coastal1.png){#fig:coastal1 width=50%}
+![Dense figure using a story-telling approach to present scenarios. It combines bar plots, maps and the small multiples approach. This figure is self-explanatory, and by including a few sentences, it replaces a lot of text. [@Arkema2]](../images/coastal1.png){#fig:coastal1 width=100%}
 
 ####Interactive dashboards
 ![The Middle Cedar visualization is an interactive webapp, developed by @Peter, who combined a scatterplot, a map, a pie chart and summary statistics in a single dashboard. It allows users to click on each point of the trade-off curve, and the corresponding land cover map will be displayed. Additionally, summary metrics and a pie chart provide information relative to the scenario chosen upon click[^009back] [@Peter]](../images/peter.png){#fig:Peter} 
@@ -151,36 +127,6 @@ Another solution for continuous spatial data aggregated by regions is the gradua
  
 #### Heatmaps, isopleths and dot density maps
 Displaying density of occurence, and identifying clusters can be achieved with heatmaps and hotspot maps. The heatmap can be understood as the continuous version of the chloropleth map, whithout aggregation of the data. It visualizes a scalar function over a geographical area [@Brodlie]. Similarly, in the dot distribution map (or dot density map), the density of dots represents the intensity of the variable. 
-
-\begin{figure}
-\centering
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.4\linewidth]{images/maps1/map1.png}
-  \caption{Chloropleth map}
-  \label{fig:sub1}
-\end{subfigure}%
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.7\linewidth]{images/maps1/graduated.png}
-  \caption{Graduated symbol map}
-  \label{fig:sub1}
-\end{subfigure}%
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.7\linewidth]{images/maps1/dot.png}
-  \caption{Dot density map}
-  \label{fig:sub4}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.25\linewidth]{images/maps1/heat.png}
-  \caption{Heatmap}
-  \label{fig:sub3}
-\end{subfigure}
-\caption{Maps types from }
-\label{fig:test}
-\end{figure}
 
 \begin{figure}
 \centering
@@ -208,19 +154,20 @@ Displaying density of occurence, and identifying clusters can be achieved with h
   \caption{Heatmap}
   \label{fig:sub4}
 \end{subfigure}
-\caption{Maps types from }
+\caption{Maps types from TODO}
 \label{fig:test}
 \end{figure}
 
 #### Contour maps 
 Also know by contour maps, or isarithmic maps, isopleth maps they display variable with contour lines (isopleths) joining the points where the variable has a constant value. For example in the field of ecology, isoflors are isopleths connecting areas of comparable biological diversity [@isoflor]. Color fills may be used to enhance the map pattern. 
 Contouring can also be used to highlight areas on a map, as in figure \ref{fig:myanmar_biodiv-ppl}), which combines informations about two independant variables, overlaying two types of maps.
+
 ![Combining informations about biodiversity (contour maps in red showing the key biodiversity areas) and about ES benefits (chloropleth map with green gradient), overlayed on a relief map [@Myanmar16]](../images/Myanmar_benefit-people.png){#fig:myanmar_biodiv-ppl}
 
 ####Cartograms
 Cartogram also illustrate data aggregated over regions. The variable to be expressed is substituted to the geographical distance or area. The regions are in the same locations with respect to each other, but their geometry is distorted proportionally to the variable of interest [@Tour]
 
-![Cartogram displaying population (variable) per country (regions of aggregation) [@carto_img]](../images/carto.png){#fig:carto}
+![Cartogram displaying population (variable) per country (regions of aggregation) [@carto_img]](../images/carto.png){#fig:carto width=70%}
 
 #### Flow maps 
 A flow map illustrates movement in space and/or in time. The intensity of a flow is represented by the thickness of the line depicting it [@datavizz]. Flow maps are typically used to visualize migrations of animals, but could also be applied to pollution load transfer, or groundwater recharge from a region ot another. (bpb: better in context of ES?)
@@ -247,23 +194,23 @@ In the context of optimization, ES analysts often have to figure out where, on a
 
 In the case of only 2 scenarios or only 2 objectives, one could show change maps, or side by side maps, i.e techniques used to compare 2 maps, detailed in \ref{sec:comp_map_2}. For more objectives, maps such as figure \ref{fig:spatialtradeoffs} can display location of synergies/tradeoffs of intervention/scenario on multiple ES metrics. (*bpb:  Do I need to add more detail explaning how map was constructed or is it pretty straight forward?*)
 
-![Priority and conflicts areas, in the case of 3 objectives: biodiversity (BD), water quality (WQ) and profit. Thanks to this map, the decison-maker can decide where to intervene on the landscape, depending on which objective(s) (s)he prioritzes [@QUICK]](../images/quick.png){#fig:spatialtradeoffs}
+![Priority and conflicts areas, in the case of 3 objectives: biodiversity (BD), water quality (WQ) and profit. Thanks to this map, the decison-maker can decide where to intervene on the landscape, depending on which objective(s) (s)he prioritzes [@QUICK]](../images/quick.png){#fig:spatialtradeoffs width=50%}
 
 A remaining subquestion is about the intensity of tradeoffs and synergies in space: where are tradeoffs more or less stark? An extension of figure \ref{fig:spatialtradeoffs} could be envisioned, varying transparency to represent intensity.
 
 Another strategy consists in combining trade-offs curves with small multiples of objective score maps. On trade-offs curves (see section \ref{sec:scatterplots}), each point corresponds to a portfolio: displaying these together adds great value and helps understanding. Examples of strategies to display together the trade-offs curve and the corresponding maps are presented in figures \ref{fig:polasky} and \ref{fig:Peter}.
 
 
-![On a static display, the strategy consists in displayingonly the extreme points of the trade-off curve [@polasky]](../images/polasky.png){#fig:polasky} 
+![On a static display, the strategy consists in displayingonly the extreme points of the trade-off curve [@polasky]](../images/polasky.png){#fig:polasky width=50%} 
 
 ###Relationship between two independant variables 
 Combining two maps 
 Displaying side by side the two input map and the one combining these.
 
-![Legend [@Myanmar16]](../images/combine_my.png)
+![TODO [@Myanmar16]](../images/combine_my.png)
 
 ####Spatial correlation
-Hello
+HelloTODO
 ![A very cool way of displaying spatial correlation between an ES and something (here LER) [@jgong]](../images/spatial_correlation_jgong.png){#fig:jong width=50%}
 
 See also figures \ref{fig:myanmar_biodiv-ppl} (combines informations about two independant variables).
@@ -273,7 +220,7 @@ The survey conducted highlighted growing interest in the topic of displaying the
 
 Figure \ref{fig:myanmar_forest} highlights depend
 
-![Combining ES maps with population maps to show people's dependency to ES [@Myanmar16]. This map results from the multiplication of (1) an objective score map for sediment retention, and (2) a map of the number of people who use surface water for drinking, as provided by the national census.](../images/Myanmar_people_depend.png){#fig:myanmar_forest} 
+![Combining ES maps with population maps to show people's dependency to ES [@Myanmar16]. This map results from the multiplication of (1) an objective score map for sediment retention, and (2) a map of the number of people who use surface water for drinking, as provided by the national census.](../images/Myanmar_people_depend.png){#fig:myanmar_forest width=50%} 
 ###Interactive maps
 
 * [The Mapping portal by Gregg Verutes, developped with Mapbox, and OpenStreetMap](http://www.geointerest.frih.org/NatCap/)
@@ -302,7 +249,7 @@ Show the two maps next to each other. This is not the most space effective optio
 Substracting one map to the other (generally corresponding to the baseline scenario) results in a change map. Typically change maps uses diverging colorscheme, two colors representing respectively increase and decrease, and the intensity gradient reflects the amount of change. 
 Suited for (examples)
 
-![Change map displaying the amount of additional sediment export (in percentage) comparing a future scenario with the current baseline one [@Myanmar16]](../images/changemap.png){#fig:my123 width=20%}
+![*TODO: combine with Hotspot figure* Change map displaying the amount of additional sediment export (in percentage) comparing a future scenario with the current baseline one [@Myanmar16]](../images/changemap.png){#fig:my123 width=40%} 
 
 #### Hotspot map {.unnumbered}
 In the context of multiple continuous ES model outputs, such as objective score maps for several ES services, a hotspot map can be constructed. The idea is to select the areas of highest score, for each objective, and find areas of overlaps. For example, as shown in figure \ref{fig:Stacie}, the top 20% of each service are selected, the selection are then added to construct the hotspot map.
