@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CSL=apa.csl
+CSL=civil.csl
 
 cat src/biblio.bib | \
   grep '^\s*@' | \
