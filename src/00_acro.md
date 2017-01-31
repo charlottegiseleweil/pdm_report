@@ -13,7 +13,7 @@
 * scenarios: storylines that describe possible futures (but are not predictions) [@greggg] (e.g an LULC scenario corresponds to an LULC map that has been changed based on modeled or user-defined changes to represent plausible futures)
 * SOW: state of the world (scenario with quantitative definition)
 
-**Jarfon of the field**
+**Jargon of the field**
 
 * ABM: Agent-Based Modeling (computational modeling of phenomena as dynamical systems of interacting agents)
 * API: Application Programming Interface

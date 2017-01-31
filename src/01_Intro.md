@@ -34,7 +34,7 @@ Visualization is the main focus of this work, because it has been proven to be e
 
 Mapping, defined by @Englund as the organization of spatially explicit quantitative information, has proven essential for many assessments of ES [@Troy]. @Hauck showed how the spatial products from mapping - maps - are tremendously helpful to support proper management of ecosystems and ecosystem services. However, he also brings attention to the fact that they should be used carefully. Visualizations of large datasets and complex information is a very effective way to conveying knowledge, but it is also non-trivial, which might explains why this topic is given so much attention in the literature. *(bpb: last sentence better?)*. 
 ##The Natural Capital Project
->"The Natural Capital Project strives to improve the well-being of people and nature by integrating the value nature provides to society into all major decisions leading to greater and more targeted natural capital investments."
+> *"The Natural Capital Project strives to improve the well-being of people and nature by integrating the value nature provides to society into all major decisions leading to greater and more targeted natural capital investments."*
 
 This work was done within the framework of the Natural Capital Project, at Stanford Woods Institute for the Environment. The Natural Capital Project (shortened NatCap) aims to account for nature’s contributions to society, so that decision-makers worldwide can take into account the value of ecosystem services, leading to wiser and more sustainable choices and better outcomes for people and nature. Founded in 2005, the Natural Capital Project gathers NGOs and academics, namely it is a partnership of four parties: the World Wild Fund (WWF), The Nature Conservancy (TNC), University of Minnesota and Stanford University [@Natcapwebsite].
 
@@ -47,10 +47,6 @@ The ecosystem service assessment strategy NatCap follows can be summarized in 6 
 The present work integrates in the context of NatCap's approach; the developed tools aim to be incorporated MESH outputs and reports. Also, in the context of the developement plan for InVEST 4.0, one of the three long-term InVEST goals is to integrate reporting as part of the InVEST workflow [Rich Webinar 29/11/16], which this work could support. *Flag! todo future to revisit last paragraph*
 
 ##Objectives
-
-> "Improving communication in the IPCC reports is by no means an easy task"
-> \
-> [@McMahon2016]
 
 Developing visuals that communicate the complexities of climate science is admittedly difficult, even with existing visual tools and expertise. A preliminary part of this work consisted in identifying the specific challenges related to displaying ES results. ES information consists in varied, large, multi-dimensional datasets, 
 typically large numbers of results that result from considering multiple objectives, scenarios, and uncertainties. These can be categorical or continuous, spatial or aspatial. The main tasks that these displays aim to support include scenario analysis, multi-objective comparisons, expression of uncertainty. Some cases may require combinations of these tasks. 
