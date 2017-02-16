@@ -1,10 +1,10 @@
 #Method
 
 > *"Improving communication in the IPCC reports is by no means an easy task"\
-> \
+>
 > [@McMahon2016]*
 ##Project definition and scoping
-Within the initial framework of the project on environmental modeling and data analysis, several potential directions were considered. Possible directions of work targeted handling spatial interdependence in the models or assessing the value of detailed data in improving optimization outputs and modeled impacts. However, an extended exploration of the needs was conducted to understand where could this work bring the most useful contribution. Analyzing the need is indeed crucial to a good project definition. This preliminary step was achieved during the first month and the annual gathering of NatCap has been a great occasion to identify the areas of needs, it resulted in defining the project around the topic of display tools for ecosystem services. The question of how to synthesize and communicate spatial and multi-dimensional outputs of multiple runs for multiple ES models would be addressed. The goal being to define easy approaches to clear ES visualizations and summaries.
+Within the initial framework of the project on environmental modeling and data analysis, several potential directions were considered. Possible directions of work targeted handling spatial interdependence in the models or assessing the value of detailed data in improving optimization outputs and modeled impacts. However, an extended exploration of the needs was conducted to understand where this work could bring the most useful contribution. Analyzing the need is indeed crucial to a good project definition. This preliminary step was achieved during the first month and the annual gathering of NatCap has been a great occasion to identify the areas of needs, it resulted in defining the project around the topic of display tools for ecosystem services. The question of how to synthesize and communicate spatial and multi-dimensional outputs of multiple runs for multiple ES models would be addressed. The goal being to define easy approaches to clear ES visualizations and summaries.
 ##Background and context
 ###Literature review
 The first steps to approaching the question of displaying natural capital information were to explore the context, learn notions of data visualization in general and understand the state-of-the art. Background knowledge was built gathering from the literature. It turned out this literature review could help answer partly the need for a useful guidance document on ES visualization, by putting together the various approaches and main strategies for displaying ES information. 
@@ -24,7 +24,7 @@ The 14 respondents were all professionals in the field of ecosystem services, wo
 [^335back]: On a scale from 0 to 5, with 0 meaning totally useless and 5 totally useful. 
 [^66809back]: link to the survey !!
 
-![Gathering NatCappers' visualizations needs and tools survey sample empty page -- *Survey here or in Annex ?*](../images/survey.pdf){#fig:survey width=120%}
+ ![Extract of the survey: Gathering NatCappers' visualizations needs and tools](../images/survey.png){#fig:survey width=100%}
 
 ##Example Cases
 The present work have found applications, and based its trials on several on-going projects at the Natural Capital Project. 
@@ -39,7 +39,7 @@ In the context of this work, this project's display tasks were (1) to display th
 *bpb: is it weird that I bring this up and don't detail the actual resutls/figures for Hawaii later ? I could, but I don't really see where, except by putting my figures as examples for the toolbox but that doesn't sound super humble, and I don't think they're the best...*
 
 ###The Upper Tana Nairobi Water Fund#### *Improving Water for Millions in Kenya* {.unnumbered}
-The Tana River supplies 95% of the water for a total of 9 million people living in Nairobi and surroundings, feeds one of the country’s most important agricultural areas and provides half of the country’s hydropower output. In the past decades, many forests and wetlands have been convertes to agriculture, therefore decreasing the natural landscape capacity to store runoff water and retain sediments and soil in place. Today, one of the outcome of increased sedimentation is that 60% of Nairobi’s residents do not have access to a reliable water supply. To solve this problem, the Upper Tana-Nairobi Water Fund was created. The Natural Capital Project analyses the landscape to find out where and what would be the most efficient actions to undertake.
+The Tana River supplies 95% of the water for a total of 9 million people living in Nairobi and surroundings, feeds one of the country’s most important agricultural areas and provides half of the country’s hydropower output. In the past decades, many forests and wetlands have been converted to agriculture, therefore decreasing the natural landscape capacity to store runoff water and retain sediments and soil in place. Today, one of the outcome of increased sedimentation is that 60% of Nairobi’s residents do not have access to a reliable water supply. To solve this problem, the Upper Tana-Nairobi Water Fund was created. The Natural Capital Project analyses the landscape to find out where and what would be the most efficient actions to undertake.
 In the context of this work, this project's display tasks were to compare scenarios resulting from a mutli-objective optimization, accounting for uncertainty. 
 ##Display toolbox
 ### Structure
@@ -57,12 +57,15 @@ It is a rather subjective task to assess the quality of suggested solutions. To 
 
 
 ## Specific developed tools : implementation methodology 
-### Prioritization of native forest restoration in Pu‘u Wa‘awa‘a, Hawai‘i
+### Prioritization of native forest restoration in Pu‘u Wa‘awa‘a, Hawai‘i (*remove?*)
 *bpb: Is this really needed?* (todo if so)
+
 #### Defining the needs
 In terms of static visualizations. The main goal of the paper  is to look at the impact of restoration (land cover scenarios) on the ES objectives (water, flammability) both independently and then simultaneously with climate scenarios going on in the background.
+
 ### Mutli-objective optimization for the Tana Waterfund: development of a web application
-*Methodolgy to go in chapter 5, introducing the webapp, no? (bpb?) *
+*Methodolgy to go in chapter 5, introducing the webapp, or here? (bpb?) *
+*could put worklow here? or in annex? or not at all?*
 
 ##Master thesis workflow 
 Todo : table with workflow (things done per week or months kind of)

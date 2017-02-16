@@ -9,4 +9,3 @@ Grant - Zeno Karl Schindler Foundation
 
 - survey here ?
 
-![Change in services for all scenarios and iterations relative to current management @Arkema2](../images/coastal4.png){fig:barplots width=60%)

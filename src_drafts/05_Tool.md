@@ -80,6 +80,10 @@ Upon brushing ...
 Peter: pre-load all maps so not calculations needed.
 ###Workflow
 
+DATA PRE-TREATMENT
+
+ITERATIVE PROCESS
+
 
 ##Testing
 (iterations and feedbacks)
