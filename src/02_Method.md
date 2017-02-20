@@ -38,7 +38,7 @@ In the context of this work, this project's display tasks were (1) to display th
 
 *bpb: is it weird that I bring this up and don't detail the actual resutls/figures for Hawaii later ? I could, but I don't really see where, except by putting my figures as examples for the toolbox but that doesn't sound super humble, and I don't think they're the best...*
 
-###The Upper Tana Nairobi Water Fund#### *Improving Water for Millions in Kenya* {.unnumbered}
+###The Upper Tana Nairobi Water Fund {#sec:tanacase}#### *Improving Water for Millions in Kenya* {.unnumbered}
 The Tana River supplies 95% of the water for a total of 9 million people living in Nairobi and surroundings, feeds one of the country’s most important agricultural areas and provides half of the country’s hydropower output. In the past decades, many forests and wetlands have been converted to agriculture, therefore decreasing the natural landscape capacity to store runoff water and retain sediments and soil in place. Today, one of the outcome of increased sedimentation is that 60% of Nairobi’s residents do not have access to a reliable water supply. To solve this problem, the Upper Tana-Nairobi Water Fund was created. The Natural Capital Project analyses the landscape to find out where and what would be the most efficient actions to undertake.
 In the context of this work, this project's display tasks were to compare scenarios resulting from a mutli-objective optimization, accounting for uncertainty. 
 ##Display toolbox
@@ -55,17 +55,36 @@ It is a rather subjective task to assess the quality of suggested solutions. To 
 
 ![When Evaluating a Figure for Clarity and Completeness, Consider the Following Questions[@Allen1]](../images/assess_table.png){#fig:crit2 width=80%} *will go in annex? bpb?*
 
-
-## Specific developed tools : implementation methodology 
-### Prioritization of native forest restoration in Pu‘u Wa‘awa‘a, Hawai‘i (*remove?*)
+### Sample use case: Prioritization of native forest restoration in Pu‘u Wa‘awa‘a, Hawai‘i (*remove?*)
 *bpb: Is this really needed?* (todo if so)
 
 #### Defining the needs
 In terms of static visualizations. The main goal of the paper  is to look at the impact of restoration (land cover scenarios) on the ES objectives (water, flammability) both independently and then simultaneously with climate scenarios going on in the background.
 
-### Mutli-objective optimization for the Tana Waterfund: development of a web application
+##Development of a web application
+Building on the knowledge from the previous chapters, and attempting to partially fill the gaps identified where improved visualizations would be useful, a prototype of a web application was developped. This was done in the context of the multi-objective optimization for the Tana waterfund (detailed in \ref{sec:tanacase}). Details about the implementation method and choices can be found in chapter \ref{sec:TheTool}.
+\
+\
+
+
 *Methodolgy to go in chapter 5, introducing the webapp, or here? (bpb?) *
-*could put worklow here? or in annex? or not at all?*
+*Maybe just summarize it here?*
 
 ##Master thesis workflow 
-Todo : table with workflow (things done per week or months kind of)
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textit{\textbf{Weeks}} & \textit{\textbf{Main focus}} & \textit{\textbf{Skills gained and tools learnt}} \\ \hline
+1-3 & Project definition and scoping & Natural capital, InVEST \\ \hline
+4 & Analysis of need & Surveying \\ \hline
+5-10 & Literature review & Data visualization \\ \hline
+11-12 & Sample hawaii & GIS (QGIS) \\ \hline
+13-17 & Guidance document redaction & Markdown, LaTEX, Github \\ \hline
+18-19 & Webapp design & - \\ \hline
+20-25 & Webapp implementation & \begin{tabular}[c]{@{}l@{}}Html, CSS, Javascript (D3.js)\\ Python pandas library\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+
+(*bpb: needed?*)

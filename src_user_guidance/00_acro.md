@@ -29,12 +29,15 @@
 
 **Softwares and models**
 
+* AWY: Annual water yield (ES objective refered to in section \ref{sec:TheTool})
 * CV: Coastal Vulnerability (model)
 * HRA: Habitat Risk Assessment (model)
 * InVEST: Integrated Valuation of Ecosystem Services and Trade-offs
 * GDAL: Geospatial Data Abstraction Library
 * MESH:  Mapping Ecosystem Services to Human well-being
 * RIOS: The Resource Investment Optimization System
-* SDR: Sediment delivery ratio (a model in InVEST)
+* SDE: sediment reaching streams (ES objective refered to in section \ref{sec:TheTool})
+* SDL: soil loss for agricultural productivity (ES objective refered to in section \ref{sec:TheTool})
+* SDR: Sediment delivery ratio (InVEST model) 
 * VIDEO: Visually Interactive Decision-making and Design using Evolutionary Multi-objective Optimization
 

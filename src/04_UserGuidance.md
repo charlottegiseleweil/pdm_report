@@ -63,16 +63,14 @@ Combining parallel coordinates with interactive features offers interesting opti
 - [Alluvial plot package in R](https://cran.r-project.org/web/packages/alluvial/vignettes/alluvial.html).
 
 ###Radar charts {#sec:radar}
- The radar chart, as shown in figures \ref{fig:radar} and \ref{fig:coastal_sm}, is the version of parallel coordinates plot in polar coordinates.  It has also been refered to as spider chart[^5353back], web chart, star chart, polar chart, or Kiviat diagram. It can be an interesting way to visualize trade-offs. However, they tend to become cluttered and complicated if with many variables, making comparisons very difficult [@datavizz] [^100back]
+ The radar chart, as shown in figure \ref{fig:coastal_sm}, is the version of parallel coordinates plot in polar coordinates.  It has also been refered to as spider chart[^5353back], web chart, star chart, polar chart, or Kiviat diagram. It can be an interesting way to visualize trade-offs. However, they tend to become cluttered and complicated if with many variables, making comparisons very difficult [@datavizz] [^100back]
 
 [^100back]: see also petal charts, and discussion from @spiderman_bad_Ref.
 
-![Hawaii, Kamehameha schools, from NatCap intranet](../images/spiderplot_tradeoffs_Ex.png){#fig:radar width=40%}
+![(a) Radar chart, in the context of a NatCap project in Kamehameha schools, Hawaii. (b) Small multiples strategy applied to radar charts by @Arkema2. The multiples correspond here to the 9 considered regions](../images/radaar.png){#fig:coastal_sm}
 
 ###Small Multiples {#sec:smallmultiples}
-An effective alternative to coercing all the data in a single plot (risking overplotting) is displaying small multiples. The concept is to replicate the same simple graph structure (in terms of axis, shape and scale), for many datasets, ordered logically. The cognitive process of understanding the graph is undertaken only once, and the understanding then is replicated while scanning all other multiples. This strategy is very efficient in many cases for comparison. Referred by Edward Tufte as "multivariate and data bountiful", they enforces comparisons of alternatives, differences and changes [@tufte]. This displaying startegy has also been called trellis chart, lattice chart, grid chart, or panel chart. It can be applied to many types of graphs, or maps. Other examples of the small multiple strategy and variants of it can be found in figures \ref{fig:arkemaa}a, \ref{fig:coastal!??TODO8}, \ref{fig:addl}a.
-
-![Small multiples strategy applied to radar charts (further described in \ref{sec:radar}) by @Arkema2. The multiples correspond here to the 9 considered regions](../images/coastal3.png){#fig:coastal_sm width=80%}
+An effective alternative to coercing all the data in a single plot (risking overplotting) is displaying small multiples. The concept is to replicate the same simple graph structure (in terms of axis, shape and scale), for many datasets, ordered logically. The cognitive process of understanding the graph is undertaken only once, and the understanding then is replicated while scanning all other multiples. This strategy is very efficient in many cases for comparison. Referred by Edward Tufte as "multivariate and data bountiful", they enforces comparisons of alternatives, differences and changes [@tufte]. This displaying startegy has also been called trellis chart, lattice chart, grid chart, or panel chart. It can be applied to many types of graphs, or maps. Other examples of the small multiple strategy and variants of it can be found in figures \ref{fig:arkemaa}a, \ref{fig:coastal_sm}b, \ref{fig:addl}a.
 
 ###Other displays 
 Other statistical distributed data displays more specific to some data types include **Stem-and-Leaf Plots**, which is a variant of horizontal histogram painting a frequency distribution with numbers classified forming the histogram-like bars; and **Q-Q Plots** that compare probability distributions by graphing their quantiles where values lining up will reflect linear correlation [@Tour]. 
@@ -84,12 +82,12 @@ Another approach to reduce cognitive complexity of multi-dimensional data, is to
 
 In the same vein, multiple dimensions can be summarized by creating an **aggregated metric**, e.g an indication of a lake recreation value would combine variables such as water quality, lake size, boat options (*reference : work Ryan shared. Cite? bpb*)
 
-###Multiple linked views
+###Multiple linked views {#sec:multiplelinked}
 Several options to display multi-variate data were discussed. However they all realistically apply to a limited number of variables. As dimensions of the data increase, it is often interesting to show several linked graphs of the same dataset to convey the complex information. This solution gives different perspectives to the viewer. In the case of a static display, the graphs are connected by matching color coding or other corresponding parameters, as in figures \ref{fig:hadka}, \ref{fig:arkemaa}a, \ref{fig:arkemaa}b and \ref{fig:addl}c. 
 
 ![Examples of combining static plots: (a) the bar plots display the area of habitat in each risk category (low, medium, high) per planning region (1 to 9), by @arkema1. (b) Dense figure using a story-telling approach to present scenarios. It combines bar plots, maps and the small multiples approach. This figure is self-explanatory, and by including a few sentences, it replaces a lot of text [@Arkema2]](../images/arkemaa.png){#fig:arkemaa width=100%} 
 
-Furthermore, dynamic displays allow improvement by adding brushing and linking features (see \ref{sec:interactivefeatures}), examples of interactive dashboard with multiple linked views include:
+Furthermore, dynamic displays allow improvement by adding brushing and linking features (see \ref{sec:interactivefeatures}), examples of interactive dashboards with multiple linked views include *(click on the title to be re-direct to the online version)*:
 
 * [The Middle Cedar visualization](https://phawthorne.github.io/mc-vis/) (figure \ref{fig:Peter})
 * [The Conservation ROI Dashboard](http://nascience.us/roi/public/) (figure \ref{fig:ConservationROIDashboard})
@@ -104,7 +102,7 @@ Furthermore, dynamic displays allow improvement by adding brushing and linking f
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=.7\linewidth]{images/maps1/map1.png}
-  \caption{choropleth map}
+  \caption{Choropleth map}
   \label{fig:sub1}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
@@ -125,11 +123,11 @@ Furthermore, dynamic displays allow improvement by adding brushing and linking f
   \caption{Heatmap}
   \label{fig:sub4}
 \end{subfigure}
-\caption{Main types of map}
+\caption{Main types of maps}
 \label{fig:test}
 \end{figure}
 
-####choropleth maps and proportional symbol maps
+####Choropleth maps and proportional symbol maps
 choropleth maps are very effective and widely used to display a continuous or categorical spatial variable aggregated by regions. The variable of interest is expressed by coloring (or using patterns on) these geographical areas. Particular attention needs to be given to the choice of patterns (see section \ref{sec:colors}). Furthermore, it is necessary to normalize[^212back] raw data values may be necessary to ensure graphical integrity [@Tour]. However, the main drawback is that larger areas appear emphasised [@datavizz].
  
 Another solution for continuous spatial data aggregated by regions is the graduated symbol map (or proportional symbol map, also called bubble map [@datavizz]) that overlays symbols to the base map. In this case, the underlying area does not affect the perception of the variable considered [@Tour]. These two approaches can also be combined, allowing to express more than one variable.
@@ -155,9 +153,9 @@ A flow map illustrates movement in space and/or in time. The intensity of a flow
 The text translates to: *The numbers of men present are represented by the width of the colored zones at a scale of one millimeter for every ten thousand men; they are further written accros the zones. The red designates the men who enter into Russia, the black those who leave it. The information which has served to draw up the map has been extracted from the works of M. M. Thiers of Ségur, of Fezensac, of Chambray and the unpublished diary of Jacob, the pharmacist of the army since october 28th. In order to better judge with the eye the diminution of the army, I have assumed that the troops of Prince Jérôme and the Marshal Davoush who had been detached at Minsk and Mokilow and have rejoined around Orcha and Vitebsk had always marched with the army.* ](../images/Minard.png){#fig:minard}
 
 ###Two widely used ES maps {#sec:twowidely}
-Two types of choropleth maps are very often used.
+Two types of choropleth maps are very often used: 
 
-####Portfolios {#sec:portfolios}
+####Portfolios {#sec:portfolios} 
 Landcover maps, also called LULC for land use/land cover, represent the full landscape with its corresponding land uses. A portfolio is a landcover map which correspond to a subset of the full landscape: the set of chosen activities for each SDU.
 *Example TODO*
 When displaying portfolios, highest care must be given to symbology, see recommendations in section \ref{sec:colors}. Landcover colors chemes can be very tricky, depending on the number of classes and the arrangement. A good example is given by figure \ref{fig:lulc}b.
@@ -301,7 +299,7 @@ A more precise version of the $\kappa$ approach explained above consists in anal
 #### Jaccard index {.unnumbered}
 Other indices comparing agreement accross categorical datasets exist. However, very few to no applications in comparing maps has been found. 
 The Jaccard index, also known as Tanimoto index, is computed as the ratio of the intersection of the two sets over their union: $$Jaccard\ index = \frac{Map1 \cap Map2}{Map1 \cup Map2}$$ [@jaccard]. Simple to understand, it ranges from 0 to 1, increasing with increasing similarity between the sets.
-The **Sørensen-Dice coefficient** is a slightly different version of the Jaccard index. Also called the Dice similarity coefficient , or F1 score, it is calculated as such: $$Sorensen-Dice\ index={\frac {2|Map1\cap Map2|}{|Map1|+|Map2|}}$$. More similarity measures for categorical data have been explored by Lourenco [@ourenco2004binary].
+The **Sørensen-Dice coefficient** is a slightly different version of the Jaccard index. Also called the Dice similarity coefficient , or F1 score, it is calculated as such: $$Sorensen-Dice\ index={\frac {2|Map1\cap Map2|}{|Map1|+|Map2|}}$$ More similarity measures for categorical data have been explored by Lourenco [@ourenco2004binary].
 #### Taking into account shifted similar patterns... {.unnumbered}
 The **moving window algorithm** further accounts for landscape patterns by considering neighboring cells in addition to the cell-to-cell comparison. It has been develop to answer the following problem: computing solely the number of cell-to-cell matches is not reliable in all circumstances, as if there is a matching cell right near by, it will not be taken into account (e.g if we compare two chessboards shifted by one well, the number of cell-to-cell matches is null although there is evident similarity not to be ignored) [@Kuhnert2005]. The **hierarchical fuzzy pattern matching** uses a different strategy to address the same concern, instead of moving a "window", it varies the zoom. It avoids drawbacks of a cell-by-cell comparison by aggregating the regional unit considered in patches, and conducting comparisons at different scales [@power2001].
 
@@ -372,7 +370,7 @@ Consistency of spatial patterns in pixel data, at coarser resolution The quest
 
 It is often of interest to analysts to consider how input uncertainty and model structure affect the precision and robustness of findings. Uncertainty may arise from modeling choices, parameters (see in particular section \ref{sec:SA}) or predicted variables (e.g future climate conditions). The inclusion of uncertainty estimates improves decision making [@reichert2005does] and [@beven2006undermining]. Because ecosystem services depends on unique landscape characteristics, each case is unique and different procedures can be specifically chosen to generate summaries of robustness and sensitivity [@lig14]. However, uncertainty is often just ignored in the representation, because it is challenging to visualize [@sohardtovizuncertainty]. Conveying both statistical and data uncertainties is nevertheless essential to an exhaustive communication of results. 
 
-![Uncertainty analysis and sensitivity analysis *useless figure?* [@lig14]](../images/UA_SA-lig14.png){#fig:SAoo}
+![Uncertainty analysis and sensitivity analysis *useless figure? bpb* [@lig14]](../images/UA_SA-lig14.png){#fig:SAoo}
  
 Closely related concepts must be distinguished: uncertainty analysis (UA) aims to explore the variability of the results; whereas sensitivity analysis (SA) explores the factors responsible for such variability. Robustness is considered when conducting uncertainty analysis; defined as "the ability of a system to resist change without adapting its initial stable configuration" [@wieland212], it can be understood as insensitivity to changes [@Maier] or also a function of performance under many states of the world. In the context of decision making, a decision is qualified robust if not vulnerable to changes, i.e if it leads to the desired outcomes under different states of the world. However, the concept of robustness is somehow vague, and cover several interpretations overlapping with UA and SA. For example, assessing the robustness many runs resulting from uncertain inputs or model assumptions can be considered as a sensitivity analysis [@Pianosi2016]. *bpb: Is this paragraph unclear??* 
 
@@ -445,7 +443,7 @@ Variance decomposition is another approach to sensitivity analysis; then **pie c
 (f) Pattern plot, evaluating sensitivity for 12 watersheds and 14 parameters, using the Sobol sensitivy index over a 38-year period, by @van2008.
 See also @Pianosi2016, Appendix A.](../images/SA_overall.png){#fig:SA}
 
-[^5353back]: Spiderplots or spidercharts is a blurry term to that has been used to refer both to 2-axis spiderplots (as in figure \ref{fig:spiderplot}), but also to multi-axis spiderplots (as in figure \ref{fig:radar}). 
+[^5353back]: Spiderplots or spidercharts is a blurry term to that has been used to refer both to 2-axis spiderplots (as in figure \ref{fig:spiderplot}), but also to multi-axis spiderplots which are also refered to as radar chart (as in figure \ref{fig:coastal_sm}a). 
 
 This section focused on visualization, but there are many ways to conduct a sensitivity analysis, using landscape comparison metrics described in section \ref{sec:comp_stat_cat_many},  or through the Wilcoxon signed rank test assessing significance of mean differences (see@Sun14). Furthermore, sensitivity analysis packages exist in multiple programming languages (e.g SAlib for python, sensitivity for R).
 
@@ -473,6 +471,8 @@ On the whole, each visualization is very **context specific**, therefore there i
 ![[The Middle Cedar visualization](https://phawthorne.github.io/mc-vis/) is an interactive webapp, developed by @Peter, who combined a scatterplot, a map, a pie chart and summary statistics in a single dashboard. It allows users to click on each point of the trade-off curve, and the corresponding land cover map will be displayed. Additionally, summary metrics and a pie chart provide information relative to the scenario chosen upon click[@Peter]](../images/peter.png){#fig:Peter width=70%} 
 
 ![Extract of the [Conservation ROI Dashboard](http://nascience.us/roi/public/), gathering and comparing ROI projects accross the US](../images/consdash.png){#fig:ConservationROIDashboard}
+
+\newpage
 
 ####Useful tools 
 
@@ -503,11 +503,35 @@ Sensitivity analysis:
 - [with R: *sensitivity* package](https://cran.r-project.org/web/packages/sensitivity/index.html)
 - [with Python: *SAlib* library](https://github.com/SALib/SALib) 
 
-### Summary table for specific display needs *for analyst in a hurry* {#sec:table}
+\newpage
 
-//Here summary table//
-[*Draft in page Sheet 5  here*](https://docs.google.com/spreadsheets/d/1yuKF0Se_2frzXOKl-MBpyUOkosxvsPsh9tkD_8EGWZc/edit#gid=741372443)
+### Summary table for specific display needs {#sec:table}
 
-
+\begin{table}[]
+\centering
+\begin{tabular}{| m{0.12\textwidth} | m{0.45\textwidth}| m{0.43\textwidth} |}
+\hline
+\textbf{Topic} & \textit{\textbf{Display task}} & \textbf{Suggested displays (and link to corresponding chapter)} \\ \hline
+\multirow{3}{*}{Maps (any)} & \textit{Compare 2 maps} & Change maps, two maps, agreement maps (\ref{sec:comp_map_2}) or aspatial metrics (\ref{sec:comp_stat_cat_2}) \\ \cline{2-3} 
+ & \textit{Compare many maps} & Map matrix (\ref{sec:comp_map_many}) \\ \cline{2-3} 
+ & \textit{Summarize many maps} & Modal portfolio and frequency map, map of diversity indices (\ref{sec:comp_map_many}), aspatial metrics (\ref{sec:comp_stat_cat_many} and \ref{sec:comp_stat_cont_many}) \\ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Portfolios\\ maps\end{tabular}} & \textit{Display a portfolio} & Choropleth map (\ref{sec:portfolios}) \\ \cline{2-3} 
+ & \textit{Agreement on doing an (any) activity across portfolios} & Footprint map (\ref{sec:comp_map_many}) \\ \cline{2-3} 
+ & \textit{Agreement on specific activity across portfolios} & Activity-specific footprint map (\ref{sec:comp_map_many}) \\ \hline
+\multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}Maps of ES\\ model\\ outputs\end{tabular}} & \textit{Spatial prioritization of intervention(s)} & Objective score map (\ref{sec:objs}) \\ \cline{2-3} 
+ & \textit{Impact of intervention or scenario on a specific ES metric} & ? \\ \cline{2-3} 
+ & \textit{Location of synergies and tradeoffs of intervention/scenario on multiple ES metrics} & Hotspot map (or priority/conflict map) (\ref{sec:hotspot}) \\ \cline{2-3} 
+ & \multirow{2}{*}{\textit{Visualize tradeoffs}} & Hotspot map (\ref{sec:hotspot}) \\ \cline{1-1} \cline{3-3} 
+\multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}Non-spatial\\ ES model\\ outputs\end{tabular}} &  & Parallel coordinate plot (\ref{sec:parcoords}), Radar plot (\ref{sec:radar}) \\ \cline{2-3} 
+ & \textit{Several objectives under small number of scenarios} & Small multiples, Scatterplots, i.e trade offs curve (\ref{sec:scatterplots}and \ref{sec:smallmultiples}) \\ \cline{2-3} 
+ & \textit{2 objectives under many scenarios} & Scatterplot: trade off curve (\ref{sec:scatterplots}) \\ \cline{2-3} 
+ & \textit{3 or more objectives  under many scenarios} & Parallel axis plot (\ref{sec:parcoords}), Small mutiples scatterplots i.e trade off curves (\ref{sec:scatterplots}  and \ref{sec:smallmultiples}) or dimension reduction to 2 objectives (\ref{sec:rdim}) \\ \hline
+Scale & \textit{Consistency of spatial pattern in pixel data (at coarser resolution)} & Area to be further explored (\ref{sec:scale}) \\ \hline
+\multirow{3}{*}{Uncertainty} & \textit{Characterize uncertainty in a set of input parameters (sensitivity analysis)} & Spiderplot, line chart, tornado diagram, box plot, radial convergence diagram, pattern plot (\ref{sec:SA}) \\ \cline{2-3} 
+ & \textit{Characterize uncertainty in spatial model outputs} & Metrics (\ref{sec:uncert_non_maps}) and maps display such as juxtaposition or overlay (\ref{sec:uncert_maps}) \\ \cline{2-3} 
+ & \textit{Characterize contribution of different uncertainty sources (to output uncertainty)} & Box plot linked to a pie chart (\ref{sec:SA}) \\ \hline
+Beneficiaries & \textit{Show and quantify beneficiaries impact, location of beneficiaries and contract with service distribution} & See section \ref{sec:beneficiaries} \\ \hline
+\end{tabular}
+\end{table}
 
 

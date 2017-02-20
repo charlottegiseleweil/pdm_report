@@ -1,16 +1,16 @@
 # Conclusion & Next Steps
 *This is just draft* (todo!)
 
-##Natural capital sustainable management : a huge potential for impact
-*"To meet the global need for conservation funding, investable cash flows from conservation projects need to be at least 20-30 times greater than they are today, reaching USD 200-300 billion per year"*
-@McKinsey (Crédit Suisse AG, WWF and McKinsey)
+>*"To meet the global need for conservation funding, investable cash flows from conservation projects need to be at least 20-30 times greater than they are today, reaching USD 200-300 billion per year"*
+>
+> @McKinsey
+> 
 
-#### A huge unexplored potential, and an unmet demand for investment{.unnumbered}
-There is an enormous potential for environmental impact and climate change mitigation through an informed management of natural capital. Aligned the 17 UN sustainability goals, and the *??* of Paris agreement. (ref)
+##Natural capital sustainable management: great potential for impact
 
-So called conservation finance (i.e a financial investment **?** as defined by @McKinsey) has a large unrealized potential, as noted by the @McKinsey report. The demand for funding is yet significantly unmet, and the private sector opportunities are widely unexploited. 
 
-Possible causes explaining this unmet demand include:
+#### A great unexplored potential, and unmet demand for investment{.unnumbered}
+There is an enormous potential for environmental impact and climate change mitigation through an informed management of natural capital. Natural capital conservation is fully aligned with the [17 UN sustainable development goals](http://www.un.org/sustainabledevelopment/sustainable-development-goals/), and the Paris agreement (@Cop21, @Guardian among others). So called conservation finance (i.e a financial investment that aims to conserve the values of the ecosystem for the long term, as defined by @McKinsey) has a large unrealized potential, as noted by the same report. The demand for funding is yet significantly unmet, and the private sector opportunities are widely unexploited. Possible causes explaining this unmet demand include:
 
 * **Measurable conservation benefits:** This report notes one major problem: the fact that the ROI of these project are hardly measurable, @McKinsey deplores that the benefits are yet to be precisely identified and standardized. However, this is exactly the problem natural capital assessments, among which the ones conducted by The Natural Capital Project, are solving. Partnering cutting-edge
 * **Conservation finance still small**:The conservation investment opportunities, especially for the private sector aren't available at scale. However, banks and asset managers could develop the conversation finance possibilities as part of their impact investment offer. This may actually be an amazing opportunity, supported by tools such as [the Natural Capital Protocol](http://naturalcapitalcoalition.org/protocol/).
@@ -19,9 +19,9 @@ Possible causes explaining this unmet demand include:
 #### Moving forward: linking the right expertise {.unnumbered}
 From this constat, it seems to the author that linking the right expertise would allow to bridge the gaps and open the doors to many much needed investments and high impact projects. In this context data visualization tools are crucial to connect the complex scientific results to the real world.
 
-Several initiatives are going in this direction, Credit Suisse for example, stated their long-term intent of creating a conservation finance asset class.  *(ref check!)*.
-It has been proven to be possible to deliver great conservation impacts while generating returns for investors ((*good reference bpb?*) and @McKinsey). 
-Furthermore, @McKinsey states that *"There would be sufficient financial capital available to meet conservation investment needs if the main investor segments globally allocated 1% of their new and reinvested capital to conservation."*
+Several initiatives are going in this direction, Credit Suisse for example, expressed their long-term intent of creating a conservation finance asset class (@CS and @McKinsey). It has been proven to be possible to deliver great conservation impacts while generating returns for investors ((*good reference about that by any chance bpb?*) and @McKinsey). Furthermore, @McKinsey states that *"There would be sufficient financial capital available to meet conservation investment needs if the main investor segments globally allocated 1% of their new and reinvested capital to conservation."*
+
+(more here... todo?)
 
 
 ##On standardizing approaches to communicate natural capital results (concluding remarks about the display toolbox)
@@ -40,9 +40,8 @@ Remain some open questions and areas of improvements were identified. The questi
 Engaging >> 
 
 ## Suggestions for the Natural Capital Project
---> mettre les cools viz des projets (genre ceu x de Gregg Verutes) plus ne valeur sur le site
-de NatCap
---> InvEST models history (timeline visualization by Rich shown at FWAT !)
+
+--> Showcase successful existing visualizations (e.g the work of Greg Verutes), for example on the website within the *Stories* tab; as these help understanding the scope of natural capital assessments and projects. 
 
 
 ## Ending note: engaging a broader audience into major decisions
