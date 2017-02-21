@@ -3,6 +3,12 @@ header, main, footer {
   padding-left: 320px; 
 }
 
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
 .side-nav {
   width: 320px;
   border-top: none;
@@ -42,16 +48,54 @@ main h4 { font-size: 22px; }
 
 
 /* Make avatar better */
-.side-nav img.avatar.circle {
-  height: 128px;
-  width: 128px;
+.side-nav img.logo, .side-nav img.circle.avatar {
+  height: 80px;
+  width: 80px;
+  margin-right: 16px;
 }
+
+.side-nav a.inline {
+  display: inline-block;
+}
+
 
 /* Bottom divider */
 .divider.bottom {
   margin: 0 0 8px 0;
 }
 
+/* Fix navbar collapsible elements padding */
 #TOC > ul > li > a { padding-left: 32px; }
 #TOC > ul > li > ul > li > a { padding-left: 48px; }
 #TOC > ul > li > ul > li > ul li a { padding-left: 64px; }
+
+h1.title {
+ text-align: center;
+ font-size: 48px;
+}
+
+ul.side-nav li a.title {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+h1.title.first {
+  font-size: 44px;
+  margin-bottom: 0;
+}
+
+h1.title.second {
+  font-size: 36px;
+  font-style: italic;
+  padding-top: 0;
+}
+
+.userView i {
+  margin-right: 8px;
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.userView .email {
+  padding-bottom: 0;
+}

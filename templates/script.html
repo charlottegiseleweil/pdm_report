@@ -1,48 +1,78 @@
 <script>
 
+// Insert title of project
+const titleFirst="Natural Capital Data Visualization";
+const titleSecond="to promote sustainable decision making";
+$(
+    '<h1 id="title" class="title first">' + titleFirst + '</h1>' +
+    '<h1 class="title second">' + titleSecond + '</h1>'
+ ).insertAfter("#TOC");
+
 // Make table of contents the side navigation
 const toc = $('#TOC ul:first-child');
 toc.addClass("side-nav").addClass("fixed");
 
-// Add link to live demo
-toc.prepend('')
-
-// Truncate long titles in side-nav & cool wave effect
-$('#TOC li a').addClass("truncate").addClass('waves-effect');
-
-// Make elements collapsible in side nav
-$('#TOC ul').addClass("collapsible").addClass("collapsible-accordion");
-$('#TOC li a').addClass("collapsible-header");
-$('#TOC li a + ul').addClass("collapsible-body");
-
-
-// Add cool avatar picture & link to demo
-const avatarUrl = 'https://avatars0.githubusercontent.com/u/18381609?v=3&s=400';
-const githubUrl = 'https://github.com/charlottegiseleweil';
+// Add link to live demo & title of project
 const demoUrl = 'https://charlottegiseleweil.github.io/webviz_natcap/intro.html';
-const email = 'weilcharlotte@gmail.com';
 toc.prepend('<li>' + 
-    '<div class="userView">' + 
-    '<a href="' + githubUrl + '"><img class="avatar circle" src="' + avatarUrl + '"></a>' + 
-    '<span class="name">Charlotte Weil\'s Pdm Report</span>' +
-    '<a href="mailto:' + email + '"><span class="email">' + email + '</span></a>' +
-    '</div>' +
-    '<div class="divider"></div>' +
-    '</li>' + 
-    '<li>' + 
     '<a href="' + demoUrl + '">' +
-    '<i class="material-icons">play_arrow</i> Live demo' +
+    '<i class="material-icons">launch</i> Visualization dashboard' +
     '</a>' +
     '<div class="bottom divider"></div>' +
+    '</li>' +
+    '<li>' +
+    '<a class="title" href="#title">' +
+    titleFirst +
+    '</a>' +
     '</li>');
 
-// Link to pdf document
+// Add link to pdf document
 toc.append(
     '<li>' + 
     '<div class="divider"></div>' +
     '<a href="thesis.pdf" target="_blank">' +
     '<i class="material-icons">picture_as_pdf</i> PDF version' +
     '</a>' +
+    '</li>');
+
+
+// Truncate long titles in side-nav & cool wave effect
+$('#TOC ul li a').addClass("truncate").addClass('waves-effect');
+
+// Make elements collapsible in side nav
+$('#TOC ul').addClass("collapsible").addClass("collapsible-accordion");
+$('#TOC ul li a').addClass("collapsible-header");
+$('#TOC ul li a + ul').addClass("collapsible-body");
+
+// Add cool avatar picture
+const avatarUrl = 'https://avatars0.githubusercontent.com/u/18381609?v=3&s=400';
+const logoUrl = '../images/natcap-logo.jpg';
+const natcapUrl = 'http://www.naturalcapitalproject.org';
+const githubUrl = 'https://github.com/charlottegiseleweil';
+const linkedInUrl = 'https://www.linkedin.com/in/charlotteweil';
+const email = 'weilcharlotte@gmail.com';
+toc.prepend('<li>' +
+    '<div class="userView">' +
+    '<a class="inline" href="' + natcapUrl + '"><img class="logo" src="' + logoUrl + '"></a>' +
+    '<a class="inline" href="' + githubUrl + '"><img class="avatar circle" src="' + avatarUrl + '"></a>' +
+    '<span class="name">Author: Charlotte Weil</span>' +
+    '<a href="mailto:' + email + '">' +
+    '<span class="email">' +
+    '<i class="material-icons">email</i>' + email +
+    '</span>' +
+    '</a>' +
+    '<a href="' + linkedInUrl + '">' +
+    '<span class="email">' +
+    '<i class="zmdi zmdi-linkedin"></i> charlotteweil' +
+    '</span>' +
+    '</a>' +
+    '<a href="' + githubUrl + '">' +
+    '<span class="email">' +
+    '<i class="zmdi zmdi-github"></i> charlottegiseleweil' +
+    '</span>' +
+    '</a>' +
+    '</div>' +
+    '<div class="divider"></div>' +
     '</li>');
 
 // Make all external links open in new tab
