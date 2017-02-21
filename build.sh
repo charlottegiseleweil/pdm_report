@@ -22,6 +22,7 @@ html_includes=(
   '--include-before-body=templates/body-open.html'
   '--include-after-body=templates/body-close.html'
   '--include-after-body=templates/script.html'
+  '--latexmathml'
 );
 
 # Process command line arguments
