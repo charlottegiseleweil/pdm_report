@@ -1,0 +1,41 @@
+<script>
+
+// Make table of contents the side navigation
+const toc = $('#TOC ul:first-child');
+toc.addClass("side-nav").addClass("fixed");
+
+// Add link to live demo
+toc.prepend('')
+
+// Truncate long titles in side-nav
+$('#TOC li a').addClass("truncate");
+
+// Make elements collapsible in side nav
+$('#TOC ul').addClass("collapsible").addClass("collapsible-accordion");
+$('#TOC li a').addClass("collapsible-header");
+$('#TOC li a + ul').addClass("collapsible-body");
+
+
+// Add cool avatar picture & link to demo
+const avatarUrl = 'https://avatars0.githubusercontent.com/u/18381609?v=3&s=400';
+const githubUrl = 'https://github.com/charlottegiseleweil';
+const demoUrl = 'https://charlottegiseleweil.github.io/webviz_natcap/intro.html';
+const email = 'weilcharlotte@gmail.com';
+toc.prepend('<li>' + 
+    '<div class="userView">' + 
+    '<a href="' + githubUrl + '"><img class="avatar circle" src="' + avatarUrl + '"></a>' + 
+    '<span class="name">Charlotte Weil\'s Pdm Report</span>' +
+    '<a href="mailto:' + email + '"><span class="email">' + email + '</span></a>' +
+    '</div>' +
+    '<div class="divider"></div>' +
+    '</li>' + 
+    '<li>' + 
+    '<a href="' + demoUrl + '">' +
+    '<i class="material-icons">play_arrow</i> Live demo' +
+    '</a>' +
+    '<div class="bottom divider"></div>' +
+    '</li>');
+
+// Make all external links open in new tab
+$("main a[href^='http']").attr("target", "_blank");
+</script>

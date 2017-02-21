@@ -7,6 +7,23 @@ batch_spellcheck=true
 outputs=()
 formats=()
 
+latex_includes=(
+  '--include-in-header=templates/subcaption.tex'
+  '--include-in-header=templates/chapter-style.tex'
+  '--include-in-header=templates/caption-size.tex'
+  '--include-in-header=templates/square-bullets.tex'
+  '--include-in-header=templates/margins.tex'
+  '--include-in-header=templates/landscape.tex'
+  '--include-before-body=templates/titlepage.tex'
+);
+
+html_includes=(
+  '--include-in-header=templates/header.html'
+  '--include-before-body=templates/body-open.html'
+  '--include-after-body=templates/body-close.html'
+  '--include-after-body=templates/script.html'
+);
+
 # Process command line arguments
 while test $# -gt 0
 do
@@ -22,6 +39,8 @@ do
         --tex) outputs+=(tex); formats+=(latex)
             ;;
         --docx) outputs+=(docx); formats+=('')
+            ;;
+        --html) outputs+=(html); formats+=(html)
             ;;
         *) echo "unrecognized option $1"
             ;;
@@ -58,13 +77,29 @@ for idx in "${!outputs[@]}"; do
   outfile="build/thesis.${outputs[$idx]}"
   format="${formats[$idx]}"
   if [ ! -z $format ]; then
+    case $format in
+      html) includes="${html_includes[@]}"
+        ;;
+      latex) includes="${latex_includes[@]}";
+        ;;
+      *) includes="";
+        ;;
+    esac
+
     format="-t $format"
   fi
 
   # Update all the links to be pdf instead of png
-  cat build/thesis_raw.md | \
-    sed -e "s|/g/png|/g/pdf|g" |\
-    sed -e "s|../images|images|g" |\
+  if [ "$format" = "-t latex" ]; then
+    cat build/thesis_raw.md |\
+      sed -e "s|/g/png|/g/pdf|g" |\
+      sed -e "s|../images|images|g" \
+      > build/thesis.md;
+    mv build/thesis.md build/thesis_raw.md;
+  fi
+
+  # Render the comments correctly
+  cat build/thesis_raw.md |\
     sed \
         -e s/'~~}'/'}'/g \
         -e s/'{~~'/'\\st{'/g \
@@ -79,20 +114,11 @@ for idx in "${!outputs[@]}"; do
         -e s/'<<}'/'}'/g \
     > build/thesis.md
 
-# Rajouter ca apres titlepage: --include-before-body=templates/abstract.tex \
-# Pour sauts de pages après titles2: --include-in-header=templates/break-sections.tex \ 
-
   echo -n "Compiling thesis to $outfile ($format) ..."
   cat build/thesis.md |\
   pandoc -f markdown $format \
+    $includes \
     --smart \
-    --include-in-header=templates/subcaption.tex \
-    --include-in-header=templates/chapter-style.tex \
-    --include-in-header=templates/caption-size.tex \
-    --include-in-header=templates/square-bullets.tex \
-    --include-in-header=templates/margins.tex \
-    --include-in-header=templates/landscape.tex \
-    --include-before-body=templates/titlepage.tex \
     --reference-links \
     --standalone \
     --number-sections \

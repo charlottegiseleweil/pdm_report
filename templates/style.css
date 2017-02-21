@@ -1,0 +1,56 @@
+/* Move content so that side-nav doesn't hide it */
+header, main, footer {
+  padding-left: 320px; 
+}
+
+.side-nav {
+  width: 320px;
+}
+
+/* Containers a bit larger than default 70% */
+.container {
+  width: 75%;
+}
+
+/* Make nested collapsibles look nice in side-nav */
+.side-nav .collapsible-body {
+  padding: 0;
+}
+
+/* Make images' width be slightly smaller than text */
+main .figure {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main img {
+  width: 100%;
+}
+
+/* Make text look prettier */
+p {
+  text-align: justify;
+}
+
+/* Make anchors to titles look better by changing margin-top to padding-top */
+/* Reduce title fonts by ~35% each to look less jarring */
+main h1 { margin-top: 0; padding-top: 2.10rem; font-size: 40px; }
+main h2 { margin-top: 0; padding-top: 1.78rem; font-size: 32px; } 
+main h3 { margin-top: 0; padding-top: 1.46rem; font-size: 28px; }
+main h4 { font-size: 22px; }
+
+
+/* Make avatar better */
+.side-nav img.avatar.circle {
+  height: 128px;
+  width: 128px;
+}
+
+/* Bottom divider */
+.divider.bottom {
+  margin: 0 0 8px 0;
+}
+
+#TOC > ul > li > a { padding-left: 32px; }
+#TOC > ul > li > ul > li > a { padding-left: 48px; }
+#TOC > ul > li > ul > li > ul li a { padding-left: 64px; }
