@@ -45,7 +45,7 @@ $('#TOC ul li a').addClass("collapsible-header");
 $('#TOC ul li a + ul').addClass("collapsible-body");
 
 // Add cool avatar picture
-const avatarUrl = 'https://avatars0.githubusercontent.com/u/18381609?v=3&s=400';
+const avatarUrl = '../images/avatar.jpg';
 const logoUrl = '../images/natcap-logo.jpg';
 const natcapUrl = 'http://www.naturalcapitalproject.org';
 const githubUrl = 'https://github.com/charlottegiseleweil';
@@ -55,22 +55,12 @@ toc.prepend('<li>' +
     '<div class="userView">' +
     '<a class="inline" href="' + natcapUrl + '"><img class="logo" src="' + logoUrl + '"></a>' +
     '<a class="inline" href="' + githubUrl + '"><img class="avatar circle" src="' + avatarUrl + '"></a>' +
-    '<span class="name">Author: Charlotte Weil</span>' +
-    '<a href="mailto:' + email + '">' +
-    '<span class="email">' +
-    '<i class="material-icons">email</i>' + email +
+    '<span class="name">' + 
+    'Author: Charlotte Weil' +
+    '<a class="inline-icon" href="mailto:' + email + '"><i class="material-icons">email</i></a>' +
+    '<a class="inline-icon" href="' + linkedInUrl + '"><i class="zmdi zmdi-linkedin"></i></a>' +
+    '<a class="inline-icon" href="' + githubUrl + '"><i class="zmdi zmdi-github"></i></a>' +
     '</span>' +
-    '</a>' +
-    '<a href="' + linkedInUrl + '">' +
-    '<span class="email">' +
-    '<i class="zmdi zmdi-linkedin"></i> charlotteweil' +
-    '</span>' +
-    '</a>' +
-    '<a href="' + githubUrl + '">' +
-    '<span class="email">' +
-    '<i class="zmdi zmdi-github"></i> charlottegiseleweil' +
-    '</span>' +
-    '</a>' +
     '</div>' +
     '<div class="divider"></div>' +
     '</li>');

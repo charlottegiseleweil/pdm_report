@@ -9,6 +9,18 @@ header, main, footer {
   }
 }
 
+@media print {    
+	header, main, footer {
+  	padding-left: 0;
+  }
+	.side-nav {
+		display: none;
+	}
+	.container {
+		width: 100%;
+	}
+}
+
 .side-nav {
   width: 320px;
   border-top: none;
@@ -49,8 +61,8 @@ main h4 { font-size: 22px; }
 
 /* Make avatar better */
 .side-nav img.logo, .side-nav img.circle.avatar {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   margin-right: 16px;
 }
 
@@ -79,6 +91,7 @@ ul.side-nav li a.title {
   font-size: 16px;
 }
 
+/* Main title */
 h1.title.first {
   font-size: 44px;
   margin-bottom: 0;
@@ -90,12 +103,20 @@ h1.title.second {
   padding-top: 0;
 }
 
-.userView i {
-  margin-right: 8px;
-  font-size: 1em;
-  vertical-align: middle;
+/* Contaxt icons in the sidebar */
+.userView a.inline-icon {
+  display: inline-block;
+  height: auto;
+  padding: 0;
+  margin-left: 16px;
 }
 
-.userView .email {
-  padding-bottom: 0;
+.userView a.inline-icon i {
+  font-size: 16px;
+  vertical-align: text-bottom;
+}
+
+/* Fix margin of section numbers */
+.toc-section-number {
+  margin-right: 16px;
 }
