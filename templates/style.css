@@ -5,6 +5,7 @@ header, main, footer {
 
 .side-nav {
   width: 320px;
+  border-top: none;
 }
 
 /* Containers a bit larger than default 70% */
