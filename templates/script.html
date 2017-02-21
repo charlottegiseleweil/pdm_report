@@ -7,8 +7,8 @@ toc.addClass("side-nav").addClass("fixed");
 // Add link to live demo
 toc.prepend('')
 
-// Truncate long titles in side-nav
-$('#TOC li a').addClass("truncate");
+// Truncate long titles in side-nav & cool wave effect
+$('#TOC li a').addClass("truncate").addClass('waves-effect');
 
 // Make elements collapsible in side nav
 $('#TOC ul').addClass("collapsible").addClass("collapsible-accordion");
@@ -34,6 +34,15 @@ toc.prepend('<li>' +
     '<i class="material-icons">play_arrow</i> Live demo' +
     '</a>' +
     '<div class="bottom divider"></div>' +
+    '</li>');
+
+// Link to pdf document
+toc.append(
+    '<li>' + 
+    '<div class="divider"></div>' +
+    '<a href="thesis.pdf" target="_blank">' +
+    '<i class="material-icons">picture_as_pdf</i> PDF version' +
+    '</a>' +
     '</li>');
 
 // Make all external links open in new tab
