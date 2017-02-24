@@ -70,13 +70,15 @@ elif [ $batch_spellcheck = true ]; then
   mdspell --report --ignore-acronyms --en-us src/*.md
 fi
 
-# Concatenate all files with space in between
-for f in src/*.md; do 
-  cat "${f}"; echo; echo;
-done > build/thesis_raw.md;
 
 # Generate documents for all output formats 
 for idx in "${!outputs[@]}"; do
+  
+  # Concatenate all files with space in between
+  for f in src/*.md; do 
+    cat "${f}"; echo; echo;
+  done > build/thesis_raw.md;
+  
   outfile="build/thesis.${outputs[$idx]}"
   format="${formats[$idx]}"
   if [ ! -z $format ]; then
