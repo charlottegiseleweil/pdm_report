@@ -127,6 +127,7 @@ for idx in "${!outputs[@]}"; do
     --number-sections \
     --default-image-extension=pdf \
     --toc \
+    --normalize \
     --highlight-style=tango \
     --filter pandoc-fignos \
     --filter pandoc-citeproc \
