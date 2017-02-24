@@ -37,8 +37,6 @@ When displaying large datasets, combining considerations about different scales 
 -  **fisheye view**, originally called *Focus + Context* technique [@Lamping], [@Furnas_fisheye] uses a continuous magnification function (that also transforms the boundaries). Tough this term has been used with different definitions, it is broadly used and very intuitive.
 - there are other options among which can be mentioned the **perspective wall** [@Mackinlay], that simulates the perspective effect or the **hyperbolic tree** that extends the fisheye view using hyperbolic plane mapped onto a circular display region [@Lamping]. 
 
-*TODO: Example figure?*
-
 ###Interaction techniques {#sec:interactivefeatures}A few interactive features of interest include [@wilhelm1995software]:
 
 -	**Scaling** which is simply zooming in and out but is powerful in the sense that it allows the user to both global view of the whole dataset and precise details on smaller fluctuations, therefore removing the need for a distorded view. Some scaling options also combine distortion techniques (see section \ref{sec:disto}) to both zoom in and keep the background context in the surroundings.-	**Identification** (also called pointing) allows access to detailed information of a subset of the graph by clicking on it.-	**Generalized selection** extracts every point that is similar to the user’s selection for an overview of subsets. The similarity rules are defined according to the case.-	**Brushing** consists in selecting a subset of data, that is then highlighted. Also, brushing can be used to remove unwanted data, when a specific threshold is required [@Kollat_Video]. Brushing can be done with a slider, or with direct selection on the plot [@xmdvtool].
@@ -88,11 +86,6 @@ The careful choice of the color scheme is not be neglected [@Kelleher]. Sequenti
 The success of an interactive display results from the appropriate interface complexity for a certain user motivation [@Roth]. In the field of interactive maps, [@Roth] examines when cartographic interaction positively supports work.Interactivity is not always beneficial to the graphs, but relevant for users who wish to customize the communicated information to their particular interests, also relevant to overcome some display problematics. Another point that interactivity helps achieving is enhancing the user's involvment with the map, by offering a sense of control over the experience.
 
 ## Overview of visualization tools
-
-Todo: http://geoawesomeness.com/top-19-online-geovisualization-tools-apis-libraries-beautiful-maps/
-"geo-visualization platforms :Mapbox, Carto... Leaflet, Mapzen API (Mapzen is a cool mapping company working on some amazing visual projects. It offers some unique and open mapping tools for developers), Maps4news... 
-In fact many of the top visualizations done in aforementioned platforms also use D3 elements"
-http://preview.weather.gov/edd/
 
 A few important things to consider when chosing a tool are the features supported (user interactivity, spatial data, 3D, web), and also the price, speed, scalability, robustness, customizability and user adoption. Then, it is often a trade-off between customizability and ease of use. The softwares are usually easier to manipulate, and the results are aesthetic, but if the user is willing to code, custom scripts offer the most flexibility in design, and various charting libraries allow to tailor the figure to specific needs. This section does not pretend to be exhaustive but attempts to give an overview of the available data visualization tools, as of 2016. Emphasis will be given on spatial data as it constitutes an essential part of natural capital informations.
 

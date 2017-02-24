@@ -154,15 +154,15 @@ The text translates to: *The numbers of men present are represented by the width
 Two types of choropleth maps are very often used: 
 
 ####Portfolios {#sec:portfolios} 
-Landcover maps, also called LULC for land use/land cover, represent the full landscape with its corresponding land uses. A portfolio is a landcover map which correspond to a subset of the full landscape: the set of chosen activities for each SDU.
-*Example TODO*
+Landcover maps, also called LULC for land use/land cover, represent the full landscape with its corresponding land uses. A portfolio is a landcover map which correspond to a subset of the full landscape: the set of chosen activities for each SDU. 
 When displaying portfolios, highest care must be given to symbology, see recommendations in section \ref{sec:colors}. Landcover colors chemes can be very tricky, depending on the number of classes and the arrangement. A good example is given by figure \ref{fig:lulc}b.
 
 ![Portofolio and landcover maps: (a) a portfolio map of the Nathpa Jhakri catchment [@Sadrian] and (b) a many-classes LULC colorscheme (Stacie Wolny)](../images/portfolio_lulc.png){#fig:lulc}
 
 ####Objective score maps {#sec:objs}
-Objective score maps are choropleths displaying a continuous variable: the objective score for each SDU. These are widely used to visualized ES model outputs. Often, the objective score maps of different ES objectives are combined in a single one summarizing the overall scores. When doing so, it is essential to normalize the scores.
-*Example TODO*
+Objective score maps are choropleths displaying a continuous variable: the objective score for each SDU. These are widely used to visualized ES model outputs. Often, the objective score maps of different ES objectives are combined in a single one summarizing the overall scores (e.g in the combined figures in appendice \ref{fig:hawaii4}). 
+
+Objective score maps can display either absolute scores, or the change in score relative to a baseline, in which case they are also refered to as marginal value maps. Examples of marginal objective score maps can be found in appendices \ref{fig:hawaii2} and \ref{fig:hawaii3}.
 
 ###Spatial visualization of tradeoffs {#sec:hotspot}
 In the context of optimization, ES analysts often have to figure out where, on a landscape, do activities produce co-benefits, and where are they in conflict ? That is: where does an intervention move multiple ES metrics (objectives) in the same direction i.e where are the *win-wins*? And on the other hand, where in space is a given intervention or scenario contribute to some metrics at the expense of others? 
@@ -337,15 +337,13 @@ Each map can be summarized with a value aggregating cell's values. For example, 
 
 #### Statistical tests to summarize variance ? *(todo - unsure - made-up - like average of difference between corresponding pixels, normalized ?)* {.unnumbered}
 Disagreement between two maps can be summarized by their variance, i.e the normalized average of corresponding cell's squared difference: $$\sum_{cells} (v_1 - v_2)^2$$ where $v_1, v_2$ would be the same cell's value in $Map_1, Map_2$, possibly weighted by the relative importance of the cell (for example, the population if displaying results related to beneficiaries).
-*(bpb - todo - unsure - made-up -couldn't find literature)*
-Least squares: A conventional approach would be the least square on the plotted points (Pontius, 2008) 
+*(bpb - todo - unsure - made-up -couldn't find literature)*.
+This is just an idea, however, references to a least squares method have been found in litterature, refering to it as a conventional approach, which would be to compute the least square on the plotted points (Pontius, 2008). 
 
-#### Spatial correlation coefficients {.unnumbered}
+#### Correlation coefficients {.unnumbered}
 Statistical indices like the Bivariate Moran's I or LISA (Local indicators of spatial association) aim to measure spatial autocorrelation between 2 variables in a same location [@akbar], which can correspond to two runs of the same variable. The field of spatial statistics digs more into these metrics.
 
-#### Correlation coefficient *relevant??* {.unnumbered}
-
-* Pearson linear correlation: $$\rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigma _{Y}}}$$ It ranges from -1 (negative linar correlation) to +1 (positive linear correlation), and 0 corresponds to maps not correlated, or its variant, the reflective correlation.
+Other non-spatial correlation coefficients also exist. An example is the **Pearson linear correlation**: $$\rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigma _{Y}}}$$ It ranges from -1 (negative linar correlation) to +1 (positive linear correlation), and 0 corresponds to maps not correlated, or its variant, the reflective correlation.
 
 #### Between many maps {#sec:comp_stat_cont_many}
 Besides discretizing the data and then using methods from \ref{sec:comp_stat_cat_many}, the solution would be an aggregation of aggregated map values. As mentioned above, each map can be summarized with a value aggregating cell's values. For example, for an objective score map, the overall objective score of the map is the sum of the pixel's scores. A second aggregation can follow: for example, the mean of these overall objective scores will give an indication of average total objective score of scenarios. (This could be interesting when comparing different subsets of runs). (bpb: is this super unclear? refers to agreement value plotted in webapp!)
@@ -420,7 +418,7 @@ The techniques described above were mainly developed for continuous data, but ca
 
 Sensitivity analysis aims to understand the influence of the inputs, and their uncertainty, on the outputs and their uncertainties of a model [@Pianosi2016]. To visualize the input/output relationship, a common and direct way is a **scatterplot** (for each input parameter, with input parameter considered on x-axis and the output on y-axis), the relationship is explicitly revealed, especially in the case of strctured dependencies. This corresponds to the so-called O(F)AT (one factor at a time) method [@hamby], e.g [@murphy04]. However, with a high number of inputs, scatterplots can become cumbersome. Then, partial derivative of the output by one factor can be displayed to assess the impact of small perturbations; however it explores only locally the input space around a baseline. Other metrics such as the percentage of output change per percentage of input change, or sensitivity indices are also used. More details can be found in [@hamby]. 
 
-**Line plots** express sensitivity analysis by showing the impact of change in an input parameter the output variable: the most horizontal the line is, the less sensitivity to the considered parameter.**Spiderplots**[^5353back] are an upgrade of the line plot, to combine several factors. They display the total impact of factors, and highlight their relative importance. Additionally they include limit values and impact on output of each input, and also the amount of change in input leading to breakeven point. However, the amount of factors displayed is limited (to about 7 according to @tornadospider). These are 2D plots, with percentage of change from baseline on x-axis, and output values on y-axis, and several lines corresponding to each input.
+**Line plots** express sensitivity analysis by showing the impact of change in an input parameter the output variable: the most horizontal the line is, the less sensitivity to the considered parameter. **Spiderplots**[^5353back] are an upgrade of the line plot, to combine several factors. They display the total impact of factors, and highlight their relative importance. Additionally they include limit values and impact on output of each input, and also the amount of change in input leading to breakeven point. However, the amount of factors displayed is limited (to about 7 according to @tornadospider). These are 2D plots, with percentage of change from baseline on x-axis, and output values on y-axis, and several lines corresponding to each input.
 
 Variance decomposition is another approach to sensitivity analysis; then **pie charts** displaying variance partitions are a good alternative [@ABMleelig]. By opposition to trying to display the impact of each inputs, variance-based method focus on finding the most influencing factors. The output variance is decomposed into parts corresponding to the contribution of each input, therefore displaying its impact on total variance [@Homma]. Pie charts are widely used mostly because they are easy to build and understand. They are effective for small datasets (less than 6 segments of notably different sizes), and if segments are ordered according to size [@piepiepie]. Because only effective on small datasets, and inadequate for comparisons (between several pie charts), partisans of high density space-effective displays, like Tufte, argue against these charts. 
 
@@ -500,6 +498,14 @@ Analysis of spatial data with R:
 - [Illustration of the *ggmap* package](https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
 - [Introduction to the *raster* package](https://cran.r-project.org/web/packages/raster/vignettes/Raster.pdf)
 - [Introduction to the *RasterVis* package, built on top of *raster* package](https://oscarperpinan.github.io/rastervis/)
+
+Other geovisualization platforms:
+
+- [A list of 19 online geovisualization tools](http://geoawesomeness.com/top-19-online-geovisualization-tools-apis-libraries-beautiful-maps/)
+- [Mapbox (API and libraries)](https://www.mapbox.com/)
+- [Carto (web platform)](https://carto.com/)
+- [Leaflet (JavaScript library)](http://leafletjs.com/)
+- [Mapzen (API)](https://mapzen.com/)
 
 Sensitivity analysis:
 
