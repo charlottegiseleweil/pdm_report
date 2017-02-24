@@ -58,7 +58,7 @@ Building on the knowledge from the previous chapters, and attempting to partiall
 
 ##Master thesis workflow 
 
-\begin{table}[]
+\begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|}
 \hline
