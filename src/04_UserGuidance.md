@@ -520,7 +520,7 @@ Layout and design:
 
 ### Summary table for specific display needs {#sec:table}
 
-\begin{table}[]
+\begin{table}[H]
 \centering
 \begin{tabular}{| m{0.12\textwidth} | m{0.45\textwidth}| m{0.43\textwidth} |}
 \hline
