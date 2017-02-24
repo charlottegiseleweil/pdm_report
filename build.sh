@@ -18,9 +18,11 @@ latex_includes=(
 );
 
 html_includes=(
-  '--include-in-header=templates/header.html'
+  '--include-in-header=templates/css-imports.html'
+  '--include-in-header=templates/style.html'
   '--include-before-body=templates/body-open.html'
   '--include-after-body=templates/body-close.html'
+  '--include-after-body=templates/js-imports.html'
   '--include-after-body=templates/script.html'
   '--latexmathml'
 );
