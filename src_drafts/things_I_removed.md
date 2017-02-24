@@ -24,3 +24,6 @@ Addl figure
 ![(b) Change map displaying the amount of additional sediment export (in percentage) comparing a future scenario with the current baseline one [@Myanmar16]](../images/changemap.png){#fig:my123 width=35%} 
 ![(c)On a static display, @polasky's strategy consists in displaying only the extreme points of the trade-off curve](../images/polasky.png){#fig:polasky width=50%} 
 ![(d)Change in services for all scenarios and iterations relative to current management @Arkema2](../images/coastal4.png){fig:barplots width=60%)
+
+
+Furthermore, valuating natural capital is not a new concept; 20 years ago, @costanza1997value estimated the value of the entire biosphere to be around 33 trillion dollars per year (considered a minimum estimate, with significant uncertainty associated). This is the magnitude of two times the US GNP. 

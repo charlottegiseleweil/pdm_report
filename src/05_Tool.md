@@ -1,10 +1,10 @@
 # An innovative tool to display natural capital results {#sec:TheTool}
 
-## Motivation and analysis of the need
+## Motivation and analysis of the need {#sec:survey_results}
 
 While exploring the design strategies to display natural capital assessments results, in the previous chapter, several areas of improvements and gaps were brought to light. Ecosystem services analysts also stated their display strategies needs in the context of the conducted survey. As detailed in \ref{sec:survey}, the respondents assessed for each listed display task: its usefulness in general, and the need for an improved implementation with a score from 0 to 5; 5 meaning very useful.
 
-#### Survey results: quantitative prioritization of display needs 
+### Survey results: quantitative prioritization of display needs 
 Method (A): A rough assessment of the most important needs consists in selecting the needs that received **average scores strictly above 4, both in terms of general usefulness and need for implementation**. The selection results in 8 display needs, belonging to 5 of the 6 different categories. 
 
 Method (B): Another approach is to define the most important needs as the ones which received **the most 5s in terms of need for implementation**, i.e the display needs for which many analysts really need a new solution. Selecting the top 10% of the display needs, ranked by the number of 5s received results in 9 display needs, among which 7 overlapped with the previous selection. 
@@ -19,7 +19,7 @@ The 7 display needs selected through both the top average scores (A), and the ma
 6. Characterize uncertainty in spatial model output - derived from multiple runs
 7. Show/quantify beneficiaries impact by subgroups
 
-#### Survey results: Qualitative analysis of comments and interviews 
+### Survey results: Qualitative analysis of comments and interviews 
 Additionally to the scores, respondents were allowed to provide comments, and interviews were conducted on specific use cases, which resulted in important information.
 \
 

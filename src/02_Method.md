@@ -15,18 +15,18 @@ Meanwhile, in computational data visualization, the resulting display highly dep
 ##Identification and prioritization of display needs {#sec:survey}
 In order to identify the communication needs of ecosystem services analysts and to understand how well existing needs are met, a survey was crafted, in collaboration with a small team of analysts.
 
-First, based on typical example cases and interviews of professionals in the field of ecosystem services, based at the Natural Capital Project, some display needs were identified. Then this list was refined and completed thanks to the inputs of the broader team. Next, these needs were gathered and organized in a survey document sent out to a broader community of professionals in the field, including scientists, ecologists, hydrologist, economists, analysts and researchers working within the Natural Capital Project. The survey questions can be found in Annex (*{section number} TODO bpb: survey here or in Annex?*). A total of 14 answers were collected, where participants assessed, for each identified need, its usefulness, but also commented on their current implementation and the usefulness of improving the current displays. The two tiers were separated as such: one just to assess “demand” or importance of different types of visualization needs (columns D-E-F in green). The second tier gathered details of current approaches for meeting these needs (column G-H-I), to help better assess gaps that can be filled.
+First, based on typical example cases and interviews of professionals in the field of ecosystem services, based at the Natural Capital Project, some display needs were identified. Then this list was refined and completed thanks to the inputs of the broader team. Next, these needs were gathered and organized in a survey document sent out to a broader community of professionals in the field, including scientists, ecologists, hydrologist, economists, analysts and researchers working within the Natural Capital Project. The survey questions can be found in figure \ref{fig:survey}. A total of 14 answers were collected, where participants assessed, for each identified need, its usefulness, but also commented on their current implementation and the usefulness of improving the current displays. The two tiers were separated as such: one just to assess “demand” or importance of different types of visualization needs (columns D-E-F in green). The second tier gathered details of current approaches for meeting these needs (column G-H-I), to help better assess gaps that can be filled.
 
 The survey was roughly grouped according to 6 thematic issues (eg, portfolio or scenario descriptions, ES model results, beneficiaries), recognizing in practice there are not clear boundaries. 30 different display tasks were listed; they were phrased purposively avoiding specifying the actual visualization in order to elicit needs and current approaches in an unbiased way. It was circulated as a google sheet so that respondents may add rows  for needs that would have not been pre-identified.
 
-The 14 respondents were all professionals in the field of ecosystem services, working in different domains ranging from marine, to FWAT (*bpb: need all these details?*). They rated the usefulness of each display tasks[^335back] both in terms of (1) the need for this type of display in general and (2) the need for an improved implementation to these displays. The former will serve as a basis to point relevant needs for the user guidance to displaying natural capital information (Chapter \ref{sec:UserGuide}). The latter will allow to identify the areas where better implementations and solutions are required, prioritize between the needs, and will guide the development of a display tool (Chapter \ref{sec:TheTool}). 
+The 14 respondents were all professionals in the field of ecosystem services, engaging in both academic and applied work. They rated the usefulness of each display tasks[^335back] both in terms of (1) the need for this type of display in general and (2) the need for an improved implementation to these displays. The former will serve as a basis to point relevant needs for the user guidance to displaying natural capital information (Chapter \ref{sec:UserGuide}). The latter will allow to identify the areas where better implementations and solutions are required, prioritize between the needs, and will guide the development of a display tool (Chapter \ref{sec:TheTool}). 
 
 [^335back]: On a scale from 0 to 5, with 0 meaning totally useless and 5 totally useful. 
 [^66809back]: link to the survey !!
 
  ![Extract of the survey: Gathering NatCappers' visualizations needs and tools](../images/survey.png){#fig:survey width=100%}
 
-##Example Cases
+##Use Cases
 The present work have found applications, and based its trials on several on-going projects at the Natural Capital Project. 
 
 ###Prioritization of native forest restoration in Pu‘u Wa‘awa‘a, Hawai‘i
@@ -36,10 +36,9 @@ The study aimed to develop a method to analyze the tradeoffs relative to effecti
  
 In the context of this work, this project's display tasks were (1) to display the land cover maps corresponding to each scenario, (2) to assess the impact of the proposed restoration scenarios for both objectives of maximazing groundwater and minimizing landscape flammability, and (3) to show spatial prioritization for each objective and the two combined, and the associated costs. 
 
-*bpb: is it weird that I bring this up and don't detail the actual resutls/figures for Hawaii later ? I could, but I don't really see where, except by putting my figures as examples for the toolbox but that doesn't sound super humble, and I don't think they're the best...*
+The static visualizations aimed to inform about the impact of restoration (land cover scenarios) on two ES objectives (water, flammability) both independently and then simultaneously while considering several climate scenarios. The resulting constructed maps can be found in appendices \ref{fig:hawaii1}, \ref{fig:hawaii2}, \ref{fig:hawaii3}, \ref{fig:hawaii4}.
 
-###The Upper Tana Nairobi Water Fund {#sec:tanacase}#### *Improving Water for Millions in Kenya* {.unnumbered}
-The Tana River supplies 95% of the water for a total of 9 million people living in Nairobi and surroundings, feeds one of the country’s most important agricultural areas and provides half of the country’s hydropower output. In the past decades, many forests and wetlands have been converted to agriculture, therefore decreasing the natural landscape capacity to store runoff water and retain sediments and soil in place. Today, one of the outcome of increased sedimentation is that 60% of Nairobi’s residents do not have access to a reliable water supply. To solve this problem, the Upper Tana-Nairobi Water Fund was created. The Natural Capital Project analyses the landscape to find out where and what would be the most efficient actions to undertake.
+###The Upper Tana Nairobi Water Fund {#sec:tanacase}#### *Improving Water for Millions in Kenya* {.unnumbered}The Tana River supplies 95% of the water for a total of 9 million people living in Nairobi and surroundings, feeds one of the country’s most important agricultural areas and provides half of the country’s hydropower output. In the past decades, many forests and wetlands have been converted to agriculture, therefore decreasing the natural landscape capacity to store runoff water and retain sediments and soil in place. Today, one of the outcome of increased sedimentation is that 60% of Nairobi’s residents do not have access to a reliable water supply. To solve this problem, the Upper Tana-Nairobi Water Fund was created. The Natural Capital Project analyses the landscape to find out where and what would be the most efficient actions to undertake.
 In the context of this work, this project's display tasks were to compare scenarios resulting from a mutli-objective optimization, accounting for uncertainty. 
 ##Display toolbox
 ### Structure
@@ -49,26 +48,13 @@ The document aimed to be explored and skimmed through, with fast referencing (dy
 ### Suggested solutions {#sec:criterion}
 Strong of the knowledge from the literature review, and the current state of existing visualizations, display solutions were suggested. For the tasks where no satisfying solutions could be found, new ones were developed, or adapted from solutions existing in neighboring fields in the literature. 
 
-It is a rather subjective task to assess the quality of suggested solutions. To increase objectivity, several criteria were considered, specifically the imperatives for visualization, defined by [@stephens2012] in the context of ensemble predicitons (figure \ref{fig:crit1}), and the criteria of clarity and completeness detailed by @Allen1, in Annex \ref{fig:crit2}.
+It is a rather subjective task to assess the quality of suggested solutions. To increase objectivity, several criteria were considered, specifically the imperatives for visualization, defined by [@stephens2012] in the context of ensemble predicitons (figure \ref{fig:crit1}), and the criteria of clarity and completeness detailed by @Allen1, in appendix \ref{fig:crit2}.
 
 ![Imperatives for visualization, defined by [@stephens2012] in the context of ensemble predicitons:  richness, saliency, and robustness.](../images/criterias.png){#fig:crit1 width=40%}
 
-![When Evaluating a Figure for Clarity and Completeness, Consider the Following Questions[@Allen1]](../images/assess_table.png){#fig:crit2 width=80%} *will go in annex? bpb?*
-
-### Sample use case: Prioritization of native forest restoration in Pu‘u Wa‘awa‘a, Hawai‘i (*remove?*)
-*bpb: Is this really needed?* (todo if so)
-
-#### Defining the needs
-In terms of static visualizations. The main goal of the paper  is to look at the impact of restoration (land cover scenarios) on the ES objectives (water, flammability) both independently and then simultaneously with climate scenarios going on in the background.
 
 ##Development of a web application
 Building on the knowledge from the previous chapters, and attempting to partially fill the gaps identified where improved visualizations would be useful, a prototype of a web application was developped. This was done in the context of the multi-objective optimization for the Tana waterfund (detailed in \ref{sec:tanacase}). Details about the implementation method and choices can be found in chapter \ref{sec:TheTool}.
-\
-\
-
-
-*Methodolgy to go in chapter 5, introducing the webapp, or here? (bpb?) *
-*Maybe just summarize it here?*
 
 ##Master thesis workflow 
 
@@ -80,11 +66,12 @@ Building on the knowledge from the previous chapters, and attempting to partiall
 1-3 & Project definition and scoping & Natural capital, InVEST \\ \hline
 4 & Analysis of need & Surveying \\ \hline
 5-10 & Literature review & Data visualization \\ \hline
-11-12 & Sample hawaii & GIS (QGIS) \\ \hline
+11-12 & Figures generation (use case: Hawaii) & GIS (QGIS) \\ \hline
 13-17 & Guidance document redaction & Markdown, LaTEX, Github \\ \hline
 18-19 & Webapp design & - \\ \hline
-20-25 & Webapp implementation & \begin{tabular}[c]{@{}l@{}}Html, CSS, Javascript (D3.js)\\ Python pandas library\end{tabular} \\ \hline
+20-24 & Webapp implementation & \begin{tabular}[c]{@{}l@{}}Html, CSS, Javascript (D3.js)\\ Python pandas library\end{tabular} \\ \hline
+25 & Report redaction &  \\ \hline
 \end{tabular}
+\caption{Rough estimate of time allocation}
+\label{my-label}
 \end{table}
-
-(*bpb: needed?*)
