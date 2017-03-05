@@ -67,4 +67,25 @@ toc.prepend('<li>' +
 
 // Make all external links open in new tab
 $("main a[href^='http']").attr("target", "_blank");
+
+// Add all reference links
+$(".ref").each((i, x) => {
+  const id = x.innerText;
+  const refDiv = $('#' + id.replace(':', '\\:'));
+  let text = '???';
+  if (id.startsWith('sec:')) {
+    text = refDiv.find('.header-section-number').text();
+  } else if (id.startsWith('fig:')) {
+    const alt = refDiv.attr('alt');
+    if (alt) {
+      text = alt.split(':')[0].substring(7);
+    } else {
+      console.log('Could not find text for figure: ', id);
+    }
+  } else {
+    console.log('Could not find text for reference: ', id);
+  }
+  $(x).html('<a href=#'+ id + '>' + text + '</a>');
+});
+
 </script>

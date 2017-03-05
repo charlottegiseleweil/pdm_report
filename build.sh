@@ -101,6 +101,11 @@ for idx in "${!outputs[@]}"; do
       sed -e "s|../images|images|g" \
       > build/thesis.md;
     mv build/thesis.md build/thesis_raw.md;
+  elif [ "$format" = "-t html" ]; then 
+    cat build/thesis_raw.md |\
+      sed -e 's|\\ref{\([^}]*\)}|<span class="ref">\1</span>|g' \
+      > build/thesis.md;
+    mv build/thesis.md build/thesis_raw.md;
   fi
 
   # Render the comments correctly
