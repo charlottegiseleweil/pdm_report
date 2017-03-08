@@ -70,13 +70,15 @@ elif [ $batch_spellcheck = true ]; then
   mdspell --report --ignore-acronyms --en-us src/*.md
 fi
 
-# Concatenate all files with space in between
-for f in src/*.md; do 
-  cat "${f}"; echo; echo;
-done > build/thesis_raw.md;
 
 # Generate documents for all output formats 
 for idx in "${!outputs[@]}"; do
+  
+  # Concatenate all files with space in between
+  for f in src/*.md; do 
+    cat "${f}"; echo; echo;
+  done > build/thesis_raw.md;
+  
   outfile="build/thesis.${outputs[$idx]}"
   format="${formats[$idx]}"
   if [ ! -z $format ]; then
@@ -97,6 +99,11 @@ for idx in "${!outputs[@]}"; do
     cat build/thesis_raw.md |\
       sed -e "s|/g/png|/g/pdf|g" |\
       sed -e "s|../images|images|g" \
+      > build/thesis.md;
+    mv build/thesis.md build/thesis_raw.md;
+  elif [ "$format" = "-t html" ]; then 
+    cat build/thesis_raw.md |\
+      sed -e 's|\\ref{\([^}]*\)}|<span class="ref">\1</span>|g' \
       > build/thesis.md;
     mv build/thesis.md build/thesis_raw.md;
   fi
