@@ -1,3 +1,4 @@
+*take google doc version!*
 #Method
 
 > *"Improving communication in the IPCC reports is by no means an easy task"\

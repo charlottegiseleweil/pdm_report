@@ -1,6 +1,6 @@
 # Conclusion & Next Steps
 
-*Chapter 5 still draft to do !*
+*Chapter 6 still draft to do !*
 
 ## Summary
 *Needed?*
@@ -14,19 +14,12 @@ Similarly to @Englund, it is found to be difficult to generalize one best method
 Remain some open questions and areas of improvements were identified. The question of the scale, **the effect of the resolution** chosen on the results can be further explored *ref?*. Additionnally, the survey noted growing interest in the topic of **beneficiaries**. Not only quantifying the people benefiting from an intervention, but more precisely adding nuance in demographics or social metrics to the analysis, classify by subgroups (e.g which fraction of service benefits accrue to vulnerable populations?) and/or contrast beneficiary distribution in space with service distribution in space. Also, displaying the **impact of intervention on a specific ES metric** could be further investigated. The usual approach looks at the overall change in ES, failing to detail how each intervention impacts each ES metric (i.e where in space does a given intervention or scenario improve or worsen a specific ES metric? e.g Where does an activity contribute to objectives ?)
 
 ##Concluding remarks about developped web application prototype and next steps
-**(Todo)** As noted in section \ref{sec:fidback}, feedback about the tool prototype underlined its engaging aspect. An overview of next steps is detailed in part \ref{sec:nextstepswebapp}. An important choice that would need to be considered in moving this project further is about the intended audience. Currently, the tool is both applicable for communication purposes to a broader audiences, and to support data analysis. Two different versions (one simplified for communication 
-
-
-Future direction can focus on making the tool generic, 
-
-Focus on the communication aspect of the tool
-OR
-the Analysis aspect .
-
+**(Todo)** As noted in section \ref{sec:fidback}, feedback about the tool prototype underlined its engaging aspect. An overview of next steps is detailed in part \ref{sec:nextstepswebapp}. An important choice that would need to be considered in moving this project further is about the intended audience. Currently, the tool is both applicable for communication purposes to a broader audiences, and to support data analysis. Two different versions (one simplified for communication, and a more detailed and rigorous for analysis) could be envisioned. Future directions could decide to focus on one or the other intended applications. The analysis tool would need tobe made more generic, while the communciation tool would call for deisng and easthetical considerations. 
+Considerations about sever architecture (hosting the data on a seperate server), and raster on the fly computations will also have to be further explored.
 
 ## Suggestions for the Natural Capital Project
 
---> Showcase successful existing visualizations (e.g the work of Greg Verutes), for example on the website within the *Stories* tab; as these help understanding the scope of natural capital assessments and projects. 
+* Showcase successful existing visualizations (e.g the work of Greg Verutes), for example on the website within the *stories* tab; as these help understanding the scope of natural capital assessments and projects. 
 
 ##Natural capital sustainable management: great potential for impact
 
@@ -44,7 +37,5 @@ From this constat, it seems to the author that linking the right expertise would
 
 Several initiatives are going in this direction, Credit Suisse for example, expressed their long-term intent of creating a conservation finance asset class (@CS and @McKinsey). It has been proven to be possible to deliver great conservation impacts while generating returns for investors ((*good reference about that by any chance bpb?*) and @McKinsey). Furthermore, @McKinsey states that *"There would be sufficient financial capital available to meet conservation investment needs if the main investor segments globally allocated 1% of their new and reinvested capital to conservation."*
 
-(more here... todo?)
-
-## Ending note: engaging a broader audience into major decisions
+## Engaging a broader audience into major decisions
 An effective visualization of natural capital assessment results must simplifies its complexity to be understandable, while staying rigorous. It would communicates its point in an engaging way, allowing more actors to get involved in natural capital sustainable management. Many decisions and investments are today left apart, because the actors and investors do not understand the complex problematic, these visualization decision support tools really aims to solve this problem. By involving a broader audience into major decisions, they are a democracy tool ! (*okay maybe getting too much there !*) 
