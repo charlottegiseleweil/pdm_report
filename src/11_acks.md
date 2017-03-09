@@ -1,8 +1,8 @@
 # Acknowledgements {.unnumbered}
 
-Grant - Zeno Karl Schindler Foundation 
-\
-{There will be something here}
+First and foremost, I would like to warmly thank my professors Dr. Benjamin Bryant and Pr. Satoshi Takahama for their trusting supervision, along with François Chabbey who informally supervised the web application development. 
+
+I hereby would like to express my gratitude to the Zeno Karl Schindler Foundation for their generosity, along with EPFL and Stanford University, for offering me the chance to learn and grow in an outstanding framework. I am very grateful to the welcoming, joyful, multidisciplinary team of NatCappers, among which Perrine, Ben, Peter, Becky, Rich, Stacie, Ginger, Adrian, Leah, James, Justin, Gregg, Lisa, Dave, Ryan and Rob’s inputs were particularly useful. I appreciated Rich and James always pretending my questions were not silly, and answering them even when they were, and Ben also teaching me English idioms and pronunciation along the way.As this report marks the end of my engineering studies, I would like to take this opportunity to thank the ones who made it possible. I am very grateful to my family, especially my parents, inspiring me in their respective ways and always so supportive, my brother, for shaping me to become who I am, and my sister, for being who she is. I would like to warmly thank Evelyne, Louis and Rob for welcoming me and making me feel at home in the Bay Area as well as Ithakans, for their everyday support and love, my incredibly skilled community and particularly Isaac, Ian, Lena, Karissa, Laura, Rupa thanks to whom I use version controls efficiently and Damien who convinced me to use his template and then patiently taught me how to. I am extremely grateful to be surrounded by such inspiring people. I am also thinking about the amazing ones I am so lucky to call friends: Hélène, Clawdia, Elvis, Bigo, Thibaud, Clara, Melon, Cécile, Mailys, Juliette, Mélanie, Benji who initiated me to Python among other things, Judith and Alice who I admire a lot, and of course, my dear Tom.Thank you to everyone who corrected my English, took the time to take interest in this work, read this whole page of acknowledgments and in general,  to everyone who pushed me out of my comfort zone and helped me become a better person.
 
 # Appendices {.unnumbered}
 
@@ -31,19 +31,8 @@ Grant - Zeno Karl Schindler Foundation
 
 \fi
 
-![Extract of the survey: Gathering NatCappers' visualizations needs and tools](../images/survey.png){#fig:survey width=100%}
 
-![When Evaluating a Figure for Clarity and Completeness, Consider the Following Questions[@Allen1]](../images/assess_table.png){#fig:crit2 width=80%} 
-
-![Land cover in Pu‘u Wa‘awa‘a under different restoration and climate scenarios. The purple contours on the current land cover map outline the enclosure areas corresponding to the partial restoration scenario. The maps on top correspond to the evolution of land cover, under the current climate for the partial and full restoration scenarios. The maps underneath correspond to the evolution of the land cover, under the RCP 8.5 future climate projection for the partial and full restoration scenarios. (figure by author in @PWW)](../images/Fig1.png){#fig:hawaii1 width=80%}
-
-![Impact of restoration on groundwater recharge in Pu‘u Wa‘awa‘a. The green contours outline the enclosure areas corresponding to the partial restoration scenario in which only these regions undergo some changes. Blue corresponds to an increase in groundwater recharge due to restoration, and red corresponds to a decrease. (figure by author in @PWW)](../images/Fig2.png){#fig:hawaii2 width=80%}
-
-![Impact of restoration on landscape flammability in Pu‘u Wa‘awa‘a. The green contours outline the enclosure areas corresponding to the partial restoration scenario. Yellow corresponds to a decrease in landscape flammability due to restoration, and red means no change. (figure by author in @PWW)](../images/Fig3.png){#fig:hawaii3 width=80%}
-
-![Spatial prioritization and restoration costs in in Pu‘u Wa‘awa‘a. For each objective and both combined. Rank 1 pixels correspond to the highest priority restoration areas. Costs are cumulative, such that if Rank n is restored, Rank n-1 was restored as well. The green contours outline the enclosure areas corresponding to the partial restoration scenario. (figure by author in @PWW)](../images/Fig4.png){#fig:hawaii4 width=80%}
-
-#### Workflow to generate the dataset {.unnumbered} {#sec:workfloww}
+#### Workflow to generate the dataset {.unnumbered}
 *Courtesy Benjamin Bryant*
 
 As implemented in the context of the development of the visualization tool (see chapter \ref{sec:TheTool}), the spatial optimization consists of a non-trivial series of steps and intermediate products. The basic workflow to generate a single trade-off frontier is as follows:
@@ -58,11 +47,27 @@ As implemented in the context of the development of the visualization tool (see 
 * Use a greedy search to select the highest cost-effectiveness pixels until the budget constraint can no longer be satisfied. The set of chosen pixels defines a portfolio.
 * Extract the base value and change in each objective score for each pixel by indexing the portfolio against the static marginal value maps. This defines the objective score map and marginal value objective score maps.
 * Sum pixel-level scores to identify aggregate landscape-wide objective score values for a particular run.
-4. Repeat for each weight combination to complete a frontier.
+4. Repeat for each weight combination to complete a frontier.\
+
 
 To generate many portfolios, the above steps are wrapped, by:
 
 1. Specifying an experimental design for ES model inputs.
 2. Specifying an experimental design for optimization parameters (budget, other constraints).
 3. Generating unique index encodings for groupings that maybe relevant for visualization or analysis (eg, indexing tradeoff curves, or objective weight combinations).
-4. Running the frontier-generating procedure defined above for each “row” of the full experimental design.
+4. Running the frontier-generating procedure defined above for each “row” of the full experimental design.\
+\
+
+
+
+![Land cover in Pu‘u Wa‘awa‘a under different restoration and climate scenarios. The purple contours on the current land cover map outline the enclosure areas corresponding to the partial restoration scenario. The maps on top correspond to the evolution of land cover, under the current climate for the partial and full restoration scenarios. The maps underneath correspond to the evolution of the land cover, under the RCP 8.5 future climate projection for the partial and full restoration scenarios. (figure by author in @PWW)](../images/Fig1.png){#fig:hawaii1 width=80%}
+
+![Impact of restoration on groundwater recharge in Pu‘u Wa‘awa‘a. The green contours outline the enclosure areas corresponding to the partial restoration scenario in which only these regions undergo some changes. Blue corresponds to an increase in groundwater recharge due to restoration, and red corresponds to a decrease. (figure by author in @PWW)](../images/Fig2.png){#fig:hawaii2 width=80%}
+
+![Impact of restoration on landscape flammability in Pu‘u Wa‘awa‘a. The green contours outline the enclosure areas corresponding to the partial restoration scenario. Yellow corresponds to a decrease in landscape flammability due to restoration, and red means no change. (figure by author in @PWW)](../images/Fig3.png){#fig:hawaii3 width=80%}
+
+![Spatial prioritization and restoration costs in in Pu‘u Wa‘awa‘a. For each objective and both combined. Rank 1 pixels correspond to the highest priority restoration areas. Costs are cumulative, such that if Rank n is restored, Rank n-1 was restored as well. The green contours outline the enclosure areas corresponding to the partial restoration scenario. (figure by author in @PWW)](../images/Fig4.png){#fig:hawaii4 width=80%}
+
+![Extract of the survey: Gathering NatCappers' visualizations needs and tools](../images/survey.png){#fig:survey width=100%}
+
+![When Evaluating a Figure for Clarity and Completeness, Consider the Following Questions[@Allen1]](../images/assess_table.png){#fig:crit2 width=80%} 

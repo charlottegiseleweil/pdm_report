@@ -4,11 +4,11 @@
 
 [^123back]: The field of ecosystem services suffers some inconsistent terminology in literature [@Englund]. Hence, an effort is made here to define precisely the terms used, point out synonyms and vague terminology, to avoid confusions.
 
-* Natural capital: Natural capital includes all environmental assets, it is the stock of resources, such a rivers, trees, the atmosphere and all living organisms [@naturalcapitalscotland].
+* Natural capital: Natural capital includes all environmental assets, it is the stock of resources, such a rivers, trees, the atmosphere and all living organisms [@naturalcapitalscotland]
 * ES: Ecosystem services are the benefits natural capital assets provide to humanity [@cardinale2012]
-* SDU: spatial decision unit, corresponding to a geometric feature such as polygon, pixel, lines or point. In the context of map comparisons, the word "cell" is used in this work for SDU, to match with the literature on the topic. SDU represent the scale at which a discrete spatial decision/intervention is undertaken. *[refs: Ben, optimizer design doc, Kuhnert]*
+* SDU: spatial decision unit, corresponding to a geometric feature such as polygon, pixel, lines or point. In the context of map comparisons, the word "cell" is used in this work for SDU, to match with the literature on the topic. SDU represent the scale at which a discrete spatial decision/intervention is undertaken.
 * LULC: land use/land cover
-* intervention/activity: an action that can be taken on a spatial decision unit that gets reflected in parameters that feed an ecosystem services model (*In the FWAT context, this typically means changing the LULC to a new row of the biophysical table that has modified values*). 
+* intervention/activity: an action that can be taken on a spatial decision unit that gets reflected in parameters that feed an ecosystem services model
 * portfolio: A set of SDU's and chosen activities for each SDU, emerging from an optimizer, from RIOS, or a participatory prioritization process. Portfolios get overlayed on LULC's to run the model
 * scenarios: storylines that describe possible futures (but are not predictions) [@greggg] (e.g an LULC scenario corresponds to an LULC map that has been changed based on modeled or user-defined changes to represent plausible futures)
 * spatial targeting: prioritization of interventions and their location on a landscape, can be undertaken with formal optimization methods, or heuristic or participatory approaches
