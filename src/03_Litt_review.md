@@ -58,6 +58,7 @@ The developed tool suggested in chapter \ref{sec:TheTool} illustrates these tech
 
 ##Graphical best practices and guidelines {#sec:colors}
 What makes a good visualization? Keeping in mind the goal which is to effectively convey information, i.e. to gain insight on the data, an efficient visualization reduces the cognitive effort of understanding the graph, in order to bring the observer's attention to the actual facts. Some may seem trivial, nevertheless the guidelines summarized in the following paragraphs are essential to achieving the intended purpose. As described by an expert in data visualization, Tufte (1983) in his classic text (p.13), graphical displays should: 
+
 > * “show the data
 > * induce the viewer to think about the substance rather than about methodology, graphic design, the technology of graphic production...
 > * avoid distorting what the data has to say
@@ -66,7 +67,7 @@ What makes a good visualization? Keeping in mind the goal which is to effectivel
 >  * encourage the eye to compare different pieces of data
 >  * reveal the data at several levels of detail, from a broad overview to the fine structure
 > *  serve a reasonably clear purpose: description, exploration, tabulation or decoration
->  * be closely integrated with the statistical and verbal descriptions of a dataset»*. 
+>  * be closely integrated with the statistical and verbal descriptions of a dataset". 
 
 In the context of maps, @Buckley2012 states five major maps design principles, namely legibility, visual contrast (for which the choice of an appropriate color scheme is essential), figure-ground organization, hierarchical organization, and balance (see her work for further details and guidance specific to maps).
 
@@ -129,6 +130,4 @@ The OpenMORDM visualization toolkit [@Hadka2015] is a dynamic visualization plat
 - [Illustration of the ggmap package](https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) \
 - [Introduction to the raster package](https://cran.r-project.org/web/packages/raster/vignettes/Raster.pdf) \
 - [and to RasterVis, which builds on raster package](https://oscarperpinan.github.io/rastervis/)
-
-
 
