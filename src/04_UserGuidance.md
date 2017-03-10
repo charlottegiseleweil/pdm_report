@@ -79,7 +79,8 @@ An effective alternative to coercing all the data in a single plot (risking over
 ### Reduce dimensions {#sec:rdim}
 Another approach to reduce cognitive complexity of multi-dimensional data, is to reduce the dimensions in some coherent way. For example, the **principal components analysis** (PCA) can be conducted to reduce the number of variables by combining the correlated ones [@hotelling1933analysis]. Similarly, the **choice modeler approach** aims to evaluate multiple decision variants, in a very large decision space. The concept is to identify criteria that do not influence the output (here, the decision option ranking), and remove these dimensions, to simplify without losing correctness [@Piotr]. 
 
-In the same vein, multiple dimensions can be summarized by creating an **aggregated metric**, e.g. an indication of a lake recreation value would combine variables such as water quality, lake size, boat options (Ryan Noe, personal communication).
+In the same vein, multiple dimensions can be summarized by creating an **aggregated metric**, e.g. an indication of a lake recreation value would combine variables such as water quality, lake size, boat options (Ryan Noe, personal communication). The basic concept to get this aggregated value is to sum each dimension once all have been put into comparable units and weighted according to preference.
+
 
 ###Multiple linked views {#sec:multiplelinked}
 
@@ -89,7 +90,7 @@ Several options to display multi-variate data were discussed above. However they
 
 Furthermore, dynamic displays allow improvement by adding brushing and linking features (see \ref{sec:interactivefeatures}), examples of interactive dashboards with multiple linked views include *(click on the title to be directed to the online version)*:
 
-* [The Middle Cedar visualization](https://phawthorne.g.ithub.io/mc-vis/) (figure \ref{fig:Peter})
+* [The Middle Cedar visualization](https://phawthorne.github.io/mc-vis/) (figure \ref{fig:Peter})
 * [The Conservation ROI Dashboard](http://nascience.us/roi/public/) (figure \ref{fig:ConservationROIDashboard})
 * [Habitat Risk Assessment Dashboard](http://vulpes.sefs.uw.edu/ttapp/hra-dash.php). This interactive web application displays user's InVEST output workspace, and was developped in R and Javascript.
 * [Coastal Vulnerability Dashboard](http://vulpes.sefs.uw.edu/ttapp/cv-dash.php)
@@ -195,7 +196,7 @@ Automated comparison of maps can be achieved with software like the* Map Compari
 
 [^127back]: MCK compares raster maps using fuzzy set map comparison, hierarchical fuzzy pattern matching, and moving window based comparison of landscape structure. [See MCK website](http://mck.riks.nl). 
  
-###Maps displays {#sec:comp_map}
+###Map displays {#sec:comp_map}
 #### Between two maps {#sec:comp_map_2}
 ####Interactive switching between maps {.unnumbered}
 For the examination of (dis)agreement between two maps, analysts often like to flip back and forth between the two (from survey results). This is easy to do in GIS software and is a convenient solution for the data exploration purposes. Nevertheless, this method is not always suited for communication purposes. Plus, this interactive solution doesn't apply to static documents.
@@ -451,7 +452,7 @@ On the whole, each visualization is very **context specific**, therefore there i
 
 ![Additional examples (a) To compare 3 ES metrics between 4 scenarios, @Arkema2 combines small multiples of objective score maps, with summary statistics and bar plots. (b) Change map displaying the amount of additional sediment export (in percentage) comparing a future scenario with the current baseline one [@Myanmar16]. (c) On a static display, @polasky's strategy consists in displaying only the extreme points of the trade-off curve. (d) Change in services for all scenarios and iterations relative to current management @Arkema2](../images/addl.png){#fig:addl}
 
-![[The Middle Cedar visualization](https://phawthorne.g.ithub.io/mc-vis/) is an interactive webapp, developed by @Peter, who combined a scatterplot, a map, a pie chart and summary statistics in a single dashboard. It allows users to click on each point of the trade-off curve, and the corresponding land cover map will be displayed. Additionally, summary metrics and a pie chart provide information relative to the scenario chosen upon click [@Peter]](../images/peter.png){#fig:Peter width=70%} 
+![[The Middle Cedar visualization](https://phawthorne.github.io/mc-vis/) is an interactive webapp, developed by @Peter, who combined a scatterplot, a map, a pie chart and summary statistics in a single dashboard. It allows users to click on each point of the trade-off curve, and the corresponding land cover map will be displayed. Additionally, summary metrics and a pie chart provide information relative to the scenario chosen upon click [@Peter]](../images/peter.png){#fig:Peter width=70%} 
 
 ![Extract of the [Conservation ROI Dashboard](http://nascience.us/roi/public/), gathering and comparing ROI projects across the US](../images/consdash.png){#fig:ConservationROIDashboard}
 

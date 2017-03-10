@@ -48,7 +48,7 @@ The tool aims to allow visualization of tradeoffs between objectives, comparison
 In between communication and exploratory purposes, this tool aims to be first introduced by the analyst who has generated the results. Then, the audience such as stakeholders, once familiarized with the functioning of the tool, can further explore the dataset, referring to the onIine tool. It is not fully self-explanatory, but the interpretation is supported by multiple help buttons providing information on the data structure. More complex or simpler versions could be tailored to facilitate analyst exploration and un-guided stakeholder use, respectively.
 
 ### Use case
-The proposed tool takes the form of a dashboard, combining multiple linked plots (see \ref{sec:multiplelinked}) which allow to explore interactively the results. Design choices were made through an iterative process and are based on the knowledge of chapters \ref{sec:elements} and \ref{sec:UserGuide}. The design of the tool has been refined, specifically for the Upper Tana Waterfund use case, described in \ref{sec:tanacase}. The goal here is to optimize which landscape and farmer extension interventions to undertake in the Upper Tana basin, in order to improve water quality, quantity, and farmer livelihoods in the region -- which also serves as an important water supply and power generation area for Nairobi. 
+The proposed tool takes the form of a dashboard, combining multiple linked plots (see \ref{sec:multiplelinked}) which allow to explore interactively the results. Design choices were made through an iterative process and are based on the knowledge of chapters \ref{sec:elements} and \ref{sec:UserGuide}. The design of the tool has been refined, specifically for the Upper Tana Water Fund use case, described in \ref{sec:tanacase}. The goal here is to optimize which landscape and farmer extension interventions to undertake in the Upper Tana basin, in order to improve water quality, quantity, and farmer livelihoods in the region -- which also serves as an important water supply and power generation area for Nairobi. 
 Possible interventions are road mitigation, agroforestry, riparian management, terracing, reforestation, grass strips. For the purposes of the tool demonstration, three ES objectives are considered:
 
 * Annual water yield (AWY) to be maximized, as it serves water supply and hydropower needs
@@ -170,8 +170,7 @@ Feedback on a first version noted the importance of putting the graphical inform
 
 Feedback repeatedly noted the **engaging** aspect of this tool, underlining the enthusiasm stemming from the interactive features. It was suggested that such as tool would improve the stakeholder's engagement and interest in the project.
 
-
-Overall, the feedback was extremely positive, the tool was qualified to be "a great step forward", and led suggestions and most frequently to request for generic capabilities, adaptable to any dataset similarly formatted.
+Overall, the feedback was very positive, the tool was qualified to be "a great step forward", "immediately useful" and led suggestions and most frequently to request for generic capabilities, adaptable to any dataset similarly formatted.
 
 The needs previously identified appear to be fulfilled by the conceived design. Visualization of tradeoffs between objectives is facilitated with the parallel coordinate plots and the trade-off frontiers in the scatterplots. Comparison of portfolios is allowed by the different maps displaying upon user's choice: the portfolios themselves, the modal portfolio of selected subset, the footprint or the agreement. Assessment of uncertainty in the input parameters can be explored with the sliders, allowing to view results for specific parameters values. The overall interactive dashboard with multiple dynamic linked views helps global understanding and engages users, by giving them great flexibility. The goal of the prototype seems achieved, as it led to calls for further development of a generic tool along the same lines.
 
@@ -195,6 +194,7 @@ The needs previously identified appear to be fulfilled by the conceived design. 
 
 * Server architecture: host the data on a separate server (data engineering considerations)
 * Raster on-the-fly computation solution (e.g. webworkers)
+* Integration in the NatCap's tools workflow (e.g MESH)
 
 ### Building a generic tool {.unnumbered}
 

@@ -1,0 +1,128 @@
+<style>
+  
+  /* Move content so that side-nav doesn't hide it */
+  header, main, footer {
+    padding-left: 320px; 
+  }
+  
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+  
+  @media print {    
+    header, main, footer {
+      padding-left: 0;
+    }
+    .side-nav {
+      display: none;
+    }
+    .container {
+      width: 100%;
+    }
+  }
+  
+  .side-nav {
+    width: 320px;
+    border-top: none;
+  }
+  
+  /* Containers a bit larger than default 70% */
+  .container {
+    width: 75%;
+  }
+  
+  /* Make nested collapsibles look nice in side-nav */
+  .side-nav .collapsible-body {
+    padding: 0;
+  }
+  
+  /* Make images' width be slightly smaller than text */
+  main .figure {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  main img {
+    width: 100%;
+  }
+  
+  /* Make text look prettier */
+  p {
+    text-align: justify;
+  }
+  
+  /* Make anchors to titles look better by changing margin-top to padding-top */
+  /* Reduce title fonts by ~35% each to look less jarring */
+  main h1 { margin-top: 0; padding-top: 2.10rem; font-size: 40px; }
+  main h2 { margin-top: 0; padding-top: 1.78rem; font-size: 32px; } 
+  main h3 { margin-top: 0; padding-top: 1.46rem; font-size: 28px; }
+  main h4 { font-size: 22px; }
+  
+  
+  /* Make avatar better */
+  .side-nav img.logo, .side-nav img.circle.avatar {
+    height: 120px;
+    width: 150px;
+  }
+  
+  
+  .side-nav a.inline {
+    display: inline-block;
+  }
+  
+  
+  /* Bottom divider */
+  .divider.bottom {
+    margin: 0 0 8px 0;
+  }
+  
+  /* Fix navbar collapsible elements padding */
+  #TOC > ul > li > a { padding-left: 32px; }
+  #TOC > ul > li > ul > li > a { padding-left: 48px; }
+  #TOC > ul > li > ul > li > ul li a { padding-left: 64px; }
+  
+  h1.title {
+   text-align: center;
+   font-size: 48px;
+  }
+  
+  ul.side-nav li a.title {
+    font-weight: 900;
+    font-size: 16px;
+  }
+  
+  /* Main title */
+  h1.title.first {
+    font-size: 44px;
+    margin-bottom: 0;
+    font-weight: bolder;
+  }
+  
+  h1.title.second {
+    font-size: 36px;
+    font-style: italic;
+    padding-top: 0;
+    font-weight: 100;
+  }
+  
+  /* Contaxt icons in the sidebar */
+  .userView a.inline-icon {
+    display: inline-block;
+    height: auto;
+    padding: 0;
+    margin-left: 16px;
+  }
+  
+  .userView a.inline-icon i {
+    font-size: 16px;
+    vertical-align: text-bottom;
+  }
+  
+  /* Fix margin of section numbers */
+  .toc-section-number {
+    margin-right: 8px;
+  }
+  
+  </style>

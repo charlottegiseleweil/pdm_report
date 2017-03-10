@@ -1,0 +1,93 @@
+<script>
+
+// Insert title of project
+const titleFirst="Natural Capital Data Visualization";
+const titleSecond="A toolbox to synthesize and visualize multiple complex ecosystem services model outputs";
+$(
+    '<h1 id="title" class="title first">' + titleFirst + '</h1>' +
+    '<br>' + 
+    '<h1 class="title second">' + titleSecond + '</h1>'
+ ).insertAfter("#TOC");
+
+// Make table of contents the side navigation
+const toc = $('#TOC ul:first-child');
+toc.addClass("side-nav").addClass("fixed");
+
+// Add link to live demo & title of project
+const masterpageUrl = 'http://www.charlotteweil.fr/masterthesis';
+toc.prepend(
+    '<li>' + 
+    '<a href="toolbox.pdf" target="_blank">' +
+    '<i class="material-icons">picture_as_pdf</i> PDF version' +
+    '</a>' +
+    '</li>' +
+    '<div class="bottom divider"></div>' + 
+    '<li>' +
+    '<a class="title" href="#title">' +
+    titleFirst +
+    '</a>' +
+    '</li>');
+
+// Add link to pdf document
+toc.append(
+    
+    '<div class="divider"></div>' +
+    '<li>' + 
+    '<a href="' + masterpageUrl + '">' +
+    '<i class="material-icons">launch</i> Master thesis' +
+    '</a>' +
+    '<div class="bottom divider"></div>' +
+    '</li>');
+
+
+// Truncate long titles in side-nav & cool wave effect
+$('#TOC ul li a').addClass("truncate").addClass('waves-effect');
+
+// Make elements collapsible in side nav
+$('#TOC ul').addClass("collapsible").addClass("collapsible-accordion");
+$('#TOC ul li a').addClass("collapsible-header");
+$('#TOC ul li a + ul').addClass("collapsible-body");
+
+// Add cool avatar picture
+const avatarUrl = '../images/avatar.jpg';
+const logoUrl = '../images/natcap-logo.jpg';
+const natcapUrl = 'http://www.naturalcapitalproject.org';
+const githubUrl = 'https://github.com/charlottegiseleweil';
+const linkedInUrl = 'https://www.linkedin.com/in/charlotteweil';
+const email = 'weilcharlotte@gmail.com';
+toc.prepend('<li>' +
+    '<div class="userView">' +
+    '<a class="inline" href="' + natcapUrl + '"><img class="logo" src="' + logoUrl + '"></a>' +
+    
+    '<li>' + 
+    '<a class="inline-icon" href="mailto:' + email + '"><i class="material-icons">email</i>' +
+    '<em>Charlotte Weil</em></a>' +
+    '</li>' +
+    '</div>' +
+    '<div class="divider"></div>' +
+    '</li>');
+
+// Make all external links open in new tab
+$("main a[href^='http']").attr("target", "_blank");
+
+// Add all reference links
+$(".ref").each((i, x) => {
+  const id = x.innerText;
+  const refDiv = $('#' + id.replace(':', '\\:'));
+  let text = '???';
+  if (id.startsWith('sec:')) {
+    text = refDiv.find('.header-section-number').text();
+  } else if (id.startsWith('fig:')) {
+    const alt = refDiv.attr('alt');
+    if (alt) {
+      text = alt.split(':')[0].substring(7);
+    } else {
+      console.log('Could not find text for figure: ', id);
+    }
+  } else {
+    console.log('Could not find text for reference: ', id);
+  }
+  $(x).html('<a href=#'+ id + '>' + text + '</a>');
+});
+
+</script>

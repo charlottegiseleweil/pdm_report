@@ -59,14 +59,14 @@ The developed tool suggested in chapter \ref{sec:TheTool} illustrates these tech
 ##Graphical best practices and guidelines {#sec:colors}
 What makes a good visualization? Keeping in mind the goal which is to effectively convey information, i.e. to gain insight on the data, an efficient visualization reduces the cognitive effort of understanding the graph, in order to bring the observer's attention to the actual facts. Some may seem trivial, nevertheless the guidelines summarized in the following paragraphs are essential to achieving the intended purpose. As described by an expert in data visualization, Tufte (1983) in his classic text (p.13), graphical displays should: 
 
-> * “show the data
-> * induce the viewer to think about the substance rather than about methodology, graphic design, the technology of graphic production...
-> * avoid distorting what the data has to say
-> * present many numbers in a small space
->  * make large data sets coherent
->  * encourage the eye to compare different pieces of data
->  * reveal the data at several levels of detail, from a broad overview to the fine structure
-> *  serve a reasonably clear purpose: description, exploration, tabulation or decoration
+> * “show the data,
+> * induce the viewer to think about the substance rather than about methodology, graphic design, the technology of graphic production,...
+> * avoid distorting what the data has to say,
+> * present many numbers in a small space,
+>  * make large data sets coherent,
+>  * encourage the eye to compare different pieces of data,
+>  * reveal the data at several levels of detail, from a broad overview to the fine structure,
+> *  serve a reasonably clear purpose: description, exploration, tabulation or decoration,
 >  * be closely integrated with the statistical and verbal descriptions of a dataset". 
 
 In the context of maps, @Buckley2012 states five major maps design principles, namely legibility, visual contrast (for which the choice of an appropriate color scheme is essential), figure-ground organization, hierarchical organization, and balance (see her work for further details and guidance specific to maps).
@@ -121,9 +121,8 @@ The OpenMORDM visualization toolkit [@Hadka2015] is a dynamic visualization plat
 **Matplotlib** is the main Python graphing library. It contains a toolkit for plotting 2D data on maps: **basemap**[^6789back].  Also, **geopandas** extends the data analysis library Pandas to spatial data, using also Fiona for file access, Shapely and Descartes for geometric operations, PySal for spatial analysis, and of course Matplotlib for plotting [@python_libs]. Interactive plots are based on **Bokeh** which imitates D3, or, as mentioned previously, Plotly. 
 
 [^6789back]: Useful links to make maps using Python (matplotlib, basemap): \
-- [A well written blogpost](http://sensitivecities.com/so-youd-like-to-make-a-map-using-python-EN.html#.WCJPDvkrJhE) \
-- [and another one](http://www.datadependence.com/2016/06/creating-map-visualisations-in-python/) \
-- [basemap examples](http://matplotlib.org/basemap/users/examples.html).
+- [A well written blogpost](http://sensitivecities.com/so-youd-like-to-make-a-map-using-python-EN.html#.WCJPDvkrJhE), and [another one](http://www.datadependence.com/2016/06/creating-map-visualisations-in-python/) \
+- [Basemap examples](http://matplotlib.org/basemap/users/examples.html).
  
 [^6782back]: Useful links about analysis of spatial data in R: \
 - [overview of analysis of spatial data](https://cran.r-project.org/web/views/Spatial.html) \
